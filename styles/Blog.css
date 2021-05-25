@@ -1,0 +1,358 @@
+
+/* ===============================================
+Main Page
+=============================================== */
+
+  p{
+      padding: .7rem 0;
+      /* text-align: center; */
+  }
+
+.blog-container,.login-choice{
+
+    width:65%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 2rem auto;
+    font-family: var(--font);
+}
+.blog-container button{
+    color: black;
+}
+
+/* ================================================================ */
+/* Login Form */
+/* ================================================================ */
+.Log{
+    /* min-height: 50vh; */
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    /* height: auto; */
+    top:50%;
+    transform: translate(-50%,-50%);
+    flex:2;
+    z-index: 3;
+    background-color: white;
+    border: 1px solid;
+    animation: ShowLogin 1s;
+    box-shadow: 0 0 20px var(--bgcolor);
+    animation-iteration-count: 1;
+    /* align-items: center; */
+    transition: all var(--transition);
+}
+
+@keyframes ShowLogin {
+    0%{
+
+        transform: translate(-50%,-50%) scale(0);
+
+    }100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    
+}
+.login-choice{
+    flex-direction: row;
+    margin: 0;
+}
+.login-choice span{
+    /* padding: .4rem; */
+    color: black;
+    /* margin: 0 .2rem; */
+    cursor: pointer;
+}
+.form div label::after{
+    content: ":";
+}
+.form-login div,.form-singin div{
+    /* margin: 1rem 0; */
+}
+.close{
+    position: absolute;
+    right: 0;
+}
+.form-login,.form-singin{
+    padding: 0;
+    margin: 0;
+    flex: 2;
+    position: relative;
+    align-items: flex-start;
+}
+
+.form-login button,.form-singin button{
+    color: white;
+    /* justify-self: flex-end; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* margin-top:12px ; */
+
+}
+
+.form-login,.form-singin{
+    height: 90%;
+    width: 100%;
+    /* border: 2px solid black; */
+    border-top: none;
+}
+
+/* ===================================================================== */
+
+
+.blog-container  h1{
+    text-transform: capitalize;
+    line-height: 2.4rem;
+    font-size: 2rem;
+    /* padding: 1.3rem 0;
+}
+.blog-container > .para{
+    font-size: var(--font_size);
+    /* text-align: justify; */
+    line-height: 1.8rem;
+    margin: 1.5rem 0;
+    
+}
+
+em{
+    text-decoration: none;
+    background-color: var(--bgcolor);
+    font-family: inherit;
+    padding: 5px 5px;
+    color: white;
+    font-style: normal;
+}
+
+.blog-container  .img ,.img{
+    align-self: center;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+}
+p > img{
+    width: 100%;
+}
+.blog-container > .para::first-letter{
+    
+    color: red;
+}
+
+
+
+.alert{
+    font-size: var(--font);
+    /* background-color: red; */
+    background-color: white;
+    /* text-align: center; */
+    padding: 10px 0;
+}
+
+.ListOfBlogs{
+    
+    display: grid;
+    
+}
+
+.ListOfBlogs > .BlogShort{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap: 1rem;
+    /* border: 1px solid black; */
+    /* flex-wrap:wrap ; */
+    /* box-shadow: 0px 0px 10px black; */
+    margin: 1rem 0;
+
+}
+.blog-a{
+    text-decoration: none;
+}
+.Bloshort-not-found{
+    flex-direction: column;
+}
+.BlogInformation,.Bloshort-not-found{
+    display: flex;
+    flex: 1;
+    margin: 0 1rem;
+    flex-direction: column;
+    padding: 1rem 0;
+    height: 100%;
+}
+
+h1,h2,h3{
+    /* margin: 1rem 0; */
+    /* font-size: 12px; */
+    /* color: #322f38; */
+    text-transform: capitalize;
+}
+.Blogtitle{
+    font-size: larger;
+    /* text-decoration: underline; */
+    /* text-decoration-color: red; */
+}
+
+.title{
+    margin: 2rem;
+    font-size: xx-large;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-align: center;
+}
+
+.blog-a{
+    font-size: var(--font);
+    margin: 0;
+    padding: 0;
+}
+.Like{
+    margin: 1rem 0;
+}
+.BlogInformation  img{
+    width: 100%;
+    height: 70%;
+}
+.BlogInformation *{
+    flex: 1;
+}
+svg{
+    display: inline-block;
+}
+
+
+.open{
+    /* border: 2px solid black; */
+    border-bottom: none;
+    color: white;
+    align-items: center;
+    border:none;
+    border-radius: 0px;
+    /* padding: 10px; */
+    background-color:  var(--form-bg);
+    /* color: white; */
+}
+
+/* ====================================
+Like
+==================================== */
+
+.Like-Page,.Like{
+    display: inline-flex;
+    background-color: black;
+    color: white;
+    font-size: var(--font_size);
+    padding: 3px .2rem;
+    align-items: center;
+
+}
+
+.Like-Page{
+    /* display: inline-flex; */
+    margin-left: .4rem;
+   
+}
+
+.alert{
+    /* background-color: transparent; */
+    width: 100%;
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+    
+}
+
+.Like-Page:hover{
+    
+    cursor: pointer;
+}
+.blog-container button{
+    color: white;
+}
+.Footer-icons a:hover,.Footer-icons svg:hover{
+    color: var(--hoverc);
+    background-color: transparent;
+}
+.Footer-icons:hover{
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 1200px) {
+    h1,h2{
+        font-size: 1rem;
+    }
+    .blog-container{
+        width: 90%;
+    }
+    .Login-Page{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .login a{
+        font-size: .7rem;
+    }
+    .Log button{
+        color: white;
+    }
+    .ListOfBlogs{
+        grid-template-columns: 100%;
+        margin: 2rem 0;
+    }
+    .ListOfBlogs > .BlogShort{
+        grid-template-columns: 100%;
+    grid-gap: 4rem;
+    }
+    .blog-container  h1,h1{
+        font-size: 1.4rem;
+    }
+    .blog-container  p{
+        font-size: 1.0rem;
+    }
+    .form div input{
+        padding: 10px 0;
+    }
+
+    /* .BlogInformation *{ */
+        /* width: 100%;
+    } */
+}
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+/* ========================================
+Dark Mode Make Sure to the last
+======================================== */
+
+.buler{
+    backdrop-filter: blur(62px);
+}
+.dark{
+    background-color:  #181a1b;;
+    color: rgb(34, 20, 20);
+  }
+  .dark *,.dark p,.dark button,.dark a,.dark div,.dark footer{
+    color: white;
+  }
+  .dark .login-choice span,.dark .form div label{
+      color: white;
+  }
+  .dark .alert{
+      /* color: inherit; */
+      background-color: black;
+  }
+  .dark .login-choice span{
+      color: black;
+  }
+  .dark footer{
+      color: white;
+  }

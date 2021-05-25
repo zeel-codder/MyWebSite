@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "Home/*": ["Components/My_Home_Page/*"],
+        "Blog/*":["Components/Blog/*"],
+        "Database/*":["api/database/*"]
+      }
+    }
+  }
