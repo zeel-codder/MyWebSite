@@ -14,7 +14,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import {useState} from 'react';
 // import {useEffect} from 'react';
 import axios from 'axios';
-import {useGlobalContext} from '../context';
+// import {useGlobalContext} from '../context';
 // import { response } from 'express';
 // ====================================
 
@@ -24,7 +24,7 @@ import {useGlobalContext} from '../context';
 const Like=(props)=>{
     
     const {blogInfo,isBlogShort}=props;
-    const {UserState}=useGlobalContext();
+    // const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
     const [Like,setLike]=useState(props.like);
     // const {Loading}=useGlobalContext();
@@ -83,7 +83,7 @@ const Like=(props)=>{
         return(
             <h2 className="Like">Like:
             <span className="Link-Page" onClick={PostLike}>
-            <FcLike className="like-icon"/>
+            <FavoriteIcon className="like-icon"/>
             {Like}
             </span>
             </h2>

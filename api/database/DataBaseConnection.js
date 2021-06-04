@@ -8,12 +8,7 @@ console.log('Start Connections')
 
 const ConnectToDataBase=()=>{
   console.log('Start Connections')
-   mongoose.connect(process.env.MONGO_URI,{ 
-     useUnifiedTopology: true,
-     useFindAndModify: false,
-     useCreateIndex: true,
-     useNewUrlParser: true
-    });
+   mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true ,useFindAndModify: false});
     
    console.log('Loading Connections');
    mongoose.connection
@@ -23,7 +18,24 @@ const ConnectToDataBase=()=>{
 
 
 
+const { Schema } = mongoose;
 
+const Blog = new Schema({
+  name:  String, // String is shorthand for {type: String}
+  title: String,
+  img:'String',
+  url:   String,
+  like:Number,
+  topic:String,
+});
+
+
+const User = new Schema({
+  name: {type: String}, // String is shorthand for {type: String}
+  password:{type: String},
+  LikePage:{type: [String]},
+  url:{type: String},
+});
 
 
 
@@ -31,6 +43,8 @@ console.log('End Connections');
 
 
 
-
+exports.Blog=Blog;
+exports.User=User;
 exports.mongoose=mongoose
 exports.Connect=ConnectToDataBase;
+

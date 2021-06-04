@@ -116,7 +116,7 @@ Main Page
 
 em{
     text-decoration: none;
-    background-color: var(--bgcolor);
+    background-color: var(--form-bg);
     font-family: inherit;
     padding: 5px 5px;
     color: white;

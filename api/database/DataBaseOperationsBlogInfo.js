@@ -2,8 +2,8 @@
 const mongoose = require('mongoose');
 // const { MdBorderVertical } = require('react-icons/md');
 const BlogSchema = require('./DataBaseConnection');
-const Blog = require('./BlogSchema');
-const User = require('./UserSchema');
+const Blog = BlogSchema.Blog;
+const User = BlogSchema.User;
 
 
 console.log(process.env.BLOG_INFO);
@@ -52,16 +52,20 @@ const add = async (data, Modal) => {
     // let isOk=false;
 
     const name = data.name;
-    // console.log(User)
+    console.log(data,"<==")
     return await Modal.findOne({ name }, async(err, value) => {
         if (err) return console.log(err);
-        // console.log(value);
+        // console.log(Blog);
         
         if (value === null) {
-            const document = await new Modal(data);
+            let document =  new Modal(data);
+            // for(let i in data){
+            //     document[i]=data[i];
+            //     // console.log(document[i],document);
+            // }
             
+            console.log(document.name)
             if(!document.name){
-                console.log(data,document)
                 console.log(document instanceof UserInfo)
                 return;
             }

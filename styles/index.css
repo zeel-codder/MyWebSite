@@ -19,9 +19,9 @@ body::-webkit-scrollbar {
   width: .7em;
 }
 
-body{
-  background-image: var(--bgi);
-  color: white;
+.me{
+  background-image: var(--bgi); 
+   color: white;
 }
  
 body::-webkit-scrollbar-track {
@@ -350,9 +350,24 @@ p{
   overflow:hidden;
   cursor:alias;
 }
-.imgeAnimationDiv img{
+p{
+  width:100%;
+  overflow:hidden;
+  cursor: pointer;
+  transition:all 2s;
+}
+p > img:hover{
+  filter:grayscale(30%)
+}
+.imgeAnimationDiv img,p > img{
   width:100%;
   transition:all 1s;
+  object-fit: cover;
+
+}
+p > img{
+  border-radius:12px;
+  max-height: 70%;
   object-fit: cover;
 
 }
