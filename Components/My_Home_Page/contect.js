@@ -15,7 +15,7 @@ import React from "react";
 // import {Link} from 'react-dom';
 import { useState } from 'react';
 // import Loadding from './Loadding'
-import { useGlobalContext } from '../context';
+// import { useGlobalCont/ext } from '../context';
 import Loading from './Loadding';
 // ====================================
 

@@ -16,16 +16,27 @@ import Reactmarkdown from 'react-markdown';
 import axios from 'axios';
 import Prism from 'prismjs';
 import Like from '@Blog/Like'
+import Template from '@Layout/Template'
 import matter from 'gray-matter'
 
 // ====================================
 
 
 
-const BlogPage = ({data,file}) => {
+const Blog = ({data,file}) => {
+
+  const dic={data,file}
+
+  return (
+    <Template Component={BlogPage} data={dic}></Template>
+  )
+
+}
 
 
 
+
+function BlogPage({data,file}){
 
 
   //=============================
@@ -66,8 +77,8 @@ const BlogPage = ({data,file}) => {
     </>
 
   )
-}
 
+}
 
 export async function getStaticProps(context) {
   const name=context.params.name;
@@ -96,4 +107,4 @@ export async function getStaticPaths() {
     fallback: 'blocking'
 }
 }
-export default BlogPage;
+export default Blog;

@@ -13,9 +13,10 @@
 // ====================================
 // import {IoIosArrowDroprightCircle} from 'react-icons/io'
 // import {FaRegHandPointRight} from 'react-icons/fa'
-import Brightness1Icon from '@material-ui/icons/Brightness1';
-import Brightness5Icon from '@material-ui/icons/Brightness5';
+// import Brightness1Icon from '@material-ui/icons/Brightness1';
+// import Brightness5Icon from '@material-ui/icons/Brightness5';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 import {useState} from 'react'
 import React from "react";
 // import { useGlobalContext } from '../context';
@@ -101,9 +102,9 @@ const Projects=()=>{
                    <ArrowRightIcon className={class2}></ArrowRightIcon>  &nbsp;{d.title} , {d.technology}
                    </p>
                    <ul className={class1}>
-                   <li><Brightness5Icon /> {d.subtitle}</li>
-                   <li><Brightness5Icon /> Code Link: <a href={d.codelink} style={{padding:1 ,fontSize:'14px'}}>Code</a></li>
-                   <li><Brightness5Icon /> Project Link: <a href={d.link} style={{padding:1,fontSize:'14px'}}>Link</a></li>
+                   <li><BookmarkIcon /> {d.subtitle}</li>
+                   <li><BookmarkIcon /> Code Link: <a href={d.codelink} style={{padding:1 ,fontSize:'14px'}}>Code</a></li>
+                   <li><BookmarkIcon /> Project Link: <a href={d.link} style={{padding:1,fontSize:'14px'}}>Link</a></li>
                    </ul>
                    </li>
                    )

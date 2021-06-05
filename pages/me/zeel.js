@@ -1,18 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Main from '@Home/Main'
-import Navbar from '@Home/navabar'
-import Footer from '@Home/Footer'
+import React from 'react'
+import Navbar from 'Components/navbar/navabarme'
+import Footer from 'Components/footer/Footer'
+import NavData from '@Data/navbar/data' 
 
 
 
 export default function Home() {
   return (
     <div className="me" >
-      <Navbar></Navbar>
+      <Navbar data={NavData}></Navbar>
       <Main></Main>
       <Footer></Footer>
-      <h1>Starting</h1>
     </div>
   )
 }

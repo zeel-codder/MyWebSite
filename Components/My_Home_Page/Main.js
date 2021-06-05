@@ -125,7 +125,7 @@ function Main() {
       <>
         <div className="main1" id="home">
          
-            <img src='/images/home/logo.jpg' className="logo" alt="Zeel"></img>
+            <img src='/images/home/zeel.jpeg' className="logo" alt="Zeel"></img>
             <span className="logo-text" id="head">
               Zeel Codder Personal Web Site
               <button className="btn" > 

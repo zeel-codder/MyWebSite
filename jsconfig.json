@@ -5,7 +5,10 @@
         "@Home/*": ["Components/My_Home_Page/*"],
         "@Blog/*":["Components/Blog/*"],
         "@Database/*":["api/database/*"],
-        "@Page/*":["Blogs/*"]
+        "@Page/*":["Blogs/*"],
+        "@Data/*":["Data/*"],
+        "@Layout/*":["Components/Blog/*"]
+
       }
     }
   }

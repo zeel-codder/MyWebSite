@@ -14,12 +14,15 @@ Main Page
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    margin: 2rem auto;
+    margin: 0rem auto;
+    margin-bottom:2rem ;
     font-family: var(--font);
 }
 .blog-container button{
     color: black;
 }
+
+
 
 /* ================================================================ */
 /* Login Form */
