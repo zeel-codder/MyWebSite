@@ -8,14 +8,14 @@ const FindUser = async (e,state,dispatchUser,Reducer,closeLogin) => {
         password: state.passWord
     }
     console.log(newUser);
-    axios.post(`.netlify/functions/FindUser`, { ...newUser })
+    axios.post(`api/finduser`, { ...newUser })
         .then((res) => {
             // console.log(res.);
             // console.log(res.data)
             res = JSON.parse(res.data.message);
             if (res.password === state.passWord) {
                 closeLogin();
-                dispatchUser({ type: 'UserLogIn', data: res });
+                // dispatchUser({ type: 'UserLogIn', data: res });
 
             } else {
                 alert('Wrong PassWord')
@@ -41,12 +41,12 @@ const AddUser = async (e,state,dispatchUser,Reducer,closeLogin) => {
             password: state.passWord
         }
 
-        axios.post('.netlify/functions/AddUser', newUser)
+        axios.post('api/adduser', newUser)
             .then((res) => {
                 if (res.status === 200) {
                     // console.log(res);
                     closeLogin();
-                    dispatchUser({ type: 'UserLogIn', data: newUser });
+                    // dispatchUser({ type: 'UserLogIn', data: newUser });
                 }
                 Reducer({ type: 'changeLoadingFalse' });
             })

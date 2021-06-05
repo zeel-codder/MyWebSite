@@ -29,17 +29,13 @@ Main Page
 /* ================================================================ */
 .Log{
     /* min-height: 50vh; */
-    position: absolute;
-    width: 40%;
-    left: 50%;
-    /* height: auto; */
-    top:50%;
-    transform: translate(-50%,-50%);
-    flex:2;
-    z-index: 3;
-    background-color: white;
+    /* transform: translate(-50%,-50%); */
+    /* flex:2; */
+    /* z-index: 3; */
+    background-image: var(--bgi);
     border: 1px solid;
     animation: ShowLogin 1s;
+    height:110vh;
     box-shadow: 0 0 20px var(--bgcolor);
     animation-iteration-count: 1;
     /* align-items: center; */
@@ -48,17 +44,18 @@ Main Page
 
 @keyframes ShowLogin {
     0%{
-
-        transform: translate(-50%,-50%) scale(0);
+        transform: scale(0);
 
     }100%{
-        transform: translate(-50%,-50%) scale(1);
+        transform: scale(1);
     }
     
 }
 .login-choice{
-    flex-direction: row;
-    margin: 0;
+    flex-direction: row !important;
+    /* margin: */
+    margin: 0 auto!important;
+    /* width: 100%; */
 }
 .login-choice span{
     /* padding: .4rem; */
@@ -94,7 +91,7 @@ Main Page
 }
 
 .form-login,.form-singin{
-    height: 90%;
+    /* height: 90%; */
     width: 100%;
     /* border: 2px solid black; */
     border-top: none;
@@ -162,6 +159,7 @@ p > img{
     background-color: white;
     /* text-align: center; */
     padding: 10px 0;
+    width: 70%;
 }
 
 .ListOfBlogs{
@@ -243,8 +241,9 @@ svg{
     border:none;
     border-radius: 0px;
     /* padding: 10px; */
-    background-color:  var(--form-bg);
+    /* background-color:  var(--form-bg); */
     /* color: white; */
+    background-image: var(--bgi);
 }
 
 /* ====================================
@@ -269,7 +268,7 @@ Like
 
 .alert{
     /* background-color: transparent; */
-    width: 100%;
+    /* width: 100%; */
     color: red;
     text-align: center;
     font-size: 1rem;

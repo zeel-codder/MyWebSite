@@ -16,7 +16,7 @@ import React from "react";
 import { useState } from 'react';
 // import Loadding from './Loadding'
 // import { useGlobalCont/ext } from '../context';
-import Loading from './Loadding';
+import Loading from '../Loadding';
 // ====================================
 
 const Context = () => {

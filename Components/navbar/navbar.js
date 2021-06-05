@@ -17,12 +17,13 @@ import Link from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
+import Login from '../UserLoging/Login'
 
 // ====================================
 
 
 
-function Navbar({ data }) {
+function Navbar() {
 
 
     let value = useRef(true);
@@ -134,23 +135,22 @@ function Navbar({ data }) {
                     </div>
 
 
-                    {/* <li className="Login-Page" ref={linksRefs}>
+
+
+                    <li className="Login-Page" ref={linksRefs}>
 
                         {
-                            !UserState.isUserIn
+                            !false
                                 ?
                                 <>
-                                    <li className="login"><a onClick={(e) => {
-                                        ShowLogin(e.target);
-                                    }} title="Sing In">Sing In</a></li>
-                                    <li className="login"><a onClick={(e) => {
-                                        ShowLogin(e.target);
-                                    }} title="Log In">Log In</a></li>
+                                    <li className="login"><Link href='/auth/singin'
+                                     title="Sing In">Sing In</Link></li>
+                                    <li className="login"><Link href='/auth/login' title="Log In">Log In</Link></li>
                                 </>
                                 :
                                 <li className="icons"><Link to={`/user/${UserState.UserInfo._id}`} title="User"><FaUserSecret></FaUserSecret></Link></li>
                         }
-                    </li> */}
+                    </li>
                 </ul>
                 {/* {
                     isLoginOpen && <Login choice={value.current} closeLogin={closeLogin}></Login>

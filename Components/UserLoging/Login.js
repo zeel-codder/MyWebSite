@@ -18,8 +18,9 @@
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 import React from "react";
-import { useGlobalContext } from '../context';
+// import { useGlobalContext } from '../context';
 import GoogleButton from './GoogleAuth';
+import Loading from '../Loadding'
 import { FindUser, AddUser, AddUserWithGoogle, FindUserWithGoogle } from './LoginFunctions';
 // ==================================== 
 
@@ -85,7 +86,7 @@ const reducer = (state, action) => {
 const Login = (props) => {
 
     const InitialState = {
-        isLoginOpen: props.choice !== "Sing In",
+        isLoginOpen: props.choice !== "Singin",
         issame: false,
         isLoading: false,
         passWord: '',
@@ -101,7 +102,7 @@ const Login = (props) => {
     // const [passWord,setpassWord]=useState('');
     // const [email,setemail]=useState('');
     // const [compassWord,setCompassWord]=useState('');
-    const { dispatchUser, Loading } = useGlobalContext();
+
 
 
     useEffect(() => {
@@ -118,12 +119,13 @@ const Login = (props) => {
 
     return (
 
-        <div className="blog-container Log">
+        <div className="Log">
+            <em>Zeel Codder Web-Site Auth</em>
 
-            <div className="login-choice">
+            <div className="login-choice form">
                 <span onClick={() => Reducer({ type: 'changeLoginTrue' })} className={state.isLoginOpen && `open`}>Log in</span>
                 <span onClick={() => Reducer({ type: 'changeLoginFalse' })} className={state.isLoginOpen || `open`}>Sing in</span>
-                <span onClick={() => props.closeLogin()} className="close Mybutton">[X]</span>
+                {/* <span onClick={() => props.closeLogin()} className="close Mybutton">[X]</span> */}
             </div>
 
             {
@@ -137,9 +139,9 @@ const Login = (props) => {
                     Reducer({ type: 'changeLoadingTrue' });
                     (state.isLoginOpen)
                         ?
-                        FindUser(e, state, dispatchUser, Reducer, props.closeLogin)
+                        FindUser(e, state, null, Reducer, props.closeLogin)
                         :
-                        AddUser(e, state, dispatchUser, Reducer, props.closeLogin);
+                        AddUser(e, state, null, Reducer, props.closeLogin);
 
                 }}>
 
@@ -201,7 +203,7 @@ const Login = (props) => {
                     type="submit">{state.isLoginOpen ? 'Log In' : 'Sing In'}
                 </button>
 
-                <span className="alert">Or</span>
+                <span className="alert">OR</span>
 
                 <GoogleButton
                     text={`${state.isLoginOpen ? 'Log' : 'Sing'} In With Google`}
