@@ -14,6 +14,7 @@
 // import { IoMdListBox } from 'react-icons/io'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Imgshow from './imgshow'
+import React from "react";
 // import { useGlobalContext } from '../conte/xt';
 // ====================================
 

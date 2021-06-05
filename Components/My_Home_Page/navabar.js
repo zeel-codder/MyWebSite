@@ -17,6 +17,7 @@
 // import {Link} from 'react-dom
 import { Link, animateScroll as scroll } from "react-scroll";
 import Navdata from '../../Data/Home/data'
+import React from "react";
 // import { AiOutlineFacebook , AiFillGithub ,AiFillLinkedin ,AiFillTwitterCircle } from 'react-icons/ai';
 // import { FaBeer } from 'react-icons/fa';
 // import { VscListFlat } from 'react-icons/vsc'

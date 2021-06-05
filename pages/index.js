@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import axios from 'axios'
+import React from "react";
 import BlogShort from '@Blog/BlogShort'
 
 

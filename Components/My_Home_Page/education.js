@@ -7,6 +7,7 @@
  @returns: JSX of Education details
  @functionality : This Component is use to show Education info of zeel  website.
 **/
+import React from "react";
 
 
 const Education = () => {

@@ -13,6 +13,7 @@
 // import {FcLike} from 'react-icons/fc';
 // import {useGlobalContext} from '../context';
 import Link from 'next/link'
+import React from "react";
 import Like from './Like'
 
 // ====================================
@@ -49,7 +50,7 @@ const BlogShort = (props) => {
                 <div className="BlogInformation" key={id}>
                     <span className="Blogtitle">{title}</span>
                     <img src={img}  alt='BlogShort Img'/> 
-                    <Like like={like} isBlogShort={true}></Like>
+                    <Like blogInfo={BlogInformation} isBlogShort={true}></Like>
                     {/* <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2> */}
                     <Link href={`blog/${name}`} className="blog-a">
                     <button className="btn">Read more

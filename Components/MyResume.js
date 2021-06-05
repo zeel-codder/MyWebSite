@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
+import React from "react";
 
 function MyResume() {
   const [numPages, setNumPages] = useState(null);

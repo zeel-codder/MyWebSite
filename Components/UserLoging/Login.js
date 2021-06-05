@@ -17,6 +17,7 @@
 // import { useState } from 'react';
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
+import React from "react";
 import { useGlobalContext } from '../context';
 import GoogleButton from './GoogleAuth';
 import { FindUser, AddUser, AddUserWithGoogle, FindUserWithGoogle } from './LoginFunctions';

@@ -113,6 +113,18 @@ Main Page
     margin: 1.5rem 0;
     
 }
+.like-icon{
+    color: red;
+}
+.Link-Page{
+    display: flex;
+    padding: .5rem;
+    /* grid-column: 2; */
+    /* text-align: center; */
+}
+.Link-Page > *{
+   padding-right: .2rem;
+}
 
 em{
     text-decoration: none;
@@ -213,7 +225,7 @@ h1,h2,h3{
     height: 70%;
 }
 .BlogInformation *{
-    flex: 1;
+    /* flex: 1; */
 }
 svg{
     display: inline-block;

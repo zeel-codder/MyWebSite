@@ -5,11 +5,12 @@
  @returns: JSX of BlogPage.
  @functionality : This Component is Data of Blog on screen.
 **/
-Html/Html4SimpleTages/Html4SimpleTages.md
+// Html/Html4SimpleTages/Html4SimpleTages.md
 
 // Imports
 // ====================================
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import React from "react";
 import Reactmarkdown from 'react-markdown';
 // import { useRouter } from 'next/router'
 import axios from 'axios';
@@ -36,8 +37,10 @@ const BlogPage = ({data,file}) => {
   //=============================
 
   useEffect(() => {
-    Prism.highlightAll()
-    console.log(file)
+    setTimeout(() => {
+      Prism.highlightAll();
+  }, 0);
+    // console.log(file)
   }, [])
 
   // console.log(blogInfo,'main');
@@ -57,7 +60,7 @@ const BlogPage = ({data,file}) => {
           {file}
         </Reactmarkdown>        {/* </article> */}
         {
-          data !== 0 && <Like className="Share" data={data} like={data.like}></Like>
+          data !== 0 && <Like className="Share" blogInfo={data} isBlogShort={false}></Like>
         }
       </div> 
     </>

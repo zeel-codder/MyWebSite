@@ -17,6 +17,7 @@ import Brightness1Icon from '@material-ui/icons/Brightness1';
 import Brightness5Icon from '@material-ui/icons/Brightness5';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import {useState} from 'react'
+import React from "react";
 // import { useGlobalContext } from '../context';
 // ====================================
 

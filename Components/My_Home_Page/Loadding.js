@@ -8,6 +8,9 @@
  * @functionality : This Component is use to show Loading animation on page.
  */
 
+
+ import React from "react";
+
 const Loading= ()=>{
   
     
