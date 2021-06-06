@@ -20,6 +20,7 @@ const Loading= ()=>{
             <div className="line1"></div>
             <div className="line2"></div>
             <div className="line3"></div>
+            {/* <hr></hr> */}
         </div>
         </>
     )

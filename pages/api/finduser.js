@@ -1,9 +1,13 @@
 const DataBase=require('@Database/DataBaseOperationsBlogInfo');
 
+// import bcrypt from "bcryptjs";
+const jwt =require('jsonwebtoken');
+
 export default async function handler(req, res) {
 
     const {name}=req.body;
-    console.log(name);
+    console.log(req.body);
+   
     // your server-side functionality
     await DataBase.ONConnections();
     const data=await DataBase.GetBlogInfoOne(name,DataBase.UserInfo);
@@ -17,7 +21,12 @@ export default async function handler(req, res) {
 
     }
 
+     const token=jwt.sign(data.toJSON(), process.env.key, { expiresIn: "1h" });
+  
+
     res.end(JSON.stringify({
-      message: JSON.stringify(data)
+      message: 'User Found',
+      result:data,
+      token
     }));
 };

@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 // const { MdBorderVertical } = require('react-icons/md');
 const BlogSchema = require('./DataBaseConnection');
+const bcrypt =require( 'bcryptjs');
 const Blog = BlogSchema.Blog;
 const User = BlogSchema.User;
 
@@ -52,30 +53,21 @@ const add = async (data, Modal) => {
     // let isOk=false;
 
     const name = data.name;
-    console.log(data,"<==")
-    return await Modal.findOne({ name }, async(err, value) => {
-        if (err) return console.log(err);
-        // console.log(Blog);
-        
-        if (value === null) {
-            let document =  new Modal(data);
-            // for(let i in data){
-            //     document[i]=data[i];
-            //     // console.log(document[i],document);
-            // }
-            
-            console.log(document.name)
-            if(!document.name){
-                console.log(document instanceof UserInfo)
-                return;
-            }
-
-            await document.save();
-            return true;
+    // console.log(data,"<==")
+    try{
+        const item= await Modal.findOne({ name })
+        console.log(item)
+        if(item!==null){
+            return null;
         }
-        return false;
-        // return data;
-    });
+        let document =  new Modal(data);
+        return await document.save();
+
+    }catch(e){
+        console.log(e)
+        return null;
+    }
+
 
 }
 

@@ -18,7 +18,7 @@ import Link from 'next/link'
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
 import Login from '../UserLoging/Login'
-
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 // ====================================
 
 
@@ -33,6 +33,7 @@ function Navbar() {
     const linksContainerRef = useRef(null);
 
     const [showLinks, setLinkopen] = useState(false);
+    const [User, setUser] = useState(null);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
 
     // const { UserState, Login } = useGlobalContext();
@@ -102,6 +103,7 @@ function Navbar() {
         } else {
             first.current = false
         }
+        setUser(JSON.parse(localStorage.getItem('User')))
         // console.log('cc')
     }, [showLinks])
 
@@ -140,7 +142,7 @@ function Navbar() {
                     <li className="Login-Page" ref={linksRefs}>
 
                         {
-                            !false
+                            !User
                                 ?
                                 <>
                                     <li className="login"><Link href='/auth/singin'
@@ -148,7 +150,20 @@ function Navbar() {
                                     <li className="login"><Link href='/auth/login' title="Log In">Log In</Link></li>
                                 </>
                                 :
-                                <li className="icons"><Link to={`/user/${UserState.UserInfo._id}`} title="User"><FaUserSecret></FaUserSecret></Link></li>
+                                <li className="icons">
+                                    <Link href={`/user/${User?.name}`} title="User"><AccountCircleIcon className="user"/></Link>
+                                    <Link href={`/user/${User?.name}`} title="User">
+                                        {User.username}
+                                    </Link>
+                                    <a title="User"
+                                    onClick={()=>{
+                                        localStorage.removeItem('User');
+                                        setUser(null);
+                                    }}
+                                    >
+                                        Logout
+                                    </a>
+                                </li>
                         }
                     </li>
                 </ul>

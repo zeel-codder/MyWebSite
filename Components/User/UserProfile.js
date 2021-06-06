@@ -10,15 +10,16 @@
 
 // Imports
 // ====================================
-import { useGlobalContext } from '../context';
+// import { useGlobalContext } from '../context';
 import React from "react";
 // ====================================
 
 
 
-const Profile=()=>{
+const Profile=({name})=>{
 
-    const {name}=useGlobalContext().UserState.UserInfo;
+
+
 
     return (
 

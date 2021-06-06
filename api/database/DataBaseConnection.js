@@ -31,6 +31,7 @@ const Blog = new Schema({
 
 
 const User = new Schema({
+  username:{type:String},
   name: {type: String}, // String is shorthand for {type: String}
   password:{type: String},
   LikePage:{type: [String]},

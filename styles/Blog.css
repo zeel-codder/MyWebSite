@@ -34,10 +34,10 @@ Main Page
     /* z-index: 3; */
     background-image: var(--bgi);
     border: 1px solid;
-    animation: ShowLogin 1s;
-    height:110vh;
+    /* animation: ShowLogin 1s; */
+    height:140vh;
     box-shadow: 0 0 20px var(--bgcolor);
-    animation-iteration-count: 1;
+    /* animation-iteration-count: 1; */
     /* align-items: center; */
     transition: all var(--transition);
 }
@@ -157,6 +157,7 @@ p > img{
     font-size: var(--font);
     /* background-color: red; */
     background-color: white;
+    text-transform: capitalize;
     /* text-align: center; */
     padding: 10px 0;
     width: 70%;

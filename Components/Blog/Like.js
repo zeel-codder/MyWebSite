@@ -13,6 +13,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import {useState} from 'react';
 import React from "react";
+import { useRouter } from 'next/router'
 // import {useEffect} from 'react';
 
 
@@ -27,10 +28,13 @@ import axios from 'axios';
 
 const Like=(props)=>{
     
+    [1,2].includes
     const {blogInfo,isBlogShort}=props;
     // const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
     const [Like,setLike]=useState(blogInfo.like);
+    // const user=JSON.parse()
+    const router=useRouter();
     // const {Loading}=useGlobalContext();
 
     console.log(blogInfo,isBlogShort)
@@ -43,7 +47,8 @@ const Like=(props)=>{
     }
 
     const PostLike=()=>{
-        if(true){
+        // console.log('')
+        if(localStorage.getItem('User')){
             let like=0;
             if(!isLike){
                 like=Like+1;
@@ -60,10 +65,13 @@ const Like=(props)=>{
             setLike(like);
     
             const odd={...blogInfo}
-            const new_data={like}
+            const new_data={like,
+                LikePage:blogInfo.name
+                }
     
             UpdateLike(odd,new_data);
         }else{
+            router.push('/auth/singin')
             alert('LogIn First');
         }
 
@@ -84,10 +92,13 @@ const Like=(props)=>{
 
         )
     }
+    
 
     return (
         <h2 className="Like">Like:
-        <span className="Like-Page" onClick={PostLike}>
+        <span className="Like-Page" 
+        
+        onClick={ PostLike}>
         {
             
             !isLike?  <FavoriteBorderIcon className="like-icon"/>:<FavoriteIcon className="like-icon"/>

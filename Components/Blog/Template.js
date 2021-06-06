@@ -5,7 +5,7 @@ import Footer from '../footer/Footer'
 
 function MyApp({ Component, data }) {
 
-  
+  console.log(data)
   return (
     
 

@@ -10,6 +10,5 @@ export default async function handler(req, res) {
     // message: JSON.stringify(data)
     count:data.length,
     message: data
-
   }));
 };

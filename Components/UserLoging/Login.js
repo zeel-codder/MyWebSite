@@ -21,8 +21,12 @@ import React from "react";
 // import { useGlobalContext } from '../context';
 import GoogleButton from './GoogleAuth';
 import Loading from '../Loadding'
+import { useRouter } from 'next/router'
 import { FindUser, AddUser, AddUserWithGoogle, FindUserWithGoogle } from './LoginFunctions';
 // ==================================== 
+
+
+
 
 
 /**
@@ -46,7 +50,8 @@ const reducer = (state, action) => {
                 isLoading: false,
                 passWord: '',
                 email: '',
-                compassWord: ''
+                compassWord: '',
+                name:''
             };
         case 'changeLoginTrue':
             // const tem=!state.isLoading;
@@ -55,18 +60,24 @@ const reducer = (state, action) => {
                 isLoading: false,
                 passWord: '',
                 email: '',
-                compassWord: ''
+                compassWord: '',
+                name:''
             };
         case 'changeLoginFalse':
-            return { ...state, isLoginOpen: false, issame: false,
+            return {
+                ...state, isLoginOpen: false, issame: false,
                 isLoading: false,
                 passWord: '',
                 email: '',
-                compassWord: '' };
+                compassWord: '',
+                name:''
+            };
         case 'SetSameTrue':
             return { ...state, issame: true };
         case 'SetSameFalse':
             return { ...state, issame: false };
+        case 'setname':
+            return { ...state, name: action.data };
         case 'setEmail':
             return { ...state, email: action.data };
         case 'setPassword':
@@ -74,7 +85,7 @@ const reducer = (state, action) => {
         case 'setComPassword':
             return { ...state, compassWord: action.data };
         case 'TogglePassWordShow':
-            const ans=!state.isPassWordShowOpen;
+            const ans = !state.isPassWordShowOpen;
             return { ...state, isPassWordShowOpen: ans };
 
     }
@@ -89,19 +100,21 @@ const Login = (props) => {
         isLoginOpen: props.choice !== "Singin",
         issame: false,
         isLoading: false,
+        name:'',
         passWord: '',
         email: '',
         compassWord: '',
-        isPassWordShowOpen:false,
+        isPassWordShowOpen: false,
     }
 
+    const router = useRouter()
     const [state, Reducer] = useReducer(reducer, InitialState);
-    // const [isLoginOpen, setIsLoginOpen] = useState(props.choice!=="Sing In");
-    // const [issame,setInsane]=useState(false);
-    // const [isLoadding,setIsLoadding]=useState(false);
-    // const [passWord,setpassWord]=useState('');
-    // const [email,setemail]=useState('');
-    // const [compassWord,setCompassWord]=useState('');
+
+
+
+    const GotoHome = () => {
+        router.push('/')
+    }
 
 
 
@@ -123,8 +136,8 @@ const Login = (props) => {
             <em>Zeel Codder Web-Site Auth</em>
 
             <div className="login-choice form">
-                <span onClick={() => Reducer({ type: 'changeLoginTrue' })} className={state.isLoginOpen && `open`}>Log in</span>
-                <span onClick={() => Reducer({ type: 'changeLoginFalse' })} className={state.isLoginOpen || `open`}>Sing in</span>
+                <span onClick={() => router.push('/auth/login')} className={state.isLoginOpen ? `open` : null}>Log in</span>
+                <span onClick={() => router.push('/auth/singin')} className={state.isLoginOpen ? null : `open`}>Sing in</span>
                 {/* <span onClick={() => props.closeLogin()} className="close Mybutton">[X]</span> */}
             </div>
 
@@ -139,12 +152,21 @@ const Login = (props) => {
                     Reducer({ type: 'changeLoadingTrue' });
                     (state.isLoginOpen)
                         ?
-                        FindUser(e, state, null, Reducer, props.closeLogin)
+                        FindUser(e, state, Reducer,GotoHome)
                         :
-                        AddUser(e, state, null, Reducer, props.closeLogin);
+                        AddUser(e, state, Reducer,GotoHome);
 
                 }}>
 
+               {
+                ! state.isLoginOpen 
+                 &&
+                   <div>
+                    <input className="form-input"
+                        onChange={(e) => Reducer({ type: 'setname', data: e.target.value })} value={state.name}
+                        type="name" name="name" placeholder="Enter name" required></input>
+                </div>
+                } 
                 <div>
                     <input className="form-input"
                         onChange={(e) => Reducer({ type: 'setEmail', data: e.target.value })} value={state.email}
@@ -155,7 +177,7 @@ const Login = (props) => {
                 <div>
                     <input
                         className={`form-input`}
-                        type={state.isPassWordShowOpen? "text" :"passWord"} 
+                        type={state.isPassWordShowOpen ? "text" : "passWord"}
                         name="subject"
                         onChange={(e) => Reducer({ type: 'setPassword', data: e.target.value })}
                         value={state.passWord}
@@ -168,35 +190,47 @@ const Login = (props) => {
 
                     <>
                         {
-                            !state.passWord
-                                ?
-                                <span className="alert">PassWord Must Be Same</span>
-                                :
+
+                            (
+                                state.passWord == '' &&
+                                <span className="alert" style={{ color: 'green' }}>Enter password first</span>
+                            )
+                            ||
+                            (
+                                state.passWord.length < 8
+                                &&
+                                !/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/.test(state.passWord)
+                                &&
+                                <span className="alert">PassWord Must be Strong(Add number,char etc..)</span>
+                            )
+                            ||
+                            (
                                 !state.issame
                                     ?
                                     <span className="alert">PassWord Not Same</span>
                                     :
                                     <span className="alert" style={{ color: 'green' }}>PassWord Same</span>
+                            )
                         }
                         <div>
-                            <input 
-                            className={`form-input ${state.issame || 'Wrong'}`} 
-                            type={state.isPassWordShowOpen? "text" :"passWord"} 
-                            name="subject" 
-                            onChange={(e) => Reducer({ type: 'setComPassword', data: e.target.value })} 
-                            value={state.compassWord} 
-                            placeholder="Enter Confirm Password" 
-                            required></input>
+                            <input
+                                className={`form-input ${state.issame || 'Wrong'}`}
+                                type={state.isPassWordShowOpen ? "text" : "passWord"}
+                                name="subject"
+                                onChange={(e) => Reducer({ type: 'setComPassword', data: e.target.value })}
+                                value={state.compassWord}
+                                placeholder="Enter Confirm Password"
+                                required></input>
                         </div>
                     </>
                 }
                 {/* <div> */}
                 <div>
-                    <input 
-                    type="checkbox" 
-                    name="show-pass" 
-                    onClick={(e)=>Reducer({ type: 'TogglePassWordShow'})}
-                    ></input> : <span style={{fontSize:'1rem'}}>Show PassWord</span>
+                    <input
+                        type="checkbox"
+                        name="show-pass"
+                        onClick={(e) => Reducer({ type: 'TogglePassWordShow' })}
+                    ></input> : <span style={{ fontSize: '1rem' }}>Show PassWord</span>
                 </div>
                 <button
                     className="btn"
@@ -210,9 +244,9 @@ const Login = (props) => {
                     responseSuccess={
                         state.isLoginOpen
                             ?
-                            (res) => FindUserWithGoogle(res, dispatchUser, Reducer, props.closeLogin)
+                            (res) => FindUserWithGoogle(res, Reducer, GotoHome)
                             :
-                            (res) => AddUserWithGoogle(res, dispatchUser, Reducer, props.closeLogin)
+                            (res) => AddUserWithGoogle(res, Reducer, GotoHome)
                     }
                 />
 
