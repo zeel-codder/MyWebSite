@@ -1,4 +1,4 @@
-const DataBase=require('@Database/DataBaseOperationsBlogInfo');
+const DataBase=require('server/database/DataBaseOperationsBlogInfo');
 
 export default async function handler(req, res){
     // your server-side functionality

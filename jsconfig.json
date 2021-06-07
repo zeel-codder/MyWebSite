@@ -4,10 +4,12 @@
       "paths": {
         "@Home/*": ["Components/My_Home_Page/*"],
         "@Blog/*":["Components/Blog/*"],
-        "@Database/*":["api/database/*"],
+        "@Database/*":["server/database/*"],
         "@Page/*":["Blogs/*"],
         "@Data/*":["Data/*"],
-        "@Layout/*":["Components/Blog/*"]
+        "@Layout/*":["Components/Blog/*"],
+        "@api/*":["api/*"],
+        "@middleware/*":["middleware/*"]
 
       }
     }

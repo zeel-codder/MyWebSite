@@ -33,7 +33,7 @@ const ImageShow = ({data}) => {
         }
 
     ]
-    console.log(data)
+    // console.log(data)/\
 
     const [index, setIndex] = useState(0)
 

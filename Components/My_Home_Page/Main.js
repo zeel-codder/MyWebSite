@@ -17,7 +17,7 @@
 import { useState } from 'react';
 // import {Link} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
-import Introduction from 'Components/My_Home_Page/introduction';
+import Introduction from '@Home/introduction';
 import Education from './education';
 import Technology from './tecnologes';
 import Projects from './projects';

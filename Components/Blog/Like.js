@@ -11,9 +11,10 @@
 // ====================================
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import React from "react";
 import { useRouter } from 'next/router'
+import {GetUser,UpdateBlogLike } from '@api/api.object'
 // import {useEffect} from 'react';
 
 
@@ -28,22 +29,30 @@ import axios from 'axios';
 
 const Like=(props)=>{
     
-    [1,2].includes
+    // [1,2].includes
     const {blogInfo,isBlogShort}=props;
     // const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
+    const [user,setUser]=useState(null)
     const [Like,setLike]=useState(blogInfo.like);
     // const user=JSON.parse()
     const router=useRouter();
     // const {Loading}=useGlobalContext();
 
-    console.log(blogInfo,isBlogShort)
+    // console.log(blogInfo,isBlogShort)
 
 
     const UpdateLike=async (old,newData)=>{
-            await axios.post('/api/bloginfoupdate',{ filter:{...old},
-            update:{...old,...newData},})
+            await UpdateBlogLike (old,newData);
+    }
 
+    const getUser=async()=>{
+        const name=JSON.parse(localStorage.getItem('User')).result.name
+        const temuser=await GetUser(name)
+        console.log(temuser)
+        const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);
+        setUser(temuser)
+        setIsLike(isBlogLike);
     }
 
     const PostLike=()=>{
@@ -77,6 +86,12 @@ const Like=(props)=>{
 
     }
 
+    useEffect(() => {
+        if(localStorage.getItem('User')){
+            getUser()
+        }
+            
+    }, [])
 
     if(isBlogShort){
 

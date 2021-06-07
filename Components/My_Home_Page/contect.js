@@ -45,11 +45,11 @@ const Context = () => {
 
         emailjs.sendForm('service_50van2j', 'template_ar6zjgw', e.target)
             .then((result) => {
-                console.log(result.text);
+                // console.log(result.text);
                 alert("Send🙏🙏");
                 setLoading(false);
             }, (error) => {
-                console.log(error.text);
+                // console.log(error.text);
             });
 
         e.target.reset();

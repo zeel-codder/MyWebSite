@@ -1,9 +1,9 @@
-const DataBase = require('@Database/DataBaseOperationsBlogInfo');
+const DataBase = require('server/database/DataBaseOperationsBlogInfo');
 
 export default async function handler(req, res) {
   // your server-side functionality
   await DataBase.ONConnections();
-  console.log("s")
+  // console.log("s")
 
   const data = await DataBase.GetBlogInfo(DataBase.UserInfo);
   res.end(JSON.stringify({

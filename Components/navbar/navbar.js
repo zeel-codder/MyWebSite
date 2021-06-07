@@ -31,10 +31,11 @@ function Navbar() {
     const linksRefs = useRef(null);
     const first = useRef(true);
     const linksContainerRef = useRef(null);
-
+    // const user=
     const [showLinks, setLinkopen] = useState(false);
     const [User, setUser] = useState(null);
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    // const [nam, setUser] = useState(null);
+    // const [isLoginOpen, setIsLoginOpen] = useState(false);
 
     // const { UserState, Login } = useGlobalContext();
 
@@ -61,12 +62,12 @@ function Navbar() {
     // @functionality: Function is used add Login Component in Web Site.
     //=============================
 
-    const ShowLogin = (data) => {
-        // console.log(data.textContent);
-        value.current = data.textContent;
-        setIsLoginOpen(true);
+    // const ShowLogin = (data) => {
+    //     // console.log(data.textContent);
+    //     value.current = data.textContent;
+    //     setIsLoginOpen(true);
 
-    }
+    // }
 
     //=============================
     // @name:closeLogin
@@ -114,24 +115,24 @@ function Navbar() {
             <div className="navbar-item" ref={linksContainerRef}>
 
                 <ul className="navabar-ul" ref={linksRef}>
-                                    <img src='/images/home/zeel.jpeg' className="logo" alt="Zeel"></img>
+                    <img src='/images/home/zeel.jpeg' className="logo" alt="Zeel"></img>
                     <div>
 
-                        <li  className="a">
-                                
+                        <li className="a">
+
                             <Link href='/'>
-                                   
-                                        Zeel Codder Blogs
-                                    
-                                
+
+                                Zeel Codder Blogs
+
+
                             </Link>
                         </li>
                         <li>
-                                
+
                             <Link href='/me/zeel'>
-                                   
-                                        About Me
-                                    
+
+                                About Me
+
                             </Link>
                         </li>
                     </div>
@@ -145,24 +146,37 @@ function Navbar() {
                             !User
                                 ?
                                 <>
-                                    <li className="login"><Link href='/auth/singin'
-                                     title="Sing In">Sing In</Link></li>
+                                    <li className="login">
+
+                                       <Link href='/auth/singin'
+                                            title="Sing In">Sing In</Link>
+                                    </li>
                                     <li className="login"><Link href='/auth/login' title="Log In">Log In</Link></li>
                                 </>
                                 :
                                 <li className="icons">
-                                    <Link href={`/user/${User?.name}`} title="User"><AccountCircleIcon className="user"/></Link>
+                                    
                                     <Link href={`/user/${User?.name}`} title="User">
-                                        {User.username}
+                                    
+                                        <AccountCircleIcon className="user" />
                                     </Link>
-                                    <a title="User"
-                                    onClick={()=>{
-                                        localStorage.removeItem('User');
-                                        setUser(null);
-                                    }}
+                                    
+                                    <Link href={`/user/${User?.name}`} title="User">
+                                    
+                                    {User.result.username}    
+                                    
+                                    </Link>
+                                    
+                                    <a title="Logout"
+                                        onClick={() => {
+                                            localStorage.removeItem('User');
+                                            setUser(null);
+                                        }}
                                     >
+                                    
                                         Logout
                                     </a>
+                                    
                                 </li>
                         }
                     </li>

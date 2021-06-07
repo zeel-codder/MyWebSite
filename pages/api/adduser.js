@@ -1,4 +1,4 @@
-const DataBase=require('@Database/DataBaseOperationsBlogInfo');
+const DataBase=require('server/database/DataBaseOperationsBlogInfo');
 const bcrypt =require("bcryptjs");
 const jwt =require('jsonwebtoken');
 
@@ -7,10 +7,10 @@ export default async function handler(req, res) {
 
     // console.log('strat');
     await DataBase.ONConnections();
-    console.log(req.body)
+    // console.log(req.body)
     req.body.password=await bcrypt.hash(req.body.password, 12);
     const ans=await DataBase.AddNewBlog(req.body,DataBase.UserInfo);
-    console.log(ans,1223);
+    // console.log(ans,1223);
     await DataBase.OffConnections();
     if(ans===null){
       res.status(404).end(JSON.stringify({
@@ -18,10 +18,9 @@ export default async function handler(req, res) {
       }))
     }
 
-    const token = jwt.sign( ans.toJSON(), process.env.key, { expiresIn: "1h" } );
+    const token =jwt.sign( ans.toJSON(), process.env.key, { expiresIn: "1h" } );
     // await DataBase.OffDatabase();
     res.end(JSON.stringify({
-      message: `User Added`,
       result:ans,
       token
     }))

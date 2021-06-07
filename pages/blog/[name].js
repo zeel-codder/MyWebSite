@@ -90,6 +90,7 @@ export async function getStaticProps(context) {
   }
   )
   .catch((err) => console.log(err));
+  
   const file = await import('../../Blogs/'+data.url);
 
   // axios.post(`/BlogInfoOne`,{name:blogname})

@@ -14,7 +14,7 @@ const reducer= (state,action)=>{
     
     if(action.type==="UserLogIn"){
         
-        console.log({...state,isUserIn:true,UserInfo:action.data});
+        // console.log({...state,isUserIn:true,UserInfo:action.data});
         
         return {...state,isUserIn:true,UserInfo:action.data};
     }

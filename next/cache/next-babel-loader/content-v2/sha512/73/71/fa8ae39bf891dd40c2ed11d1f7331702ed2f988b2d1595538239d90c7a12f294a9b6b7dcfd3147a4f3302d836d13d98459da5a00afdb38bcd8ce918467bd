@@ -1,0 +1,1 @@
+{"ast":null,"code":"import Auth from 'Components/UserLoging/auth';\nimport React from 'react';\nexport default function SingIn(_ref) {\n  var {\n    data\n  } = _ref;\n  return /*#__PURE__*/React.createElement(Auth, {\n    isLogingIn: false\n  });\n}","map":null,"metadata":{},"sourceType":"module"}
