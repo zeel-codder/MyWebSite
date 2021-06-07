@@ -83,7 +83,7 @@ function BlogPage({data,file}){
 export async function getStaticProps(context) {
   const name=context.params.name;
 
-  const data=await axios.post(process.env.WebLink+"/api/bloginfoone", { name })
+  let data=await axios.post(process.env.WebLink+"/api/bloginfoone", { name })
   .then((response) => {
     // console.log(response.data);
     return JSON.parse(response.data.message)
@@ -95,8 +95,10 @@ export async function getStaticProps(context) {
 
   // axios.post(`/BlogInfoOne`,{name:blogname})
   const content=matter(file.default).content;
+  const tem=JSON.stringify(data);
+      data=tem;
   return {
-    props:{data,file:content}
+    props:{data,file:JSON.stringify(content)}
   }
 }
 export async function getStaticPaths() {
