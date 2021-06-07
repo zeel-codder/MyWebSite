@@ -83,7 +83,7 @@ function BlogPage({data,file}){
 export async function getStaticProps(context) {
   const name=context.params.name;
 
-  const data=await axios.post(process.env.WebLink+"api/bloginfoone", { name })
+  const data=await axios.post(process.env.WebLink+"/api/bloginfoone", { name })
   .then((response) => {
     // console.log(response.data);
     return JSON.parse(response.data.message)

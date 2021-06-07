@@ -64,12 +64,13 @@ export async function getStaticProps(context) {
   
   // console.log(process.env.WebLink+'api/blog')
   
-  let data=await axios.get(process.env.WebLink+'api/blog')
-  //  axios.get('/Blog')
-      .then((res) => {
-        const data1 = [];
-        const index = [];
-        // console.log(res.data);
+
+    let data=await axios.get(process.env.WebLink+'/api/blog')
+    //  axios.get('/Blog')
+    .then((res) => {
+      const data1 = [];
+      const index = [];
+      // console.log(res.data);
         // console.log(res.data);
         const BlogInfo = res.data;
         BlogInfo.forEach(element => {
@@ -90,8 +91,11 @@ export async function getStaticProps(context) {
         
         return data1
       })
-      .catch((err) => { return console.log(err); })
+      .catch((err) => { return; })
       // console.log(data)
+      // if(!data){
+      //   data=null
+      // }
       return {
         props: { data}, // will be passed to the page component as props
       }
