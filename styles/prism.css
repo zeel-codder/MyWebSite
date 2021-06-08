@@ -28,6 +28,9 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+	line-height: 34px;
+    font-size: 18px;
+    margin: 5px 0;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -64,6 +67,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
 	color: white;
 	background: #011627;
+	padding: 22px;
 }
 
 :not(pre) > code[class*="language-"] {

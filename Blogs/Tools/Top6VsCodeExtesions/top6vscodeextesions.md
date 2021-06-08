@@ -1,3 +1,10 @@
+---
+title: Tho 6 vs code Extensions For programmer.
+
+keywords: VS CODE , HTML, WEB, CSS , CODEEDITOR,4 Basic And Important Tags For Beginner In Web Development,Vs code Extensions
+---
+
+
 # Tho 6 vs code Extensions For programmer.
 
 # 1.Code Runner
@@ -18,9 +25,7 @@ Search: *Code Runner* in Extension search box in vs code.
 
 ![CodeRunnerAfter](/images/blog/tools/top6vscodeextesions/CodeRunnerAfter.png)
 
-*Demo*
 
-<!-- <video src="images/blog/tools/top6vscodeextesions/CodeRunner.mp4" > -->
 
 
 *Note:*

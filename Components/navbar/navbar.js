@@ -148,8 +148,8 @@ function Navbar() {
                                 <>
                                     <li className="login">
 
-                                       <Link href='/auth/singin'
-                                            title="Sing In">Sing In</Link>
+                                       <Link href='/auth/singup'
+                                            title="Sing Up">Sing Up</Link>
                                     </li>
                                     <li className="login"><Link href='/auth/login' title="Log In">Log In</Link></li>
                                 </>

@@ -11,13 +11,19 @@
 // ====================================
 import { useEffect, useState } from "react";
 import React from "react";
-import Reactmarkdown from 'react-markdown';
+// import Reactmarkdown from 'react-markdown';
 // import { useRouter } from 'next/router'
 import axios from 'axios';
 import Prism from 'prismjs';
 import Like from '@Blog/Like'
 import Template from '@Layout/Template'
 import matter from 'gray-matter'
+import Markdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+
+
+
 
 // ====================================
 
@@ -47,29 +53,32 @@ function BlogPage({data,file}){
   // @functionality: UseEffect is used read the contend of read me and store in data hook.
   //=============================
 
-  useEffect(() => {
-    setTimeout(() => {
-      Prism.highlightAll();
-  }, 0);
-    // console.log(file)
+  useEffect(() => { 
+     setTimeout(() =>
+     Prism.highlightAll()
+     ,0)
+     
   }, [])
+
+  function AddIndex(){
+    console.log(document.querySelectorAll('.blog-container  > h1'))
+  }
 
   // console.log(blogInfo,'main');
   // Prism.usePrismHighlightAll();
   return (
     <>
-      {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: text}}> */}
 
       {/* <Tem></Tem> */}
-       <div className=" blog-container">
-        <Reactmarkdown
-        
-          // plugins={[gfm]}
+       <div className="blog-container">
+      {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: file}} /> */}
+
+         <Markdown 
+         onLoad={AddIndex}
+         >
           
-          allowDangerousHtml='true'
-        >
           {file}
-        </Reactmarkdown>        {/* </article> */}
+          </Markdown>   
         {
           data !== 0 && <Like className="Share" blogInfo={data} isBlogShort={false}></Like>
         }
@@ -79,6 +88,10 @@ function BlogPage({data,file}){
   )
 
 }
+
+
+
+
 
 export async function getStaticProps(context) {
   const name=context.params.name;
@@ -91,14 +104,17 @@ export async function getStaticProps(context) {
   )
   .catch((err) => console.log(err));
   
+  // data=data['data'].result;
   const file = await import('../../Blogs/'+data.url);
 
   // axios.post(`/BlogInfoOne`,{name:blogname})
-  const content=matter(file.default).content;
-  const tem=JSON.stringify(data);
-      data=tem;
+  const content=matter(file.default).content
+  ;
+  // const tem=JSON.stringify(data);
+  //     data=tem;
+  console.log(matter(file.default))
   return {
-    props:{data,file:JSON.stringify(content)}
+    props:{data,file:content}
   }
 }
 export async function getStaticPaths() {

@@ -16,12 +16,13 @@ import GoogleSvg from './Google.Svg';
 
 
 const GoogleAuth = ({ text, responseSuccess }) => {
+    
     return (
-        <GoogleLogin
-            clientId="823218346829-6rsuihi7nes49dvp64rt71hpen8jb585.apps.googleusercontent.com"
+        <GoogleLogin 
+            clientId={process.env.clientId || "823218346829-6rsuihi7nes49dvp64rt71hpen8jb585.apps.googleusercontent.com"}
             // buttonText={text}
             render={renderProps => (
-                <button className="btn icons"  onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                <button className="btn icons"  style={{flexDirection:"row", alignItems: "center"}}onClick={renderProps.onClick} disabled={renderProps.disabled}>
                     <GoogleSvg></GoogleSvg>
                      {text}</button>
             )}

@@ -31,6 +31,7 @@ const Like=(props)=>{
     
     // [1,2].includes
     const {blogInfo,isBlogShort}=props;
+    
     // const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
     const [user,setUser]=useState(null)
@@ -90,6 +91,7 @@ const Like=(props)=>{
         if(localStorage.getItem('User')){
             getUser()
         }
+        console.log(blogInfo)
             
     }, [])
 

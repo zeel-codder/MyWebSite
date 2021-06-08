@@ -97,7 +97,7 @@ const reducer = (state, action) => {
 const Login = (props) => {
 
     const InitialState = {
-        isLoginOpen: props.choice !== "Singin",
+        isLoginOpen: props.choice !== "Singup",
         issame: false,
         isLoading: false,
         name:'',
@@ -133,11 +133,11 @@ const Login = (props) => {
     return (
 
         <div className="Log">
-            <em>Zeel Codder Web-Site Auth</em>
+            {/* <em>Zeel Codder Web-Site Auth</em> */}
 
             <div className="login-choice form">
                 <span onClick={() => router.push('/auth/login')} className={state.isLoginOpen ? `open` : null}>Log in</span>
-                <span onClick={() => router.push('/auth/singin')} className={state.isLoginOpen ? null : `open`}>Sing in</span>
+                <span onClick={() => router.push('/auth/singup')} className={state.isLoginOpen ? null : `open`}>Sing up</span>
                 {/* <span onClick={() => props.closeLogin()} className="close Mybutton">[X]</span> */}
             </div>
 
@@ -225,7 +225,7 @@ const Login = (props) => {
                     </>
                 }
                 {/* <div> */}
-                <div>
+                <div style={{flexDirection:"row", alignItems: "center"}}>
                     <input
                         type="checkbox"
                         name="show-pass"
@@ -234,12 +234,12 @@ const Login = (props) => {
                 </div>
                 <button
                     className="btn"
-                    type="submit">{state.isLoginOpen ? 'Log In' : 'Sing In'}
+                    type="submit">{state.isLoginOpen ? 'Log In' : 'Sing Up'}
                 </button>
 
                 <span className="alert">OR</span>
 
-                <GoogleButton
+                <GoogleButton 
                     text={`${state.isLoginOpen ? 'Log' : 'Sing'} In With Google`}
                     responseSuccess={
                         state.isLoginOpen

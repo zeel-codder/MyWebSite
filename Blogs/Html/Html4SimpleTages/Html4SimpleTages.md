@@ -1,3 +1,13 @@
+---
+title: 4 Basic And Important Tags For Beginner In Web Development  
+
+keywords: VS CODE , HTML, WEB, CSS , CODEEDITOR,4 Basic And Important Tags For Beginner In Web Development,Vs code Extensions
+---
+
+
+
+
+
 # 4 Basic And Important Tags For Beginner In Web Development
 
 
@@ -5,20 +15,20 @@
 
 # 1 Div
 
-Div is very basic and useful tag in html. By default div is <em>block level</em> element in html means div element default take hole width. You can see example below.
+Div is very basic and useful tag in html. By default div is *block level* element in html means div element default take hole width. You can see example below.
 
 
 ```html
-<div style="background-color:red;">Hi,I am Div</div>
+<div>Hi,I am Div</div>
 ```
 
-<em>Output:</em>
+*Output:*
 
-<div style="background-color:red;">Hi,I am Div</div>
+## Hi,I am Div
 
 
 
-If you know basic <em>css than you can do any think with div</em>. like you can create stander layout of website, you can crate animation. one of the main think about this basic element  is you do not need to remember so many tags in html. like b,i ,em,hr tags....etc.
+If you know basic *css than you can do any think with div*. like you can create stander layout of website, you can crate animation. one of the main think about this basic element  is you do not need to remember so many tags in html. like b,i ,em,hr tags....etc.
 
 Basic Layout with div:
 
@@ -59,7 +69,7 @@ Note: I know there are may useful tags in html. like sub,sup,fieldset ... etc, b
 
 # 2 Input
 
-Input is one off the important tag in html.<em> with the help of input you can take input form user</em>.
+Input is one off the important tag in html.* with the help of input you can take input form user*.
 
 
 Input tag main attribute:

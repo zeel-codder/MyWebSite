@@ -2,6 +2,10 @@
 /* ================================
 this main root variables
 ================================ */
+::selection {
+  color: red;
+  background: yellow;
+}
 .row,.column{
   display:flex !important;
   align-items: center;
@@ -676,6 +680,9 @@ h1{
     justify-content: center;
   /* margin-top: 10px; */
 }
+.BlogInformation img,.Like,.blog-container button{
+  border-radius: 12px;
+}
 .Login-Page{
   flex: 2;
   margin: 0;
@@ -840,7 +847,7 @@ h1{
 
 .form >.btn,.form > .alert{
 
-  width:70% !important;
+  /* width:70% !important; */
   border-radius: 10px !important;
   margin: .4rem 0;
 
@@ -986,6 +993,10 @@ For Mobile
     padding: 0;
     margin: 10px;
   }
+  .navabar-ul li a{
+    margin: 7px;
+
+  }
   .login {
     margin: 0;
   }
@@ -996,7 +1007,7 @@ For Mobile
   }
   .main1{
     background-color: #F64C72;
-    /* height: 130vh; */
+    height: 80vh;
   }
   .navabar{
     z-index: 2;
@@ -1016,6 +1027,8 @@ For Mobile
 
   .logo-text{
     font-size: 1rem;
+    font-size: 1rem;
+    opacity: .69;
   }
   .Goto_top{
     /* transform: rotate(45deg) scale(2); */
@@ -1074,7 +1087,7 @@ For Mobile
   
   .icon:hover{
     cursor: pointer;
-    color: var(--hoverc);
+    color: var(--form-bg);
   }
   .navbar-item{
     flex-direction: column;
@@ -1161,8 +1174,14 @@ For Mobile
 }
 
 @media only screen and (max-width: 420px) {
-  .navabar-ul div{
+  .navabar-ul div,.Login-Page,.icons{
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navabar-ul img{
+    width: 33%;
+    margin: 0 12px;
   }
   .row, .imgeAnimationDiv{
     flex-wrap: wrap;
@@ -1197,10 +1216,17 @@ For Mobile
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
   }
   .form-input{
+    font-size: 12px;
     /* padding: 10px; */
     width: 90%;
+    
   }
   
 }
