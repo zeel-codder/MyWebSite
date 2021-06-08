@@ -10,7 +10,7 @@ export default function SingIn({data}) {
   
     return (
       
-      <Auth isLogingIn={false}></Auth>
+      <Auth isLogingIn={false} clientId={process.env.clientId}></Auth>
     )
   }
   

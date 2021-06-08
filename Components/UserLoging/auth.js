@@ -4,7 +4,7 @@ import Meta from '../Meta'
 import Navbar from '../navbar/navbar'
 import Footer from '../footer/Footer'
 
-export default function Home({isLogingIn}) {
+export default function Home({isLogingIn,clientId}) {
 
   // const dic={data}
 
@@ -16,12 +16,12 @@ export default function Home({isLogingIn}) {
         ?
         <>
         <Meta title="Login" keywords="Login into zeel codder web site"></Meta>
-        <Login choice='Login' ></Login>
+        <Login choice='Login' clientId={clientId}></Login>
         </>
         :
         <>
         <Meta title="Singup" keywords="Singup into zeel codder web site"></Meta>
-        <Login choice='Singup' ></Login>
+        <Login choice='Singup' clientId={clientId}></Login>
         </>
 
     }

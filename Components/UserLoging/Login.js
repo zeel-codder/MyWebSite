@@ -108,6 +108,7 @@ const Login = (props) => {
     }
 
     const router = useRouter()
+    const {clientId}=props;
     const [state, Reducer] = useReducer(reducer, InitialState);
 
 
@@ -240,6 +241,7 @@ const Login = (props) => {
                 <span className="alert">OR</span>
 
                 <GoogleButton 
+                    clientId={clientId}
                     text={`${state.isLoginOpen ? 'Log' : 'Sing'} In With Google`}
                     responseSuccess={
                         state.isLoginOpen
