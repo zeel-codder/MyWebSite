@@ -19,4 +19,4 @@ export default function Login({id}) {
     return {
       props: { id }, // will be passed to the page component as props
     }
-  }z
+  }
