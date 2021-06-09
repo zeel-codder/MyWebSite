@@ -113,7 +113,7 @@ const Like=(props)=>{
 
     return (
         <h2 className="Like">Like:
-        <span className="Like-Page" 
+        <span className="Like-Page"  style={{fontSize:"1.5rem"}}
         
         onClick={ PostLike}>
         {

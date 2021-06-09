@@ -135,6 +135,13 @@ function Navbar() {
 
                             </Link>
                         </li>
+                        <li>
+
+                            <Link href='/me/tools'>
+
+                                Tools
+                            </Link>
+                        </li>
                     </div>
 
 

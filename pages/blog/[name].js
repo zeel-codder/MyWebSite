@@ -112,7 +112,7 @@ export async function getStaticProps(context) {
   ;
   // const tem=JSON.stringify(data);
   //     data=tem;
-  console.log(matter(file.default))
+  // console.log(matter(file.default))
   return {
     props:{data,file:content}
   }

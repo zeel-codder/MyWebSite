@@ -7,7 +7,7 @@ const  handler= async (req, res)=> {
     const body=req.body;
     const filter=body.filter;
     const update=body.update;
-    console.log(req.userId)
+    // console.log(req.userId)
 
     // console.log(filter,update);
     // console.log('strat');

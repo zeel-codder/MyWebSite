@@ -41,7 +41,7 @@ function BlogList({data}){
       
      </div>
 
-
+  <h1>Blogs</h1>
   <div className="ListOfBlogs blog-container" id="Read">
     {
       
@@ -62,42 +62,14 @@ function BlogList({data}){
 
 export async function getStaticProps(context) {
   
-  // console.log(process.env.WebLink+'api/blog')
-  
-
     let data=await axios.get(process.env.WebLink+'/api/blog')
-    //  axios.get('/Blog')
     .then((res) => {
-      const data1 = [];
-      const index = [];
-      // console.log(res.data);
-        // console.log(res.data);
-        const BlogInfo = res.data;
-        BlogInfo.forEach(element => {
-          let topic = element.topic;
-          //  console.log(topic)
-          if (!(topic in index)) {
-            const add = {
-            };
-            add['topic'] = topic;
-            add['data'] = [];
-            index[topic] = data1.length;
-            data1.push(add);
-            // console.log(data1);
-          }
-          data1[index[topic]]['data'].push(element);
-        });
-        //  console.log(data1);
         
-        return data1
+        return res.data;
       })
       .catch((err) => { return; })
       // console.log(data)
-      // if(!data){
-      //   data=null
-      // }
-      
       return {
-        props: { data : data || []}, // will be passed to the page component as props
+        props: { data : data || []}, 
       }
 }

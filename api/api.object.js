@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: process.env.webLink || 'http://localhost:3000' });
+const API = axios.create({ baseURL: process.env.WebLink });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('User')) {

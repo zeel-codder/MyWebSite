@@ -17,7 +17,7 @@ const UserInfo=mongoose.models[process.env.User] ||  mongoose.model(process.env.
 
 const DemoData = {
 
-    "name": "top6vscodeextesions",
+    "name": "top6vscodeextesions123",
     "title": "Tho 6 vs code Extensions For programmer",
     "img": "/images/blog/tools/top6vscodeextesions/vscode.png",
     "url": "Tools/Top6VsCodeExtesions/top6vscodeextesions.md",
@@ -49,7 +49,7 @@ const add = async (data, Modal) => {
 
     // console.log('i am call');
 
-    console.log(data);
+    // console.log(data);
 
     // let isOk=false;
 
@@ -65,7 +65,7 @@ const add = async (data, Modal) => {
         return await document.save();
 
     }catch(e){
-        console.log(e)
+        // console.log(e)
         return null;
     }
 
@@ -151,7 +151,7 @@ const AddLikeArray = async (id,name,User) => {
         const doc = await User.findOne({
             _id:id
         });
-        console.log(doc)
+        // console.log(doc)
         
         doc.LikePage.includes(name)
         ?

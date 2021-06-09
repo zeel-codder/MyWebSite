@@ -5,7 +5,7 @@ const secret = process.env.key;
 
 const auth = async (req, res) => {
     try {
-      console.log(req.headers)
+      // console.log(req.headers)
       const token = req.headers.authorization.split(" ")[1];
       
       let decodedData;
@@ -14,7 +14,7 @@ const auth = async (req, res) => {
       
       req.userId = decodedData?._id;
       
-      console.log(decodedData instanceof mongoose.Modal)
+      // console.log(decodedData instanceof mongoose.Modal)
       return ;
 
     } catch (error) {

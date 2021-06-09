@@ -20,51 +20,34 @@ import Like from './Like'
 
 
 const BlogShort = (props) => {
-    
-    const { topic, data } = props;
+
+    const { name, title, img, url, link, topic,id } = props;
     // const {Like}=useGlobalContext();
-    
-    if (data.length === 0) {
-        
-        return (
-            <div className="Bloshort-not-found">
-                <h1>{topic}</h1>
-                <marquee className="alert" behavior="scroll" direction="right">There is no blog found on this topic</marquee>
-
-            </div>
-        )
-    }
 
 
-    return(
+
+    return (
         <>
-    <span className="title">{topic}</span>
-    <div className="BlogShort">
-
-    {
-        data.map((BlogInformation)=>{
-            const {id,title,img,url,like,name}=BlogInformation;
-            return (
-                
-                
+            <div className="BlogShort">
+            
+            <span className="title">{topic}</span>
+                <div>
+                <img src={img} alt='BlogShort Img' />
+                </div>    
                 <div className="BlogInformation" key={id}>
                     <span className="Blogtitle">{title}</span>
-                    <img src={img}  alt='BlogShort Img'/> 
-                    <Like blogInfo={BlogInformation} isBlogShort={true}></Like>
                     {/* <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2> */}
                     <Link href={`blog/${name}`} className="blog-a">
-                    <button className="btn">Read more
-                    </button>
-                   
+                        <button className="btn">Read
+                        </button>
                     </Link>
                 </div>
 
-            )
-        })
-    }
+                <Like blogInfo={props} isBlogShort={true}></Like>
 
-    </div>
-    </>
+
+            </div>
+        </>
     )
 }
 

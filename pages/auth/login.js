@@ -6,8 +6,8 @@ import React from 'react';
 
 export default function Login({id}) {
    
-  console.log(id)
-  
+  // console.log(id)
+  // 
     return (
       
       <Auth isLogingIn={true} clientId={id}></Auth>
@@ -19,4 +19,4 @@ export default function Login({id}) {
     return {
       props: { id }, // will be passed to the page component as props
     }
-  }
+  }z
