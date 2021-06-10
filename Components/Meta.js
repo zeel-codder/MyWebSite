@@ -17,6 +17,7 @@ const Meta= ({title,keywords}) =>{
         <meta name="keywords" content={keywords} />
         <meta name="author" content="zeel prajapati" />
         <meta name="description" content="zeel-codder web site for programmer and student" />
+        <link rel="shortcut icon" href="/zeel.png" />
         </Head>
         
     )

@@ -44,7 +44,7 @@ const data=[
         technology:'Node js and Express',
         description:'This Project is build on node js and express as demo blog web site. We have mongodb as data base and pub as template engine',
         codelink:'https://github.com/zeel-codder/ProgramingHub',
-        link:'/'
+        link:'https://programinghub.herokuapp.com/'
     }
 
    

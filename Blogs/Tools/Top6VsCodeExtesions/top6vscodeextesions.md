@@ -122,4 +122,40 @@ Search: *Material Product Icons* in Extension search box in vs code.
 ![MaterialProductIconsAfter](/images/blog/tools/top6vscodeextesions/MaterialProductIconsAfter.png)
 
 
-*Thank You*
+*Other Must User Extensions:*
+
+    1.Babel Javascript
+    2.C/C++
+    3.Competitive Programming Helper (cph)
+    4.Debugger for Java
+    5.Django
+    6.ES7 React/Redux/React-Native/JS snippets
+    7.GitLens — Git supercharged
+    8.HTML CSS Support
+    9.HTML Snippets
+    10.Java Extension Pack
+    11.Java Test Runner
+    12.JavaScript
+    13.JavaScript and TypeScript Nightly
+    14.JavaScript Debugger (Nightly)
+    15.JavaScript REPL
+    16.Jinja
+    17.JS JSX Snippets
+    18.Jupyter
+    19.Language support for Java ™ for Visual Studio Code
+    20.Live Server
+    21.Magic Python
+    22.Markdown Preview Enhanced
+    23.Material Icon Theme
+    24.Material Product Icons
+    25.Maven for Java
+    26.vscode-node-readme
+    27.node-snippets
+    28.Project Manager for Java
+    29.Python extension
+    30.Python Extension Pack
+    31.Python-vscode
+    32.React Native Tools
+    33. React/Redux/Typescript/Javascript/Omi snippets
+    34.Simple React Snippets
+    35.Visual Studio IntelliCode

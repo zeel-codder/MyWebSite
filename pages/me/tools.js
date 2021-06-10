@@ -6,10 +6,10 @@ import Link from 'next/link'
 
 export default function Tools() {
 
-  // const dic={data}
+  const dic={title:"tools",keywords:"tools"}
 
   return (
-    <Template Component={ToolList}></Template>
+    <Template Component={ToolList} data={dic}></Template>
   )
 }
 

@@ -120,6 +120,7 @@ Main Page
     padding: .5rem;
     /* grid-column: 2; */
     /* text-align: center; */
+    font-size: 1.5rem;
 }
 .Link-Page > *{
    padding-right: .2rem;
@@ -248,6 +249,9 @@ p > img{
 .Like{
     background:none !important;
     color:black !important;
+    
+}
+.BlogShort .Like{
     pointer-events: none;
 
 }
@@ -302,7 +306,7 @@ h1,h3{
     padding: 0;
 }
 .Like{
-    margin: 1rem 0;
+    margin: .4rem 0;
 }
 .BlogInformation  img{
     width: 100%;
@@ -341,14 +345,39 @@ Like
 
 .Like-Page,.Like{
     display: inline-flex;
-    background-color: black;
-    color: white;
+
     font-size: var(--font_size);
     padding: 3px .2rem;
     align-items: center;
     font-size: 1.5rem !important;
     display: flex;
 
+}
+.Share >a{
+    padding: 3px 6px;
+    color: black !important;
+
+}
+.Share , .Like{
+    padding: 0 !important;
+}
+.Share .whatsup svg{
+
+    color: green;
+}
+.Share .Linked svg{
+
+    color: rgb(0, 113, 243);
+}
+.Share  svg{
+    /* width: 8%;  */
+    /* background-color: green; */
+    height: -9%;
+    border-radius: 1px;
+    font-size: 1.5rem;
+
+}
+.Share .whatsup path:hover{
 }
 
 .Like-Page{
@@ -397,7 +426,8 @@ Like
         display: flex;
         flex-direction: column;
     }
-    .BlogShort > img ,.img{
+    .BlogShort  img ,.img{
+        width: 100%;
         margin-top: 3rem;
     }
     .BlogInformation, .Bloshort-not-found{

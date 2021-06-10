@@ -37,13 +37,13 @@ const BlogShort = (props) => {
                 <div className="BlogInformation" key={id}>
                     <span className="Blogtitle">{title}</span>
                     {/* <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2> */}
+                <Like blogInfo={props} isBlogShort={true}></Like>
                     <Link href={`blog/${name}`} className="blog-a">
                         <button className="btn">Read
                         </button>
                     </Link>
                 </div>
 
-                <Like blogInfo={props} isBlogShort={true}></Like>
 
 
             </div>

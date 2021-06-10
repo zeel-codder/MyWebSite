@@ -9,7 +9,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Home({data}) {
 
-  const dic={data}
+  const dic={data,title:"zeel codder blogs", keywords:"zeel codder blog,html"}
 
   return (
     <Template Component={BlogList} data={dic}></Template>
@@ -21,6 +21,7 @@ function BlogList({data}){
 
     <article className="">
   {/* <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee> */}
+  
   <div className="blog_main1" id="home">
          
   {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
@@ -32,14 +33,15 @@ function BlogList({data}){
                                         smooth={true}
                                         offset={-70}
                                         duration={500}
-                                    >
+                                        >
                                           Lets Read
                                         </Link>
              </button>
          </span>
          
       
-     </div>
+  
+                                      </div> 
 
   <h1>Blogs</h1>
   <div className="ListOfBlogs blog-container" id="Read">
