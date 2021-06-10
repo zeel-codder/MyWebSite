@@ -203,7 +203,8 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
 
 .Goto_top,.DarkMode,.Icon{
   border-radius: 62px;
-  background: rgb(23, 202, 193);
+  background: var(--form-bg);
+  color: aqua;
   position: absolute;
   top:0;
   left: 0;
@@ -269,6 +270,10 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   color: white;
   transform: scale(1.2);
 }
+.icons {
+  color: white !important;
+  
+}
 .icons li a,.login a{
   display: inline-block;
   /* border-radius: 12px; */
@@ -312,7 +317,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   margin: 0px;
   border-radius: 47px;
 }
-.navabar-ul li a,.open,a,.login-choice span,.Mybutton,.navabar-ul li .a{
+.navabar-ul li a,.open,a,.login-choice span,.Mybutton,.navabar-ul li .a,.icons{
   text-decoration: none;
   color: var(--color) !important;
   padding: 13px 11px;
@@ -682,6 +687,12 @@ h1{
     justify-content: center;
   /* margin-top: 10px; */
 }
+.icons *{
+  margin: 0 1rem ;
+}
+.icons a:hover{
+  background-color: var(--form-bg);
+}
 .BlogInformation img,.Like,.blog-container button{
   /* border-radius: 12px; */
 }
@@ -804,8 +815,8 @@ h1{
 }
 .form div textarea{
   margin: 10px;
-    width: 261px;
-    height: 50px;
+   
+ 
   }
   .form-input:focus,.form div :hover{
     /* border-bottom-color: var(--bgcolor); */
@@ -991,10 +1002,20 @@ animation: thor_move 2s ease-out 0s 1;
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
-  .navabar-ul li a,.open,a,.login-choice span,.Mybutton{
-    padding: 0;
+  .navabar-ul li a,.open,a,.login-choice span,.Mybutton,.icons > div{
+    padding: 7px;
     margin: 10px;
+    align-items: center;
   }
+  .icons{
+    padding: 0;
+    align-items: flex-start;
+  }
+  .icons > div{
+    justify-content: flex-start;
+    align-items: center !important;
+  }
+
   .navabar-ul li a{
     margin: 7px;
 
@@ -1084,8 +1105,12 @@ For Mobile
     padding-top:14px;
   }
   .icon svg{
-    transform: scale(2);
+    transform: scale(2) rotate(90deg);
   }
+  .navabar-ul div, .Login-Page, .icons {
+    flex-direction: column;
+    align-items: flex-start;
+}
   
   .icon:hover{
     cursor: pointer;
@@ -1200,7 +1225,7 @@ For Mobile
     display: none;
   }
   .icon svg{
-    transform: scale(1.4);
+    transform: scale(1.4) rotate(90deg);
   }
   .container-img{
     width: 250px;

@@ -138,7 +138,7 @@ const Login = (props) => {
 
             <div className="login-choice form">
                 <span onClick={() => router.push('/auth/login')} className={state.isLoginOpen ? `open` : null}>Log in</span>
-                <span onClick={() => router.push('/auth/singup')} className={state.isLoginOpen ? null : `open`}>Sing up</span>
+                <span onClick={() => router.push('/auth/singup')} className={state.isLoginOpen ? null : `open`}>Sin up</span>
                 {/* <span onClick={() => props.closeLogin()} className="close Mybutton">[X]</span> */}
             </div>
 
@@ -235,14 +235,14 @@ const Login = (props) => {
                 </div>
                 <button
                     className="btn"
-                    type="submit">{state.isLoginOpen ? 'Log In' : 'Sing Up'}
+                    type="submit">{state.isLoginOpen ? 'Log In' : 'Sin Up'}
                 </button>
 
                 <span className="alert">OR</span>
 
                 <GoogleButton 
                     clientId={clientId}
-                    text={`${state.isLoginOpen ? 'Log' : 'Sing'} In With Google`}
+                    text={`${state.isLoginOpen ? 'Log In' : 'Sin Up'}  With Google`}
                     responseSuccess={
                         state.isLoginOpen
                             ?

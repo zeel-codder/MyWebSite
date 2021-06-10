@@ -17,6 +17,7 @@ import { useState } from 'react';
 // import Loadding from './Loadding'
 // import { useGlobalCont/ext } from '../context';
 import Loading from '../Loadding';
+import {SetMailInContactForm } from '@api/api.object'
 // ====================================
 
 const Context = () => {
@@ -38,19 +39,23 @@ const Context = () => {
         e.preventDefault();
 
         document.documentElement.scrollTop = 0;
+         let {email,subject,message}=e.target;
+         email=email.value;
+         subject=subject.value;
+         message=message.value;
+          console.log(email,subject,message)
+         
 
-        init("user_T7VYY639xcXhhBCzLUUCo");
+        try{
+            SetMailInContactForm(email,subject,message)
+            alert("Send🙏🙏");
+            setLoading(false);
+        }catch(e){
+            console.log(e)
 
-        setLoading(true);
+            alert("Some Error")
+        }
 
-        emailjs.sendForm('service_50van2j', 'template_ar6zjgw', e.target)
-            .then((result) => {
-                // console.log(result.text);
-                alert("Send🙏🙏");
-                setLoading(false);
-            }, (error) => {
-                // console.log(error.text);
-            });
 
         e.target.reset();
     }
@@ -92,7 +97,7 @@ const Context = () => {
                         <input className="form-input" type="text" title="Email Subject" name="subject" placeholder="Enter Subject" required></input>
                     </div>
                     <div>
-                        <input className="form-input" type="text" title="Email Body" name="message" placeholder="Enter Message" required></input>
+                        <textarea className="form-input" type="text" title="Email Body" name="message" placeholder="Enter Message" required></textarea>
                     </div>
                     {/* <div>/ */}
                     {/* <button className="btn" type="reset">Reset</button> */}

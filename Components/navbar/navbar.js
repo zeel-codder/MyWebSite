@@ -162,17 +162,17 @@ function Navbar() {
                                 </>
                                 :
                                 <li className="icons">
-                                    
+                                    <div style={{display:"flex",flexDirection:"row"}}>
                                     <Link href={`/user/${User?.name}`} title="User">
-                                    
+                                    <>
                                         <AccountCircleIcon className="user" />
-                                    </Link>
-                                    
-                                    <Link href={`/user/${User?.name}`} title="User">
+                                
                                     
                                     {User.result.username}    
+                                    </>
                                     
                                     </Link>
+                                    </div>    
                                     
                                     <a title="Logout"
                                         onClick={() => {

@@ -353,8 +353,9 @@ Like
     display: flex;
 
 }
-.Share >a{
-    padding: 3px 6px;
+.Share a{
+    padding: 0 !important;
+    margin: 0 !important;
     color: black !important;
 
 }
@@ -363,22 +364,29 @@ Like
 }
 .Share .whatsup svg{
 
-    color: green;
+    color: green !important;
 }
 .Share .Linked svg{
 
-    color: rgb(0, 113, 243);
+    color: rgb(0, 113, 243) !important;
 }
 .Share  svg{
     /* width: 8%;  */
     /* background-color: green; */
-    height: -9%;
+    /* height: -9%; */
+    position: relative;
     border-radius: 1px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
 }
-.Share .whatsup path:hover{
+.Share svg:hover{
+    cursor: pointer;
+    color: var(--form-bg) !important;
+    /* background-color: var(--form-bg); */
+    /* font-size: 2rem; */
+    
 }
+
 
 .Like-Page{
     display: inline-flex;
@@ -518,6 +526,9 @@ Dark Mode Make Sure to the last
   }
   .dark *,.dark p,.dark button,.dark a,.dark div,.dark footer{
     color: white;
+  }
+  .dark .Like{
+      color: white !important;
   }
   .dark .login-choice span,.dark .form div label{
       color: white;

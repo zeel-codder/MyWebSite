@@ -49,11 +49,16 @@ const Like=(props)=>{
 
     const getUser=async()=>{
         const name=JSON.parse(localStorage.getItem('User')).result.name
-        const temuser=await GetUser(name)
-        console.log(temuser)
-        const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);
-        setUser(temuser)
-        setIsLike(isBlogLike);
+        try{
+            const temuser=await GetUser(name)
+            const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);
+            setUser(temuser)
+            setIsLike(isBlogLike);
+        }catch{
+            localStorage.removeItem('User');
+        }
+        
+        // console.log(temuser)
     }
 
     const PostLike=()=>{

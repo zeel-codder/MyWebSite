@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from '../navbar/navbar'
 import Footer from '../footer/Footer'
 import Meta from '../Meta'
+import MYButtons from '../MainPageButton'
 
 function MyApp({ Component, data }) {
 
@@ -13,6 +14,7 @@ function MyApp({ Component, data }) {
     
 
   <>
+  <MYButtons></MYButtons>
   <Meta title={title} keywords={keywords}></Meta>
   <Navbar></Navbar>
   <Component {...data} />

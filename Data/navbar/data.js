@@ -17,7 +17,7 @@ const Navdata=[
     },
     {
         id:4,
-        title:"Theology",
+        title:"Technology",
         link:"theology",
     },
     {

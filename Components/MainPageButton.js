@@ -56,7 +56,7 @@ function MainPageButton() {
 
       <CgDarkMode className="DarkMode" onClick={() => {
 
-        document.querySelector("#root").classList.toggle("dark");
+        document.querySelector("body").classList.toggle("dark");
         const form = document.querySelector(".form");
         form !== null && form.classList.toggle("light-dark");
 
