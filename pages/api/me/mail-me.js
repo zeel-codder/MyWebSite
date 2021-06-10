@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     
    const transporter = await nodemailer.createTransport({
     service: 'gmail',
+    secure:true,
     
         auth: {
           user: mymail,
