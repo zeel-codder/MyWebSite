@@ -43,6 +43,7 @@
     "react-scroll": "^1.8.2",
     "rehype-raw": "^5.1.0",
     "rehype-sanitize": "^4.0.0",
+    "saslprep": "^1.0.3",
     "validator": "^13.6.0"
   },
   "devDependencies": {

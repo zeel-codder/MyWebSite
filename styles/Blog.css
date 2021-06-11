@@ -261,6 +261,7 @@ p > img{
 .BlogInformation,.Bloshort-not-found{
     display: flex;
     flex: 1;
+    width: 100%;
     margin: 0 1rem;
     flex-direction: column;
     padding: 1rem 0;

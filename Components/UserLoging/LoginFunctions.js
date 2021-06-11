@@ -110,7 +110,7 @@ const AddUserWithGoogle=async(data,Reducer,GotoHome)=>{
 }
 const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
     // console.log(data)
-    // console.log('call')
+    console.log('call')
     const newUser = {
         username:data.profileObj.name,
         name: data.profileObj.email,
@@ -133,7 +133,9 @@ const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
         if (isPassWordSame) {
             localStorage.setItem('User',JSON.stringify(datau));
             // dispatchUser({ type: 'UserLogIn', data: res });
-             await GotoHome()
+            console.log('login')
+            Reducer({ type: 'changeLoadingFalse' });
+            await GotoHome()
 
         } else {
             alert('Wrong PassWord')

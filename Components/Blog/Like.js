@@ -44,9 +44,12 @@ const Like=(props)=>{
     // console.log(blogInfo,isBlogShort)
 
 
-    const UpdateLike=async (old,newData)=>{
+    const UpdateLike=async (old,newData,like)=>{
             await UpdateBlogLike (old,newData);
+            setIsLike(!isLike);
+            setLike(like);
     }
+    
 
     const getUser=async()=>{
         const name=JSON.parse(localStorage.getItem(User)).result.name
@@ -77,18 +80,17 @@ const Like=(props)=>{
                     like=Like;
                 }
             }
-            setIsLike(!isLike);
-            setLike(like);
     
             const odd={...blogInfo}
             const new_data={like,
                 LikePage:blogInfo.name
                 }
     
-            UpdateLike(odd,new_data);
+            UpdateLike(odd,new_data,like);
+            
         }else{
-            router.push('/auth/singup')
             alert('LogIn First');
+            router.push('/auth/singup')
         }
 
     }
@@ -97,8 +99,7 @@ const Like=(props)=>{
         if(localStorage.getItem(User)){
             getUser()
         }
-        console.log(blogInfo)
-            
+
     }, [])
 
     if(isBlogShort){

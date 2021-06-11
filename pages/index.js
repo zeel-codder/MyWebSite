@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import axios from 'axios'
 import React from "react";
-import BlogShort from '@Blog/BlogShort'
+// import BlogShort from '@B/BlogShort'
 import Template from '@Layout/Template'
 import { Link, animateScroll as scroll } from "react-scroll";
-
+import BlogShort from '@Blog/BlogShort';
 
 export default function Home({data}) {
 

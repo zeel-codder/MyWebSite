@@ -22,20 +22,20 @@ function MyApp({ title }) {
 
       <div className="row">
 
-        <a class="whatsup" title="whatsApp" href={`whatsapp://send?text=${title} 
+        <a className="whatsup" title="whatsApp" href={`whatsapp://send?text=${title} 
       \n
       Like:${url}
       `} data-action="share/whatsapp/share"
           target="_blank"> <WhatsAppIcon></WhatsAppIcon> </a>
 
-        <a class="Linked" title="Linked" href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&source=https://zeelcodder.tech/`} data-action="share/whatsapp/share"
+        <a className="Linked" title="Linked" href={`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&source=https://zeelcodder.tech/`} data-action="share/whatsapp/share"
           target="_blank"> <LinkedInIcon></LinkedInIcon> </a>
 
-        <a class="Linked" title="Facebook" href={`https://www.facebook.com/sharer/sharer.php?u=https://zeelcodder.tech/`} target="_blank">
+        <a className="Linked" title="Facebook" href={`https://www.facebook.com/sharer/sharer.php?u=https://zeelcodder.tech/`} target="_blank">
           <FacebookIcon></FacebookIcon>
     
         </a>
-      <a class="Linked" title="Facebook" href={`http://twitter.com/share?text=${title}&url=${url} &hashtags=#codding #zeel-codder`} target="_blank">
+      <a className="Linked" title="Facebook" href={`http://twitter.com/share?text=${title}&url=${url} &hashtags=#codding #zeel-codder`} target="_blank">
         <TwitterIcon></TwitterIcon>
       </a>
     </div>

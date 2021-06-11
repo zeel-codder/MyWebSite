@@ -243,12 +243,15 @@ const Login = (props) => {
                 <GoogleButton 
                     clientId={clientId}
                     text={`${state.isLoginOpen ? 'Log In' : 'Sin Up'}  With Google`}
-                    responseSuccess={
+                    responseSuccess={(res)=>{
+
+                        Reducer({ type: 'changeLoadingTrue' });
                         state.isLoginOpen
-                            ?
-                            (res) => FindUserWithGoogle(res, Reducer, GotoHome)
-                            :
-                            (res) => AddUserWithGoogle(res, Reducer, GotoHome)
+                        ?
+                         FindUserWithGoogle(res, Reducer, GotoHome)
+                        :
+                         AddUserWithGoogle(res, Reducer, GotoHome)
+                    }
                     }
                 />
 

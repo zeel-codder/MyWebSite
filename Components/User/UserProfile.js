@@ -15,7 +15,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { User } from "@const/List";
-import BlogShort from "@Blog/BlogShort";
+import BlogShort from "BlogShort";
 // ====================================
 
 
