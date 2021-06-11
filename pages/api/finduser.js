@@ -5,7 +5,7 @@ const jwt =require('jsonwebtoken');
 
 export default async function handler(req, res) {
 
-    const {name}=req.body;
+    const {name,isNotCreateToken}=req.body;
     // console.log(req.body);
    
     // your server-side functionality
@@ -21,7 +21,10 @@ export default async function handler(req, res) {
 
     }
 
-     const token=jwt.sign(data.toJSON(), process.env.key, { expiresIn: "1h" });
+     let token=null;
+     if(!isNotCreateToken){
+       token=jwt.sign(data.toJSON(), process.env.key, { expiresIn: "1h" });
+     }
      
 
     res.end(JSON.stringify({

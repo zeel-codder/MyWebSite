@@ -1,7 +1,7 @@
 
 // require('dotenv').config();
 import nodemailer from 'nodemailer'
-import CheckMail from 'server/mail/checkemailhash';
+import CheckMail from 'server/helpers/mail/checkemailhash';
 
 export default async function handler(req, res) {
 
@@ -23,7 +23,8 @@ export default async function handler(req, res) {
     // console.log(mymail,password)
     
    const transporter = await nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
     secure:true,
     
         auth: {

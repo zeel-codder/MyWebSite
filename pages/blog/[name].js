@@ -117,14 +117,14 @@ export async function getStaticProps(context) {
     .catch((err) => console.log(err));
 
   // data=data['data'].result;
-  const file = await import('../../Blogs/' + data.url);
+  const file = await import('../../Blogs/' + name+'/blog.md');
 
   // axios.post(`/BlogInfoOne`,{name:blogname})
   const content = matter(file.default).content;
 
   const title = matter(file.default).data.title
   const keywords = matter(file.default).data.keywords
-  console.log(matter(file.default))
+  // console.log(matter(file.default))
 
   // const tem=JSON.stringify(data);
   //     data=tem;

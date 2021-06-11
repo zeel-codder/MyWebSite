@@ -14,7 +14,8 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import {useState,useEffect} from 'react';
 import React from "react";
 import { useRouter } from 'next/router'
-import {GetUser,UpdateBlogLike } from '@api/api.object'
+import {GetUser,UpdateBlogLike } from '@api/User-Blog-Api'
+import {User} from '@const/List'
 // import {useEffect} from 'react';
 
 
@@ -48,14 +49,14 @@ const Like=(props)=>{
     }
 
     const getUser=async()=>{
-        const name=JSON.parse(localStorage.getItem('User')).result.name
+        const name=JSON.parse(localStorage.getItem(User)).result.name
         try{
             const temuser=await GetUser(name)
             const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);
             setUser(temuser)
             setIsLike(isBlogLike);
         }catch{
-            localStorage.removeItem('User');
+            localStorage.removeItem(User);
         }
         
         // console.log(temuser)
@@ -63,7 +64,7 @@ const Like=(props)=>{
 
     const PostLike=()=>{
         // console.log('')
-        if(localStorage.getItem('User')){
+        if(localStorage.getItem(User)){
             let like=0;
             if(!isLike){
                 like=Like+1;
@@ -86,14 +87,14 @@ const Like=(props)=>{
     
             UpdateLike(odd,new_data);
         }else{
-            router.push('/auth/singin')
+            router.push('/auth/singup')
             alert('LogIn First');
         }
 
     }
 
     useEffect(() => {
-        if(localStorage.getItem('User')){
+        if(localStorage.getItem(User)){
             getUser()
         }
         console.log(blogInfo)

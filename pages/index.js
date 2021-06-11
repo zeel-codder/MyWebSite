@@ -47,9 +47,9 @@ function BlogList({data}){
   <div className="ListOfBlogs blog-container" id="Read">
     {
       
-      data.map((page) => {
+      data.map((page,index) => {
         
-        return (<BlogShort {...page} key={new Date().getMilliseconds()} />)
+        return (<BlogShort {...page} key={index} />)
         
       })
       

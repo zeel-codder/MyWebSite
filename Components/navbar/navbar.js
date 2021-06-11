@@ -153,23 +153,23 @@ function Navbar() {
                             !User
                                 ?
                                 <>
-                                    <li className="login">
+                                    <div className="login">
 
                                        <Link href='/auth/singup'
                                             title="Sing Up">Sing Up</Link>
-                                    </li>
-                                    <li className="login"><Link href='/auth/login' title="Log In">Log In</Link></li>
+                                    </div>
+                                    <div className="login"><Link href='/auth/login' title="Log In">Log In</Link></div>
                                 </>
                                 :
-                                <li className="icons">
+                                <div className="icons">
                                     <div style={{display:"flex",flexDirection:"row"}}>
-                                    <Link href={`/user/${User?.name}`} title="User">
-                                    <>
-                                        <AccountCircleIcon className="user" />
+                                    <Link href={`/user/${User?.result.name}`} title="User">
+                                    {/* <> */}
+                                        {/* <AccountCircleIcon className="user" /> */}
                                 
                                     
                                     {User.result.username}    
-                                    </>
+                                    {/* </> */}
                                     
                                     </Link>
                                     </div>    
@@ -184,7 +184,7 @@ function Navbar() {
                                         Logout
                                     </a>
                                     
-                                </li>
+                                </div>
                         }
                     </li>
                 </ul>

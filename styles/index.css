@@ -317,7 +317,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   margin: 0px;
   border-radius: 47px;
 }
-.navabar-ul li a,.open,a,.login-choice span,.Mybutton,.navabar-ul li .a,.icons{
+.navabar-ul li a,.open,.login-choice span,.Mybutton,.navabar-ul li .a,.icons{
   text-decoration: none;
   color: var(--color) !important;
   padding: 13px 11px;
@@ -807,6 +807,26 @@ h1{
   text-align: center;
   border-radius: 10px;
 }
+.userInfo .form-input{
+  border: 2px solid var(--hadderbg);
+  color: black !important;
+  width: fit-content;
+  margin-left: 2rem;
+  padding: .8rem;
+  text-align: center;
+  margin: inherit;
+}
+.userInfo{
+  font-size: 1.2rem;
+}
+.userInfo div{
+  width: 100%;
+  justify-content: space-between;
+}
+.userInfo span{
+  color: black  !important;
+}
+
 .form div input,.form div textarea{
   color: white;
   /* font-weight: bold; */
@@ -997,11 +1017,23 @@ animation: thor_move 2s ease-out 0s 1;
 
 }
 
+.User{
+  width: 80%;
+}
 
 /* =========================================
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+  .userInfo div{
+    width: fit-content !important;
+    flex-direction: column;
+  }
+  .userInfo .form-input{
+    margin: 1rem;
+    /* width: 0% !important; */
+    /* width: fit-content !important; */
+  }
   .navabar-ul li a,.open,a,.login-choice span,.Mybutton,.icons > div{
     padding: 7px;
     margin: 10px;

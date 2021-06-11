@@ -1,9 +1,14 @@
 import React from 'react'
 import UserProfile from 'Components/User/UserProfile'
 import Template from '@Layout/Template'
+import {User} from '@const/List'
+import axios from 'axios'
+import  GetUserProfile  from 'server/helpers/User/GetUserProfile'
 
 
-export default function User({data}) {
+
+export default function UserDetails({data}) {
+  // console.log(data);
 
   
     return (
@@ -12,8 +17,16 @@ export default function User({data}) {
   }
 
   export async function getStaticProps(context) {
-    const name=context.params.name;
-    const data={name}
+    const uname=context.params.name;
+
+    // const Link=process.env.WebLink+'/api/finduser';
+    // const dataUser=await axios.post(Link,{name:uname,isNotCreateToken:true})
+    // // console.log(dataUser)
+    // const {name,username,LikePage}=dataUser.data.result;
+    // const LikeDic=await getList(LikePage);
+    // const data={name,username,LikeDic}
+    const data=await GetUserProfile(uname)
+    console.log(data);
   
     return {
       props:{data}
@@ -28,4 +41,5 @@ export default function User({data}) {
       fallback: 'blocking'
   }
   }
+
   

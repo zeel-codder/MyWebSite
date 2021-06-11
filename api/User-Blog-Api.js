@@ -10,9 +10,18 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
+
+
 export const GetUser = (name) => API.post('/api/finduser',{name});
-export const SetMailInContactForm = (email,subject,message) => axios.post('/api/me/mail-me',{email,subject,message});
+export const UserLogin = () => API.get('/api/userlogin');
+
+
 export const UpdateBlogLike = (old,newData) =>  API.post('/api/like',{ filter:{...old},
 update:{...old,...newData},});
+
+
+
+
+export const SetMailInContactForm = (email,subject,message) => axios.post('/api/me/mail-me',{email,subject,message});
 
 // exports.API=API;

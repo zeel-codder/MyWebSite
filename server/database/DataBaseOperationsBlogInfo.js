@@ -17,12 +17,12 @@ const UserInfo=mongoose.models[process.env.User] ||  mongoose.model(process.env.
 
 const DemoData = {
 
-    "name": "top6vscodeextesions123",
-    "title": "Tho 6 vs code Extensions For programmer",
-    "img": "/images/blog/tools/top6vscodeextesions/vscode.png",
-    "url": "Tools/Top6VsCodeExtesions/top6vscodeextesions.md",
-    "like": 3,
-    "topic": "Tools"
+    "name": "letblogtogether",
+    "title": "Lets Blog Together",
+    "img": "https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80",
+    "like": 0,
+    "topic": "Blog",
+    "creator":"zeelprajapati321@gmail.com"
 }
 const DemoUser = {
     name: 'zeel',

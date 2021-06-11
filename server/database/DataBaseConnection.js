@@ -27,6 +27,7 @@ const Blog = new Schema({
   url:   String,
   like:Number,
   topic:String,
+  creator:String,
 },{ versionKey: false });
 
 
@@ -36,6 +37,7 @@ const User = new Schema({
   password:{type: String},
   LikePage:{type: [String]},
   url:{type: String},
+  About:{type:String},
 },{ versionKey: false });
 
 
