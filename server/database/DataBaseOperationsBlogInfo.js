@@ -117,16 +117,14 @@ const GetBlogInfoAndUpDate = async (filter, Update, Modal) => {
             name
         });
 
-        await BlogInfo.deleteOne({
-            _id: doc._id
-        });
+        // await BlogInfo.deleteOne({
+        //     _id: doc._id
+        // });
 
         // console.log('zeel');
-        await add(Update, Modal);
+        return await Modal.update({ _id: doc._id }, { ...Update });
 
-        return {
-            'update': 'update'
-        };
+      
     } catch {
         return 'Error'
     }

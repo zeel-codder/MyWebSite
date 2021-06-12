@@ -14,7 +14,8 @@
 // import {useGlobalContext} from '../context';
 import Link from 'next/link'
 import React from "react";
-import Like from './Like'
+import Like from './Like';
+import { useState } from 'react';
 import { WebLink } from '@const/List';
 
 // ====================================
@@ -23,7 +24,8 @@ import { WebLink } from '@const/List';
 const BlogShort = (props) => {
 
     const { name, title, img, url, link, topic,id } = props;
-    // const {Like}=useGlobalContext();
+    // const WebLink="null"
+    console.log(WebLink)
 
 
 

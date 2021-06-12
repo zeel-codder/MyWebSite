@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
     try{
       await UserLogin();
-  
+     
     }catch(e){
       console.log(e)
       localStorage.removeItem(User);

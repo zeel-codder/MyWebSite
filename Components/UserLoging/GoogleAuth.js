@@ -22,7 +22,7 @@ const GoogleAuth = ({ text, responseSuccess ,clientId}) => {
             clientId={clientId}
             // buttonText={text}
             render={renderProps => (
-                <button className="btn icons"  style={{flexDirection:"row", alignItems: "center"}}onClick={renderProps.onClick} disabled={renderProps.disabled}>
+                <button className="btn"  style={{flexDirection:"row", alignItems: "center"}}onClick={renderProps.onClick} disabled={renderProps.disabled}>
                     <GoogleSvg></GoogleSvg>
                      {text}</button>
             )}

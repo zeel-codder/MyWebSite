@@ -1,4 +1,6 @@
 // List
-export const User='User';
-export const WebLink=process.env.WebLink 
+const User='User';
+const WebLink=process.env.NEXT_PUBLIC_WebLink;
+
+export {User,WebLink}
 

@@ -880,12 +880,15 @@ h1{
 
 .form >.btn,.form > .alert{
 
-  /* width:70% !important; */
-  border-radius: 10px !important;
-  margin: .4rem 0;
-
-}
-.btn{
+     /* width: 70% !important; */
+     border-radius: 10px !important;
+     margin: .4rem 0;
+     
+    }
+    .btn{
+  box-shadow: 0px 0px 4px var(--form-bg);
+  display: flex;
+  justify-content: center;
 /* color: white; */
 border: 0;
 

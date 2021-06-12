@@ -17,6 +17,8 @@ export default function Home({data}) {
 }
 
 function BlogList({data}){
+
+  
   return (
 
     <article className="">
