@@ -34,28 +34,19 @@ export default function Search({data}) {
             let {title,topic}=item;
             // console.log(name,topic);
 
-                const dic1=title.match(regex);
-                const dic2=topic.match(regex);
-
-                // const new_title
-                console.log(typeof(dic1))
-
-                if(dic1){
-
-                    dic1.forEach((text)=>{
-                        title=title.replace(text, `<span class="hl">${text}</span>`);
+        
+                        title=title.replace(regex, `<span class="hl">${query}</span>`);
                         // console.log(text)
-                    })
+                
                     item.title=title;
-                }
-                if(dic2){
+               
 
-                     dic2.forEach((text)=>{
-                       topic=topic.replace(text, `<span class="hl">${text}</span>`);
-                    })
+                    
+                       topic=topic.replace(regex, `<span class="hl">${query}</span>`);
+                    
                     
                     item.topic=topic;
-                }
+                
             
             return item;
         });
