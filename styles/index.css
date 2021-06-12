@@ -150,7 +150,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
    
 }
 .blog_main1{
-  background-image:url(https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
+  background-image:url(https://source.unsplash.com/random);
   flex-direction:column;
   justify-content:center;
   align-items:flex-end;
@@ -291,7 +291,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   color: black;
 }
 
-.navabar-ul{
+.navabar-ul,.Serach ul{
   display: flex;
     list-style: none;
     top: 0px;
@@ -317,7 +317,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   margin: 0px;
   border-radius: 47px;
 }
-.navabar-ul li a,.open,.login-choice span,.Mybutton,.navabar-ul li .a,.icons{
+.navabar-ul li a,.open,.login-choice span,.Mybutton,.navabar-ul li .a,.icons,.Serach li a{
   text-decoration: none;
   color: var(--color) !important;
   padding: 13px 11px;
@@ -1290,6 +1290,13 @@ For Mobile
     width: 90%;
     
   }
+  .Serach input{
+    width: 85%;
+}
+.Serach ul{
+  top:66px;
+    width: 99% !important;
+}
   
 }
 @media only screen and (max-width: 300px) {

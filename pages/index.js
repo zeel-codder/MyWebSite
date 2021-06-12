@@ -6,6 +6,7 @@ import React from "react";
 import Template from '@Layout/Template'
 import { Link, animateScroll as scroll } from "react-scroll";
 import BlogShort from '@Blog/BlogShort';
+import Search from '@Blog/Serach';
 
 export default function Home({data}) {
 
@@ -23,9 +24,8 @@ function BlogList({data}){
 
     <article className="">
   {/* <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee> */}
-  
-  <div className="blog_main1" id="home">
          
+  <div className="blog_main1" id="home">
   {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
          <span className="logo-text blog-text" id="head">
             Start Reading And Learning Today
@@ -44,9 +44,15 @@ function BlogList({data}){
       
   
                                       </div> 
+         {/* <video width="320" height="240"  src="/index.mp4" type="video/mp4"  loop autoPlay> */}
 
-  <h1>Blogs</h1>
-  <div className="ListOfBlogs blog-container" id="Read">
+{/* </video> */}
+
+{/* <img src="/zeel.jpg" /> */}
+  <Search data={data}/>
+
+  <h1 >Blogs</h1>
+  <div className="ListOfBlogs blog-container" >
     {
       
       data.map((page,index) => {
