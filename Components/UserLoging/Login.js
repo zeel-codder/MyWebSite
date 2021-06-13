@@ -231,7 +231,7 @@ const Login = (props) => {
                         type="checkbox"
                         name="show-pass"
                         onClick={(e) => Reducer({ type: 'TogglePassWordShow' })}
-                    ></input> : <span style={{ fontSize: '1rem' }}>Show PassWord</span>
+                    ></input> : <span style={{ fontSize: '1rem' }}>Show Password</span>
                 </div>
                 <button
                     className="btn"

@@ -72,12 +72,12 @@ export default function Search({data}) {
 
     return (
        <div className="Serach form"  id="Read">
-           <SearchIcon />
            <input  className="form-input" type="text" name="search" value={query} 
            onChange={(e)=>setquery(e.target.value)}
            placeholder="Search Blogs..."
            autoComplete="off"
            /> 
+           <SearchIcon />
 
            <ul className="item">
 
@@ -89,7 +89,7 @@ export default function Search({data}) {
                     <li key={index} title={topic}>
                         <span className="title"  dangerouslySetInnerHTML={{ __html: topic }}></span>
                         <Link href={WebLink+`/blog/${name}`}>
-                        <span  dangerouslySetInnerHTML={{ __html: title }}>
+                        <span className="text"  dangerouslySetInnerHTML={{ __html: title }}>
                         </span>
                         </Link>
                         

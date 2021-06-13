@@ -78,7 +78,9 @@ export async function getStaticProps(context) {
         return res.data;
       })
       .catch((err) => { return; })
-      // console.log(data)
+      
+      console.log(data,'<-');
+
       return {
         props: { data : data || []}, 
       }

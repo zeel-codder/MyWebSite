@@ -10,8 +10,7 @@ keywords: VS CODE , HTML, WEB, CSS , CODEEDITOR,4 Basic And Important Tags For B
 
 # 4 Basic And Important Tags For Beginner In Web Development
 
-
-![MyFase](/images/blog/html/Html4SimpleTages/1.jpg)
+![MyFase](/images/blog/Html4SimpleTages/1.jpg)
 
 # 1 Div
 
@@ -60,7 +59,7 @@ Basic Layout with div:
 
 *Output*
 
-![Output2](/images/blog/html/Html4SimpleTages/Output2.jpg)
+![Output2](/images/blog/Html4SimpleTages/Output2.jpg)
 
 
 
@@ -69,7 +68,7 @@ Note: I know there are may useful tags in html. like sub,sup,fieldset ... etc, b
 
 # 2 Input
 
-Input is one off the important tag in html.* with the help of input you can take input form user*.
+Input is one off the important tag in html. with the help of input you can take input form user*.
 
 
 Input tag main attribute:
@@ -96,7 +95,7 @@ Example of input tag :
 *OutPut*
 
 
-![Output3](/images/blog/html/Html4SimpleTages/Output3.jpg)
+![Output3](/images/blog/Html4SimpleTages/Output3.jpg)
 
 # 3 Form
 
@@ -141,12 +140,12 @@ Example of Form tag :
 ```
 *Output:*
 
-![Output4](/images/blog/html/Html4SimpleTages/Output4.jpg)
+![Output4](/images/blog/Html4SimpleTages/Output4.jpg)
 
 
 # 4 Img
 
-*Know a days web-site is not complete without image*.img tag is used to display img on screen.
+*Nowadays web-site is not complete without image*.img tag is used to display img on screen.
 
 Img tag main attribute: 
 
@@ -164,7 +163,7 @@ Example of Img tag :
 ```
 *OutPut*
 
-![Output5](/images/blog/html/Html4SimpleTages/Output5.jpg)
+![Output5](/images/blog/Html4SimpleTages/Output5.jpg)
 
 
 *Thanks for reading. Give the like to Blog. Have grate life ahead.*

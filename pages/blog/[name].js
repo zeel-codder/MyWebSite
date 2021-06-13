@@ -33,9 +33,9 @@ import rehypeSanitize from 'rehype-sanitize'
 
 
 
-const Blog = ({ data, file, title ,keywords}) => {
+const Blog = ({ data, file, title, keywords }) => {
 
-  const dic = { data, file, title,keywords }
+  const dic = { data, file, title, keywords }
 
   return (
     <Template Component={BlogPage} data={dic}></Template>
@@ -49,7 +49,7 @@ const Blog = ({ data, file, title ,keywords}) => {
 function BlogPage({ data, file, title }) {
 
   // let url='/';
-  
+
 
 
   //=============================
@@ -64,9 +64,9 @@ function BlogPage({ data, file, title }) {
     setTimeout(() =>
       Prism.highlightAll()
       , 0)
-      // seturl(window.location.href)
-      // console.log(window)
-      
+    // seturl(window.location.href)
+    // console.log(window)
+
 
   }, [])
 
@@ -85,19 +85,23 @@ function BlogPage({ data, file, title }) {
 
         <Markdown
           onLoad={AddIndex}
+          rehypePlugins={[rehypeRaw]}
         >
 
           {file}
         </Markdown>
-        {
-          data !== 0 && <Like className="Share" blogInfo={data} isBlogShort={false}></Like>
-        }
-        <Share title={title}></Share>
-      
-      </div>
-    </>
+        <div class="code-toolbar"><pre class=" language-javascript"><code class=" language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Thank You'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+        </div>
+          {
+            data !== 0 && <Like className="Share" blogInfo={data} isBlogShort={false}></Like>
+          }
+          <Share title={title}></Share>
 
-  )
+        </div>
+      </>
+
+      )
 
 }
 
@@ -105,40 +109,40 @@ function BlogPage({ data, file, title }) {
 
 
 
-export async function getStaticProps(context) {
+      export async function getStaticProps(context) {
   const name = context.params.name;
 
-  let data = await axios.post(process.env.WebLink + "/api/bloginfoone", { name })
+      let data = await axios.post(process.env.WebLink + "/api/bloginfoone", {name})
     .then((response) => {
       // console.log(response.data);
       return JSON.parse(response.data.message)
     }
-    )
+      )
     .catch((err) => console.log(err));
 
-  // data=data['data'].result;
-  const file = await import('../../Blogs/' + name+'/blog.md');
+      // data=data['data'].result;
+      const file = await import('../../Blogs/' + name+'/blog.md');
 
   // axios.post(`/BlogInfoOne`,{name:blogname})
-  const content = matter(file.default).content;
+      const content = matter(file.default).content;
 
-  const title = matter(file.default).data.title
-  const keywords = matter(file.default).data.keywords
-  // console.log(matter(file.default))
+      const title = matter(file.default).data.title
+      const keywords = matter(file.default).data.keywords
+      // console.log(matter(file.default))
 
-  // const tem=JSON.stringify(data);
-  //     data=tem;
-  return {
-    props: { data, file: content, title ,keywords}
+      // const tem=JSON.stringify(data);
+      //     data=tem;
+      return {
+        props: {data, file: content, title ,keywords}
   }
 }
-export async function getStaticPaths() {
+      export async function getStaticPaths() {
 
 
 
   return {
-    paths: [],
-    fallback: 'blocking'
+        paths: [],
+      fallback: 'blocking'
   }
 }
-export default Blog;
+      export default Blog;

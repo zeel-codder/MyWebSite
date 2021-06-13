@@ -9,6 +9,8 @@ const User = BlogSchema.User;
 
 // console.log(process.env.BLOG_INFO);
 
+// const BlogInfo=mongoose.model(process.env.BLOG_INFO, Blog);
+// const UserInfo= mongoose.model(process.env.User, User);
 const BlogInfo=mongoose.models[process.env.BLOG_INFO] || mongoose.model(process.env.BLOG_INFO, Blog);
 const UserInfo=mongoose.models[process.env.User] ||  mongoose.model(process.env.User, User);
 
@@ -17,11 +19,11 @@ const UserInfo=mongoose.models[process.env.User] ||  mongoose.model(process.env.
 
 const DemoData = {
 
-    "name": "letblogtogether",
-    "title": "Lets Blog Together",
-    "img": "https://images.unsplash.com/photo-1500989145603-8e7ef71d639e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80",
+    "name": "mongooseoverwriteerror",
+    "title": "Mongoose Modal OverwriteModelError",
+    "img": "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=715&q=80",
     "like": 0,
-    "topic": "Blog",
+    "topic": "Error",
     "creator":"zeelprajapati321@gmail.com"
 }
 const DemoUser = {

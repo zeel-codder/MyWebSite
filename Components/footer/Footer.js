@@ -16,6 +16,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import React from "react";
+import Link from 'next/link';
+import data from './data'
 // import { FaBeer } from 'react-icons/fa';
 // ====================================
 
@@ -24,10 +26,37 @@ import React from "react";
 
 const Footer=()=>{
     return (
-        <div className="footer">
+    
+        <div className="footer-container">
+
+        
+    
+        <div className="topic">
+            <h1 style={{width:"100%"}}>Topics of Blogs</h1>
+
+            <div className="list">
+            {
+                data.map((topic,index)=>{
+                    const {title}=topic;
+                    return (
+                        <Link  key={index}
+                       
+                        href={process.env.NEXT_PUBLIC_WebLink+`/blog/topic/${title}`}>
+                       
+                        {title}
+
+                    </Link>
+                    )
+                })
+            }
+            </div>
+            </div>
+                        <div className="footer">
             <p className="footer-para">
-                All CopyRight &copy; zeel prajapati
+            All Copyright goes to © zeel prajapati
             </p>
+
+        
         <ul className="footer-ul icons Footer-icons">
         <li><a href="https://www.facebook.com/zeel.prajapati.397/" title="Facebook"><FacebookIcon /></a></li>
         <li><a href="https://github.com/zeel-codder" title="Github"><GitHubIcon /></a></li>
@@ -35,6 +64,7 @@ const Footer=()=>{
         <li><a href="https://twitter.com/ZeelPrajapati15"  title="Twitter"><TwitterIcon /></a></li>
         </ul>
     </div>
+                </div>
     )
 }
 

@@ -1,11 +1,11 @@
 ---
-title: Tho 6 vs code Extensions For programmer.
+title: Top 6 vs code Extensions For programmer.
 
 keywords: VS CODE , HTML, WEB, CSS , CODEEDITOR,4 Basic And Important Tags For Beginner In Web Development,Vs code Extensions
 ---
 
 
-# Tho 6 vs code Extensions For programmer.
+# Top 6 vs code Extensions For programmer.
 
 # 1.Code Runner
 
@@ -15,15 +15,15 @@ Code Runner is of of the most Popular Extension in vs code. With the help of thi
 
 Search: *Code Runner* in Extension search box in vs code.
 
-![Code-Runner-Download](/images/blog/tools/top6vscodeextesions/Code-Runner-Download.png)
+![Code-Runner-Download](/images/blog/top6vscodeextesions/Code-Runner-Download.png)
 
 *Before Download*
 
-![Code-Runner-Before](/images/blog/tools/top6vscodeextesions/Code-Runner-Before.png)
+![Code-Runner-Before](/images/blog/top6vscodeextesions/Code-Runner-Before.png)
 
 *After Download*
 
-![CodeRunnerAfter](/images/blog/tools/top6vscodeextesions/CodeRunnerAfter.png)
+![CodeRunnerAfter](/images/blog/top6vscodeextesions/CodeRunnerAfter.png)
 
 
 
@@ -34,7 +34,7 @@ Some time when you click on run button the programme is not run in terminal. You
 Goto:*Setting->User->Extensions->Run Code Configuration* 
 Than find Checkbox for *Run in Terminal* and mack sour that is checked.
 
-![CodeRunnerTerminal](/images/blog/tools/top6vscodeextesions/CodeRunnerTerminal.png)
+![CodeRunnerTerminal](/images/blog/top6vscodeextesions/CodeRunnerTerminal.png)
 
 There are other think you can do. Explore. 
 
@@ -47,15 +47,15 @@ As developer we know problem of *{}* bracket pair may Occurs. As Code become mor
 
 Search: *Bracket Pair Colorizer 2* in Extension search box in vs code.
 
-![BracketPairColorizer2Download](/images/blog/tools/top6vscodeextesions/BracketPairColorizer2Download.png)
+![BracketPairColorizer2Download](/images/blog/top6vscodeextesions/BracketPairColorizer2Download.png)
 
 *Before Download*
 
-![BracketPairColorizer2Before](/images/blog/tools/top6vscodeextesions/BracketPairColorizer2Before.png)
+![BracketPairColorizer2Before](/images/blog/top6vscodeextesions/BracketPairColorizer2Before.png)
 
 *After Download*
 
-![BracketPairColorizer2After](/images/blog/tools/top6vscodeextesions/BracketPairColorizer2After.png)
+![BracketPairColorizer2After](/images/blog/top6vscodeextesions/BracketPairColorizer2After.png)
 
 # 3.Cobalt2 Theme Official
 
@@ -66,15 +66,15 @@ Search: *Bracket Pair Colorizer 2* in Extension search box in vs code.
 Search: *Cobalt2 Theme Official* in Extension search box in vs code.
 
 
-![Cobalt2ThemeOfficialDownload](/images/blog/tools/top6vscodeextesions/Cobalt2ThemeOfficialDownload.png)
+![Cobalt2ThemeOfficialDownload](/images/blog/top6vscodeextesions/Cobalt2ThemeOfficialDownload.png)
 
 *Before Download*
 
-![Cobalt2ThemeOfficialBefore](/images/blog/tools/top6vscodeextesions/Cobalt2ThemeOfficialBefore.png)
+![Cobalt2ThemeOfficialBefore](/images/blog/top6vscodeextesions/Cobalt2ThemeOfficialBefore.png)
 
 *After Download*
 
-![Cobalt2ThemeOfficialAfter](/images/blog/tools/top6vscodeextesions/Cobalt2ThemeOfficialAfter.png)
+![Cobalt2ThemeOfficialAfter](/images/blog/top6vscodeextesions/Cobalt2ThemeOfficialAfter.png)
 
 
 # 4.Code Spell Checker
@@ -85,7 +85,7 @@ As Developer we have to  writing good code. Fore make sure there is not an sapli
 
 Search: *Code Spell Checker* in Extension search box in vs code.
 
-![CodeSpellChecker](/images/blog/tools/top6vscodeextesions/CodeSpellChecker.png)
+![CodeSpellChecker](/images/blog/top6vscodeextesions/CodeSpellChecker.png)
 
 # 5.JavaScript REPL
 
@@ -95,11 +95,11 @@ If you are javascript Developer You must have to use *JavaScript REPL* Extension
 
 Search: *JavaScript REPL* in Extension search box in vs code.
 
-![JavaScriptREPLDownload](/images/blog/tools/top6vscodeextesions/JavaScriptREPLDownload.png)
+![JavaScriptREPLDownload](/images/blog/top6vscodeextesions/JavaScriptREPLDownload.png)
 
 *After download you can see play button in right top conner.*
 
-![JavaScriptREPLAfter](/images/blog/tools/top6vscodeextesions/JavaScriptREPLAfter.png)
+![JavaScriptREPLAfter](/images/blog/top6vscodeextesions/JavaScriptREPLAfter.png)
 
 
 # 6.Material Product Icons
@@ -111,15 +111,15 @@ Search: *JavaScript REPL* in Extension search box in vs code.
 Search: *Material Product Icons* in Extension search box in vs code.
 
 
-![MaterialProductIconsDownload](/images/blog/tools/top6vscodeextesions/MaterialProductIconsDownload.png)
+![MaterialProductIconsDownload](/images/blog/top6vscodeextesions/MaterialProductIconsDownload.png)
 
 *Before*
 
-![MaterialProductIconsBefore](/images/blog/tools/top6vscodeextesions/MaterialProductIconsBefore.png)
+![MaterialProductIconsBefore](/images/blog/top6vscodeextesions/MaterialProductIconsBefore.png)
 
 *After*
 
-![MaterialProductIconsAfter](/images/blog/tools/top6vscodeextesions/MaterialProductIconsAfter.png)
+![MaterialProductIconsAfter](/images/blog/top6vscodeextesions/MaterialProductIconsAfter.png)
 
 
 *Other Must User Extensions:*

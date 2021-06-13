@@ -30,7 +30,7 @@ Main Page
 /* ================================================================ */
 /* Login Form */
 /* ================================================================ */
-.Log{
+.Log,.topic{
     /* min-height: 50vh; */
     /* transform: translate(-50%,-50%); */
     /* flex:2; */
@@ -44,7 +44,17 @@ Main Page
     /* align-items: center; */
     transition: all var(--transition);
 }
+.topic{
+    padding: 1rem;
+}
+.topic .list{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem auto;
+    text-align: center;
 
+}
 @keyframes ShowLogin {
     0%{
         transform: scale(0);
@@ -109,8 +119,14 @@ Main Page
     font-size: 2rem;
     text-align: start;
     line-height: 2.8rem;
-    /* margin: 1.5rem 0; */
-    
+    margin: 1.5rem 0;   
+}
+.BlogInformation >span{
+    margin: 0;
+}
+.blog-container > h2{
+    margin: 1.5rem 0;   
+
 }
 .like-icon{
     color: red;
@@ -288,6 +304,7 @@ h1,h3{
     background: black;
     padding: .2rem;
     color: white;
+    text-transform: capitalize;
     /* display: inline; */
     /* border: 2px solid black; */
     /* border-radius: 12px; */
@@ -355,11 +372,15 @@ svg{
     font-weight: bold;
     color: yellow;
 }
-.Serach .title,.Serach span{
+.Serach .title,.Serach .text{
     cursor: pointer;
-    text-transform: lowercase;
+    text-transform:lowercase;
     font-size: 1rem !important;
 
+}
+.Serach .text{
+    /* margin: 1rem; */
+    width: 90%;
 }
 
 
