@@ -1,23 +1,46 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import axios from 'axios'
-import React from "react";
+import React,{useEffect,useState} from "react";
 // import BlogShort from '@B/BlogShort'
 import Template from '@Layout/Template'
 import { Link, animateScroll as scroll } from "react-scroll";
 import BlogShort from '@Blog/BlogShort';
 import Search from '@Blog/Serach';
+import { WebLink } from '@const/List';
 
-export default function Home({data}) {
+export default function Home() {
 
-  const dic={data,title:"zeel codder blogs", keywords:"zeel codder blog,html"}
+  const dic={title:"zeel codder blogs", keywords:"zeel codder blog,html", isShoWList:true}
 
   return (
     <Template Component={BlogList} data={dic}></Template>
   )
 }
 
-function BlogList({data}){
+function BlogList(){
+
+  const [data,setdata]=useState([])
+
+
+  async function Getdata(){
+
+    let data=await axios.get(WebLink+'/api/blog')
+    .then((res) => {
+        
+        return res.data;
+      })
+      .catch((err) => { return; })
+
+      setdata(data)
+
+      return data;
+  }
+
+  useEffect(() => {
+    Getdata()
+    console.log(data);
+  }, [])
 
   
   return (
@@ -69,19 +92,3 @@ function BlogList({data}){
   )
 }
 
-
-export async function getStaticProps(context) {
-  
-    let data=await axios.get(process.env.WebLink+'/api/blog')
-    .then((res) => {
-        
-        return res.data;
-      })
-      .catch((err) => { return; })
-      
-      console.log(data,'<-');
-
-      return {
-        props: { data : data || []}, 
-      }
-}

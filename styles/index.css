@@ -323,7 +323,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   margin: 0px;
   border-radius: 47px;
 }
-.navabar-ul li a,.open,.login-choice span,.Mybutton,.navabar-ul li .a,.icons,.Serach li a,.topic a{
+.navabar-ul li a,.open,.login-choice span,.Mybutton,.navabar-ul li .a,.icons,.Serach li a,.topic a,.tools a{
   text-decoration: none;
   color: var(--color) !important;
   padding: 13px 11px;
@@ -536,9 +536,9 @@ h1{
 
 .container-img{
   display: block;
-  /* width: ; */
-  height: 288px;
-  margin: 10px auto;
+  width: 50%;
+  /* height: 288px; */
+  margin: 10px 15px;
 }
 
 .container table{
@@ -844,7 +844,7 @@ h1{
   
 }
 .form div textarea{
-  margin: 10px;
+  /* margin: 10px; */
    
  
   }
@@ -1075,7 +1075,18 @@ For Mobile
   }
   .main1{
     background-color: #F64C72;
-    height: 80vh;
+    height: auto;
+    flex-direction: column;
+  }
+  .logo{
+    width: 66%;
+  }
+  .logo-text .btn{
+    padding:0 ;
+  }
+  .logo-text{
+    margin: 1rem;
+
   }
   .navabar{
     z-index: 2;
@@ -1135,8 +1146,8 @@ For Mobile
   }
   
   .container-img{
-    width: 308px;
-    height: 203px;
+    /* width: 308px; */
+    /* height: 203px; */
   }
   .icon{
     display: block;
@@ -1285,8 +1296,8 @@ For Mobile
     transform: scale(1.4) rotate(90deg);
   }
   .container-img{
-    width: 250px;
-    height: 150px;
+    /* width: 250px; */
+    /* height: 150px; */
   }
   .form div{
     margin: 20px 0;
@@ -1327,8 +1338,8 @@ For Mobile
   }
   
   .container-img{
-    width: 200px;
-    height: 155px;
+    /* width: 200px; */
+    /* height: 155px; */
   }
   .container table th, .container table tr {
     font-size: 6px;
@@ -1350,7 +1361,7 @@ For Mobile
     font-size: 6px;
   }
   .container-img{
-    width: 130px;
+    /* width: 130px; */
   }
   .container table{
     display: none;

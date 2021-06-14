@@ -2,87 +2,106 @@ const Navdata=[
 
     {
         id:1,
-        title:"html"
+        title:"html",
+        link:"html"
     },
     {
         id:2,
-        title:"css"
+        title:"css",
+        link:"css"
        
     },
     {
         id:3,
-        title:"js"
+        title:"js",
+        link:"js"
        
     },
     {
         id:4,
-        title:"react js"
+        title:"react js",
+        link:"react-js"
      
     },
     {
         id:5,
-        title:"next js"
+        title:"next js",
+        link:"next-js"
     },
     {
         id:6,
-        title:"node js"
+        title:"node js",
+        link:"node-js"
     },
     {
         id:7,
-        title:"java"
+        title:"java",
+        link:"java"
     },
     {
         id:8,
-        title:"python"
+        title:"python",
+        link:"python"
     },
     {
         id:9,
-        title:"c"
+        title:"c",
+        link:"c"
   
     },
     {
         id:10,
-        title:"React native"
+        title:"React native",
+        link:"React-native"
+
   
     },
     {
         id:11,
-        title:"c++"
+        title:"c++",
+        link:"c++"
   
     },
     {
         id:12,
-        title:"Vs Code"
+        title:"Vs Code",
+        link:"vs-code"
   
     },
     {
         id:13,
-        title:"mongodb"
+        title:"mysql",
+        link:"mysql"
   
     },
     {
         id:14,
-        title:"mongodb"
+        title:"mongodb",
+        link:"mongodb"
   
     },
     {
         id:15,
-        title:"sql"
+        title:"sql",
+        link:"sql"
   
     },
     {
         id:16,
-        title:"error"
+        title:"error",
+        link:"error"
   
     },
     {
         id:17,
-        title:"Mobile"
+        title:"Mobile",
+        link:"mobile"
   
     },
     {
         id:18,
-        title:"Json"
+        title:"Json",
+        link:"Json"
   
     },
 ]

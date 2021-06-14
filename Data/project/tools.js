@@ -6,13 +6,13 @@ const data=[
         title:'My Introduction',
         technology:'next js',
         description:'A blogging web site which build on next js. Web-site main function are User Auth , User can read the blogs , Search blogs and also like or share the blog.',
-        codelink:'https://github.com/zeel-codder/My_Introduction',
+        codelink:'https://github.com/zeel-codder/MyWebSitNextjs',
         link:'https://zeelcodder.tech/'
     },
     {
         id:2,
     
-        title:'Anteryamin-store.',
+        title:'Anteryamin-store',
         technology:'Html,Css,Js',
         description:'A e-commerce web site which build on Only Html,css and js. Main function are User Login, singing , see the item or product of store, sort or search the item by name and price and add item or remove to cart.',
         codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
@@ -45,6 +45,14 @@ const data=[
         description:'This Project is build on node js and express as demo blog web site. We have mongodb as data base and pub as template engine',
         codelink:'https://github.com/zeel-codder/ProgramingHub',
         link:'https://programinghub.herokuapp.com/'
+    },
+    {
+        id:6,
+        title:'Anteryami_GameZone',
+        technology:'Java',
+        description:'Sudoku and Tic-Tac-Toe Games Build in java. User of OOPs in java.',
+        codelink:'https://github.com/zeel-codder/java_Tic-Tac-Toe_Sudoku_Games',
+        link:''
     }
 
    

@@ -3,12 +3,17 @@
 Main Page
 =============================================== */
 
-  .blog-container > p,.blog-container > pre,.tools *{
+  .blog-container > p,.blog-container > pre,.tools *,.container p,.para{
         /* padding: 0.7rem 0; */
     /* text-align: center; */
     line-height: 34px;
     font-size: 20px;
+    /* text-align: s; */
     margin: 5px 0;
+  }
+  .tools .BlogShort{
+      width: 100%;
+      justify-content: center;
   }
 
 .blog-container,.login-choice{
@@ -492,7 +497,7 @@ Like
 .blog-container button{
     color: white;
 }
-.Footer-icons a:hover,.Footer-icons svg:hover{
+.Footer-icons a:hover{
     color: var(--form-bg);
     background-color: transparent;
 }
@@ -554,13 +559,16 @@ Like
         margin:10px 0;
         line-height: 31px;
     }
-    .blog-container  p,code[class*="language-"], pre[class*="language-"],.tools span{
+    .blog-container  p,code[class*="language-"], pre[class*="language-"],.tools span,.container p,.para{
         font-size: 1.0rem !important;
         overflow-wrap: break-word !important;
         line-height: 25px;
         /* text-decoration: justify; */
         text-align: justify;
 
+    }
+    .container p,.para{
+        width: 100%;
     }
     .form div input{
         padding: 10px 0;

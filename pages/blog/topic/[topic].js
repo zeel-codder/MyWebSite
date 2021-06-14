@@ -31,7 +31,7 @@ import BlogShort from "@Blog/BlogShort";
 
 const   Blogoftopic = ({ data, title, keywords }) => {
 
-  const dic = { data, title, keywords }
+  const dic = { data, title, keywords , isShoWList :true}
 
   return (
     <Template Component={BlogPage} data={dic}></Template>

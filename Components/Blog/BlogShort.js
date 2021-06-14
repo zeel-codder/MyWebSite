@@ -25,7 +25,7 @@ const BlogShort = (props) => {
 
     const { name, title, img, url, link, topic,id } = props;
     // const WebLink="null"
-    console.log(WebLink)
+    // console.log(WebLink)
 
 
 

@@ -10,6 +10,7 @@ function MyApp({ Component, data }) {
   // console.log(data)
 
   const {title,keywords}=data;
+  const  isShoWList=data?.isShoWList;
   return (
     
 
@@ -18,7 +19,7 @@ function MyApp({ Component, data }) {
   <Meta title={title} keywords={keywords}></Meta>
   <Navbar></Navbar>
   <Component {...data} />
-  <Footer></Footer>
+  <Footer isShoWList={isShoWList}></Footer>
   </>
     )
 }

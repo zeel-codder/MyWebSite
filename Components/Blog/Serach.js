@@ -72,7 +72,7 @@ export default function Search({data}) {
 
     return (
        <div className="Serach form"  id="Read">
-           <input  className="form-input" type="text" name="search" value={query} 
+           <input  className="form-input" type="search" name="search" value={query} 
            onChange={(e)=>setquery(e.target.value)}
            placeholder="Search Blogs..."
            autoComplete="off"

@@ -6,7 +6,7 @@
       }], "@babel/preset-react" ],
     "plugins": [
       ["prismjs", {
-        "languages": ["javascript", "css", "html","bash"],
+        "languages": ["javascript", "css", "html","bash","java","c","python"],
         "plugins": ["show-language","copy-to-clipboard"],
         "css": true
       }]

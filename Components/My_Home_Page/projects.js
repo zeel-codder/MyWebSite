@@ -19,6 +19,8 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 import {useState} from 'react'
 import React from "react";
+import { WebLink } from '@const/List';
+import Link from 'next/link';
 // import { useGlobalContext } from '../context';
 // ====================================
 
@@ -32,19 +34,19 @@ const Projects=()=>{
         {
             id:1,
             title:'My Introduction',
-            technology:'React js',
-            subtitle:'This projects is build on react js.',
+            technology:'Next Js',
+            description:'A blogging web site which build on next js. Web-site main function are User Auth , User can read the blogs , Search blogs and also like or share the blog.',
             codelink:'https://github.com/zeel-codder/My_Introduction',
             link:'https://zeelcodder.tech/',
             
         },
         {
             id:2,
-            title:'BookMarkStor',
+            title:'Anteryamin-Store',
             technology:'Html,Css and Js',
-            subtitle:'This is used for Storing bookmark of website.',
-            codelink:'https://github.com/zeel-codder/BookMarks',
-            link:'https://mybookmarks1.netlify.app/',
+            description:'An e-commerce web site which build on Only Html,css and js. Main function are User Login, singing , see the item or product of store, sort or search the item by name and price and add item or remove to cart.',
+            codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
+            link:'https://anteryaminstore.netlify.app/',
             
         },
      
@@ -84,34 +86,49 @@ const Projects=()=>{
         {/* <div className="row"> */}
 
         {/* <img className="container-img" src='/images/home/project.jpg' alt="Project svg"></img> */}
-        <div className="list-container">
-        <ul className="project-ul"> 
+        <div className="ListOfBlogs blog-container tools" style={{width:"100%"}}>
+     
 
            {
-               ProjectData.map((d,index)=>{
-                   let class1="not-show"
-                   let class2=""
-                   if(arr.includes(index)){
-                       class1="show"
-                       class2="rotetor"
-                    }
+               ProjectData.map((data,index)=>{
+
+                const {id,technology,description,codelink ,link,title}=data
+  
+                return (
+
+                    <div key={id} className="BlogShort" >
+                <span className="title">Technology:{technology}</span>
+              
+
+                <div>
+                <h1>{title}</h1>
+                <div className="description">{description}</div>
+                <div>
+                
+                {
+                    codelink 
+                  &&
+                  <div className="code"><Link href={codelink}>code</Link></div>
+                }
+                {
+                    link
+                    &&
+                    <div className="link"><Link href={link}>Web site</Link></div>
                     
-                    return (
-                        <li key={d.id}  onClick={()=>changeIndex(index)}>
-                   <p className="text">
-                   <ArrowRightIcon className={class2}></ArrowRightIcon>  &nbsp;{d.title} , {d.technology}
-                   </p>
-                   <ul className={class1}>
-                   <li><BookmarkIcon /> {d.subtitle}</li>
-                   <li><BookmarkIcon /> Code Link: <a href={d.codelink} style={{padding:1 ,fontSize:'14px'}}>Code</a></li>
-                   <li><BookmarkIcon /> Project Link: <a href={d.link} style={{padding:1,fontSize:'14px'}}>Link</a></li>
-                   </ul>
-                   </li>
-                   )
-                   
+                }
+
+                
+                </div>
+                </div>
+              
+            </div>
+                )
                 })
             }
-        </ul>
+        {/* </ul> */}
+        <div className="code">
+            <Link href={`${WebLink}/me/tools`}>More Projects</Link>
+        </div>
         </div>
         </div>
             {/* </div> */}

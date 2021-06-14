@@ -24,24 +24,29 @@ import data from './data'
 
 
 
-const Footer=()=>{
+const Footer=({isShoWList})=>{
     return (
     
         <div className="footer-container">
 
         
-    
+    {
+
+        isShoWList 
+
+        &&
+
         <div className="topic">
             <h1 style={{width:"100%"}}>Topics of Blogs</h1>
 
             <div className="list">
             {
                 data.map((topic,index)=>{
-                    const {title}=topic;
+                    const {title,link}=topic;
                     return (
                         <Link  key={index}
-                       
-                        href={process.env.NEXT_PUBLIC_WebLink+`/blog/topic/${title}`}>
+                        
+                        href={process.env.NEXT_PUBLIC_WebLink+`/blog/topic/${link}`}>
                        
                         {title}
 
@@ -51,6 +56,7 @@ const Footer=()=>{
             }
             </div>
             </div>
+       }
                         <div className="footer">
             <p className="footer-para">
             All Copyright goes to © zeel prajapati

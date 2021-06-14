@@ -127,7 +127,7 @@ function Main() {
          
             <img src='/images/home/zeel.jpeg' className="logo" alt="Zeel"></img>
             <span className="logo-text" id="head">
-              Zeel Codder Personal Web Site
+              Hello, I am zeel codder
               <button className="btn" > 
               <a href="/Resume.pdf">
                 

@@ -44,7 +44,3 @@ Right now I am working on upload blog from web siteBut for know I have way from 
 *And with in 24 hour you blog is live in Google🍺.*
 
 I am waiting form you👔.
-
-```javascript
-console.log("Thank You");
-```

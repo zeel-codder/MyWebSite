@@ -35,7 +35,7 @@ import rehypeSanitize from 'rehype-sanitize'
 
 const Blog = ({ data, file, title, keywords }) => {
 
-  const dic = { data, file, title, keywords }
+  const dic = { data, file, title, keywords ,isShoWList:true}
 
   return (
     <Template Component={BlogPage} data={dic}></Template>

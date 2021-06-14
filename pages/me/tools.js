@@ -31,9 +31,18 @@ function ToolList(){
                 <h1>{title}</h1>
                 <div className="description">{description}</div>
                 <div>
+                
+                {
+                  codelink 
+                  &&
+                  <div className="code"><Link href={codelink}>code</Link></div>
+                }
+                {
+                  link
+                  &&
+                  <div className="link"><Link href={link}>Web site</Link></div>
 
-                <div className="code"><Link href={codelink}>code</Link></div>
-                <div className="link"><Link href={link}>Web site</Link></div>
+                }
 
                 
                 </div>
