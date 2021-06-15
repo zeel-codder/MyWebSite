@@ -12,7 +12,8 @@
 // ====================================
 // import { useGlobalContext } from '../context';
 import React from "react";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import BlogLoad from "Components/loading/BlogLoadder";
 import { useRef } from "react";
 import { User } from "@const/List";
 // import BlogShort from "BlogShort";
@@ -24,6 +25,7 @@ import BlogShort from "@Blog/BlogShort";
 const Profile = ({ name, username, LikeDic }) => {
 
     const formref = useRef();
+    
 
 
 

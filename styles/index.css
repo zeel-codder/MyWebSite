@@ -959,7 +959,7 @@ margin: 0;
   height: 1.5rem;
   border-radius: 50%;
   opacity: 1;
-  background-color: var(--form-bg);
+  background-color: red;
   transform-origin: center;
   /* border-bottom: 3px solid white; */
   /* transition: all .5s; */
@@ -1324,11 +1324,14 @@ For Mobile
     
   }
   .Serach input{
-    width: 85%;
+    width: 75%;
 }
 .Serach ul{
-  top:66px;
-    width: 99% !important;
+  /* top:66px; */
+  width: 100% !important;
+}
+.Serach li{
+  width: 89% !important;
 }
   
 }

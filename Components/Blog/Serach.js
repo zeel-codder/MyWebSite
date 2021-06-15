@@ -87,11 +87,13 @@ export default function Search({data}) {
 
                     return (
                     <li key={index} title={topic}>
+                        <div>
                         <span className="title"  dangerouslySetInnerHTML={{ __html: topic }}></span>
                         <Link href={WebLink+`/blog/${name}`}>
                         <span className="text"  dangerouslySetInnerHTML={{ __html: title }}>
                         </span>
                         </Link>
+                        </div>
                         
                         
                         </li>

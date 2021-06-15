@@ -8,6 +8,9 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import BlogShort from '@Blog/BlogShort';
 import Search from '@Blog/Serach';
 import { WebLink } from '@const/List';
+import LoadShort from 'Components/loading/LoderShort' 
+import BlogLoad from 'Components/loading/BlogLoadder';
+
 
 export default function Home() {
 
@@ -21,6 +24,7 @@ export default function Home() {
 function BlogList(){
 
   const [data,setdata]=useState([])
+  const [isLoading,setLoading]=useState(true)
 
 
   async function Getdata(){
@@ -31,9 +35,8 @@ function BlogList(){
         return res.data;
       })
       .catch((err) => { return; })
-
-      setdata(data)
-
+        setdata(data)
+        setLoading(false)
       return data;
   }
 
@@ -75,8 +78,16 @@ function BlogList(){
   <Search data={data}/>
 
   <h1 >Blogs</h1>
+  {/* <BlogShort /> */}
   <div className="ListOfBlogs blog-container" >
     {
+
+      isLoading 
+    ?
+    
+    <BlogLoad />
+    :
+    
       
       data.map((page,index) => {
         
@@ -84,6 +95,7 @@ function BlogList(){
         
       })
       
+    
     }
   </div>
 

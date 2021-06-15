@@ -17,6 +17,8 @@ import axios from 'axios';
 import Template from '@Layout/Template'
 import Search from "@Blog/Serach";
 import BlogShort from "@Blog/BlogShort";
+import BlogLoad from "Components/loading/BlogLoadder";
+import { WebLink } from "@const/List";
 
 
 
@@ -29,9 +31,9 @@ import BlogShort from "@Blog/BlogShort";
 
 
 
-const   Blogoftopic = ({ data, title, keywords }) => {
+const Blogoftopic = ({ title, keywords, topic }) => {
 
-  const dic = { data, title, keywords , isShoWList :true}
+  const dic = { title, keywords, isShoWList: true, topic }
 
   return (
     <Template Component={BlogPage} data={dic}></Template>
@@ -43,35 +45,69 @@ export default Blogoftopic;
 
 
 
-function BlogPage({ data }) {
+function BlogPage({ topic }) {
 
   // console.log(data==[])
+  const [data, setdata] = useState([])
+  const [isLoading, setLoading] = useState(true)
+
+
+  async function Getdata() {
+
+    let data = await axios.get(WebLink + '/api/blog')
+      .then((res) => {
+
+        return res.data;
+      })
+      .catch((err) => { return; })
+      data = data.filter((item) => item.topic === topic)
+      setdata(data)
+      setLoading(false)
+  }
+
+  useEffect(() => {
+    Getdata()
+    console.log(data);
+  }, [])
 
   return (
     <>
-      <Search data={data}/>
+      <Search data={data} />
 
-<h1 >Blogs</h1>
-<div className="ListOfBlogs blog-container" >
+      <h1 >Blogs</h1>
+      <div className="ListOfBlogs blog-container" >
 
-  {
-  data.length==0 && <h1 className="row">🙏🙏 No Blogs on this Topic 🙏🙏</h1>
-  }
-  {
-    
-    data.map((page,index) => {
-      
-      return (<BlogShort {...page} key={index} />)
-      
-    })
-    
-  }
-</div>
+        {
+          isLoading 
+          ?
+          <BlogLoad></BlogLoad>
+          :
+          <>
+
+        {
+
+          data.length == 0 && <h1 className="row">🙏🙏 No Blogs on this Topic 🙏🙏</h1>
+        
+        }
+        {
+
+          
+          data.map((page, index) => {
+            
+            return (<BlogShort {...page} key={index} />)
+            
+          })
+        }
+          </>
+
+        }
+        
+      </div>
 
 
-      </>
+    </>
 
-      )
+  )
 
 }
 
@@ -79,34 +115,27 @@ function BlogPage({ data }) {
 
 
 
-      export async function getStaticProps(context) {
+export async function getStaticProps(context) {
   const topic = context.params.topic;
 
-      let data = await axios.post(process.env.WebLink + "/api/blog")
-    .then((response) => {
-      console.log(response.data);
-      return response.data
-    }
-      )
-    .catch((err) => console.log(err));
 
-    data=data.filter((item)=>item.topic===topic)
 
-    const title=topic;
-    const keywords=`zeel codder ${topic}`;
 
- 
-      return {
-        props: {data, title ,keywords}
+
+  const title = topic;
+  const keywords = `zeel codder ${topic}`;
+
+
+  return {
+    props: { title, keywords, topic }
   }
 }
-      export async function getStaticPaths() {
+export async function getStaticPaths() {
 
 
 
   return {
-        paths: [],
-      fallback: 'blocking'
+    paths: [],
+    fallback: 'blocking'
   }
 }
-      

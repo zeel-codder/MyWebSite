@@ -22,7 +22,8 @@ import matter from 'gray-matter'
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
-
+import { WebLink } from "@const/List";
+import Link from "next/link";
 
 
 
@@ -33,9 +34,9 @@ import rehypeSanitize from 'rehype-sanitize'
 
 
 
-const Blog = ({ data, file, title, keywords }) => {
+const Blog = ({ data, file, title, keywords,user }) => {
 
-  const dic = { data, file, title, keywords ,isShoWList:true}
+  const dic = { data, file, title, keywords ,isShoWList:true,user}
 
   return (
     <Template Component={BlogPage} data={dic}></Template>
@@ -46,9 +47,10 @@ const Blog = ({ data, file, title, keywords }) => {
 
 
 
-function BlogPage({ data, file, title }) {
+function BlogPage({ data, file, title ,user}) {
 
   // let url='/';
+  const {name,username}=user
 
 
 
@@ -97,8 +99,14 @@ function BlogPage({ data, file, title }) {
             data !== 0 && <Like className="Share" blogInfo={data} isBlogShort={false}></Like>
           }
           <Share title={title}></Share>
-
+          
+        <p className="creator">
+        Blog Write By:<Link href={WebLink+`/user/${name}`}>
+            {`${username || 'none'}`}
+          </Link>
+        </p>
         </div>
+        
       </>
 
       )
@@ -112,10 +120,20 @@ function BlogPage({ data, file, title }) {
       export async function getStaticProps(context) {
   const name = context.params.name;
 
+  console.log(name)
       let data = await axios.post(process.env.WebLink + "/api/bloginfoone", {name})
     .then((response) => {
       // console.log(response.data);
       return JSON.parse(response.data.message)
+    }
+      )
+    .catch((err) => console.log(err));
+    // name=data.creator;
+
+    const user=await axios.post(process.env.WebLink+'/api/finduser',{name:data.creator,isNotCreateToken:true})
+    .then((response) => {
+      // console.log(response.data);
+      return response.data.result
     }
       )
     .catch((err) => console.log(err));
@@ -133,7 +151,7 @@ function BlogPage({ data, file, title }) {
       // const tem=JSON.stringify(data);
       //     data=tem;
       return {
-        props: {data, file: content, title ,keywords}
+        props: {data, file: content, title ,keywords,user}
   }
 }
       export async function getStaticPaths() {

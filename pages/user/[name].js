@@ -19,12 +19,6 @@ export default function UserDetails({data}) {
   export async function getStaticProps(context) {
     const uname=context.params.name;
 
-    // const Link=process.env.WebLink+'/api/finduser';
-    // const dataUser=await axios.post(Link,{name:uname,isNotCreateToken:true})
-    // // console.log(dataUser)
-    // const {name,username,LikePage}=dataUser.data.result;
-    // const LikeDic=await getList(LikePage);
-    // const data={name,username,LikeDic}
     const data=await GetUserProfile(uname)
     console.log(data);
   

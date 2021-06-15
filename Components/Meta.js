@@ -18,7 +18,7 @@ const Meta = ({ title, keywords }) => {
             <meta name="keywords" content={keywords} />
             <meta name="author" content="zeel prajapati" />
             <meta name="description" content="zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good." />
-            <link rel="shortcut icon" href="/zeel.png" />
+            <link rel="shortcut icon" href="/zeel.jpg" />
 
             {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC9RB4MTPH"></script>

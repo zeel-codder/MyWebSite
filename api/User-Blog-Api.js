@@ -22,5 +22,6 @@ export const UpdateBlogLike = (old,newData) =>  API.post('/api/like',{ filter:{.
 update:{...old,...newData}});
 export const SetMailInContactForm = (email,subject,message) => axios.post('/api/me/mail-me',{email,subject,message});
 export const  GetBlog= (name) => axios.post('/api/bloginfoone',{name});
+export const  GetOnlyUserInfo= (name) => axios.post('/api/finduser',{name,isNotCreateToken:true});
 
 // exports.API=API;
