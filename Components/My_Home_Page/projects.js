@@ -15,9 +15,9 @@
 // import {FaRegHandPointRight} from 'react-icons/fa'
 // import Brightness1Icon from '@material-ui/icons/Brightness1';
 // import Brightness5Icon from '@material-ui/icons/Brightness5';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import BookmarkIcon from '@material-ui/icons/Bookmark';
-import {useState} from 'react'
+// import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+// import BookmarkIcon from '@material-ui/icons/Bookmark';
+// import {useState} from 'react'
 import React from "react";
 import { WebLink } from '@const/List';
 import Link from 'next/link';
@@ -53,7 +53,7 @@ const Projects=()=>{
      ]
 
     //Store the open ul data
-    const [arr,setarr]=useState([]);
+    // const [arr,setarr]=useState([]);
 
 
     
@@ -65,17 +65,17 @@ const Projects=()=>{
     // @functionality: Function is used to show the Text of ul. It item in arr than it nested ul is display in screen other wise not.
     //=============================
 
-    const changeIndex=(index)=>{
-        // console.log(index)
-        let new_arr=arr;
-        if(new_arr.includes(index)){
-            new_arr=new_arr.filter((index1)=>index1!==index);
-        }else{
-           new_arr.push(index);
-        }
-        // console.log([...new_arr])
-        setarr([...new_arr]);
-    }
+    // const changeIndex=(index)=>{
+    //     // console.log(index)
+    //     let new_arr=arr;
+    //     if(new_arr.includes(index)){
+    //         new_arr=new_arr.filter((index1)=>index1!==index);
+    //     }else{
+    //        new_arr.push(index);
+    //     }
+    //     // console.log([...new_arr])
+    //     setarr([...new_arr]);
+    // }
 
 
     // console.log('rendee')

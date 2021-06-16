@@ -4,11 +4,10 @@ Main Page
 =============================================== */
 
   .blog-container > p,.blog-container > pre,.tools *,.container p,.para{
-        /* padding: 0.7rem 0; */
-    /* text-align: center; */
+    
     line-height: 34px;
     font-size: 20px;
-    /* text-align: s; */
+   
     margin: 5px 0;
   }
   .tools .BlogShort{
@@ -21,7 +20,7 @@ Main Page
     width:65%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+   
     margin: 1rem auto;
     margin-bottom:2rem ;
     font-family: var(--font);
@@ -36,17 +35,13 @@ Main Page
 /* Login Form */
 /* ================================================================ */
 .Log,.topic{
-    /* min-height: 50vh; */
-    /* transform: translate(-50%,-50%); */
-    /* flex:2; */
-    /* z-index: 3; */
+  
     background-image: var(--bgi);
     border: 1px solid;
-    /* animation: ShowLogin 1s; */
+ 
     height:fit-content;
     box-shadow: 0 0 20px var(--bgcolor);
-    /* animation-iteration-count: 1; */
-    /* align-items: center; */
+  
     transition: all var(--transition);
 }
 .topic{
@@ -84,9 +79,7 @@ Main Page
 .form div label::after{
     content: ":";
 }
-.form-login div,.form-singin div{
-    /* margin: 1rem 0; */
-}
+
 .close{
     position: absolute;
     right: 0;
@@ -101,10 +94,6 @@ Main Page
 
 .form-login button,.form-singin button{
     color: white;
-    /* justify-self: flex-end; */
-    /* position: absolute; */
-    /* bottom: 0; */
-    /* margin-top:12px ; */
 
 }
 
@@ -139,8 +128,6 @@ Main Page
 .Link-Page{
     display: flex;
     padding: .5rem;
-    /* grid-column: 2; */
-    /* text-align: center; */
     font-size: 1.5rem;
 }
 .Link-Page > *{
@@ -186,12 +173,9 @@ em{
 .BlogShort  img ,.img{
     align-self: center;
     width: 330px;
-    /* height:100%; */
-    /* margin:0 auto; */
-    /* height: 70%; */
+
     object-fit: container;
-    /* display: block; */
-    /* margin: 10px auto; */
+
     border-radius: var(--radius);
 }
 .tools{
@@ -253,11 +237,7 @@ p > img{
 
 .ListOfBlogs > .BlogShort{
     display: flex;
-    /* grid-template-columns: repeat(2,50%); */
-    /* grid-gap: 1rem; */
-    /* border: 1px solid black; */
-    /* flex-wrap:wrap ; */
-    /* box-shadow: 0px 0px 10px black; */
+
     margin: 1rem 0;
     padding:1.5rem;
     border: 1px solid rgb(49, 26, 26);
@@ -290,34 +270,27 @@ p > img{
 }
 
 h1,h3{
-    /* margin: 1rem 0; */
-    /* font-size: 12px; */
-    /* color: #322f38; */
+
     text-transform: capitalize;
 }
 .Blogtitle{
     font-size: larger;
-    /* text-decoration: underline; */
-    /* text-decoration-color: red; */
 }
 
 .title{
 
-    /* margin: 0rem; */ 
+  
     font-size: xx-large;
     text-align: center;
     background: black;
     padding: .2rem;
     color: white;
     text-transform: capitalize;
-    /* display: inline; */
-    /* border: 2px solid black; */
-    /* border-radius: 12px; */
+ 
     position: absolute;
     right: 0;
     top:0;
-    /* padding: .2rem; */
-    /* text */
+
 }
 .tools > a{
   background-color:black !important;
@@ -335,9 +308,7 @@ h1,h3{
     width: 100%;
     height: 70%;
 }
-.BlogInformation *{
-    /* flex: 1; */
-}
+
 svg{
     display: inline-block;
 }
@@ -392,10 +363,8 @@ svg{
     align-items: center;
     border:none;
     border-radius: 0px;
-    /* padding: 10px; */
-    /* background-color:  var(--form-bg); */
-    /* color: white; */
 }
+
 .Serach input{
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -404,7 +373,9 @@ svg{
     width: 25%;
 }
 
-
+.Serach{
+    padding: 1rem 0;
+}
 .Serach li{
     position: relative;
     width: 100% !important;
@@ -497,9 +468,6 @@ Like
     color: rgb(0, 113, 243) !important;
 }
 .Share  svg{
-    /* width: 8%;  */
-    /* background-color: green; */
-    /* height: -9%; */
     position: relative;
     border-radius: 1px;
     font-size: 2rem;
@@ -508,8 +476,6 @@ Like
 .Share svg:hover{
     cursor: pointer;
     color: var(--form-bg) !important;
-    /* background-color: var(--form-bg); */
-    /* font-size: 2rem; */
     
 }
 
@@ -523,8 +489,7 @@ Like
 }
 
 .alert{
-    /* background-color: transparent; */
-    /* width: 100%; */
+
     color: red;
     text-align: center;
     font-size: 1rem;
@@ -549,7 +514,7 @@ Like
 
 @media only screen and (max-width: 1200px) {
     .Loaddic .span1 {
-        /* background: #cccccc; */
+     
         width: 100%;
       
         margin: 9px;
@@ -563,8 +528,7 @@ Like
     }
     .ListOfBlogs > .BlogShort{
         grid-template-columns: 100%;
-        /* grid-gap: 4rem; */
-        /* margin-bottom: 3rem; */
+       
         display: flex;
         flex-direction: column;
     }
@@ -606,7 +570,7 @@ Like
         font-size: 1.0rem !important;
         overflow-wrap: break-word !important;
         line-height: 25px;
-        /* text-decoration: justify; */
+       
         text-align: justify;
 
     }
@@ -617,9 +581,7 @@ Like
         padding: 10px 0;
     }
 
-    /* .BlogInformation *{ */
-        /* width: 100%;
-    } */
+
 }
 
 

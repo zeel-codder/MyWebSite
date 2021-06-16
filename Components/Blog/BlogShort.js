@@ -14,8 +14,10 @@
 // import {useGlobalContext} from '../context';
 import Link from 'next/link'
 import React from "react";
-import Like from './Like';
-import { useState } from 'react';
+import loadable from '@loadable/component'
+// import Like from './Like';
+const Like = loadable(() => import('./Like'))
+// import { useState } from 'react';
 import { WebLink } from '@const/List';
 
 // ====================================

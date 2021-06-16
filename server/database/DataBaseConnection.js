@@ -28,7 +28,7 @@ const Blog = new Schema({
   like:Number,
   topic:String,
   creator:String,
-},{ versionKey: false });
+},{ versionKey: false,timestamps: true });
 
 
 const User = new Schema({
@@ -38,7 +38,7 @@ const User = new Schema({
   LikePage:{type: [String]},
   url:{type: String},
   About:{type:String},
-},{ versionKey: false });
+},{ versionKey: false,timestamps: true });
 
 
 

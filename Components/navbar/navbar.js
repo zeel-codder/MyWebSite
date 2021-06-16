@@ -17,8 +17,8 @@ import Link from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
-import Login from '../UserLoging/Login'
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+// import Login from '../UserLoging/Login'
+// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 // ====================================
 
 
@@ -26,7 +26,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 function Navbar() {
 
 
-    let value = useRef(true);
+    // let value = useRef(true);
     const linksRef = useRef(null);
     const linksRefs = useRef(null);
     const first = useRef(true);
@@ -77,9 +77,9 @@ function Navbar() {
     // @functionality: Function is used remove Login Component in Web Site.
     //=============================
 
-    const closeLogin = () => {
-        setIsLoginOpen(false);
-    }
+    // const closeLogin = () => {
+    //     setIsLoginOpen(false);
+    // }
 
 
     //=============================

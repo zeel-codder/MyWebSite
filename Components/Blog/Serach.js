@@ -24,7 +24,7 @@ export default function Search({data}) {
         const tem= temdata.filter((item)=>{
             const {title,topic}=item;
             // console.log(name,topic);
-            console.log(topic.match(regex));
+            // console.log(topic.match(regex));
             return title.match(regex) || topic.match(regex);
         });
         

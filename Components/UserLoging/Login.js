@@ -16,14 +16,18 @@
 // import {MdSubject} from 'react-icons/md';
 // import { useState } from 'react';
 import { useEffect, useReducer } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import React from "react";
 // import { useGlobalContext } from '../context';
-import GoogleButton from './GoogleAuth';
-import Loading from '../Loadding'
+// import GoogleButton from './GoogleAuth';
+// import Loading from '../Loadding'
 import { useRouter } from 'next/router'
 import { FindUser, AddUser, AddUserWithGoogle, FindUserWithGoogle } from './LoginFunctions';
 // ==================================== 
+import loadable from '@loadable/component'
+const  GoogleButton = loadable(() => import('./GoogleAuth'))
+const  Loading = loadable(() => import('../Loadding'))
+// const  GoogleButton = loadable(() => import('./GoogleAuth'))
 
 
 

@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 
 const secret = process.env.key;
 

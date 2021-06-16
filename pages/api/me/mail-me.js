@@ -1,20 +1,20 @@
 
 // require('dotenv').config();
 import nodemailer from 'nodemailer'
-import CheckMail from 'server/helpers/mail/checkemailhash';
+// import CheckMail from 'server/helpers/mail/checkemailhash';
 
 export default async function handler(req, res) {
 
     const {email,subject,message}=req.body;
 
-    const isUserEmailHash=CheckMail(email);
-    console.log(isUserEmailHash)
+    // const isUserEmailHash=CheckMail(email);
+    // console.log(isUserEmailHash)
 
-    if(!isUserEmailHash){
-        res.status(400).end(JSON.stringify({
-            message:"User Email not Valid"
-        }))
-    }
+    // if(!isUserEmailHash){
+    //     res.status(400).end(JSON.stringify({
+    //         message:"User Email not Valid"
+    //     }))
+    // }
     // console.log(req.body);
 
     const mymail=process.env.mail;

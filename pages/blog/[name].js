@@ -9,22 +9,28 @@
 
 // Imports
 // ====================================
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import React from "react";
 // import Reactmarkdown from 'react-markdown';
 // import { useRouter } from 'next/router'
 import axios from 'axios';
 import Prism from 'prismjs';
-import Like from '@Blog/Like'
-import Share from '@Blog/share'
-import Template from '@Layout/Template'
+// import Like from '@Blog/Like'
+// import Share from '@Blog/share'
+// import Template from '@Layout/Template'
 import matter from 'gray-matter'
 import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
-import rehypeSanitize from 'rehype-sanitize'
+// import rehypeSanitize from 'rehype-sanitize'
 import { WebLink } from "@const/List";
 import Link from "next/link";
 
+import loadable from '@loadable/component'
+const   Like   = loadable(() => import('@Blog/Like'))
+const   Share    = loadable(() => import('@Blog/share'))
+const   Template    = loadable(() => import('@Layout/Template'))
+// const   Share    = loadable(() => import('@Blog/share'))
+// const 
 
 
 

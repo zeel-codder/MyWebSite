@@ -12,19 +12,21 @@
 // ====================================
 // import { useGlobalContext } from '../context';
 import React from "react";
-import { useEffect,useState } from "react";
-import BlogLoad from "Components/loading/BlogLoadder";
-import { useRef } from "react";
-import { User } from "@const/List";
+// import { useEffect,useState } from "react";
+// import BlogLoad from "Components/loading/BlogLoadder";
+// import { useRef } from "react";
+// import { User } from "@const/List";
 // import BlogShort from "BlogShort";
-import BlogShort from "@Blog/BlogShort";
+// import BlogShort from "@Blog/BlogShort";
+import loadable from '@loadable/component'
+const  BlogShort = loadable(() => import('@Blog/BlogShort'))
 // ====================================
 
 
 
 const Profile = ({ name, username, LikeDic }) => {
 
-    const formref = useRef();
+    // const formref = useRef();
     
 
 
@@ -35,7 +37,7 @@ const Profile = ({ name, username, LikeDic }) => {
         <div className="blog-container">
             <h1 style={{textAlign:"center"}}>UserInfo</h1>
 
-            <form className="form userInfo" contentEditable={false} ref={formref}>
+            <form className="form userInfo" contentEditable={false} >
 
                 <div>
                     <span>User Name</span>

@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 // const { MdBorderVertical } = require('react-icons/md');
 const BlogSchema = require('./DataBaseConnection');
-const bcrypt =require( 'bcryptjs');
+// const bcrypt =require( 'bcryptjs');
 const Blog = BlogSchema.Blog;
 const User = BlogSchema.User;
 
@@ -19,11 +19,11 @@ const UserInfo=mongoose.models[process.env.User] ||  mongoose.model(process.env.
 
 const DemoData = {
 
-    "name": "mongooseoverwriteerror",
-    "title": "Mongoose Modal OverwriteModelError",
-    "img": "https://images.unsplash.com/photo-1594322436404-5a0526db4d13?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=715&q=80",
+    "name": "python-introduction",
+    "title": "Introduction To Python programming",
+    "img": "/images/blog/python-introduction/1.jpg",
     "like": 0,
-    "topic": "Error",
+    "topic": "python",
     "creator":"zeelprajapati321@gmail.com"
 }
 const DemoUser = {

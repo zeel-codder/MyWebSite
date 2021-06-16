@@ -1,11 +1,17 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Main from '@Home/Main'
+// import Head from 'next/head'
+// import Image from 'next/image'
 import React from 'react'
-import Navbar from 'Components/navbar/navabarme'
-import Footer from 'Components/footer/Footer'
+// import Main from '@Home/Main'
+// import Navbar from 'Components/navbar/navabarme'
+// import Footer from 'Components/footer/Footer'
+// import Meta from 'Components/Meta'
 import NavData from '@Data/navbar/data' 
-import Meta from 'Components/Meta'
+
+import loadable from '@loadable/component'
+const   Main   = loadable(() => import('@Home/Main'))
+const   Navbar   = loadable(() => import('Components/navbar/navabarme'))
+const   Footer  = loadable(() => import('Components/footer/Footer'))
+const   Meta   = loadable(() => import('Components/Meta'))
 
 
 

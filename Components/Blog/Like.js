@@ -11,6 +11,7 @@
 // ====================================
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+
 import {useState,useEffect} from 'react';
 import React from "react";
 import { useRouter } from 'next/router'
@@ -20,7 +21,7 @@ import {User} from '@const/List'
 
 
 
-import axios from 'axios';
+// import axios from 'axios';
 // import {useGlobalContext} from '../context';
 // import { response } from 'express';
 // ====================================

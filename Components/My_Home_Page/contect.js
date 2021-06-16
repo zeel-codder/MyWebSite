@@ -9,14 +9,16 @@
 
 // Imports
 // ====================================
-import { init } from 'emailjs-com';
-import emailjs from 'emailjs-com';
+// import { init } from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import React from "react";
 // import {Link} from 'react-dom';
 import { useState } from 'react';
 // import Loadding from './Loadding'
 // import { useGlobalCont/ext } from '../context';
-import Loading from '../Loadding';
+import loadable from '@loadable/component'
+const  Loading = loadable(() => import('../Loadding'))
+// import Loading from '../Loadding';
 import {SetMailInContactForm } from '@api/User-Blog-Api'
 // ====================================
 

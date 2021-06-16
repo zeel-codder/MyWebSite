@@ -9,7 +9,7 @@
 
 // Imports
 // ====================================
-import React, { Component } from 'react';
+import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 import GoogleSvg from './Google.Svg';
 // ====================================

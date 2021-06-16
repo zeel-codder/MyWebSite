@@ -14,15 +14,22 @@
 // ====================================
 // import { useGlobalContext } from '../context';
 // import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 // import {Link} from 'react-router-dom';
-import { useHistory } from "react-router-dom";
-import Introduction from '@Home/introduction';
-import Education from './education';
-import Technology from './tecnologes';
-import Projects from './projects';
-import Contact from './contect';
+// import { useHistory } from "react-router-dom";
+// import Introduction from '@Home/introduction';
+// import Education from './education';
+// import Technology from './tecnologes';
+// import Projects from './projects';
+// import Contact from './contect';
 import React from "react";
+
+import loadable from '@loadable/component'
+const  Introduction = loadable(() => import('@Home/introduction'))
+const  Education = loadable(() => import('./education'))
+const  Technology = loadable(() => import('./tecnologes'))
+const  Projects = loadable(() => import('./projects'))
+const  Contact  = loadable(() => import('./contect'))
 
 // ====================================
 
@@ -30,8 +37,8 @@ import React from "react";
 function Main() {
 
 
-  const [HeightArr, setHeighArr] = useState([]);
-  let history = useHistory();
+  // const [HeightArr, setHeighArr] = useState([]);
+  // let history = useHistory();
   // console.log(useGlobalContext())
 
 
@@ -44,16 +51,16 @@ function Main() {
   // @functionality: Function is used to Set the Scroll animation on .box div
   //=============================
 
-  function ScrollAnimtion(e) {
-    const arr = document.querySelectorAll(".box");
-    const WindowsBottom = window.scrollY + window.innerHeight;
-    arr.forEach((box) => {
-      const Box = box.offsetTop + box.offsetHeight / 7;
-      if (Box < WindowsBottom) {
-        box.classList.add("box-show");
-      }
-    })
-  }
+  // function ScrollAnimtion(e) {
+  //   const arr = document.querySelectorAll(".box");
+  //   const WindowsBottom = window.scrollY + window.innerHeight;
+  //   arr.forEach((box) => {
+  //     const Box = box.offsetTop + box.offsetHeight / 7;
+  //     if (Box < WindowsBottom) {
+  //       box.classList.add("box-show");
+  //     }
+  //   })
+  // }
 
 
   //=============================
@@ -66,27 +73,27 @@ function Main() {
   //=============================
 
   
-  function AddLine() {
+  // function AddLine() {
 
-    let height = document.querySelector(".main1").offsetHeight/2;
-    let HeightArr = [];
-    for (let i = 0; i < 20; i++) {
-      HeightArr.push(Math.random() * (height)+height);
-    }
-    let list=document.querySelectorAll('.line');
-    list.forEach((data)=>{
-      data.style.height = `${height}px`;
-      const cout=Math.floor(Math.random()*3+1);
-      // console.log(data);
-      const block='<div class="block1">';
-      for(let i=0;i<cout;i++){
-        data.innerHTML=data.innerHTML+block;
-      }
-    });
-    setHeighArr(HeightArr);
-    // console.log(HeightArr);
+  //   let height = document.querySelector(".main1").offsetHeight/2;
+  //   let HeightArr = [];
+  //   for (let i = 0; i < 20; i++) {
+  //     HeightArr.push(Math.random() * (height)+height);
+  //   }
+  //   let list=document.querySelectorAll('.line');
+  //   list.forEach((data)=>{
+  //     data.style.height = `${height}px`;
+  //     const cout=Math.floor(Math.random()*3+1);
+  //     // console.log(data);
+  //     const block='<div class="block1">';
+  //     for(let i=0;i<cout;i++){
+  //       data.innerHTML=data.innerHTML+block;
+  //     }
+  //   });
+  //   setHeighArr(HeightArr);
+  //   // console.log(HeightArr);
 
-  }
+  // }
 
 
    //=============================

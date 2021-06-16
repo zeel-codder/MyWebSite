@@ -12,17 +12,17 @@
 
 // import {FcLike} from 'react-icons/fc';
 // import {useGlobalContext} from '../context';
-import Link from 'next/link'
+// import Link from 'next/link'
 import React from "react";
 // import Like from './Like';
-import { useState } from 'react';
-import { WebLink } from '@const/List';
-import Like from '@Blog/Like';
+// import { useState } from 'react';
+// import { WebLink } from '@const/List';
+// import Like from '@Blog/Like';
 
 // ====================================
 
 
-const BlogShort = (props) => {
+const BlogShort = () => {
 
 
 

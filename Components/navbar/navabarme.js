@@ -13,7 +13,7 @@
 
 // Imports
 // ====================================
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import MyLink from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
@@ -25,14 +25,14 @@ import React, { useState, useRef, useEffect } from 'react';
 
 function Navbar({data}) {
 
-    let value = useRef(true);
+    // let value = useRef(true);
     const linksRef = useRef(null);
-    const linksRefs = useRef(null);
+    // const linksRefs = useRef(null);
     const first = useRef(true);
     const linksContainerRef = useRef(null);
 
     const [showLinks, setLinkopen] = useState(false);
-    const [isLoginOpen, setIsLoginOpen] = useState(false);
+    // const [isLoginOpen, setIsLoginOpen] = useState(false);
 
     // const { UserState, Login } = useGlobalContext();
 
@@ -59,12 +59,12 @@ function Navbar({data}) {
     // @functionality: Function is used add Login Component in Web Site.
     //=============================
 
-    const ShowLogin = (data) => {
-        // console.log(data.textContent);
-        value.current = data.textContent;
-        setIsLoginOpen(true);
+    // const ShowLogin = (data) => {
+    //     // console.log(data.textContent);
+    //     value.current = data.textContent;
+    //     setIsLoginOpen(true);
 
-    }
+    // }
 
     //=============================
     // @name:closeLogin
@@ -74,9 +74,9 @@ function Navbar({data}) {
     // @functionality: Function is used remove Login Component in Web Site.
     //=============================
 
-    const closeLogin = () => {
-        setIsLoginOpen(false);
-    }
+    // const closeLogin = () => {
+    //     setIsLoginOpen(false);
+    // }
 
 
     //=============================

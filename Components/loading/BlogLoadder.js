@@ -1,7 +1,9 @@
-import LoadShort from './LoderShort';
+// import LoadShort from './LoderShort';
+import loadable from '@loadable/component'
+const LoadShort= loadable(() => import('./LoderShort'))
 import React from 'react';
 
-const BlogLoad = (props) => {
+const BlogLoad = () => {
 
 
 

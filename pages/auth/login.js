@@ -1,6 +1,7 @@
-
-import Auth from 'Components/UserLoging/auth'
 import React from 'react';
+// import Auth from 'Components/UserLoging/auth'
+import loadable from '@loadable/component'
+const   Auth  = loadable(() => import('Components/UserLoging/auth'))
 
 
 
