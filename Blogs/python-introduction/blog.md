@@ -15,11 +15,11 @@ Python is an interpreted, object-oriented, high-level programming language with 
 
 ## YOU CAN FIND MORE THAN 100+ PROGRAMS IN PYTHON BELLOW: 
 
-    1.Calculation
-    2.Basic Concepts 
-    3.Function
-    4.Pattern
-    5.File
-    6.Oops
-    7.Modules
-    8.Extra
+1. [Basic](https://zeelcodder.tech/blog/python-basic)
+2. [Calculation](https://zeelcodder.tech/blog/python-calculation)
+3. [Pattern](https://zeelcodder.tech/blog/python-pattern)
+4. [Array](https://zeelcodder.tech/blog/python-array)
+5. [Functions](https://zeelcodder.tech/blog/python-functions)
+6. [File](https://zeelcodder.tech/blog/python-file)
+7. [Modules](https://zeelcodder.tech/blog/python-modules)
+8. [Oops](https://zeelcodder.tech/blog/c-oops) 

@@ -1,25 +1,27 @@
-const DataBase=require('server/database/DataBaseOperationsBlogInfo');
-const bcrypt =require("bcryptjs");
 const jwt =require('jsonwebtoken');
+const bcrypt =require("bcryptjs");
+import {ONConnections,OffConnections} from 'server/database/DataBaseConnection';
+import {AddNewUser} from 'server/database/user/CRUD'
 
 export default async function handler(req, res) {
-    // your server-side functionality
 
-    // console.log('strat');
-    await DataBase.ONConnections();
+    await ONConnections();
     // console.log(req.body)
     req.body.password=await bcrypt.hash(req.body.password, 12);
-    const ans=await DataBase.AddNewBlog(req.body,DataBase.UserInfo);
+
+    const ans=await AddNewUser(req.body);
     // console.log(ans,1223);
-    await DataBase.OffConnections();
+    await OffConnections();
+
     if(ans===null){
       res.status(404).end(JSON.stringify({
-        message: `User Not Add`
+        message: `Same Error while adding user`
       }))
     }
 
     const token =jwt.sign( ans.toJSON(), process.env.key, { expiresIn: "1h" } );
-    // await DataBase.OffDatabase();
+  
+    
     res.end(JSON.stringify({
       result:ans,
       token

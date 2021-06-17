@@ -6,7 +6,7 @@ const FindUser = async (e,state,Reducer,GotoHome) => {
     e!==null && e.preventDefault();
     const newUser = {
         username:state.name,
-        name: state.email,
+        email: state.email,
         password: state.passWord
     }
     // console.log(newUser);
@@ -46,7 +46,7 @@ const AddUser = async (e,state,Reducer,GotoHome) => {
 
         const newUser = {
             username:state.name,
-            name: state.email,
+            email: state.email,
             password: state.passWord
         }
 
@@ -79,9 +79,9 @@ const AddUserWithGoogle=async(data,Reducer,GotoHome)=>{
     
     const newUser = {
         username:data.profileObj.name,
-        name: data.profileObj.email,
+        email: data.profileObj.email,
         password: data.profileObj.googleId,
-        token: data.accessToken
+       
     }
     // console.log(newUser,'<--');
     
@@ -113,12 +113,12 @@ const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
     console.log('call')
     const newUser = {
         username:data.profileObj.name,
-        name: data.profileObj.email,
+        email: data.profileObj.email,
         password: data.profileObj.googleId,
-        token: data.accessToken
+     
 
     }
-    await axios.post('/api/finduser', { ...newUser })
+    await axios.post('/api/finduser', newUser )
     .then( async (res) => {
         const datau=res.data;
         res = res.data.result;

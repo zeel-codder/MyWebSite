@@ -9,7 +9,7 @@
         "@Data/*":["Data/*"],
         "@Layout/*":["Components/Blog/*"],
         "@api/*":["api/*"],
-        "@middleware/*":["middleware/*"],
+        "@middleware/*":["server/middleware/*"],
         "@const/*":["Components/Constance/*"],
         "@helpers/*":["server/helpers/*"]
 

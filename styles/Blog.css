@@ -3,7 +3,7 @@
 Main Page
 =============================================== */
 
-  .blog-container > p,.blog-container > pre,.tools *,.container p,.para{
+  .blog-container > p,.blog-container > pre,.tools *,.container p,.para,.blog-container  li{
     
     line-height: 34px;
     font-size: 20px;

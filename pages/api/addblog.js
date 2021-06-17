@@ -1,13 +1,16 @@
-const DataBase=require('server/database/DataBaseOperationsBlogInfo');
+import {ONConnections,OffConnections,BlogInfo} from 'server/database/DataBaseConnection';
+
+import {AddNewBlog} from 'server/database/Blog/CRUD';
+
 
 export default async function handler(req, res){
 
-    await DataBase.ONConnections();
-    await DataBase.AddNewBlog(null,DataBase.BlogInfo);
-    // await DataBase.OffDatabase();
+    await ONConnections();
+    await AddNewBlog(null);
+    await OffConnections();
 
     res.end(JSON.stringify({
-      message: `Blog Added`
+      message: `Blog Added into database zeel`
     }))
     
-    };
+};

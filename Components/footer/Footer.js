@@ -44,13 +44,13 @@ const Footer=({isShoWList})=>{
                 data.map((topic,index)=>{
                     const {title,link}=topic;
                     return (
-                        <Link  key={index}
+                        <a  key={index}
                         
                         href={process.env.NEXT_PUBLIC_WebLink+`/blog/topic/${link}`}>
                        
                         {title}
 
-                    </Link>
+                    </a>
                     )
                 })
             }

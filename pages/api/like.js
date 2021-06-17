@@ -1,16 +1,16 @@
 const DataBase=require('server/database/DataBaseOperationsBlogInfo');
-import auth from '@middleware/auth'
+import auth from 'server/middleware/auth'
 
+import {ONConnections,OffConnections,UserInfo} from 'server/database/DataBaseConnection';
+import {AddLikeArray} from 'server/database/user/CRUD'
+import {GetBlogAndUpDate} from 'server/database/Blog/CRUD'
 const  handler= async (req, res)=> {
     // your server-side functionality
     await auth(req,res);
     const body=req.body;
     const filter=body.filter;
     const update=body.update;
-    // console.log(req.userId)
 
-    // console.log(filter,update);
-    // console.log('strat');
 
     if(!req.userId){
       res.status(400).end(JSON.stringify({
@@ -18,11 +18,10 @@ const  handler= async (req, res)=> {
       }));
     }
 
-    await DataBase.ONConnections();
-    await DataBase.GetBlogInfoAndUpDate(filter,update,DataBase.BlogInfo);
-    const data=await DataBase.AddLikeArray(req.userId,update.name,DataBase.UserInfo);
-    // console.log(data);
-    // await DataBase.OffDatabase();
+    await ONConnections();
+    await GetBlogAndUpDate(filter,update);
+    await AddLikeArray(req.userId,update.name); 
+    await OffConnections();
 
     res.end(JSON.stringify({
       message: `Blog Update`

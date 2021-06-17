@@ -41,9 +41,8 @@ Hello World of Programming Anteryami!!
 
 YOU CAN FIND MORE THAN 100+ PROGRAMS IN JAVA BELLOW: 
 
-1.Basic
-2.Calculation
-3.Condition
-4.Array
-5.String
-6.Application base
+    1.[Basic](https://zeelcodder.tech/blog/java-basic)
+    2.[Calculation](https://zeelcodder.tech/blog/java-calculation)
+    3.[Array](https://zeelcodder.tech/blog/java-array)
+    4.[String](https://zeelcodder.tech/blog/java-string)
+    

@@ -40,12 +40,12 @@ Hello world of zeel
 
 ## YOU CAN FIND  MORE THAN 100+ PROGRAMS IN C BELLOW:
 
-1. Basic
-2. Condition.
-3. Calculation
-4. Pattern
-5. Array
-6. String
-7. Pointer
-8. Structure
-9. Application base 
+1. [Basic](https://zeelcodder.tech/blog/c-basic)
+2. [Condition](https://zeelcodder.tech/blog/c-condition)
+3. [Calculation](https://zeelcodder.tech/blog/c-calculation)
+4. [Pattern](https://zeelcodder.tech/blog/c-pattern)
+5. [Array](https://zeelcodder.tech/blog/c-array)
+6. [String](https://zeelcodder.tech/blog/c-string)
+7. [Pointer](https://zeelcodder.tech/blog/c-pointer)
+8. [Structure](https://zeelcodder.tech/blog/c-structure)
+9. [Application base](https://zeelcodder.tech/blog/c-applications) 

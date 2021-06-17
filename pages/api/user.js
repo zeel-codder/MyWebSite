@@ -1,5 +1,6 @@
-const DataBase = require('server/database/DataBaseOperationsBlogInfo');
-import  Admin  from '@middleware/Admin';
+import  Admin  from 'server/middleware/Admin';
+import {ONConnections,OffConnections} from 'server/database/DataBaseConnection';
+import {GetUserList } from 'server/database/user/CRUD'
 
 export default async function handler(req, res) {
 
@@ -11,10 +12,13 @@ export default async function handler(req, res) {
     }));
   }
   // your server-side functionality
-  await DataBase.ONConnections();
+  await ONConnections();
   // console.log("s")
 
-  const data = await DataBase.GetBlogInfo(DataBase.UserInfo);
+  const data = await GetUserList();
+
+  await OffConnections();
+
   res.end(JSON.stringify({
     // message: JSON.stringify(data)
     count:data.length,

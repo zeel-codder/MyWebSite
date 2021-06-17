@@ -56,7 +56,7 @@ const Blog = ({ data, file, title, keywords,user }) => {
 function BlogPage({ data, file, title ,user}) {
 
   // let url='/';
-  const {name,username}=user
+  const {_id,username}=user
 
 
 
@@ -107,7 +107,7 @@ function BlogPage({ data, file, title ,user}) {
           <Share title={title}></Share>
           
         <p className="creator">
-        Blog Write By:<Link href={WebLink+`/user/${name}`}>
+        Blog Write By:<Link href={WebLink+`/user/${_id}`}>
             {`${username || 'none'}`}
           </Link>
         </p>
@@ -136,9 +136,9 @@ function BlogPage({ data, file, title ,user}) {
     .catch((err) => console.log(err));
     // name=data.creator;
 
-    const user=await axios.post(process.env.WebLink+'/api/finduser',{name:data.creator,isNotCreateToken:true})
+    const user=await axios.post(process.env.WebLink+'/api/finduser',{email:data.creator,isNotCreateToken:true})
     .then((response) => {
-      // console.log(response.data);
+
       return response.data.result
     }
       )

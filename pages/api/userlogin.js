@@ -1,5 +1,5 @@
 // const DataBase=require('server/database/DataBaseOperationsBlogInfo');
-import auth from '@middleware/auth'
+import auth from 'server/middleware/auth'
 
 const  handler= async (req, res)=> {
   

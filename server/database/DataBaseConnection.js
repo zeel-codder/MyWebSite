@@ -1,10 +1,6 @@
 require('dotenv').config();
 const mongoose =require('mongoose');
-// console.log(process.env.MONGO_URI)
 
-
-
-// console.log('Start Connections')
 
 const ConnectToDataBase=()=>{
   // console.log('Start Connections')
@@ -21,7 +17,7 @@ const ConnectToDataBase=()=>{
 const { Schema } = mongoose;
 
 const Blog = new Schema({
-  name:  String, // String is shorthand for {type: String}
+  name:  String, 
   title: String,
   img:'String',
   url:   String,
@@ -33,7 +29,7 @@ const Blog = new Schema({
 
 const User = new Schema({
   username:{type:String},
-  name: {type: String}, // String is shorthand for {type: String}
+  email: {type: String}, 
   password:{type: String},
   LikePage:{type: [String]},
   url:{type: String},
@@ -42,12 +38,30 @@ const User = new Schema({
 
 
 
-// console.log('End Connections');
 
+const BlogInfo=mongoose.models[process.env.BLOG_INFO] || mongoose.model(process.env.BLOG_INFO, Blog);
+const UserInfo=mongoose.models[process.env.User] ||  mongoose.model(process.env.User, User);
+
+
+
+const OffConnections = async () => {
+
+  await mongoose.connection.close();
+
+}
+
+const ONConnections = async () => {
+
+  await ConnectToDataBase();
+
+}
 
 
 exports.Blog=Blog;
 exports.User=User;
-exports.mongoose=mongoose
+exports.mongoose=mongoose;
 exports.Connect=ConnectToDataBase;
-
+exports.BlogInfo = BlogInfo;
+exports.UserInfo = UserInfo;
+exports.OffConnections=OffConnections;
+exports.ONConnections=ONConnections;

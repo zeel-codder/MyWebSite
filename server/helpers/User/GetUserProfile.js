@@ -2,14 +2,21 @@ import axios from 'axios'
 
 
 export default async function GetUserProfile(uname){
-    
-    const Link=process.env.WebLink+'/api/finduser';
-    const dataUser=await axios.post(Link,{name:uname,isNotCreateToken:true})
-    // console.log(dataUser)
-    const {name,username,LikePage}=dataUser.data.result;
-    const LikeDic=await getList(LikePage);
-    const data={name,username,LikeDic}
-    return data;
+
+
+   try{
+
+     
+     const Link=process.env.WebLink+'/api/finduser';
+     const dataUser=await axios.get(Link+`?id=${uname}`)
+     // console.log(dataUser)
+     const {username,email,LikePage}=dataUser.data.result;
+     const LikeDic=await getList(LikePage);
+     const data={name:email,username,LikeDic}
+     return data;
+    }catch(e){
+      console.log('error')
+    }
        
 
 

@@ -23,7 +23,7 @@ export default function UserDetails({data}) {
     const uname=context.params.name;
 
     const data=await GetUserProfile(uname)
-    console.log(data);
+    // console.log(data);
   
     return {
       props:{data}

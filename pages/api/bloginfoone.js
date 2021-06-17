@@ -1,17 +1,22 @@
-const DataBase=require('server/database/DataBaseOperationsBlogInfo');
+
+
+import {ONConnections,OffConnections} from 'server/database/DataBaseConnection';
+import {GetOneBlogInformation} from 'server/database/Blog/CRUD'
 
 export default async function handler(req, res) {
 
     const {name}=req.body;
-    // console.log(name);
-    // your server-side functionality
-    await DataBase.ONConnections();
-    const data=await DataBase.GetBlogInfoOne(name,DataBase.BlogInfo);
-    // console.log(data,12);
+
+
+    await ONConnections();
+    const data=await GetOneBlogInformation(name);
+    await OffConnections();
+  
+    
     if(data===null){
 
       res.status(404).end( JSON.stringify({
-        message: JSON.stringify(data)
+        message: "Blog Not Found"
       }));
     }
 
