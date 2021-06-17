@@ -15,13 +15,13 @@ API.interceptors.request.use((req) => {
 
 
 
-export const GetUser = (name) => API.post('/api/finduser',{name});
+export const GetUser = (name) => API.post('/api/finduser',{email:name});
 export const UserLogin = () => API.get('/api/userlogin');
 export const UserList=()=>API.get('/api/user');
 export const UpdateBlogLike = (old,newData) =>  API.post('/api/like',{ filter:{...old},
 update:{...old,...newData}});
 export const SetMailInContactForm = (email,subject,message) => axios.post('/api/me/mail-me',{email,subject,message});
 export const  GetBlog= (name) => axios.post('/api/bloginfoone',{name});
-export const  GetOnlyUserInfo= (name) => axios.post('/api/finduser',{name,isNotCreateToken:true});
+export const  GetOnlyUserInfo= (name) => axios.post('/api/finduser',{email:name,isNotCreateToken:true});
 
 // exports.API=API;

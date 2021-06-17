@@ -12,31 +12,31 @@ export default async function handler(req, res) {
 
   // console.log(req.method)
 
-  if (req.method == "GET") {
+  // if (req.method == "GET") {
 
-    const { id } = req.query;
-    // console.log(id)
-    // console.log(id);
-    await ONConnections();
-    const data = await GetOneUserInformationById(id);
-    await OffConnections();
+  //   const { id } = req.query;
+  //   // console.log(id)
+  //   // console.log(id);
+  //   await ONConnections();
+  //   const data = await GetOneUserInformationById(id);
+  //   await OffConnections();
 
-    if (data === null) {
-      // console.log('Lest Go');
+  //   if (data === null) {
+  //     // console.log('Lest Go');
 
-      res.status(404).end(JSON.stringify({
-        message: "User Not Found"
-      }));
-    }
+  //     res.status(404).end(JSON.stringify({
+  //       message: "User Not Found"
+  //     }));
+  //   }
 
-    res.end(JSON.stringify({
-      result: data
-    }));
+  //   res.end(JSON.stringify({
+  //     result: data
+  //   }));
 
-  }
+  // }
 
 
-  if (req.method == "POST") {
+  // if (req.method == "POST") {
 
 
     const { email, isNotCreateToken } = req.body;
@@ -65,10 +65,10 @@ export default async function handler(req, res) {
       result: data,
       token
     }));
-  }
-  res.status(404).end(JSON.stringify({
-    message: "Not Found"
-  }));
+  // }
+  // res.status(404).end(JSON.stringify({
+  //   message: "Not Found"
+  // }));
 
 
 };
