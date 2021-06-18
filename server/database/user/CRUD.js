@@ -76,7 +76,7 @@ const GetOneUserInformationByEmail = async (id) => {
         });
         return data;
     } catch {
-        return 'Error';
+        return null;
     }
 
 }

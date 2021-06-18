@@ -1,8 +1,8 @@
 // const DataBase=require('server/database/DataBaseOperationsBlogInfo');
 const jwt = require('jsonwebtoken');
 
-import { ONConnections, OffConnections } from 'server/database/DataBaseConnection';
-import { GetOneUserInformationByEmail, GetOneUserInformationById } from 'server/database/user/CRUD'
+import { ONConnections } from 'server/database/DataBaseConnection';
+import {  GetOneUserInformationById } from 'server/database/user/CRUD'
 
 
 // import bcrypt from "bcryptjs";
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     // console.log(id);
     await ONConnections();
     const data = await GetOneUserInformationById(id);
-    await OffConnections();
+    // await OffConnections();
 
     if (data === null) {
       // console.log('Lest Go');

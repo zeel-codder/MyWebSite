@@ -177,6 +177,8 @@ em{
     object-fit: container;
 
     border-radius: var(--radius);
+    height: 213px;
+
 }
 .tools{
     align-items: center;

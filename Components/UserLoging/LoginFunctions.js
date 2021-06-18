@@ -10,10 +10,9 @@ const FindUser = async (e,state,Reducer,GotoHome) => {
         password: state.passWord
     }
     // console.log(newUser);
-    axios.post(`/api/finduser`, { ...newUser })
+    await axios.post(`/api/finduser`, newUser )
         .then(async (res) => {
-            // console.log(res.);
-            // console.log(res.data)
+       
             const data=res.data;
             res = res.data.result;
             const isPassWordSame=await bcrypt.compare( state.passWord ,res.password );
@@ -50,7 +49,7 @@ const AddUser = async (e,state,Reducer,GotoHome) => {
             password: state.passWord
         }
 
-        axios.post('/api/adduser', newUser)
+       await axios.post('/api/adduser', newUser)
             .then( async (res) => {
                 if (res.status === 200) {
                     const data=res.data;
@@ -109,7 +108,6 @@ const AddUserWithGoogle=async(data,Reducer,GotoHome)=>{
     // console.log(localStorage.getItem('User'),'<-');
 }
 const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
-    // console.log(data)
     console.log('call')
     const newUser = {
         username:data.profileObj.name,
@@ -122,17 +120,12 @@ const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
     .then( async (res) => {
         const datau=res.data;
         res = res.data.result;
-        // console.log(res);
-        // console.log()
-        // res = JSON.parse(res.data.message);
-        // console.log(await bcrypt.hash(newUser.password),res.password  )
+        
 
         const isPassWordSame=await bcrypt.compare(newUser.password,res.password);
-        // const isPassWordSame=true;
-        // console.log(isPassWordSame)
+
         if (isPassWordSame) {
             localStorage.setItem('User',JSON.stringify(datau));
-            // dispatchUser({ type: 'UserLogIn', data: res });
             console.log('login')
             Reducer({ type: 'changeLoadingFalse' });
             await GotoHome()

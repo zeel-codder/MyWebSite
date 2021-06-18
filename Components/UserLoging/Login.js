@@ -249,7 +249,7 @@ const Login = (props) => {
                     text={`${state.isLoginOpen ? 'Log In' : 'Sin Up'}  With Google`}
                     responseSuccess={(res)=>{
 
-                        Reducer({ type: 'changeLoadingTrue' });
+                        // Reducer({ type: 'changeLoadingTrue' });
                         state.isLoginOpen
                         ?
                          FindUserWithGoogle(res, Reducer, GotoHome)

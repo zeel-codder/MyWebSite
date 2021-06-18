@@ -1,8 +1,8 @@
 // const DataBase=require('server/database/DataBaseOperationsBlogInfo');
 const jwt = require('jsonwebtoken');
 
-import { ONConnections, OffConnections } from 'server/database/DataBaseConnection';
-import { GetOneUserInformationByEmail, GetOneUserInformationById } from 'server/database/user/CRUD'
+import { ONConnections } from 'server/database/DataBaseConnection';
+import { GetOneUserInformationByEmail} from 'server/database/user/CRUD'
 
 
 // import bcrypt from "bcryptjs";
@@ -40,17 +40,21 @@ export default async function handler(req, res) {
 
 
     const { email, isNotCreateToken } = req.body;
+    if(req.body==={}){
+      res.status(404).end();
+    }
     await ONConnections();
-    const data = await GetOneUserInformationByEmail(email);
-    await OffConnections();
-    // console.log(req.body,12);
+    let data = await GetOneUserInformationByEmail(email);
+    // await OffConnections();
+    console.log(req.body,12);
 
     if (data === null) {
       // console.log('Lest Go');
 
-      res.status(404).end(JSON.stringify({
+      return res.status(404).end(JSON.stringify({
         message: "User Not Found"
       }));
+      // return;
 
     }
 
@@ -65,10 +69,6 @@ export default async function handler(req, res) {
       result: data,
       token
     }));
-  // }
-  // res.status(404).end(JSON.stringify({
-  //   message: "Not Found"
-  // }));
-
+ 
 
 };

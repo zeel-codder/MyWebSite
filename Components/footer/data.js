@@ -107,4 +107,14 @@ const Navdata=[
 ]
 
 
+// for ( i in d){
+
+//         const data=`<url>
+//         <loc>https://zeelcodder.tech/blog/${d[i].name}</loc>
+//         <lastmod>2021-06-18T09:10:32+00:00</lastmod>
+//         <priority>0.80</priority>
+//       </url>`
+//       console.log(data)
+//     }
+    
 export default Navdata;

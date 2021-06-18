@@ -1,7 +1,7 @@
 // const DataBase=require('server/database/DataBaseOperationsBlogInfo');
 import auth from 'server/middleware/auth'
 
-import {ONConnections,OffConnections,UserInfo} from 'server/database/DataBaseConnection';
+import {ONConnections,UserInfo} from 'server/database/DataBaseConnection';
 import {AddLikeArray} from 'server/database/user/CRUD'
 import {GetBlogAndUpDate} from 'server/database/Blog/CRUD'
 const  handler= async (req, res)=> {
@@ -21,7 +21,7 @@ const  handler= async (req, res)=> {
     await ONConnections();
     await GetBlogAndUpDate(filter,update);
     await AddLikeArray(req.userId,update.name); 
-    await OffConnections();
+    // await OffConnections();
 
     res.end(JSON.stringify({
       message: `Blog Update`

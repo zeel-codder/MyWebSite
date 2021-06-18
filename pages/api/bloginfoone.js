@@ -1,6 +1,6 @@
 
 
-import {ONConnections,OffConnections} from 'server/database/DataBaseConnection';
+import {ONConnections} from 'server/database/DataBaseConnection';
 import {GetOneBlogInformation} from 'server/database/Blog/CRUD'
 
 export default async function handler(req, res) {
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
     await ONConnections();
     const data=await GetOneBlogInformation(name);
-    await OffConnections();
+    // await OffConnections();
   
     
     if(data===null){

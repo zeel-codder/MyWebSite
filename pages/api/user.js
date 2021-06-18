@@ -1,5 +1,5 @@
 import  Admin  from 'server/middleware/Admin';
-import {ONConnections,OffConnections} from 'server/database/DataBaseConnection';
+import {ONConnections} from 'server/database/DataBaseConnection';
 import {GetUserList } from 'server/database/user/CRUD'
 
 export default async function handler(req, res) {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
   const data = await GetUserList();
 
-  await OffConnections();
+  // await OffConnections();
 
   res.end(JSON.stringify({
     // message: JSON.stringify(data)

@@ -383,7 +383,7 @@ blog-container p > img:hover{
 }
 p > img{
   border-radius:12px;
-  max-height: 70%;
+  max-height: 28rem;
   object-fit: cover;
 
 }
