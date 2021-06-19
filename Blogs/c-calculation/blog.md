@@ -1,5 +1,5 @@
 ---
-title: C programming Calculation Programs
+title: C Programming Calculation Programs
 keywords: c
 
 ---

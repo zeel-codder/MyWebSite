@@ -10,7 +10,7 @@ const   Template   = loadable(() => import('@Layout/Template'))
 
 export default function Tools() {
 
-  const dic={title:"tools",keywords:"tools"}
+  const dic={title:"Tools",keywords:"tools"}
 
   return (
     <Template Component={ToolList} data={dic}></Template>

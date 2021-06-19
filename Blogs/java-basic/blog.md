@@ -1,5 +1,5 @@
 ---
-title: Java programming Basic Programs
+title: Java Programming Basic Programs
 keywords: Java
 ---
 

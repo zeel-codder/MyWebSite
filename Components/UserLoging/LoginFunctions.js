@@ -1,38 +1,44 @@
 import axios from 'axios';
 import bcrypt from 'bcryptjs';
+import { User , Gkey} from '@const/List';
+import { GetUser, AddUserInDataBase } from '@api/User-Blog-Api';
 // import React from "react";
+
+
+
+const GetNewUser=(username,email,password)=>{
+    return {username,email,password};
+}
 
 const FindUser = async (e,state,Reducer,GotoHome) => {
     e!==null && e.preventDefault();
-    const newUser = {
-        username:state.name,
-        email: state.email,
-        password: state.passWord
-    }
-    // console.log(newUser);
-    await axios.post(`/api/finduser`, newUser )
-        .then(async (res) => {
-       
-            const data=res.data;
-            res = res.data.result;
-            const isPassWordSame=await bcrypt.compare( state.passWord ,res.password );
-            if (isPassWordSame) {
-            
-                newUser.username =res.username;
-                localStorage.setItem('User',JSON.stringify(data));
-                // dispatchUser({ type: 'UserLogIn', data: res });
-                  await GotoHome()
 
-            } else {
-                alert('Wrong PassWord')
-            }
-            Reducer({ type: 'changeLoadingFalse' });
-        })
-        .catch((error) => {
-            console.error(error)
-            alert('UserName is not valid')
-            Reducer({ type: 'changeLoadingFalse' });
-        });
+    const newUser=GetNewUser(state.name,state.email,state.passWord);
+    
+    // console.log(newUser);
+
+    try{
+
+        const res=await GetUser(newUser.email);
+        const data=res.data;
+        const user= res.data.result;
+        const isPassWordSame=await bcrypt.compare( state.passWord ,user.password );
+        if (isPassWordSame) {
+            
+            newUser.username =res.username;
+            localStorage.setItem(User,JSON.stringify(data));
+            await GotoHome()
+
+        } else {
+            alert('Wrong PassWord')
+        }
+        Reducer({ type: 'changeLoadingFalse' });
+
+    }catch(e){
+        console.error(e)
+        alert('UserName is not valid')
+        Reducer({ type: 'changeLoadingFalse' });
+    }
 
 }
 
@@ -40,33 +46,24 @@ const FindUser = async (e,state,Reducer,GotoHome) => {
 
 const AddUser = async (e,state,Reducer,GotoHome) => {
     e!==null && e.preventDefault();
-    // console.log(e)
+  
     if (state.issame) {
 
-        const newUser = {
-            username:state.name,
-            email: state.email,
-            password: state.passWord
-        }
+        const newUser=GetNewUser(state.name,state.email,state.passWord);
+     
+        try{
+            const res=await AddUserInDataBase(newUser);
+            const data=res.data;
+            // const user=data.result;
+            localStorage.setItem(User,JSON.stringify(data));
+            await GotoHome();
+            Reducer({ type: 'changeLoadingFalse' });
 
-       await axios.post('/api/adduser', newUser)
-            .then( async (res) => {
-                if (res.status === 200) {
-                    const data=res.data;
-                    res = res.data.result;
-                    // console.log(res);
-                    localStorage.setItem('User',JSON.stringify(data));
-                    // dispatchUser({ type: 'UserLogIn', data: newUser });
-                     await GotoHome();
-                }
-                Reducer({ type: 'changeLoadingFalse' });
-            })
-            .catch((error) => {
-                // console.log(error);
-                alert('User Exits');
-                Reducer({ type: 'changeLoadingFalse' });
-                // alert('error');
-            });
+        }catch(e){
+            alert('User Exits');
+            Reducer({ type: 'changeLoadingFalse' });
+
+        }
     } else {
         alert('Pass Word Done mathch')
         Reducer({ type: 'changeLoadingFalse' });
@@ -76,57 +73,38 @@ const AddUser = async (e,state,Reducer,GotoHome) => {
 
 const AddUserWithGoogle=async(data,Reducer,GotoHome)=>{
     
-    const newUser = {
-        username:data.profileObj.name,
-        email: data.profileObj.email,
-        password: data.profileObj.googleId,
-       
-    }
-    // console.log(newUser,'<--');
+    const newUser=GetNewUser(data.profileObj.name,data.profileObj.email,data.profileObj[Gkey]);
     
-    return await axios.post('/api/adduser', newUser)
-    .then(async (res) => {
-        const datau=res.data;
-        res = res.data.result;
-        if (res.status === 200) {
-            // console.log(res);
-            // dispatchUser({ type: 'UserLogIn', data: newUser });
-        }
-        
-        localStorage.setItem('User',JSON.stringify(datau));
-            Reducer({ type: 'changeLoadingFalse' });
-             await GotoHome();
-            
-        })
-        .catch((error) => {
-            // console.log(error)/;
-            alert('User Exits');
-            Reducer({ type: 'changeLoadingFalse' });
-            // alert('error');
-            
-        });
-    // console.log(localStorage.getItem('User'),'<-');
+    try{
+        const res=await AddUserInDataBase(newUser);
+        const data=res.data;
+        // const user=data.result;
+        localStorage.setItem(User,JSON.stringify(data));
+        await GotoHome();
+        Reducer({ type: 'changeLoadingFalse' });
+
+    }catch(e){
+        alert('User Exits');
+        Reducer({ type: 'changeLoadingFalse' });
+
+    }
+
 }
 const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
     console.log('call')
-    const newUser = {
-        username:data.profileObj.name,
-        email: data.profileObj.email,
-        password: data.profileObj.googleId,
-     
+    
 
-    }
-    await axios.post('/api/finduser', newUser )
-    .then( async (res) => {
-        const datau=res.data;
-        res = res.data.result;
-        
+    const newUser=GetNewUser(data.profileObj.name,data.profileObj.email,data.profileObj[Gkey]);
 
-        const isPassWordSame=await bcrypt.compare(newUser.password,res.password);
+    // console.log(newUser)
+    try{
+        const res=await GetUser(newUser.email);
+        const data=res.data;
+        const user=data.result;
+        const isPassWordSame=await bcrypt.compare(newUser.password,user.password);
 
         if (isPassWordSame) {
-            localStorage.setItem('User',JSON.stringify(datau));
-            console.log('login')
+            localStorage.setItem(User,JSON.stringify(data));
             Reducer({ type: 'changeLoadingFalse' });
             await GotoHome()
 
@@ -134,12 +112,13 @@ const FindUserWithGoogle=async(data,Reducer,GotoHome)=>{
             alert('Wrong PassWord')
         }
         Reducer({ type: 'changeLoadingFalse' });
-    })
-    .catch((error) => {
-        console.error(error);
-                alert('UserName is not valid')
+
+    }catch(e){
+        console.log(e);
+        alert('User not Exits');
         Reducer({ type: 'changeLoadingFalse' });
-    });
+
+    }
 
 }
 export {FindUser,AddUser, AddUserWithGoogle,FindUserWithGoogle};

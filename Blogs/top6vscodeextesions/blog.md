@@ -1,5 +1,5 @@
 ---
-title: Top 6 vs code Extensions For programmer.
+title: Top 6 vs code Extensions For Programmer.
 
 keywords: VS CODE , HTML, WEB, CSS , CODEEDITOR,4 Basic And Important Tags For Beginner In Web Development,Vs code Extensions
 ---

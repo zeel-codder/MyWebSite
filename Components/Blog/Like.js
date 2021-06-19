@@ -55,7 +55,7 @@ const Like=(props)=>{
     
 
     const getUser=async()=>{
-        const name=JSON.parse(localStorage.getItem(User)).result.name
+        const name=JSON.parse(localStorage.getItem(User)).result.email
         try{
             const temuser=await GetUser(name)
             const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);

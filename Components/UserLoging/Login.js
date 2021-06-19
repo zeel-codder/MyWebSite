@@ -22,6 +22,7 @@ import React from "react";
 // import GoogleButton from './GoogleAuth';
 // import Loading from '../Loadding'
 import { useRouter } from 'next/router'
+import { reducer } from './reduce';
 import { FindUser, AddUser, AddUserWithGoogle, FindUserWithGoogle } from './LoginFunctions';
 // ==================================== 
 import loadable from '@loadable/component'
@@ -31,71 +32,6 @@ const  Loading = loadable(() => import('../Loadding'))
 
 
 
-
-
-/**
- @name:reducer
- @type:Javascript Function
- @param:state ,action
- @returns: Updated State object.
- @functionality : This Reducer of Login Website Hook Reducer UserState.
-**/
-
-const reducer = (state, action) => {
-
-    // eslint-disable-next-line default-case
-    switch (action.type) {
-        case 'changeLoadingTrue':
-            // const tem=!state.isLoading;
-            return { ...state, isLoading: true };
-        case 'changeLoadingFalse':
-            return {
-                ...state, isLoading: false, issame: false,
-                isLoading: false,
-                passWord: '',
-                email: '',
-                compassWord: '',
-                name:''
-            };
-        case 'changeLoginTrue':
-            // const tem=!state.isLoading;
-            return {
-                ...state, isLoginOpen: true, issame: false,
-                isLoading: false,
-                passWord: '',
-                email: '',
-                compassWord: '',
-                name:''
-            };
-        case 'changeLoginFalse':
-            return {
-                ...state, isLoginOpen: false, issame: false,
-                isLoading: false,
-                passWord: '',
-                email: '',
-                compassWord: '',
-                name:''
-            };
-        case 'SetSameTrue':
-            return { ...state, issame: true };
-        case 'SetSameFalse':
-            return { ...state, issame: false };
-        case 'setname':
-            return { ...state, name: action.data };
-        case 'setEmail':
-            return { ...state, email: action.data };
-        case 'setPassword':
-            return { ...state, passWord: action.data };
-        case 'setComPassword':
-            return { ...state, compassWord: action.data };
-        case 'TogglePassWordShow':
-            const ans = !state.isPassWordShowOpen;
-            return { ...state, isPassWordShowOpen: ans };
-
-    }
-    return { ...state };
-
-}
 
 
 const Login = (props) => {
@@ -114,6 +50,8 @@ const Login = (props) => {
     const router = useRouter()
     const {clientId}=props;
     const [state, Reducer] = useReducer(reducer, InitialState);
+    const LoginKey='Log In'
+    const SingUpKey='Sing Up'
 
 
 
@@ -133,17 +71,15 @@ const Login = (props) => {
 
     }, [state.passWord, state.compassWord])
 
-    // console.log(prpos);
 
     return (
 
         <div className="Log">
-            {/* <em>Zeel Codder Web-Site Auth</em> */}
+        
 
             <div className="login-choice form">
-                <span onClick={() => router.push('/auth/login')} className={state.isLoginOpen ? `open` : null}>Log in</span>
-                <span onClick={() => router.push('/auth/singup')} className={state.isLoginOpen ? null : `open`}>Sin up</span>
-                {/* <span onClick={() => props.closeLogin()} className="close Mybutton">[X]</span> */}
+                <span onClick={() => router.push('/auth/login')} className={state.isLoginOpen ? `open` : null}>{LoginKey}</span>
+                <span onClick={() => router.push('/auth/singup')} className={state.isLoginOpen ? null : `open`}>{SingUpKey}</span>
             </div>
 
             {
@@ -204,8 +140,6 @@ const Login = (props) => {
                             (
                                 state.passWord.length < 8
                                 &&
-                                !/^(?=.*[\d])(?=.*[!@#$%^&*])[\w!@#$%^&*]{6,16}$/.test(state.passWord)
-                                &&
                                 <span className="alert">PassWord Must be Strong(Add number,char etc..)</span>
                             )
                             ||
@@ -239,17 +173,16 @@ const Login = (props) => {
                 </div>
                 <button
                     className="btn"
-                    type="submit">{state.isLoginOpen ? 'Log In' : 'Sin Up'}
+                    type="submit">{state.isLoginOpen ? LoginKey : SingUpKey}
                 </button>
 
-                <span className="alert">OR</span>
+                <span className="alert" style={{color:"green",fontWeight:"bold"}}>OR</span>
 
                 <GoogleButton 
                     clientId={clientId}
-                    text={`${state.isLoginOpen ? 'Log In' : 'Sin Up'}  With Google`}
+                    text={`${state.isLoginOpen ? LoginKey : SingUpKey}  With Google`}
                     responseSuccess={(res)=>{
 
-                        // Reducer({ type: 'changeLoadingTrue' });
                         state.isLoginOpen
                         ?
                          FindUserWithGoogle(res, Reducer, GotoHome)

@@ -1,5 +1,5 @@
 ---
-title: C programming Basic Programs
+title: C Programming Basic Programs
 keywords: c
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: C programming Array Programs
+title: C Programming Array Programs
 keywords: c
 ---
 

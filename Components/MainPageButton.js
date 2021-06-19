@@ -35,10 +35,12 @@ function MainPageButton() {
   useEffect(() => {
 
     const GOTO = document.querySelector('.Goto_top');
+    const Bottom = document.querySelector('.bottom');
     const Dark = document.querySelector('.DarkMode');
 
     if (isOpen && GOTO && Dark) {
       GOTO.classList.toggle('Goto_top-show');
+      Bottom.classList.toggle('bottom-show');
       Dark.classList.toggle('DarkMode-show');
     }
 
@@ -52,6 +54,9 @@ function MainPageButton() {
 
       <BiLeftTopArrowCircle className="Goto_top" onClick={() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
+      }}></BiLeftTopArrowCircle>
+      <BiLeftTopArrowCircle className="Goto_top bottom" onClick={() => {
+        window.scrollTo({ top: document.querySelector("#__next").offsetHeight, behavior: 'smooth' })
       }}></BiLeftTopArrowCircle>
 
       <CgDarkMode className="DarkMode" onClick={() => {

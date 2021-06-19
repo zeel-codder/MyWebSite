@@ -1,5 +1,5 @@
 ---
-title: Java programming Array Programs
+title: Java Programming Array Programs
 keywords: Java
 ---
 

@@ -5,7 +5,6 @@ import { ONConnections } from 'server/database/DataBaseConnection';
 import { GetOneUserInformationByEmail} from 'server/database/user/CRUD'
 
 
-// import bcrypt from "bcryptjs";
 
 export default async function handler(req, res) {
 
@@ -40,16 +39,13 @@ export default async function handler(req, res) {
 
 
     const { email, isNotCreateToken } = req.body;
-    if(req.body==={}){
-      res.status(404).end();
-    }
+
+
     await ONConnections();
     let data = await GetOneUserInformationByEmail(email);
-    // await OffConnections();
-    console.log(req.body,12);
+    console.log('call finduser');
 
     if (data === null) {
-      // console.log('Lest Go');
 
       return res.status(404).end(JSON.stringify({
         message: "User Not Found"

@@ -16,7 +16,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import React from "react";
-import Link from 'next/link';
+// import Link from 'next/link';
 import data from './data'
 // import { FaBeer } from 'react-icons/fa';
 // ====================================

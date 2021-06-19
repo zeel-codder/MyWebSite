@@ -56,10 +56,6 @@ const ONConnections = async () => {
 
 }
 
-
-exports.Blog=Blog;
-exports.User=User;
-exports.mongoose=mongoose;
 exports.Connect=ConnectToDataBase;
 exports.BlogInfo = BlogInfo;
 exports.UserInfo = UserInfo;

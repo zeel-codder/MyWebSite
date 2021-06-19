@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(async () => {
 
     try{
-      // await UserLogin();
+       await UserLogin();
      
     }catch(e){
       // console.log(e)

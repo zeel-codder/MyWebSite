@@ -1,5 +1,5 @@
 ---
-title: C programming Structure Programs
+title: C Programming Structure Programs
 keywords: c
 ---
 
