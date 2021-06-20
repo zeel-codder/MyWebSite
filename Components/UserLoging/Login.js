@@ -38,13 +38,10 @@ const Login = (props) => {
 
     const InitialState = {
         isLoginOpen: props.choice !== "Singup",
-        issame: false,
         isLoading: false,
         name:'',
-        passWord: '',
         email: '',
-        compassWord: '',
-        isPassWordShowOpen: false,
+       
     }
 
     const router = useRouter()
@@ -60,16 +57,6 @@ const Login = (props) => {
     }
 
 
-
-    useEffect(() => {
-        if (state.passWord === state.compassWord) {
-            Reducer({ type: 'SetSameTrue' });
-        } else {
-
-            Reducer({ type: 'SetSameFalse' });
-        }
-
-    }, [state.passWord, state.compassWord])
 
 
     return (
@@ -115,7 +102,7 @@ const Login = (props) => {
                 </div>
 
 
-                <div>
+                {/* <div>
                     <input
                         className={`form-input`}
                         type={state.isPassWordShowOpen ? "text" : "passWord"}
@@ -124,8 +111,8 @@ const Login = (props) => {
                         value={state.passWord}
                         placeholder="Enter PassWord"
                         required></input>
-                </div>
-                {
+                </div> */}
+                {/* {
                     state.isLoginOpen
                     ||
 
@@ -150,8 +137,8 @@ const Login = (props) => {
                                     :
                                     <span className="alert" style={{ color: 'green' }}>PassWord Same</span>
                             )
-                        }
-                        <div>
+                        } */}
+                        {/* <div>
                             <input
                                 className={`form-input ${state.issame || 'Wrong'}`}
                                 type={state.isPassWordShowOpen ? "text" : "passWord"}
@@ -160,17 +147,17 @@ const Login = (props) => {
                                 value={state.compassWord}
                                 placeholder="Enter Confirm Password"
                                 required></input>
-                        </div>
-                    </>
-                }
+                        </div> */}
+                    {/* </>
+                } */}
                 {/* <div> */}
-                <div style={{flexDirection:"row", alignItems: "center"}}>
+                {/* <div style={{flexDirection:"row", alignItems: "center"}}>
                     <input
                         type="checkbox"
                         name="show-pass"
                         onClick={(e) => Reducer({ type: 'TogglePassWordShow' })}
                     ></input> : <span style={{ fontSize: '1rem' }}>Show Password</span>
-                </div>
+                </div> */}
                 <button
                     className="btn"
                     type="submit">{state.isLoginOpen ? LoginKey : SingUpKey}
@@ -182,7 +169,8 @@ const Login = (props) => {
                     clientId={clientId}
                     text={`${state.isLoginOpen ? LoginKey : SingUpKey}  With Google`}
                     responseSuccess={(res)=>{
-
+                        
+                        Reducer({ type: 'changeLoadingTrue' });
                         state.isLoginOpen
                         ?
                          FindUserWithGoogle(res, Reducer, GotoHome)

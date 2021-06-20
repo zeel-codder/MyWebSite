@@ -42,21 +42,10 @@ export const reducer = (state, action) => {
                 compassWord: '',
                 name:''
             };
-        case 'SetSameTrue':
-            return { ...state, issame: true };
-        case 'SetSameFalse':
-            return { ...state, issame: false };
         case 'setname':
             return { ...state, name: action.data };
         case 'setEmail':
             return { ...state, email: action.data };
-        case 'setPassword':
-            return { ...state, passWord: action.data };
-        case 'setComPassword':
-            return { ...state, compassWord: action.data };
-        case 'TogglePassWordShow':
-            const ans = !state.isPassWordShowOpen;
-            return { ...state, isPassWordShowOpen: ans };
 
     }
     return { ...state };

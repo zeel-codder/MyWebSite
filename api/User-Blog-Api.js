@@ -17,6 +17,9 @@ API.interceptors.request.use((req) => {
 
 export const GetUser = (name) => axios.post('/api/finduser',{email:name});
 export const AddUserInDataBase=(data) => axios.post('/api/adduser', data);
+export const UserExitsInDataBase=(data)=>axios.post('/api/userhas',data);
+export const MailToUser=(data)=>axios.post('/api/userauthmail',data);
+
 export const UserLogin = () => API.get('/api/userlogin');
 export const UserList=()=>API.get('/api/user');
 export const UpdateBlogLike = (old,newData) =>  API.post('/api/like',{ filter:{...old},

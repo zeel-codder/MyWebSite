@@ -30,7 +30,6 @@ const Blog = new Schema({
 const User = new Schema({
   username:{type:String},
   email: {type: String}, 
-  password:{type: String},
   LikePage:{type: [String]},
   url:{type: String},
   About:{type:String},

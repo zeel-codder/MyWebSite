@@ -18,19 +18,34 @@ const AddNewUser = async (data) => {
 
 const add = async (data, Modal) => {
 
-    const {username,email} = data;
-  
     try{
-        const item= await Modal.find({ username,email })
-      
-        if(item!==null){
-            return null;
-        }
 
         let document =  new Modal(data);
 
         return await document.save();
 
+    }catch(e){
+      
+        return null;
+    }
+}
+
+const UserExits= async (data)=>{
+    const {username,email} = data;
+
+    console.log(data)
+  
+    try{
+        const item= await UserInfo.findOne({ email })
+        const name= username ? await UserInfo.findOne({ username }) : false;
+
+        // console.log(item)
+      
+        if(item || name){
+            console.log(item,name)
+            return true;
+        }
+        return false;
     }catch(e){
       
         return null;
@@ -136,3 +151,4 @@ exports.GetUserList = GetUserList;
 exports.GetUserAndUpDate  = GetUserAndUpDate ;
 exports.GetOneUserInformationById  = GetOneUserInformationById ;
 exports.GetOneUserInformationByEmail  = GetOneUserInformationByEmail ;
+exports.UserExits=UserExits;

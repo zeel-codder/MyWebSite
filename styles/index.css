@@ -139,7 +139,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
     width: 100%;
     position: absolute;
     top:0;
-    object-fit: cover;
+    /* object-fit: cover; */
     z-index: 1;
     opacity: 3;
 }
@@ -866,14 +866,31 @@ margin: 0;
 }
 .line1{
   animation: LineAnimation .6s linear 0s infinite;
+  background: #e80f2b;
 
 }
 .line2{
+  position: relative;
   animation: LineAnimation .6s linear .15s infinite;
+  background-color: white;
+
+}
+.line2::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 23px;
+  background: blue;
+  border: 4px solid yellow;
 
 }
 .line3{
   animation: LineAnimation .6s linear .30s infinite;
+  background: green;
 
 }
 
