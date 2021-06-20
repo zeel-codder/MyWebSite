@@ -40,6 +40,8 @@ const AddUser = async (e, state, Reducer, GotoHome) => {
 
     const newUser = GetNewUser(state.name, state.email);
 
+    
+
     try {
         await UserExitsInDataBase(newUser);
 
@@ -64,19 +66,33 @@ const AddUserWithGoogle = async (data, Reducer, GotoHome) => {
 
     const newUser = GetNewUser(data.profileObj.name, data.profileObj.email);
 
-    try {
-        const res = await AddUserInDataBase(newUser);
-        const data = res.data;
-        // const user=data.result;
-        localStorage.setItem(User, JSON.stringify(data));
-        await GotoHome();
-        Reducer({ type: 'changeLoadingFalse' });
 
-    } catch (e) {
-        alert('User Exits, Please try to Sing Up Again');
+    try {
+        await UserExitsInDataBase(newUser);
+
+        alert('User  Exits, Please try again');
         Reducer({ type: 'changeLoadingFalse' });
 
     }
+    catch (e) {
+        try {
+            const res = await AddUserInDataBase(newUser);
+            const data = res.data;
+            // const user=data.result;
+            localStorage.setItem(User, JSON.stringify(data));
+            await GotoHome();
+            Reducer({ type: 'changeLoadingFalse' });
+    
+        } catch (e) {
+            alert('User Exits, Please try to Sing Up Again');
+            Reducer({ type: 'changeLoadingFalse' });
+    
+        }
+        Reducer({ type: 'changeLoadingFalse' });
+    }
+
+
+  
 
 }
 const FindUserWithGoogle = async (data, Reducer, GotoHome) => {

@@ -515,6 +515,9 @@ Like
 }
 
 @media only screen and (max-width: 1200px) {
+    .Log{
+        margin: 2rem auto;
+    }
     .Loaddic .span1 {
      
         width: 100%;
@@ -580,7 +583,7 @@ Like
         width: 100%;
     }
     .form div input{
-        padding: 10px 0;
+        /* padding: 10px 0; */
     }
 
 

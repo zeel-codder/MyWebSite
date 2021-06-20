@@ -20,6 +20,8 @@ const add = async (data, Modal) => {
 
     try{
 
+        
+
         let document =  new Modal(data);
 
         return await document.save();

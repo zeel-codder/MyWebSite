@@ -88,26 +88,30 @@ function Var(){
     }
 
     useEffect(async () => {
+
         // console.log(router)
-        const {email,username,time}=jwt.verify(d, process.env.NEXT_PUBLIC_key)
-
-        const time2=new Date().getTime();
-
-        // console.log(time,time2)
-
-        if(time2>=time){
-            alert('Link Is Expirer')
-            router.push('/auth/singup');
-        }
-
-        const data={username,email}
-
         try{
-          await UserExitsInDataBase(data);
+
+          const {email,username,time}=jwt.verify(d, process.env.NEXT_PUBLIC_key)
+          
+          const time2=new Date().getTime();
+          
+          
+          
+          
+          
+          const data={username,email}
+          
+          try{
+            await UserExitsInDataBase(data);
           FindUser(data)
         }catch(e){
           addUser(data)
         }
+      }catch(e){
+        alert('Token Exipred')
+        router.push('/auth/singup');
+      }
     }, [])
   
     return <h1>Loading...</h1>
