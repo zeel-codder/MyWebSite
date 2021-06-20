@@ -33,7 +33,7 @@ const add = async (data, Modal) => {
 const UserExits= async (data)=>{
     const {username,email} = data;
 
-    console.log(data)
+    // console.log(data)
   
     try{
         const item= await UserInfo.findOne({ email })
@@ -42,7 +42,7 @@ const UserExits= async (data)=>{
         // console.log(item)
       
         if(item || name){
-            console.log(item,name)
+            // console.log(item,name)
             return true;
         }
         return false;

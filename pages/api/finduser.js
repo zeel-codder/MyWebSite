@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 
     await ONConnections();
     let data = await GetOneUserInformationByEmail(email);
-    console.log('call finduser');
+    // console.log('call finduser');
 
     if (data === null) {
 

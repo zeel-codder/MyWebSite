@@ -11,7 +11,7 @@
 // ====================================
 import { useEffect} from "react";
 import React from "react";
-import {AddUserInDataBase, GetUser} from 'api/User-Blog-Api'
+import {AddUserInDataBase, GetUser ,UserExitsInDataBase} from 'api/User-Blog-Api'
 import { User } from "@const/List";
 
 import loadable from '@loadable/component'
@@ -87,7 +87,7 @@ function Var(){
   
     }
 
-    useEffect(() => {
+    useEffect(async () => {
         // console.log(router)
         const {email,username,time}=jwt.verify(d, process.env.NEXT_PUBLIC_key)
 
@@ -101,10 +101,12 @@ function Var(){
         }
 
         const data={username,email}
-        if(username){
-            addUser(data)
-        }else{
-            FindUser(data)
+
+        try{
+          await UserExitsInDataBase(data);
+          FindUser(data)
+        }catch(e){
+          addUser(data)
         }
     }, [])
   
