@@ -43,10 +43,10 @@ const BlogShort = (props) => {
                     <span className="Blogtitle">{title}</span>
                     {/* <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2> */}
                 <Like blogInfo={props} isBlogShort={true}></Like>
-                    <Link href={`${WebLink}/blog/${name}`} className="blog-a">
+                    <a href={`${WebLink}/blog/${name}`} className="blog-a">
                         <button className="btn">Read
                         </button>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </>

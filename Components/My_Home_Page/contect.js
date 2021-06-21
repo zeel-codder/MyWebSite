@@ -87,7 +87,7 @@ const Context = () => {
 
                     </h1>
                 </div>
-                <form className="form" onSubmit={(e) => { MailMe(e) }}>
+                <form className="form MyContact" onSubmit={(e) => { MailMe(e) }}>
                     
                     <div>
                         <input className="form-input" type="text" title="Your name" name="name" placeholder="Enter Name" required></input>

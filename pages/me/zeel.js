@@ -18,7 +18,7 @@ const   Meta   = loadable(() => import('Components/Meta'))
 export default function Home() {
   return (
     <div className="me" >
-      <Meta title="zeel codder" keyword="zeel prajapati, zeel sureshbhai parajapati, js, web, zeel prajapati personal web site" />
+      <Meta title="Zeel Codder" keyword="zeel prajapati, zeel sureshbhai parajapati, js, web, zeel prajapati personal web site" />
       <Navbar data={NavData}></Navbar>
       <Main></Main>
       <Footer></Footer>

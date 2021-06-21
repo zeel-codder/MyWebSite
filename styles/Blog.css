@@ -571,6 +571,9 @@ Like
         margin:10px 0;
         line-height: 31px;
     }
+    .blog-container  h1,h1{
+        font-size: xx-large;
+    }
     .blog-container  p,code[class*="language-"], pre[class*="language-"],.tools span,.container p,.para{
         font-size: 1.0rem !important;
         overflow-wrap: break-word !important;

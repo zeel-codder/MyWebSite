@@ -9,9 +9,9 @@
 
 // Imports
 // ====================================
-import { useEffect} from "react";
+import { useEffect } from "react";
 import React from "react";
-import {AddUserInDataBase, GetUser ,UserExitsInDataBase} from 'api/User-Blog-Api'
+import { AddUserInDataBase, GetUser, UserExitsInDataBase } from 'api/User-Blog-Api'
 import { User } from "@const/List";
 
 import loadable from '@loadable/component'
@@ -20,7 +20,7 @@ import jwt from 'jsonwebtoken'
 import { useRouter } from 'next/router'
 // const   Like   = loadable(() => import('@Blog/Like'))
 // const   Share    = loadable(() => import('@Blog/share'))
-const   Template    = loadable(() => import('@Layout/Template'))
+const Template = loadable(() => import('@Layout/Template'))
 // const   Share    = loadable(() => import('@Blog/share'))
 // const 
 
@@ -30,7 +30,7 @@ const   Template    = loadable(() => import('@Layout/Template'))
 
 const Verify = () => {
 
-  const dic = {title:"Verify", keywords:"auth" ,isShoWList:false}
+  const dic = { title: "Verify", keywords: "auth", isShoWList: false }
   // console.log(dic)
 
   return (
@@ -41,80 +41,85 @@ const Verify = () => {
 export default Verify;
 
 
-function Var(){
-    const router=useRouter()
-    const {d}=router.query;
-    // console.log(key)
+function Var() {
+  const router = useRouter()
   
-  
-    const GotoHome=()=>{
-  
-      router.push('/');
-  
-    }
-  
-    const addUser=async (newUser)=>{
-          try {
-          const res = await AddUserInDataBase(newUser);
-          const data = res.data;
-          localStorage.setItem(User, JSON.stringify(data));
-          await GotoHome();
-  
-      } catch (e) {
-          alert('Some ErroR Occurs to LogIn,Please Try Again ');
-      
-  
-      }
-  
-    }
-  
-    const FindUser=async(newUser)=>{
-  
-      try {
-  
-          const res = await GetUser(newUser.email);
-          const data = res.data;
-          // const user = res.data.result;
-          newUser.username = res.username;
-          localStorage.setItem(User, JSON.stringify(data));
-          await GotoHome();
-  
-      } catch (e) {
-          // console.error(e)
-          alert('Some ErroR Occurs to LogIn,Please Try Again ');
-      
-      }
-  
+  // console.log(key)
+
+
+  const GotoHome = () => {
+
+    router.push('/');
+
+  }
+
+  const addUser = async (newUser) => {
+    try {
+      const res = await AddUserInDataBase(newUser);
+      const data = res.data;
+      localStorage.setItem(User, JSON.stringify(data));
+      await GotoHome();
+
+    } catch (e) {
+      alert('Some ErroR Occurs to LogIn,Please Try Again ');
+
+
     }
 
-    useEffect(async () => {
+  }
 
-        // console.log(router)
-        try{
+  const FindUser = async (newUser) => {
 
-          const {email,username,time}=jwt.verify(d, process.env.NEXT_PUBLIC_key)
-          
-          const time2=new Date().getTime();
-          
-          
-          
-          
-          
-          const data={username,email}
-          
-          try{
-            await UserExitsInDataBase(data);
-          FindUser(data)
-        }catch(e){
-          addUser(data)
-        }
-      }catch(e){
-        alert('Token Exipred')
-        router.push('/auth/singup');
-      }
-    }, [])
-  
-    return <h1>Loading...</h1>
+    try {
+
+      const res = await GetUser(newUser.email);
+      const data = res.data;
+      // const user = res.data.result;
+      newUser.username = res.username;
+      localStorage.setItem(User, JSON.stringify(data));
+      await GotoHome();
+
+    } catch (e) {
+      // console.error(e)
+      alert('Some ErroR Occurs to LogIn,Please Try Again ');
+
+    }
+
+  }
+
+  useEffect(async () => {
+
+    // console.log(router)
+    try{
+      const { d } = await router.query;
+    console.log(d);
+
+    const { email, username, time } = jwt.verify(d, process.env.NEXT_PUBLIC_key)
+
+    // const time2=new Date().getTime();
+
+    const data = { username, email }
+
+    try {
+      await UserExitsInDataBase(data);
+      FindUser(data)
+    } catch (e) {
+      addUser(data)
+    }
+    }catch(e){
+      alert('Some Error occurs, try again')
+      router.push('/auth/singup');
+  }
+    }
+    , [])
+
+return (
+  <div style={{textAlign:"center"}}>
+    <h1>{`=>`} Working ...</h1>
+
+<img src="/images/Loadding.svg" className="line1" alt="Loading.."></img>
+  </div>
+)
 }
 
 
@@ -122,7 +127,7 @@ function Var(){
 //     const key=process.env.key;
 //     console.log(key)
 
-  
+
 //     return {
 //       props:{data:key,na:"zeel"}
 //     }

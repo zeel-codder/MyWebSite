@@ -17,9 +17,9 @@ const Loading= ()=>{
     return(
         <>
         <div class="loadding">
-            <div className="line1"></div>
-            <div className="line2"></div>
-            <div className="line3"></div>
+          
+                <img src="/images/Loadding.svg" className="line1" alt="Loading.."></img>
+            
             {/* <hr></hr> */}
         </div>
         </>
