@@ -104,6 +104,24 @@ const Navdata=[
         link:"Json"
   
     },
+    {
+        id:19,
+        title:"Tools",
+        link:"tools"
+  
+    },
+    {
+        id:20,
+        title:"C#",
+        link:"c#"
+  
+    },
+    {
+        id:21,
+        title:"Functions",
+        link:"functions"
+  
+    },
 ]
 
 

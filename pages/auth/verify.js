@@ -107,8 +107,29 @@ function Var() {
       addUser(data)
     }
     }catch(e){
-      alert('Some Error occurs, try again')
-      router.push('/auth/singup');
+      try{
+        const { d } = await router.query;
+      console.log(d);
+  
+      const { email, username, time } = jwt.verify(d, process.env.NEXT_PUBLIC_key)
+  
+      // const time2=new Date().getTime();
+  
+      const data = { username, email }
+  
+      try {
+        await UserExitsInDataBase(data);
+        FindUser(data)
+      } catch (e) {
+        addUser(data)
+      }
+      }catch(e){
+        
+        alert('Some Error occurs, try again')
+        router.push('/auth/singup');
+    }
+      
+
   }
     }
     , [])

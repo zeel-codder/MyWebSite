@@ -13,7 +13,7 @@
 
 // Imports
 // ====================================
-import Link from 'next/link'
+// import Link from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
@@ -120,27 +120,27 @@ function Navbar() {
 
                         <li className="a">
 
-                            <Link href='/'>
+                            <a href='/'>
 
                                 Zeel Codder Blogs
 
 
-                            </Link>
+                            </a>
                         </li>
                         <li>
 
-                            <Link href='/me/zeel'>
+                            <a href='/me/zeel'>
 
                                 About Me
 
-                            </Link>
+                            </a>
                         </li>
                         <li>
 
-                            <Link href='/me/tools'>
+                            <a href='/me/tools'>
 
                                 Tools
-                            </Link>
+                            </a>
                         </li>
                     </div>
 
@@ -155,15 +155,15 @@ function Navbar() {
                                 <>
                                     <div className="login">
 
-                                       <Link href='/auth/singup'
-                                            title="Sing Up">Sing Up</Link>
+                                       <a href='/auth/singup'
+                                            title="Sing Up">Sing Up</a>
                                     </div>
-                                    <div className="login"><Link href='/auth/login' title="Log In">Log In</Link></div>
+                                    <div className="login"><a href='/auth/login' title="Log In">Log In</a></div>
                                 </>
                                 :
                                 <div className="icons">
                                     <div style={{display:"flex",flexDirection:"row"}}>
-                                    <Link href={`/user/${User?.result._id}`} title="User">
+                                    <a href={`/user/${User?.result._id}`} title="User">
                                     {/* <> */}
                                         {/* <AccountCircleIcon className="user" /> */}
                                 
@@ -171,7 +171,7 @@ function Navbar() {
                                     {User.result.username}    
                                     {/* </> */}
                                     
-                                    </Link>
+                                    </a>
                                     </div>    
                                     
                                     <a title="Logout"

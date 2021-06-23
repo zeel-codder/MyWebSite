@@ -14,7 +14,7 @@
 // Imports
 // ====================================
 import { Link } from "react-scroll";
-import MyLink from 'next/link'
+// import MyLink from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
@@ -131,7 +131,7 @@ function Navbar({data}) {
                         }
                     </div>
                     <li>
-                        <MyLink href="/">My Blog</MyLink>
+                        <a href="/">My Blog</a>
                     </li>
                     </ul>
             </div>

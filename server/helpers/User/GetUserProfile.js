@@ -7,7 +7,7 @@ export default async function GetUserProfile(uname){
    try{
 
      
-     const Link=process.env.WebLink+'/api/getuserbyid';
+     const Link=process.env.WebLink+'/api/user/getuserbyid';
      const dataUser=await axios.post(Link,{id:uname})
      // console.log(dataUser)
      const {username,email,LikePage}=dataUser.data.result;
@@ -23,7 +23,7 @@ export default async function GetUserProfile(uname){
 }
 
 const getList=async(LikePage)=>{
-    const Link=process.env.WebLink+'/api/blog';
+    const Link=process.env.WebLink+'/api/blog/blog';
 
     try{
       const res=await axios.get(Link);

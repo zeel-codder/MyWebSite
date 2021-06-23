@@ -98,7 +98,7 @@ function BlogPage({ data, file, title ,user}) {
 
           {file}
         </Markdown>
-        <div class="code-toolbar"><pre class=" language-javascript"><code class=" language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Thank You'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <div className="code-toolbar"><pre className="language-javascript"><code class=" language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Thank You'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         </code></pre>
         </div>
           {
@@ -127,7 +127,7 @@ function BlogPage({ data, file, title ,user}) {
   const name = context.params.name;
 
   console.log(name)
-      let data = await axios.post(process.env.WebLink + "/api/bloginfoone", {name})
+      let data = await axios.post(process.env.WebLink + "/api/blog/bloginfoone", {name})
     .then((response) => {
       // console.log(response.data);
       return JSON.parse(response.data.message)
@@ -136,7 +136,7 @@ function BlogPage({ data, file, title ,user}) {
     .catch((err) => console.log(err));
     // name=data.creator;
 
-    const user=await axios.post(process.env.WebLink+'/api/finduser',{email:data.creator,isNotCreateToken:true})
+    const user=await axios.post(process.env.WebLink+'/api/user/finduser',{email:data.creator,isNotCreateToken:true})
     .then((response) => {
 
       return response.data.result

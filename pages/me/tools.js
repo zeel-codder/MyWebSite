@@ -1,7 +1,7 @@
 import React from "react";
 // import Template from '@Layout/Template'
 import ToolsData from 'Data/project/tools'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 import loadable from '@loadable/component'
 const   Template   = loadable(() => import('@Layout/Template'))
@@ -39,12 +39,12 @@ function ToolList(){
                 {
                   codelink 
                   &&
-                  <div className="code"><Link href={codelink}>code</Link></div>
+                  <div className="code"><a href={codelink}>code</a></div>
                 }
                 {
                   link
                   &&
-                  <div className="link"><Link href={link}>Web site</Link></div>
+                  <div className="link"><a href={link}>Web site</a></div>
 
                 }
 

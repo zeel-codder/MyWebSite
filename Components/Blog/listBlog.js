@@ -36,7 +36,7 @@ function BlogList({ isTopic, topic }) {
 
         // console.log(topic,'<=')
 
-        let data = await axios.get(WebLink + '/api/blog')
+        let data = await axios.get(WebLink + '/api/blog/blog')
             .then((res) => {
 
                 return res.data;

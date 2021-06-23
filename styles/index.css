@@ -387,13 +387,13 @@ blog-container p{
 blog-container p > img:hover{
   filter:grayscale(30%)
 }
-.imgeAnimationDiv img,p > img{
+.imgeAnimationDiv img,p > img,iframe{
   width:100%;
   transition:all 1s;
   object-fit: cover;
 
 }
-p > img{
+p > img,iframe{
   border-radius:12px;
   max-height: 28rem;
   object-fit: cover;
@@ -640,9 +640,9 @@ h1{
 .icons *{
   margin: 0 1rem ;
 }
-.icons a:hover{
+/* .icons a:hover{
   background-color: var(--form-bg);
-}
+} */
 
 .Login-Page{
   flex: 2;
@@ -688,6 +688,9 @@ h1{
 .footer-ul li svg:hover, .footer p:hover,.container table td:hover,.container table tr:hov{
   color: var(--hoverc);
   cursor: pointer;
+}
+.footer-ul li svg:hover{
+  color: var(--form-bg);
 }
 
 

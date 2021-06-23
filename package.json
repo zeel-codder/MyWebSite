@@ -22,6 +22,7 @@
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
     "email-existence": "^0.1.6",
+    "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
     "gray-matter": "^4.0.3",
     "jsonwebtoken": "^8.5.1",

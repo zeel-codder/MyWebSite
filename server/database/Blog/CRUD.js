@@ -6,11 +6,11 @@ const {BlogInfo}=Database;
   
 const DemoData = {
 
-    "name": "python-modules",
-    "title": "Python Programming Modules Programs",
-    "img": "/images/blog/python-introduction/1.jpg",
+    "name": "Earn-Money-Online-Without-Investment-in-India",
+    "title": "Earn Money Online Without Investment in India",
+    "img": "/images/blog/Earn-Money-Online-Without-Investment-in-India/1.png",
     "like": 0,
-    "topic": "python",
+    "topic": "tools",
     "creator":"zeelprajapati321@gmail.com"
 }
 

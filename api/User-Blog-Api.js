@@ -14,18 +14,20 @@ API.interceptors.request.use((req) => {
 });
 
 
-
-export const GetUser = (name) => axios.post('/api/finduser',{email:name});
-export const AddUserInDataBase=(data) => axios.post('/api/adduser', data);
-export const UserExitsInDataBase=(data)=>axios.post('/api/userhas',data);
-export const MailToUser=(data)=>axios.post('/api/userauthmail',data);
-
-export const UserLogin = () => API.get('/api/userlogin');
-export const UserList=()=>API.get('/api/user');
-export const UpdateBlogLike = (old,newData) =>  API.post('/api/like',{ filter:{...old},
+//user
+export const GetUser = (name) => axios.post('/api/user/finduser',{email:name});
+export const AddUserInDataBase=(data) => axios.post('/api/user/adduser', data);
+export const UserExitsInDataBase=(data)=>axios.post('/api/user/userhas',data);
+export const MailToUser=(data)=>axios.post('/api/user/userauthmail',data);
+export const UserLogin = () => API.get('/api/user/userlogin');
+export const UserList=()=>API.get('/api/user/user');
+export const UpdateBlogLike = (old,newData) =>  API.post('/api/user/like',{ filter:{...old},
 update:{...old,...newData}});
+export const  GetOnlyUserInfo= (name) => axios.post('/api/user/finduser',{email:name,isNotCreateToken:true});
+
+
+//blog
+export const  GetBlog= (name) => axios.post('/api/blog/bloginfoone',{name});
 export const SetMailInContactForm = (email,subject,message) => axios.post('/api/me/mail-me',{email,subject,message});
-export const  GetBlog= (name) => axios.post('/api/bloginfoone',{name});
-export const  GetOnlyUserInfo= (name) => axios.post('/api/finduser',{email:name,isNotCreateToken:true});
 
 // exports.API=API;

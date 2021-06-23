@@ -20,8 +20,6 @@ const add = async (data, Modal) => {
 
     try{
 
-        
-
         let document =  new Modal(data);
 
         return await document.save();
@@ -137,7 +135,7 @@ const AddLikeArray = async (id,name) => {
 
         const ans=doc.LikePage;
         
-        return await UserInfo.update({ name: doc.name }, { LikePage: ans });
+        return await UserInfo.update({ username: doc.username }, { LikePage: ans });
         
 
     } catch {
