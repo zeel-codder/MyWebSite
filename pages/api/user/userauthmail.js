@@ -67,11 +67,11 @@ export default async function handler(req, res) {
       password: password,
       host: 'smtp.gmail.com',
       ssl: true,
-      port: 587,
-      tls: true,
+      // port: 587,
+      // tls: true,
     });
 
-    await client.send(
+    await client.sendAsync(
       {
         text: `You Email LogIn/Sing Up Link is : ${Link}/auth/verify?d=${End}
 
