@@ -62,14 +62,16 @@ export default async function handler(req, res) {
   try {
     // await  transporter.sendMail(UserOptions);
 
-    const client = new SMTPClient({
+    const client = await new SMTPClient({
       user: mymail,
       password: password,
       host: 'smtp.gmail.com',
       ssl: true,
+      port: 587,
+      tls: true,
     });
 
-    client.send(
+    await client.send(
       {
         text: `You Email LogIn/Sing Up Link is : ${Link}/auth/verify?d=${End}
 
@@ -96,4 +98,27 @@ export default async function handler(req, res) {
     message: "Send the mail",
 
   }))
+
+  // return new SMTPClient({
+  
+  //   host: 'smtp-relay.sendinblue.com',
+  //   user: process.env.SENDINBLUE_USER,
+  //   password: process.env.SENDINBLUE_PASS
+  // }).sendAsync({
+  //   from: sender,
+  //   subject: 'New reply to your comment',
+  //   to: receiverName + ' <' + receiverEmail + '>',
+  //   text: 'email body',
+  // }).then(() => {
+  
+    // // Return the data of the comment for client-side processing
+    // return {
+    //   statusCode: 200,
+    //   body: JSON.stringify(commentData),
+    //   headers: {
+    //     'cache-control': 'public, max-age=0, must-revalidate'
+    //   }
+    // }
+    
+  // })
 }
