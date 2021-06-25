@@ -26,8 +26,8 @@ function BlogList({ isTopic, topic }) {
     const [data, setdata] = useState([])
     const [isLoading, setLoading] = useState(true)
     const [list, setlist] = useState([])
-    const numberBlog = 10;
-    const add = 5;
+    const numberBlog = 9;
+    const add = 6;
  
     
 
@@ -104,7 +104,19 @@ function BlogList({ isTopic, topic }) {
 
             <Search data={list} />
 
+               {
+
+                            data.length===0
+                            
+                            ?
+                            
+                            <h1 className="row">🙏🙏 No Blogs On This Topic 🙏🙏</h1>
+                
+                :
             <h1 >Blogs</h1>
+                        }
+            
+
             {/* <BlogShort /> */}
             <div className="ListOfBlogs blog-container" >
                 {
@@ -125,30 +137,26 @@ function BlogList({ isTopic, topic }) {
                         })
                         }
                         
-                        {
-
-                            data.length===0
-                            
-                            &&
-                            
-                            <h1 className="row">🙏🙏 No Blogs On This Topic 🙏🙏</h1>
-                        }
+                     
                         </>
                         
                         
                         
                     }
+            </div>
                 {
 
                     list.length > data.length
 
                     &&
 
+                    <div className="blog-container">
+
                     <button className="btn" onClick={handler}>
                         Load More
                     </button>
+                    </div>    
                 }
-            </div>
 
 
         </article>

@@ -34,7 +34,7 @@ const Profile = ({ name, username, LikeDic }) => {
 
     return (
         
-        <div className="blog-container">
+        <div className="blog-container User">
             <h1 style={{textAlign:"center"}}>UserInfo</h1>
 
             <form className="form userInfo" contentEditable={false} >

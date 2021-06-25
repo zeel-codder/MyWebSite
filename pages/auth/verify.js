@@ -57,7 +57,10 @@ function Var() {
     try {
       const res = await AddUserInDataBase(newUser);
       const data = res.data;
-      localStorage.setItem(User, JSON.stringify(data));
+      const {_id,username,email}=data.result;
+      const {token}=data;
+      const ans={_id,username,email,token}
+      localStorage.setItem(User, JSON.stringify(ans));
       await GotoHome();
 
     } catch (e) {
@@ -76,7 +79,10 @@ function Var() {
       const data = res.data;
       // const user = res.data.result;
       newUser.username = res.username;
-      localStorage.setItem(User, JSON.stringify(data));
+      const {_id,username,email}=data.result;
+      const {token}=data;
+      const ans={_id,username,email,token}
+      localStorage.setItem(User, JSON.stringify(ans));
       await GotoHome();
 
     } catch (e) {

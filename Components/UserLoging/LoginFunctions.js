@@ -79,7 +79,10 @@ const AddUserWithGoogle = async (data, Reducer, GotoHome) => {
             const res = await AddUserInDataBase(newUser);
             const data = res.data;
             // const user=data.result;
-            localStorage.setItem(User, JSON.stringify(data));
+            const {_id,username,email}=data.result;
+            const {token}=data;
+            const ans={_id,username,email,token}
+            localStorage.setItem(User, JSON.stringify(ans));
             await GotoHome();
             Reducer({ type: 'changeLoadingFalse' });
     
@@ -107,8 +110,11 @@ const FindUserWithGoogle = async (data, Reducer, GotoHome) => {
         const res = await GetUser(newUser.email);
         const data = res.data;
         // const user=data.result;
+        const {_id,username,email}=data.result;
+        const {token}=data;
+        const ans={_id,username,email,token}
 
-        localStorage.setItem(User, JSON.stringify(data));
+        localStorage.setItem(User, JSON.stringify(ans));
         Reducer({ type: 'changeLoadingFalse' });
         await GotoHome()
 

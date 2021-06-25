@@ -147,7 +147,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   /* background-image:url(https://source.unsplash.com/random); */
   flex-direction:column;
   justify-content:center;
-  align-items:flex-end;
+  align-items:center;
   background-position: center;
 }
 .blog_main1 img{
@@ -666,16 +666,21 @@ h1{
 
 .footer{
   display: flex;
-  background-color: var(--bgcolor);
+  /* background-color: var(--bgcolor); */
+  background-image: var(--bgi);
   color: white;
-
+  flex-direction: column-reverse;
   justify-content: center;
   padding: 10px;
   align-items: center;
 }
+.footer ul::before{
+  content: 'Follow Me On';
+}
 
 .footer-ul{
-  display: inline;
+  display: flex;
+  flex-direction: column;
   list-style: none;
 }
 .footer-ul li{
@@ -1267,7 +1272,7 @@ For Mobile
 }
 .Serach ul{
   /* top:66px; */
-  width: 100% !important;
+  width: 77% !important;
 }
 .Serach li{
   width: 89% !important;

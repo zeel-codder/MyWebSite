@@ -174,7 +174,7 @@ em{
     align-self: center;
     width: 330px;
 
-    object-fit: container;
+    /* object-fit: container; */
 
     border-radius: var(--radius);
     height: 213px;
@@ -233,13 +233,23 @@ p > img{
 
 .ListOfBlogs{
     
-    display: flex;
+    display: grid;
+    grid-gap: 21px;
+    grid-template-columns: repeat(3, 30%);
+    margin: 1rem auto;
+    text-align: center;
+    justify-content: center;
+    width: 100%  !important;
     
+}
+
+.ListOfBlogs  span{
+    font-size: 23px;
 }
 
 .ListOfBlogs > .BlogShort{
     display: flex;
-
+    flex-direction: column;
     margin: 1rem 0;
     padding:1.5rem;
     border: 1px solid rgb(49, 26, 26);
@@ -265,6 +275,7 @@ p > img{
     display: flex;
     flex: 1;
     width: 100%;
+    justify-content: space-between;
     margin: 0 1rem;
     flex-direction: column;
     padding: 1rem 0;
@@ -319,8 +330,8 @@ svg{
 }
 .Loaddic .span1{
     background: #cccccc;
-    width: 50%;
-    height: 250px;
+    width: 80%;
+    height: 230px;
 }
 .Loaddic .span2,.Loaddic .span4{
     width: 100%;
@@ -372,7 +383,7 @@ svg{
     width: -moz-fit-content;
     /* width: 12px; */
     margin: 1rem;
-    width: 25%;
+    width: 60%;
 }
 
 .Serach{
@@ -416,7 +427,7 @@ svg{
 
 .Serach ul{
     position: absolute;
-    /* transform: translatey(100%);  */
+    /* transform: translatey(100%); */
     background-image: var(--bgi);
     width: 26.4%;
     z-index: 12;
@@ -428,8 +439,9 @@ svg{
     margin: 0 !important;
     padding: 0 !important;
     /* bottom: 82px; */
-    top: 70px !important;
-    width: 30% !important;
+    top: 84px !important;
+    width: 55% !important;
+    transform: translateX(-14px);
 }
 
 span[class*="open"]{
@@ -515,6 +527,9 @@ Like
 }
 
 @media only screen and (max-width: 1200px) {
+    .ListOfBlogs{
+        grid-template-columns: repeat(2, 40%);
+    }
     .Log{
         margin: 2rem auto;
     }
@@ -525,11 +540,11 @@ Like
         margin: 9px;
     }
     .Serach input{
-        width: 40%;
+        width: 75%;
     }
     .Serach ul{
-        top: 66px !important;
-        width: 50% !important;
+        top: 83px !important;
+        width: 75% !important;
     }
     .ListOfBlogs > .BlogShort{
         grid-template-columns: 100%;
@@ -561,8 +576,8 @@ Like
         color: white;
     }
     .ListOfBlogs{
-        grid-template-columns: 100%;
-        margin: 2rem auto;
+        /* grid-template-columns: 100%; */
+        /* margin: 2rem auto; */
 
     }
 
@@ -592,7 +607,25 @@ Like
 
 }
 
+@media only screen and (max-width: 800px) {
+    .ListOfBlogs{
+        grid-template-columns: 65%;
+    }
+}
 
+@media only screen and (max-width: 500px) {
+    .ListOfBlogs{
+        grid-template-columns: 80%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .ListOfBlogs{
+        grid-template-columns: 90%;
+    }
+}
+.User{
+    width: 100% !important;
+}
 
 
 

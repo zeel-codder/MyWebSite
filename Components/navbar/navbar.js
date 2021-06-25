@@ -163,12 +163,12 @@ function Navbar() {
                                 :
                                 <div className="icons">
                                     <div style={{display:"flex",flexDirection:"row"}}>
-                                    <a href={`/user/${User?.result._id}`} title="User">
+                                    <a href={`/user/${User?._id}`} title="User">
                                     {/* <> */}
                                         {/* <AccountCircleIcon className="user" /> */}
                                 
                                     
-                                    {User.result.username}    
+                                    {User.username}    
                                     {/* </> */}
                                     
                                     </a>
