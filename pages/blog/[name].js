@@ -94,7 +94,7 @@ function BlogPage({ data, file, title, user }) {
       <div className="blog-container">
       
         {/* <!-- 1 st --> */}
-       {
+       {/* {
 
          ! process.env.NEXT_PUBLIC_add
         &&
@@ -115,7 +115,7 @@ function BlogPage({ data, file, title, user }) {
         }}
         />
         </>
-      }
+      } */}
         {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: file}} /> */}
 
         <Markdown
