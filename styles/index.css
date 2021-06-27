@@ -353,11 +353,13 @@ p{
   width: 100%;
   display: flex;
   margin: 0 auto;
+  cursor: pointer;
   align-items: center;
 }
 .pointh{
   transform: scale(1.03);
   border-color: red!important;
+  cursor: pointer;
 }
 
 .imgshow{
@@ -385,11 +387,13 @@ blog-container p{
   transition:all 2s;
 }
 blog-container p > img:hover{
+  cursor: pointer;
   filter:grayscale(30%)
 }
 .imgeAnimationDiv img,p > img,iframe{
   width:100%;
   transition:all 1s;
+  cursor: pointer;
   object-fit: cover;
 
 }
@@ -942,6 +946,14 @@ stating logo
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+  .nav-icon > span{
+    margin: 0 1rem;
+  }
+  .navabar-ul img {
+   
+    margin: 9px 3rem;
+    /* border-radius: 47px; */
+}
   .loadding .line1 {
     margin: 0px auto;
     width: 4rem;
@@ -1108,8 +1120,23 @@ For Mobile
   .navbar-item{
     flex-direction: column;
     align-items: flex-start;
-    height: 0; 
-    overflow: hidden;
+    margin: 0;
+    transition: var(--transition1);
+    /* height: 0; */
+    /* overflow: hidden; */
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    /* bottom: 0; */
+  }
+  .navshow{
+    transform: translateX(0);
+  }
+  .nav-icon{
+    background-image: linear-gradient( 
+  315deg
+  , #2d3436 0%, #000000 74%);
+    
   }
   .navabar-ul li{
     font-size: 15px;
@@ -1194,6 +1221,9 @@ For Mobile
 }
 
 @media only screen and (max-width: 420px) {
+  .nav-icon > span{
+    margin: 0 .3rem;
+  }
   .topic .list{
     display: grid;
     grid-gap: 5px;

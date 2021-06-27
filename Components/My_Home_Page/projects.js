@@ -86,7 +86,7 @@ const Projects=()=>{
         {/* <div className="row"> */}
 
         {/* <img className="container-img" src='/images/home/project.jpg' alt="Project svg"></img> */}
-        <div className="ListOfBlogs blog-container tools" style={{width:"100%"}}>
+        <div className="tools" >
      
 
            {

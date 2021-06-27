@@ -54,9 +54,13 @@ const Technology = () => {
         {
         title:'C',
         link:"#",
-        imgurl:"https://media.istockphoto.com/photos/text-picture-id1149101430?b=1&k=6&m=1149101430&s=170667a&w=0&h=ujvWyCbwP1pFRAioL_RpioXd0oxFHL1Bobup9I9-iPs="
+        imgurl:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/140px-The_C_Programming_Language_logo.svg.png"
         },
-        
+        {
+            title:"next js",
+            link:"#",
+            imgurl:"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        }
         
         
     ]

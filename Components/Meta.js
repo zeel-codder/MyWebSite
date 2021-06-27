@@ -36,6 +36,7 @@ const Meta = ({ title, keywords }) => {
             `,
           }}
           />
+        
           <script data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
        

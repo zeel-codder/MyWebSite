@@ -41,7 +41,7 @@ const ImageShow = ({data}) => {
 
 
     return (
-         <div  className="imgshow_div row" behavior="scroll" direction="right">
+         <div  className="imgshow_div row" behavior="scroll" direction="right" >
             {
                 data.map((Img, ImageIndex) => {
                     
@@ -51,7 +51,7 @@ const ImageShow = ({data}) => {
                     
                     
                     return (
-                        <div className={`column`}>
+                        <div className={`column`} style={{margin:"0 1rem"}}>
                         <h1>{title}</h1>
                         {/* <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" /> */}
                         <div className="imgeAnimationDiv">

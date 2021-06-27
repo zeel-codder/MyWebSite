@@ -17,6 +17,8 @@
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
+
+import CancelIcon from '@material-ui/icons/Cancel';
 // import Login from '../UserLoging/Login'
 // import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 // ====================================
@@ -50,36 +52,11 @@ function Navbar() {
     //=============================
 
     const NavbarDisplay = () => {
-        document.querySelector(".icon").classList.toggle("rotetor");
+        // document.querySelector(".icon").classList.toggle("rotetor");
         setLinkopen(!showLinks);
     }
 
-    //=============================
-    // @name:ShowLogin
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used add Login Component in Web Site.
-    //=============================
-
-    // const ShowLogin = (data) => {
-    //     // console.log(data.textContent);
-    //     value.current = data.textContent;
-    //     setIsLoginOpen(true);
-
-    // }
-
-    //=============================
-    // @name:closeLogin
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used remove Login Component in Web Site.
-    //=============================
-
-    // const closeLogin = () => {
-    //     setIsLoginOpen(false);
-    // }
+    
 
 
     //=============================
@@ -94,12 +71,14 @@ function Navbar() {
         // console.log(isLoginOpen, 1);
         if (!first.current) {
 
-            const linksHeight = linksRef.current.getBoundingClientRect().height;
+            // const linksHeight = linksRef.current.getBoundingClientRect().height;
             // const linksHeight1 = linksRefs.current.getBoundingClientRect().height;
             if (showLinks) {
-                linksContainerRef.current.style.height = `${linksHeight + 40}px`;
+                linksContainerRef.current.classList.add('navshow')
+                // linksContainerRef.current.style.height = `${linksHeight + 40}px`;
             } else {
-                linksContainerRef.current.style.height = '0px';
+                linksContainerRef.current.classList.remove('navshow')
+                // linksContainerRef.current.style.height = '0px';
             }
         } else {
             first.current = false
@@ -110,8 +89,23 @@ function Navbar() {
 
 
     return (
+        <>
+            <div className={`icon nav-icon`} > 
+            
+            <span onClick={NavbarDisplay}>
+    
+            
+            {
+                showLinks
+                ?
+                <CancelIcon />
+                :
+            <ViewWeekIcon ></ViewWeekIcon >
+            }
+            
+            </span>
+            </div>
         <div className="navbar">
-            <div className={`icon`} onClick={NavbarDisplay}> <ViewWeekIcon ></ViewWeekIcon ></div>
             <div className="navbar-item" ref={linksContainerRef}>
 
                 <ul className="navabar-ul" ref={linksRef}>
@@ -151,8 +145,8 @@ function Navbar() {
 
                         {
                             !User
-                                ?
-                                <>
+                            ?
+                            <>
                                     <div className="login">
 
                                        <a href='/auth/singup'
@@ -179,7 +173,7 @@ function Navbar() {
                                             localStorage.removeItem('User');
                                             setUser(null);
                                         }}
-                                    >
+                                        >
                                     
                                         Logout
                                     </a>
@@ -190,11 +184,12 @@ function Navbar() {
                 </ul>
                 {/* {
                     isLoginOpen && <Login choice={value.current} closeLogin={closeLogin}></Login>
-
+                    
                 } */}
             </div>
         </div>
 
+        </>
     );
 }
 

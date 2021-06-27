@@ -28,8 +28,8 @@ function BlogList({ isTopic, topic }) {
     const [list, setlist] = useState([])
     const numberBlog = 9;
     const add = 6;
- 
-    
+
+
 
 
     async function Getdata() {
@@ -42,8 +42,8 @@ function BlogList({ isTopic, topic }) {
                 return res.data;
             })
             .catch((err) => { return; })
-        
-        
+
+
         if (isTopic) {
             data = data.filter((item) => item.topic === topic)
         }
@@ -62,7 +62,7 @@ function BlogList({ isTopic, topic }) {
 
 
     useEffect(() => {
-    
+
         Getdata()
         // console.log(data);
     }, [])
@@ -74,48 +74,49 @@ function BlogList({ isTopic, topic }) {
             {/* <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee> */}
 
 
-          {
+            {
 
-              ! isTopic
+                !isTopic
 
-              &&
+                &&
 
-              <div className="blog_main1" id="home">
-    
-                <img className="video" src="/index.png" />
-                {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
-                <span className="logo-text blog-text" id="head">
-                    Start Reading And Learning Today
-                    <button className="btn" >
-                        <Link to='Read' title='Get start'
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
+                <div className="blog_main1" id="home">
+
+                    <img className="video" src="/index.png" />
+                    {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
+                    <span className="logo-text blog-text" id="head">
+                        Start Reading And Learning Today
+                        <button className="btn" >
+                            <Link to='Read' title='Get start'
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
                             >
-                            Lets Read
-                        </Link>
-                    </button>
-                </span>
-            </div>
+                                Lets Read
+                            </Link>
+                        </button>
+                    </span>
+                </div>
 
-             }
+            }
             {/* </video> */}
 
             <Search data={list} />
 
-               {
+            {
 
-                            data.length===0
-                            
-                            ?
-                            
-                            <h1 className="row">🙏🙏 No Blogs On This Topic 🙏🙏</h1>
-                
-                :
-            <h1 >Blogs</h1>
-                        }
-            
+                data.length === 0
+
+                    ?
+                    ! isLoading
+                    &&
+                    <h1 className="row">🙏🙏 No Blogs On This Topic 🙏🙏</h1>
+
+                    :
+                    <h1 >Blogs</h1>
+            }
+
 
             {/* <BlogShort /> */}
             <div className="ListOfBlogs blog-container" >
@@ -126,37 +127,37 @@ function BlogList({ isTopic, topic }) {
 
                         <BlogLoad />
                         :
-                        
+
                         <>
 
-                        {
-                        data.map((page, index) => {
+                            {
+                                data.map((page, index) => {
 
-                            return (<BlogShort {...page} key={index} />)
+                                    return (<BlogShort {...page} key={index} />)
 
-                        })
-                        }
-                        
-                     
+                                })
+                            }
+
+
                         </>
-                        
-                        
-                        
-                    }
+
+
+
+                }
             </div>
-                {
+            {
 
-                    list.length > data.length
+                list.length > data.length
 
-                    &&
+                &&
 
-                    <div className="blog-container">
+                <div className="blog-container">
 
                     <button className="btn" onClick={handler}>
                         Load More
                     </button>
-                    </div>    
-                }
+                </div>
+            }
 
 
         </article>

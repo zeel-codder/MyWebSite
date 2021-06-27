@@ -147,7 +147,7 @@ function Main() {
         </div>
 
         {/*  Main component's */}
-        <section className="container">
+        <section className="container mybox">
           
           <Introduction id="introduction"/>
           <Education />

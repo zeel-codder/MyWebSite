@@ -18,6 +18,7 @@ import { Link } from "react-scroll";
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 // ====================================
 
@@ -47,7 +48,7 @@ function Navbar({data}) {
     //=============================
 
     const NavbarDisplay = () => {
-        document.querySelector(".icon").classList.toggle("rotetor");
+        // document.querySelector(".icon").classList.toggle("rotetor");
         setLinkopen(!showLinks);
     }
 
@@ -91,24 +92,43 @@ function Navbar({data}) {
         // console.log(isLoginOpen, 1);
         if (!first.current) {
 
-            const linksHeight = linksRef.current.getBoundingClientRect().height;
+            // const linksHeight = linksRef.current.getBoundingClientRect().height;
             // const linksHeight1 = linksRefs.current.getBoundingClientRect().height;
             if (showLinks) {
-                linksContainerRef.current.style.height = `${linksHeight+40}px`;
+                linksContainerRef.current.classList.add('navshow')
+                // linksContainerRef.current.style.height = `${linksHeight + 40}px`;
             } else {
-                linksContainerRef.current.style.height = '0px';
+                linksContainerRef.current.classList.remove('navshow')
+                // linksContainerRef.current.style.height = '0px';
             }
         } else {
             first.current = false
         }
+        // setUser(JSON.parse(l/ocalStorage.getItem('User')))
         // console.log('cc')
     }, [showLinks])
 
     return (
-        <div className="navbar">
-            <div className={`icon`} onClick={NavbarDisplay}> <ViewWeekIcon ></ViewWeekIcon ></div>
-            <div className="navbar-item" ref={linksContainerRef}>
+        <>
+        <div className={`icon nav-icon`} > 
+            
+        <span onClick={NavbarDisplay} >
 
+        
+        {
+            showLinks
+            ?
+            <CancelIcon />
+            :
+        <ViewWeekIcon ></ViewWeekIcon >
+        }
+        
+        </span>
+        </div>
+        <div className="navbar">
+            {/* <div className={`icon`} onClick={NavbarDisplay}> <ViewWeekIcon ></ViewWeekIcon ></div> */}
+            <div className="navbar-item" ref={linksContainerRef}>
+                
                 <ul className="navabar-ul" ref={linksRef}>
                     <div>
 
@@ -122,7 +142,7 @@ function Navbar({data}) {
                                         smooth={true}
                                         offset={-70}
                                         duration={500}
-                                    >
+                                        >
                                             {title}
                                         </Link>
                                     </li>
@@ -137,6 +157,7 @@ function Navbar({data}) {
             </div>
         </div>
 
+                        </>
     );
 }
 

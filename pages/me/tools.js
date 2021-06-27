@@ -20,7 +20,7 @@ export default function Tools() {
 function ToolList(){
   return (
       
-      <div className="ListOfBlogs blog-container tools">
+      <div className="blog-container tools">
         <h1>Zeel Codder's Projects</h1>
         {
           ToolsData.map((data)=>{

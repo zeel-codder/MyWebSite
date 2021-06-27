@@ -39,6 +39,7 @@ const Like=(props)=>{
     // const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
     const [user,setUser]=useState(null)
+    const [isLoading,setisLoading]=useState(false)
     const [Like,setLike]=useState(blogInfo.like);
     // const user=JSON.parse()
     const router=useRouter();
@@ -57,10 +58,12 @@ const Like=(props)=>{
     const getUser=async()=>{
         const name=JSON.parse(localStorage.getItem(User)).email
         try{
+            setisLoading(true);
             const temuser=await GetUser(name)
             const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);
             setUser(temuser)
             setIsLike(isBlogLike);
+            setisLoading(false)
         }catch{
             localStorage.removeItem(User);
         }
@@ -123,12 +126,19 @@ const Like=(props)=>{
 
     return (
         <h2 className="Like">Like:
-        <span className="Like-Page"  style={{fontSize:"1.5rem"}}
+        <span className={`Like-Page ${isLoading?"pn":""}`}  style={{fontSize:"1.5rem"}} 
+
         
         onClick={ PostLike}>
         {
+            isLoading
+            ?
             
-            !isLike?  <FavoriteBorderIcon className="like-icon"/>:<FavoriteIcon className="like-icon"/>
+            <img className="MuiSvgIcon-root like-icon" src='/images/Loadding.svg' style={{pointerEvents:"none"}}/>
+            :
+        
+            !isLike? 
+            <FavoriteBorderIcon className="like-icon"/>:<FavoriteIcon className="like-icon"/>
         }
         {Like}
         </span>

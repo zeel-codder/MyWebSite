@@ -247,7 +247,40 @@ p > img{
     font-size: 23px;
 }
 
-.ListOfBlogs > .BlogShort{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pn{
+    pointer-events: none;
+}
+
+
+
+.ListOfBlogs > .BlogShort,.tools > .BlogShort{
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
@@ -589,6 +622,17 @@ Like
     .blog-container  h1,h1{
         font-size: xx-large;
     }
+    .tools .BlogShort{
+        width: 90%;
+    }
+    .tools h1{
+
+        font-size: 1.5rem !important;
+    }
+    .description{
+        font-size: 1.0rem !important;
+
+    }
     .blog-container  p,code[class*="language-"], pre[class*="language-"],.tools span,.container p,.para{
         font-size: 1.0rem !important;
         overflow-wrap: break-word !important;
@@ -621,6 +665,11 @@ Like
 @media only screen and (max-width: 400px) {
     .ListOfBlogs{
         grid-template-columns: 90%;
+    }
+     .tools > .BlogShort{
+        padding: 0px;
+        margin: 4px auto;
+
     }
 }
 .User{
