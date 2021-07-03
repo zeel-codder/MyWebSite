@@ -14,14 +14,14 @@ function MyApp({ Component, data }) {
 
   // console.log(data)
 
-  const {title,keywords}=data;
+  const {title,keywords,description}=data;
   const  isShoWList=data?.isShoWList;
   return (
     
 
   <>
   <MYButtons></MYButtons>
-  <Meta title={title} keywords={keywords}></Meta>
+  <Meta title={title} keywords={keywords} description={description}></Meta>
   <Navbar></Navbar>
   <Component {...data} />
   <Footer isShoWList={isShoWList}></Footer>

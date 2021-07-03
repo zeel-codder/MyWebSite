@@ -16,7 +16,7 @@ const List=loadable(()=>import('@Blog/listBlog'))
 
 export default function Home() {
 
-  const dic = { title: "Zeel Codder Blogs", keywords: "zeel codder blog,html", isShoWList: true }
+  const dic = { title: "Zeel Codder Blogs", keywords: "zeel codder blog,html", isShoWList: true , description:"zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good." }
 
   return (
     <div className="bg">

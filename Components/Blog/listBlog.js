@@ -82,7 +82,7 @@ function BlogList({ isTopic, topic }) {
 
                 <div className="blog_main1" id="home">
 
-                    <img className="video" src="/index.png" />
+                    <img className="video" src="/index.jpeg" />
                     {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
                     <span className="logo-text blog-text" id="head">
                         Start Reading And Learning Today

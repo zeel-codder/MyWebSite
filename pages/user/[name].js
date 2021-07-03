@@ -22,7 +22,10 @@ export default function UserDetails({data}) {
   export async function getStaticProps(context) {
     const uname=context.params.name;
 
-    const data=await GetUserProfile(uname)
+    const data=await GetUserProfile(uname);
+
+    data.title=data.username;
+    data.description=`User profile of ${data.title}`
     // console.log(data);
   
     return {

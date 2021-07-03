@@ -30,6 +30,7 @@ import loadable from '@loadable/component'
 const Like = loadable(() => import('@Blog/Like'))
 const Share = loadable(() => import('@Blog/share'))
 const Template = loadable(() => import('@Layout/Template'))
+// const Graph = loadable(() => import('Components/grapmeta'))
 // import scr
 // const   Share    = loadable(() => import('@Blog/share'))
 // const 
@@ -42,9 +43,9 @@ const Template = loadable(() => import('@Layout/Template'))
 
 
 
-const Blog = ({ data, file, title, keywords, user }) => {
+const Blog = ({ data, file, title, keywords, user,description }) => {
 
-  const dic = { data, file, title, keywords, isShoWList: true, user }
+  const dic = { data, file, title, keywords, isShoWList: true, user,description }
 
   return (
     <Template Component={BlogPage} data={dic}></Template>
@@ -59,7 +60,7 @@ function BlogPage({ data, file, title, user }) {
 
   // let url='/';
   const { _id, username } = user
-
+ 
 
 
   //=============================
@@ -80,10 +81,8 @@ function BlogPage({ data, file, title, user }) {
 
   }, [])
 
-  function AddIndex() {
-    console.log(document.querySelectorAll('.blog-container  > h1'))
-  }
 
+ 
   // console.log(blogInfo,'main');
   // Prism.usePrismHighlightAll();
   return (
@@ -92,6 +91,8 @@ function BlogPage({ data, file, title, user }) {
       {/* <Tem></Tem> */}
 
       <div className="blog-container">
+
+        {/* <Graph title={title} description={title}  />  */}
       
         {/* <!-- 1 st --> */}
        {/* {
@@ -119,8 +120,10 @@ function BlogPage({ data, file, title, user }) {
         {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: file}} /> */}
 
         <Markdown
-          onLoad={AddIndex}
+          // onLoad={AddIndex}
+     
           rehypePlugins={[rehypeRaw]}
+          // renderers={{heading: HeadingRenderer}}
         >
 
           {file}
@@ -151,8 +154,11 @@ function BlogPage({ data, file, title, user }) {
 
 
 
+
+
 export async function getStaticProps(context) {
   const name = context.params.name;
+  const regex=/(?<=#{1,6} (.*)\n(?:(?!#).*\n)*)(?=[+*-] (.*(?:\n(?![#+*-]).+)?))/g
 
   console.log(name)
   let data = await axios.post(process.env.WebLink + "/api/blog/bloginfoone", { name })
@@ -177,15 +183,30 @@ export async function getStaticProps(context) {
 
   // axios.post(`/BlogInfoOne`,{name:blogname})
   const content = matter(file.default).content;
+  // const list=content.split('\n');
+  // // console.log(list)
+  // const h_list=list.filter((data)=>{
+  //   // console.log(data);
+  //   return data !=="" || data.match(/# ([A-Z])\w+/g) 
+  // })
+  // console.log(h_list)
+   
+  // const matches = content.match(regex);
+  // console.log(matches)
 
-  const title = matter(file.default).data.title
-  const keywords = matter(file.default).data.keywords
+  const tag=matter(file.default).data
+
+  let {title,keywords,description} = tag
+
+  description=description || 'zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.'  
+
   // console.log(matter(file.default))
 
   // const tem=JSON.stringify(data);
   //     data=tem;
+  // const grap={disc}
   return {
-    props: { data, file: content, title, keywords, user }
+    props: { data, file: content, title, keywords, user,description }
   }
 }
 export async function getStaticPaths() {

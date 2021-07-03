@@ -1,13 +1,20 @@
 ---
 title: C Programming Application Programs
-keywords: c
+keywords: c Armstrong number
+
 ---
 
 # C programming Application Programs
 
+In this blog , you can find c programer from some most img definitions in c.
+
+
+
+
+
 # YOU CAN FIND PROGRAMS BELLOW:
 
-## P.1 To check whether the input number is an Armstrong number 
+<h2 id="1"> P.1 To check whether the input number is an Armstrong number (Armstrong number where sum of all digit*3 = that number) Ex.153=(1^3+5^3+3^3) </h2>
 
 *Program:*
 
@@ -18,10 +25,13 @@ void main()
     int n,i,s,r,sum=0;
     printf("Enter any Number");
     scanf("%d",&n);
+
     for(i=0;n>0;i++)
     {  
         r=n/10;
-        s=n-r*10;
+        s=n-r*10; //taking last digit from number
+        // or
+        s=n%10;
         sum+=s*s*s;
         n=r;
     }
@@ -121,7 +131,10 @@ void main()
     gets(a);
     for(i=0;a[i]!='\0';i++)
     {
+        //updating char to char+3 as definition if caesar cipher method
+        // Ex. 'A' will become 'C'
         a[i]=a[i]+3;
+
     }
     printf("cipher String\n");
     puts(a);
@@ -136,7 +149,7 @@ cipher String
 zhoo
 ```
 
-## P.4. To separate and print digits of a three digit scanned integer
+## P.4. To separate and print digits of a three digit scanned integer(Ex. 123 than ans is 1 2 3)
 
 *Program:*
 
@@ -147,10 +160,12 @@ void main()
     int a,n1,n2,n3,n4;
     printf("Enter three digit number");
     scanf("%d",&a);
-    n1=a/100;
-    n2=a-n1*100;
-    n3=n2/10;
-    n4=n2-n3*10;
+    // a=123
+
+    n1=a/100; // n1=12
+    n2=a-n1*100;// n2=3 =>last digit
+    n3=n2/10; //n3=1 => first digit
+    n4=n2-n3*10; //n4=2 => second digit
     printf("First digit=%d\nSecond Digit=%d \nLast Digit =%d",n1,n3,n4);
 }
 ```
@@ -217,20 +232,30 @@ void main()
     int n,r1,r2,r3,r4,r5,r6,r7;
     printf("Enter  of Notes\n");
     scanf("%d",&n);
+
+    //Simple Greedy Solution is here
+
     r1=n/100;
     n=n-r1*100;
+    
     r2=n/50;
     n=n-r2*50;
+    
     r3=n/20;
     n=n-r3*20;
+    
     r4=n/10;
     n=n-r4*10;
+    
     r5=n/5;
     n=n-r5*5;
+    
     r6=n/2;
     n=n-r6*2;
+    
     r7=n/1;
     n=n-r7*1;
+    
     printf("100=%d\n50=%d\n20=%d\n10=%d\n5=%d\n2=%d\n1=%d",r1,r2,r3,r4,r5,r6,r7);
 }
 ```
@@ -260,7 +285,8 @@ Enter  of Notes
 void main()
 {
     int a,x;
-    x=srand(time);
+
+    x=srand(time);//generating random number in c
     x=x%1000;
     printf("Enter Any Integer Number");
     scanf("%d",&a);
@@ -389,9 +415,11 @@ void main()
     float DA,HRA,BASIC,GS;
     printf("Enter basic salary: ");
     scanf("%f",&BASIC);
+    //Just Using Formulas
     DA=1.2*BASIC;
     HRA=0.2*BASIC;
     GS=DA+HRA+BASIC;
+    
     printf("Gross Salary is:%.2f",GS);
 }
 ```
@@ -426,10 +454,14 @@ void main()
     }
     else
     {
-      int r1,r2;
+    int r1,r2;
+
+    //Using Formula for  Equation
     r1=(-b - sqrt(b*b-4*a*c))/2*a;
     r2=(-b + sqrt(b*b-4*a*c))/2*a;
+    
     printf("Root are:%d %d",r1,r2);
+
     }
 }
 ```
@@ -443,7 +475,7 @@ Enter Value Of  C 12
 Root are:-2147483648 -2147483648
 ```
 
-## P.12. To check whether the input string is in title case 
+## P.12. To check whether the input string is in title case (Ex. Zeel in Titile Case and zeel not )
 
 *Program:*
 
@@ -498,8 +530,8 @@ Given String is not in Tital case
 ```
 
 ## P.13.  Create a structure which holds various attributes (e.g. name, id, basic_salary, DA(120%of basic), HRA%,(20% of basic) total_salary etc.) of an employee. Write a program which allows you to scan these (except total_salary) attributes for 3 employees. The program should support following operations:
-## 1. Display (total salary of the selected employee) 
-## 2. Max (find and display name of the employee with maximum salary) b. Repeat the above program using array of structure
+### 1. Display (total salary of the selected employee) 
+### 2. Max (find and display name of the employee with maximum salary) b. Repeat the above program using array of structure
 
 *Program:*
 

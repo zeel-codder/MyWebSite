@@ -52,18 +52,18 @@ const Like=(props)=>{
             await UpdateBlogLike (old,newData);
             setIsLike(!isLike);
             setLike(like);
+            setisLoading(false)
     }
     
 
     const getUser=async()=>{
         const name=JSON.parse(localStorage.getItem(User)).email
         try{
-            setisLoading(true);
+          
             const temuser=await GetUser(name)
             const isBlogLike=temuser.data.result.LikePage.includes(blogInfo.name);
             setUser(temuser)
             setIsLike(isBlogLike);
-            setisLoading(false)
         }catch{
             localStorage.removeItem(User);
         }
@@ -74,6 +74,7 @@ const Like=(props)=>{
     const PostLike=()=>{
         // console.log('')
         if(localStorage.getItem(User)){
+            setisLoading(true);
             let like=0;
             if(!isLike){
                 like=Like+1;

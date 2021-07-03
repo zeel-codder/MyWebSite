@@ -10,7 +10,7 @@ const   Template   = loadable(() => import('@Layout/Template'))
 
 export default function Tools() {
 
-  const dic={title:"Tools",keywords:"tools"}
+  const dic={title:"Tools",keywords:"tools",description:"Project build by zeel-codder(zeel prajapati). Here you can find project on Python, Js, Next js , React js , Flask , Java etc. All are very use full projects. "}
 
   return (
     <Template Component={ToolList} data={dic}></Template>
@@ -28,7 +28,9 @@ function ToolList(){
             
             return(
               <div key={id} className="BlogShort">
+                <div>
                 <span className="title">Technology:{technology}</span>
+                </div> 
               
 
                 <div>

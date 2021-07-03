@@ -33,9 +33,9 @@ const Template = loadable(() => import('@Layout/Template'))
 
 
 
-const Blogoftopic = ({ title, keywords, topic }) => {
+const Blogoftopic = ({ data }) => {
 
-  const dic = { title, keywords, isShoWList: true, topic }
+  const dic = { ...data, isShoWList: true }
 
   return (
     <Template Component={BlogPage} data={dic}></Template>
@@ -61,9 +61,12 @@ export async function getStaticProps(context) {
   const topic = context.params.topic;
   const title = topic;
   const keywords = `zeel codder ${topic}`;
+  const description=`Find blog on topic ${title}`
+
+  const data={title, keywords, topic,description}
 
   return {
-    props: { title, keywords, topic }
+    props: { data }
   }
 }
 

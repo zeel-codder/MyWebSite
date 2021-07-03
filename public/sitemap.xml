@@ -24,16 +24,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://zeelcodder.tech/auth/singup</loc>
-  <lastmod>2021-06-13T09:10:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://zeelcodder.tech/auth/login</loc>
-  <lastmod>2021-06-13T09:10:32+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://zeelcodder.tech/Resume.pdf</loc>
   <lastmod>2021-06-13T09:10:32+00:00</lastmod>
   <priority>0.64</priority>
@@ -272,6 +262,11 @@
 <url>
     <loc>https://zeelcodder.tech/blog/c-applications</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+<url>
+    <loc>https://zeelcodder.tech/blog/Earn-Money-Online-Without-Investment-in-India</loc>
+    <lastmod>2021-07-02T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   
