@@ -1056,7 +1056,7 @@ For Mobile
   .logo-text{
     font-size: 1rem;
     font-size: 1rem;
-    opacity: .69;
+    /* opacity: .69; */
   }
   .Goto_top{
     /* transform: rotate(45deg) scale(2); */

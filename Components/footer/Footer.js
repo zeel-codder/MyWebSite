@@ -30,7 +30,7 @@ const Footer=({isShoWList})=>{
         <div className="footer-container">
 
         
-    {
+    {/* {
 
         isShoWList 
 
@@ -56,7 +56,7 @@ const Footer=({isShoWList})=>{
             }
             </div>
             </div>
-       }
+       } */}
                         <div className="footer">
             <p className="footer-para">
             All Copyright goes to © zeel prajapati

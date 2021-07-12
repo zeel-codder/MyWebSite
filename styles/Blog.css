@@ -430,6 +430,7 @@ svg{
     border-bottom: 2px solid var(--form-bg);
 
 }
+
 .Serach input:hover{
     border-color: var(--form-bg);
 }
@@ -453,12 +454,21 @@ svg{
     width: 100% !important;
     justify-content: center;
     color: white !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     background-image: var(--bgi);
     position: relative;
+    align-items: center;
+    justify-content: center  !important;
 
 }
 
+.Serach input{
+    align-self: center;
+}
+.hedging{
+    font-size: 4rem;
+    margin: 2rem;
+}
 .Serach ul{
     position: absolute;
     /* transform: translatey(100%); */
@@ -473,10 +483,55 @@ svg{
     margin: 0 !important;
     padding: 0 !important;
     /* bottom: 82px; */
-    top: 84px !important;
+    top: 84px ;
     width: 60% !important;
-    transform: translateX(-14px);
+    /* border: 1px solid var(--form-bg); */
+    /* overflow: scroll; */
+    /* transform: translateX(-14px); */
+    
 }
+.item1{
+    
+    top: 108px !important ;
+}
+.item2{
+    top:194px !important
+}
+
+.home-h{
+    background-color: transparent !important;
+}
+
+.home-h h1{
+    font-weight: bold;
+    /* color: black; */
+    box-shadow: 1px 1px 1px white;
+    padding: 4px;
+    transform: all 3s;
+    animation: scale 2s linear 0s infinite;
+
+}
+
+@keyframes scale {
+    0%{
+
+        transform: scale(1.00) rotate(0);
+    }
+    50%{
+        transform: scale(1.08) rotate(2deg);
+    }100%{
+        transform: scale(1.00) rotate(0);
+
+    }
+}
+
+
+.home-h h1:hover{
+    box-shadow:2px 3px 3px white ;
+    cursor: pointer;
+}
+
+
 
 span[class*="open"]{
     background:var(--form-bg);
@@ -654,18 +709,18 @@ Like
 
 @media only screen and (max-width: 800px) {
     .ListOfBlogs{
-        grid-template-columns: 65%;
+        grid-template-columns: 75%;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .ListOfBlogs{
-        grid-template-columns: 80%;
+        grid-template-columns: 90%;
     }
 }
 @media only screen and (max-width: 400px) {
     .ListOfBlogs{
-        grid-template-columns: 94%;
+        grid-template-columns: 95%;
     }
      .tools > .BlogShort{
         padding: 0px;

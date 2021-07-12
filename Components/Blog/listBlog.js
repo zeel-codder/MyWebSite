@@ -82,11 +82,13 @@ function BlogList({ isTopic, topic }) {
 
                 <div className="blog_main1" id="home">
 
-                    <img className="video" src="/index.jpeg" />
+                    <img className="video" src="/index.jpg" />
                     {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
-                    <span className="logo-text blog-text" id="head">
+                    <span className="logo-text home-h">
+                        <h1>
                         Start Reading And Learning Today
-                        <button className="btn" >
+                        </h1>    
+                        {/* <button className="btn" >
                             <Link to='Read' title='Get start'
                                 spy={true}
                                 smooth={true}
@@ -95,7 +97,7 @@ function BlogList({ isTopic, topic }) {
                             >
                                 Lets Read
                             </Link>
-                        </button>
+                        </button> */}
                     </span>
                 </div>
 
@@ -114,7 +116,7 @@ function BlogList({ isTopic, topic }) {
                     <h1 className="row">🙏🙏 No Blogs On This Topic 🙏🙏</h1>
 
                     :
-                    <h1 >Blogs</h1>
+                    <h1 className="hedging">Blogs</h1>
             }
 
 

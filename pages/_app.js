@@ -1,6 +1,6 @@
 // import '../styles/globals.css'
-import  '../styles/Blog.css'
 import  '../styles/index.css'
+import  '../styles/Blog.css'
 import  '../styles/prism.css'
 import React from "react";
 import {useEffect} from 'react';
