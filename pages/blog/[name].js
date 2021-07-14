@@ -86,6 +86,12 @@ function BlogPage({ data, file, title, user,blogs }) {
     <>
 
       {/* <Tem></Tem> */}
+      <ins className="adsbygoogle add"
+     style={{display:'block'}}
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4438223892792479"
+     data-ad-slot="9033777830"></ins>
 
       <div className="blog-container">
 
@@ -114,14 +120,7 @@ function BlogPage({ data, file, title, user,blogs }) {
         />
         </>
       } */}
-       <ins className="adsbygoogle add"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-4438223892792479"
-            data-ad-slot="9230683994"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-            data-adtest="on"
-            ></ins>
+    
         {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: file}} /> */}
 
         <Markdown
@@ -156,7 +155,9 @@ function BlogPage({ data, file, title, user,blogs }) {
         data-ad-client="ca-pub-4438223892792479"
         data-ad-slot="5009297566"
         data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
+        data-full-width-responsive="true"
+        data-adtest="on"
+        ></ins>
            {
             blogs.map((page, index) => {
 
@@ -167,6 +168,12 @@ function BlogPage({ data, file, title, user,blogs }) {
         }
       </div>
       </div>
+      <ins className="add adsbygoogle"
+     style={{display:'block'}}
+     data-ad-client="ca-pub-4438223892792479"
+     data-ad-slot="9770669654"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
 
 
     </>

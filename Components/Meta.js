@@ -7,9 +7,11 @@ const Meta = ({ title, keywords,description }) => {
   useEffect(() => {
 
     try {
-      const number=document.querySelector('.adsbygoogle').length;
+      // const number=document.querySelectorAll('.adsbygoogle').length;
 
-      for(let i =0;i<number;i++){
+      // console.log(document)
+      for(let i =0;i<3;i++){
+        // console.log('call')
 
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       }
@@ -41,7 +43,7 @@ const Meta = ({ title, keywords,description }) => {
             {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC9RB4MTPH"></script>
       
-             {/* <script
+              <script
             dangerouslySetInnerHTML={{
               __html: `
             window.dataLayer = window.dataLayer || [];
@@ -51,7 +53,7 @@ const Meta = ({ title, keywords,description }) => {
             
             `,
           }}
-          /> */}
+          /> 
         
           <script data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
