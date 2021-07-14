@@ -618,7 +618,11 @@ Like
 .ListAfterBlog{
     grid-template-columns: repeat(2, 50%);
 }
-
+.add{
+    margin: .3rem auto;
+    border: 1px solid black;
+    text-align: center;
+}
 @media only screen and (max-width: 1200px) {
     .ListOfBlogs{
         grid-template-columns: repeat(2, 40%);

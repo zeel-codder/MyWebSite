@@ -114,6 +114,14 @@ function BlogPage({ data, file, title, user,blogs }) {
         />
         </>
       } */}
+       <ins className="adsbygoogle add"
+            style={{ display: 'block' }}
+            data-ad-client="ca-pub-4438223892792479"
+            data-ad-slot="9230683994"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+            data-adtest="on"
+            ></ins>
         {/* <article className="blog-container" dangerouslySetInnerHTML={{__html: file}} /> */}
 
         <Markdown
@@ -143,6 +151,12 @@ function BlogPage({ data, file, title, user,blogs }) {
       <div className="ListOfBlogs blog-container ListAfterBlog" >
 
         
+        <ins className="adsbygoogle add"
+        style={{display:'block'}}
+        data-ad-client="ca-pub-4438223892792479"
+        data-ad-slot="5009297566"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
            {
             blogs.map((page, index) => {
 
@@ -185,7 +199,7 @@ export async function getStaticProps(context) {
   blogs=blogs.data;
 
   const first= Math.floor(Math.random() * blogs.length);
-  blogs=[blogs[first],blogs[(first+1)%blogs.length],blogs[(first+2)%blogs.length],blogs[(first+3)%blogs.length]]
+  blogs=[blogs[first],blogs[(first+1)%blogs.length],blogs[(first+2)%blogs.length],blogs[(first+3)%blogs.length],blogs[(first+4)%blogs.length]]
   console.log(blogs)
 
 

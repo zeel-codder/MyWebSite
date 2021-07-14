@@ -5,8 +5,14 @@ import { useEffect } from "react";
 const Meta = ({ title, keywords,description }) => {
 
   useEffect(() => {
+
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      const number=document.querySelector('.adsbygoogle').length;
+
+      for(let i =0;i<number;i++){
+
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
     } catch (err) {
       console.log(err);
     }
