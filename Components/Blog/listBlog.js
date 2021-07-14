@@ -128,9 +128,10 @@ function BlogList({ isTopic, topic }) {
                 data-ad-client="ca-pub-4438223892792479"
                 data-ad-slot="9230683994"
                 data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script dangerouslySetInnerHTML={{ __html: `(adsbygoogle = window.adsbygoogle || []).push({});` }}>
-            </script>
+                data-full-width-responsive="true"
+                data-adtest="on"
+                ></ins>
+          
             {/* </Html> */}
 
 

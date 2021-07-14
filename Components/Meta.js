@@ -1,7 +1,16 @@
 import React from "react";
 import Head from 'next/head'
+import { useEffect } from "react";
 // import Document, { Html, Head } from 'next/document'
 const Meta = ({ title, keywords,description }) => {
+
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
 
 
   // zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.
