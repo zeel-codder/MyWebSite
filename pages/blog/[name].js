@@ -30,10 +30,7 @@ import loadable from '@loadable/component'
 const Like = loadable(() => import('@Blog/Like'))
 const Share = loadable(() => import('@Blog/share'))
 const Template = loadable(() => import('@Layout/Template'))
-// const Graph = loadable(() => import('Components/grapmeta'))
-// import scr
-// const   Share    = loadable(() => import('@Blog/share'))
-// const 
+const BlogShort = loadable(() => import('@Blog/BlogShort'))
 
 
 
@@ -43,9 +40,9 @@ const Template = loadable(() => import('@Layout/Template'))
 
 
 
-const Blog = ({ data, file, title, keywords, user,description }) => {
+const Blog = (props) => {
 
-  const dic = { data, file, title, keywords, isShoWList: true, user,description }
+  const dic = { ...props, isShoWList: true}
 
   return (
     <Template Component={BlogPage} data={dic}></Template>
@@ -56,7 +53,7 @@ const Blog = ({ data, file, title, keywords, user,description }) => {
 
 
 
-function BlogPage({ data, file, title, user }) {
+function BlogPage({ data, file, title, user,blogs }) {
 
   // let url='/';
   const { _id, username } = user
@@ -142,7 +139,21 @@ function BlogPage({ data, file, title, user }) {
             {`${username || 'none'}`}
           </Link>
         </p>
+        <h1>People Also Read</h1>
+      <div className="ListOfBlogs blog-container ListAfterBlog" >
+
+        
+           {
+            blogs.map((page, index) => {
+
+                return (<BlogShort {...page} key={index} />)
+
+            })
+        
+        }
       </div>
+      </div>
+
 
     </>
 
@@ -158,9 +169,9 @@ function BlogPage({ data, file, title, user }) {
 
 export async function getStaticProps(context) {
   const name = context.params.name;
-  const regex=/(?<=#{1,6} (.*)\n(?:(?!#).*\n)*)(?=[+*-] (.*(?:\n(?![#+*-]).+)?))/g
+  // const regex=/(?<=#{1,6} (.*)\n(?:(?!#).*\n)*)(?=[+*-] (.*(?:\n(?![#+*-]).+)?))/g
 
-  console.log(name)
+  // console.log(name)
   let data = await axios.post(process.env.WebLink + "/api/blog/bloginfoone", { name })
     .then((response) => {
       // console.log(response.data);
@@ -168,7 +179,15 @@ export async function getStaticProps(context) {
     }
     )
     .catch((err) => console.log(err));
-  // name=data.creator;
+
+  let blogs=await axios.post(process.env.WebLink+'/api/blog/blog');
+
+  blogs=blogs.data;
+
+  const first= Math.floor(Math.random() * blogs.length);
+  blogs=[blogs[first],blogs[(first+1)%blogs.length],blogs[(first+2)%blogs.length],blogs[(first+3)%blogs.length]]
+  console.log(blogs)
+
 
   const user = await axios.post(process.env.WebLink + '/api/user/finduser', { email: data.creator, isNotCreateToken: true })
     .then((response) => {
@@ -180,19 +199,8 @@ export async function getStaticProps(context) {
 
   // data=data['data'].result;
   const file = await import('../../Blogs/' + name + '/blog.md');
-
-  // axios.post(`/BlogInfoOne`,{name:blogname})
   const content = matter(file.default).content;
-  // const list=content.split('\n');
-  // // console.log(list)
-  // const h_list=list.filter((data)=>{
-  //   // console.log(data);
-  //   return data !=="" || data.match(/# ([A-Z])\w+/g) 
-  // })
-  // console.log(h_list)
-   
-  // const matches = content.match(regex);
-  // console.log(matches)
+
 
   const tag=matter(file.default).data
 
@@ -200,13 +208,9 @@ export async function getStaticProps(context) {
 
   description=description || 'zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.'  
 
-  // console.log(matter(file.default))
 
-  // const tem=JSON.stringify(data);
-  //     data=tem;
-  // const grap={disc}
   return {
-    props: { data, file: content, title, keywords, user,description }
+    props: { data, file: content, title, keywords, user,description, blogs }
   }
 }
 export async function getStaticPaths() {

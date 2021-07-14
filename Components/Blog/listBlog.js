@@ -5,6 +5,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { WebLink } from '@const/List';
+// import Html from 'next/'
 // import { useRouter } from 'next/router';
 // import BlogShort from '@B/BlogShort'
 // import Template from '@Layout/Template'
@@ -86,8 +87,8 @@ function BlogList({ isTopic, topic }) {
                     {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
                     <span className="logo-text home-h">
                         <h1>
-                        Start Reading And Learning Today
-                        </h1>    
+                            Start Reading And Learning Today
+                        </h1>
                         {/* <button className="btn" >
                             <Link to='Read' title='Get start'
                                 spy={true}
@@ -111,13 +112,26 @@ function BlogList({ isTopic, topic }) {
                 data.length === 0
 
                     ?
-                    ! isLoading
+                    !isLoading
                     &&
                     <h1 className="row">🙏🙏 No Blogs On This Topic 🙏🙏</h1>
 
                     :
                     <h1 className="hedging">Blogs</h1>
             }
+
+            {/* <Html> */}
+
+
+            <ins className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-4438223892792479"
+                data-ad-slot="9230683994"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script dangerouslySetInnerHTML={{ __html: `(adsbygoogle = window.adsbygoogle || []).push({});` }}>
+            </script>
+            {/* </Html> */}
 
 
             {/* <BlogShort /> */}

@@ -615,9 +615,16 @@ Like
     background-color: transparent;
 }
 
+.ListAfterBlog{
+    grid-template-columns: repeat(2, 50%);
+}
+
 @media only screen and (max-width: 1200px) {
     .ListOfBlogs{
         grid-template-columns: repeat(2, 40%);
+    }
+    .ListAfterBlog{
+        grid-template-columns: repeat(2, 50%);
     }
     .Log{
         margin: 2rem auto;
