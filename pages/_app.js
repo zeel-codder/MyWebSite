@@ -14,21 +14,21 @@ function MyApp({ Component, pageProps }) {
 
   const router=useRouter()
 
-  useLayoutEffect(() => {
-    try {
-      // const number=document.querySelectorAll('.adsbygoogle').length;
+  // useLayoutEffect(() => {
+  //   try {
+  //     // const number=document.querySelectorAll('.adsbygoogle').length;
 
-      // console.log(number)
-      for(let i =0;i<3;i++){
-        // console.log('call')
+  //     // console.log(number)
+  //     for(let i =0;i<3;i++){
+  //       // console.log('call')
 
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (err) {
-      // console.log(err);
-    }
+  //       (window.adsbygoogle = window.adsbygoogle || []).push({});
+  //     }
+  //   } catch (err) {
+  //     // console.log(err);
+  //   }
 
-  })
+  // })
 
   useEffect(async () => {
  

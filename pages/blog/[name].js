@@ -148,6 +148,13 @@ function BlogPage({ data, file, title, user,blogs }) {
         </p>
         <h1>People Also Read</h1>
        
+        <div className="center">
+            <ins className="adsbygoogle top-add add"
+     style={{display:'inline-block'}}
+     data-ad-client="ca-pub-4438223892792479"
+     data-ad-slot="5009297566"></ins>
+     </div> 
+     
       <div className="ListOfBlogs blog-container ListAfterBlog" >
 
         

@@ -629,10 +629,23 @@ Like
 }
 .add{
     margin: .3rem auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
+    padding: .2rem;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-add{
+    width:50%;height:100px;margin:0 auto;
 }
 @media only screen and (max-width: 1200px) {
+    .top-add{
+        width: 100%;
+    }
     .ListOfBlogs{
         grid-template-columns: repeat(2, 40%);
     }

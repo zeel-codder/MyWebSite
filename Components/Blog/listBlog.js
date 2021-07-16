@@ -142,12 +142,13 @@ function BlogList({ isTopic, topic }) {
 
 
             {/* <BlogShort /> */}
-            <ins className="adsbygoogle add"
+           
+            {/* <ins className="adsbygoogle add"
      style={{display:'block'}}
      data-ad-format="fluid"
      data-ad-layout-key="-90-22-20-bu+d7"
      data-ad-client="ca-pub-4438223892792479"
-     data-ad-slot="4097215739"></ins>
+     data-ad-slot="4097215739"></ins> */}
             <div className="ListOfBlogs blog-container" >
                 {
 
@@ -175,6 +176,12 @@ function BlogList({ isTopic, topic }) {
 
                 }
             </div>
+            <div className="center">
+            <ins className="adsbygoogle top-add add"
+     style={{display:'inline-block'}}
+     data-ad-client="ca-pub-4438223892792479"
+     data-ad-slot="5009297566"></ins>
+     </div>  
             {
 
                 list.length > data.length

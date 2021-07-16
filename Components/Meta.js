@@ -1,13 +1,21 @@
 import React from "react";
 import Head from 'next/head'
-import { useEffect } from "react";
+import { useEffect ,useLayoutEffect} from "react";
 // import Document, { Html, Head } from 'next/document'
 const Meta = ({ title, keywords,description }) => {
+
+  // useEffect(async ()=>{
+
+  //   const number=await document.querySelectorAll('.adsbygoogle')
+  //   console.log(document)
+  //   console.log(number)
+  //   console.log(document.querySelectorAll('.adsbygoogle'))
+  // },[])
 
   useEffect(() => {
 
     try {
-      // const number=document.querySelectorAll('.adsbygoogle').length;
+      const number=document.querySelectorAll('.adsbygoogle').length;
 
       // console.log(document)
       for(let i =0;i<3;i++){
