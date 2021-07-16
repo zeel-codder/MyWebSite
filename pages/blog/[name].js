@@ -147,17 +147,18 @@ function BlogPage({ data, file, title, user,blogs }) {
           </Link>
         </p>
         <h1>People Also Read</h1>
+       
       <div className="ListOfBlogs blog-container ListAfterBlog" >
 
         
-        <ins className="adsbygoogle add"
+        {/* <ins className="adsbygoogle add"
         style={{display:'block'}}
         data-ad-client="ca-pub-4438223892792479"
         data-ad-slot="5009297566"
         data-ad-format="auto"
         data-full-width-responsive="true"
         data-adtest="on"
-        ></ins>
+        ></ins> */}
            {
             blogs.map((page, index) => {
 

@@ -99,7 +99,7 @@ export default function Search({ data }) {
             onChange={(e) => setqueryTopic(e.target.value)}
             autoComplete="off"
             />
-            <ul className="item item1">
+            <ul className={`item item ${Topic.length===0 || 'scroll-list' }`}>
 
                 {
                     Topic.map((value, index) => {
@@ -132,7 +132,7 @@ export default function Search({ data }) {
             />
 
 
-            <ul className="item item2">
+            <ul className={`item item2 ${list.length===0 || 'scroll-list'} `}>
 
                 {
                     list.map((value, index) => {

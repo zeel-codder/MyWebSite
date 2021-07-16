@@ -142,6 +142,12 @@ function BlogList({ isTopic, topic }) {
 
 
             {/* <BlogShort /> */}
+            <ins className="adsbygoogle add"
+     style={{display:'block'}}
+     data-ad-format="fluid"
+     data-ad-layout-key="-90-22-20-bu+d7"
+     data-ad-client="ca-pub-4438223892792479"
+     data-ad-slot="4097215739"></ins>
             <div className="ListOfBlogs blog-container" >
                 {
 

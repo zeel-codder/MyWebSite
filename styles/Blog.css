@@ -483,7 +483,7 @@ svg{
     margin: 0 !important;
     padding: 0 !important;
     /* bottom: 82px; */
-    top: 84px ;
+    top: 110px ;
     width: 60% !important;
     /* border: 1px solid var(--form-bg); */
     /* overflow: scroll; */
@@ -618,6 +618,15 @@ Like
 .ListAfterBlog{
     grid-template-columns: repeat(2, 50%);
 }
+.scroll-list{
+    max-height: 80vh;
+    overflow: scroll;
+}
+.scroll-list  a{
+    padding: 0 !important;
+    margin: 0 auto;
+
+}
 .add{
     margin: .3rem auto;
     border: 1px solid black;
@@ -643,7 +652,7 @@ Like
         width: 75%;
     }
     .Serach ul{
-        top: 83px !important;
+        /* top: px !important; */
         width: 75% !important;
     }
     .ListOfBlogs > .BlogShort{
