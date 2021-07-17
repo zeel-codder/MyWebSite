@@ -176,12 +176,12 @@ function BlogPage({ data, file, title, user,blogs }) {
         }
       </div>
       </div>
-      <ins className="add adsbygoogle"
+      <ins className="adsbygoogle add"
      style={{display:'block'}}
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
      data-ad-client="ca-pub-4438223892792479"
-     data-ad-slot="9770669654"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
+     data-ad-slot="9033777830"></ins>
 
 
     </>

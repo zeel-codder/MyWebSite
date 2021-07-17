@@ -106,6 +106,7 @@ export default function Search({ data }) {
                         const { title, link } = value;
 
                         return (
+                            
                             <li key={index}>
                                 <div>
 

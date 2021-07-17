@@ -16,69 +16,44 @@ const Education = () => {
             <div className="box" id="education">
                 <h1>Education</h1>
 
-                <div className="text-container row error">
-                <img className="container-img" src='/images/home/education.jpg' alt="Education Svg"></img>
-                    <div className="column">
+                <div className="text-container  error">
+                    <img className="container-img" src='/images/home/education.svg' alt="Education Svg"></img>
+                    <div>
 
-                    <p className="para">
-                        I did my 10th in Ankit vidyalaya, kalol, Gujarat in Gujarat Board. Then I finished my 12th in KTKM High School in Science branch. And presently , I am pursuing Computer science B-Tech in Nirma university.
-                    </p>
-                    <table>
+                        <p className="para">
+                            I did my 10th in Ankit vidyalaya, kalol, Gujarat in Gujarat Board. Then I finished my 12th in KTKM High School in Science branch. And presently , I am pursuing Computer science B-Tech in Nirma university.
+                        </p>
 
-                        <thead>
-                            <td>Collage/school  name</td>
-                            <td>Percentile rank/SPI</td>
-                            <td>Compilation data</td>
-                            <td>Location</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    Ankit vidyalaya
-                                </td>
-                                <td>
-                                    99.12 PR
-                                </td>
-                                <td>
-                                    2017
-                                </td>
-                                <td>
-                                    kalol, Gujarat
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    KTKM High School
-                                </td>
-                                <td>
-                                    99.27 PR
-                                </td>
-                                <td>
-                                    2019
-                                </td>
-                                <td>
-                                    kalol, Gujarat
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Nirma University
-                                </td>
-                                <td>
-                                    -
-                                </td>
-                                <td>
-                                    2023
-                                </td>
-                                <td>
-                                    Ahmadabad, Gujarat
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <ul>
 
-                </div>
+
+
+                        <li className="School para">
+
+                            <b>KTKM High School, kalol, Gujarat — 12th Science
+                                2018 - 2019</b>
+                            <div className="Sub">
+
+                                I got 99.23 PR in Gujarat bort in Science brach. I hold the first position
+                                In kalol center in science brach.
+                            </div>
+                        </li>
+                        <li className="School para">
+
+                            <b> Nirma University, Ahmedabad, Gujarat — B-Tech CSE
+                        2019 -2023</b>
+                            <div className="Sub">
+
+                            Presently I am pursuing B-Tech in Computer Science Technology with
+                        80% marks
+                            </div>
+                        </li>
+                       
+                       
+                        </ul>    
+
                     </div>
+                </div>
             </div>
         </>
     )

@@ -38,6 +38,7 @@ const Projects=()=>{
             description:'A blogging web site which build on next js. Web-site main function are User Auth , User can read the blogs , Search blogs and also like or share the blog.',
             codelink:'https://github.com/zeel-codder/My_Introduction',
             link:'https://zeelcodder.tech/',
+            img:'/images/projects/my-blog.png'
             
         },
         {
@@ -47,6 +48,7 @@ const Projects=()=>{
             description:'An e-commerce web site which build on Only Html,css and js. Main function are User Login, singing , see the item or product of store, sort or search the item by name and price and add item or remove to cart.',
             codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
             link:'https://anteryaminstore.netlify.app/',
+            img:'/images/projects/Anteryami-store.png'
             
         },
      
@@ -92,16 +94,17 @@ const Projects=()=>{
            {
                ProjectData.map((data,index)=>{
 
-                const {id,technology,description,codelink ,link,title}=data
+                const {id,technology,description,codelink ,link,title,img}=data
   
                 return (
 
-                    <div key={id} className="BlogShort" >
-                <span className="title">Technology:{technology}</span>
+                <div key={id} className="BlogShort" >
+                <span className="title">{technology}</span>
               
 
                 <div>
                 <h1>{title}</h1>
+                <img src={img} className="img" />
                 <div className="description">{description}</div>
                 <div>
                 

@@ -7,7 +7,8 @@ const data=[
         technology:'next js',
         description:'A blogging web site which build on next js. Web-site main function are User Auth , User can read the blogs , Search blogs and also like or share the blog.',
         codelink:'https://github.com/zeel-codder/MyWebSitNextjs',
-        link:'https://zeelcodder.tech/'
+        link:'https://zeelcodder.tech/',
+        img:'/images/projects/my-blog.png'
     },
     {
         id:2,
@@ -16,7 +17,8 @@ const data=[
         technology:'Html,Css,Js',
         description:'A e-commerce web site which build on Only Html,css and js. Main function are User Login, singing , see the item or product of store, sort or search the item by name and price and add item or remove to cart.',
         codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
-        link:'https://anteryaminstore.netlify.app/'
+        link:'https://anteryaminstore.netlify.app/',
+        img:'/images/projects/Anteryami-store.png'
     },
     {
         id:3,
@@ -25,7 +27,8 @@ const data=[
         technology:'Python-flask',
         description:'This project is used to find spi of student of nirma university Technology. Currently we have only four branch data so user can only calculate the spi of four branch.',
         codelink:'https://github.com/zeel-codder/spi',
-        link:'https://zeelprajapati123.pythonanywhere.com/'
+        link:'https://zeelprajapati123.pythonanywhere.com/',
+        img:'/images/projects/spi.png'
     
     },
     {
@@ -35,7 +38,8 @@ const data=[
         technology:'Html,Css,Js',
         description:'This project is used to find spi of student of nirma university Technology. Currently we have only four branch data so user can only calculate the spi of four branch.',
         codelink:'https://github.com/zeel-codder/BookMarks',
-        link:'https://mybookmarks1.netlify.app/'
+        link:'https://mybookmarks1.netlify.app/',
+        img:'/images/projects/BookMark.png'
     },
     {
         id:5,
@@ -44,7 +48,8 @@ const data=[
         technology:'Node js and Express',
         description:'This Project is build on node js and express as demo blog web site. We have mongodb as data base and pub as template engine',
         codelink:'https://github.com/zeel-codder/ProgramingHub',
-        link:'https://programinghub.herokuapp.com/'
+        link:'https://programinghub.herokuapp.com/',
+        img:'/images/projects/programmin-hub.png'
     },
     {
         id:6,

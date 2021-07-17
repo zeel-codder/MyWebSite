@@ -12,7 +12,8 @@
 
 // import {FcLike} from 'react-icons/fc';
 // import {useGlobalContext} from '../context';
-import Link from 'next/link'
+// import Link from 'next/link'
+// import Image from 'next/image'
 import React from "react";
 import loadable from '@loadable/component'
 // import Like from './Like';

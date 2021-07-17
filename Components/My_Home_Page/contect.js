@@ -53,9 +53,8 @@ const Context = () => {
             alert("Send🙏🙏");
             setLoading(false);
         }catch(e){
-            console.log(e)
-
-            alert("Some Error")
+    
+            alert("Email is not Valid")
         }
 
 
@@ -72,11 +71,11 @@ const Context = () => {
 
             }
 
-            <div id="contact">
+            <div >
 
             
 
-            <h1>Contact Form</h1>
+            <h1 id="contact">Contact Form</h1>
             <div className="row con">
                 <div>
 

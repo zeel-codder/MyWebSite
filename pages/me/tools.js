@@ -24,17 +24,19 @@ function ToolList(){
         <h1>Zeel Codder's Projects</h1>
         {
           ToolsData.map((data)=>{
-            const {id, title, description,imgurl,codelink,link, technology}=data;
+            const {id, title, description,imgurl,codelink,link, technology,img}=data;
             
             return(
               <div key={id} className="BlogShort">
                 <div>
-                <span className="title">Technology:{technology}</span>
+                <span className="title">{technology}</span>
+                <h1>{title}</h1>
                 </div> 
+
               
 
+                <img src={img} className="img" />
                 <div>
-                <h1>{title}</h1>
                 <div className="description">{description}</div>
                 <div>
                 

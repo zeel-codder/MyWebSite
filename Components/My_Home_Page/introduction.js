@@ -16,10 +16,10 @@ const Introduction = () => {
         <>
             <div className="box" name="introduction">
                 <h1>Introduction</h1>
-                <div className="text-container row">
-                <img className="container-img" src="/images/home/introduction.jpg" alt="Introduction Svg"></img>
+                <div className="text-container">
+                <img className="container-img" src="/images/home/introduction.svg" alt="Introduction Svg"></img>
                     <p className="para">
-                        My name is zeel Sureshbhai prajapati. My father's name is Sureshbhai Prajapati, he is doing business in catering.I am living in kalol, Gujarat. currently,  I am doing Computer Science at Nirma university. I love to make web sites and also create android apps. I am also doing competitive programming. I am fascinated by my work. I am good at teamwork and give my best in any work. I like to do coding. My favorite language is javascript. I done projects in javascript as well as Reactjs.  I have knowledge about java, python ,c and c++ like languages. I am using java for competitive programming. I also loves to learn new technologies.
+                    My name is Zeel Sureshbhai Prajapati.I am living in kalol, Gujarat. Presently, I am pursuing Computer Science at Nirma University. I am love to code. I am do competitive programming and using java for competitive programming.  I am open source enthusiastic   Javascript is my favorite language.  I done projects web development. I have knowledge about  Python ,C and C++ like languages. I  love to learn new things everyday.
                     </p>
                 </div>
                     

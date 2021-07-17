@@ -47,6 +47,7 @@ const Meta = ({ title, keywords,description }) => {
             <meta name="author" content="zeel prajapati" />
             <meta name="description" content={description} />
             <link rel="shortcut icon" href="/zeel.jpg" />
+            <link rel="preload" as="image" href="/index.jpg" />
 
             {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC9RB4MTPH"></script>

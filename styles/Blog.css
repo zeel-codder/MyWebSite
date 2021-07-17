@@ -176,18 +176,20 @@ em{
 
     /* object-fit: container; */
 
-    border-radius: var(--radius);
+    /* border-radius: var(--radius); */
     height: 213px;
 
 }
 .tools{
     align-items: center;
     text-align: center;
+    text-transform: capitalize;
 }
 .tools  img{
-    width:100px;
-    height:100px;
-    margin: 0 1rem;
+    width:100%;
+    height: auto;
+    /* height:100px; */
+    margin: 0 .5rem !important;
 
 }
 .tools .code , .tools .link{
@@ -248,37 +250,9 @@ p > img{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .pn{
     pointer-events: none;
 }
-
-
 
 .ListOfBlogs > .BlogShort,.tools > .BlogShort{
     display: flex;
@@ -324,7 +298,6 @@ h1,h3{
 }
 
 .title{
-
   
     font-size: xx-large;
     text-align: center;
@@ -495,11 +468,17 @@ svg{
     top: 108px !important ;
 }
 .item2{
+    z-index: 10 !important;
     top:194px !important
 }
 
 .home-h{
     background-color: transparent !important;
+
+}
+.item div{
+    text-align: center
+    ;
 }
 
 .home-h h1{
@@ -620,7 +599,7 @@ Like
 }
 .scroll-list{
     max-height: 80vh;
-    overflow: scroll;
+    overflow: auto;
 }
 .scroll-list  a{
     padding: 0 !important;
@@ -759,6 +738,9 @@ Like
         padding: 0px;
         margin: 4px auto;
 
+    }
+    .tools .img{
+        width: 90%;
     }
 }
 .User{
