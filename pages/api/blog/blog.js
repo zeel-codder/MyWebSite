@@ -5,7 +5,7 @@ export default async function handler(req, res){
     await ONConnections();
     let data=(await GetBlogList());
     // await OffConnections();
-    data=data.sort((a,b)=>b.like-a.like);
+    // data=data.sort((a,b)=>b.like-a.like);
     
     
     res.status(200).end(JSON.stringify(data));

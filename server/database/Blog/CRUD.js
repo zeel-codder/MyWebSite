@@ -6,11 +6,11 @@ const {BlogInfo}=Database;
   
 const DemoData = {
 
-    "name": "Earn-Money-Online-Without-Investment-in-India",
-    "title": "Earn Money Online Without Investment in India",
-    "img": "/images/blog/Earn-Money-Online-Without-Investment-in-India/1.png",
+    "name": "How-Send-Email-in-next-js-app-With-Email-js-module",
+    "title": "How Send Email in next js app With Email js module?",
+    "img": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
     "like": 0,
-    "topic": "tools",
+    "topic": "next-js",
     "creator":"zeelprajapati321@gmail.com"
 }
 
