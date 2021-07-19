@@ -350,7 +350,11 @@ blog-container p > img:hover{
   cursor: pointer;
   filter:grayscale(30%)
 }
-.imgeAnimationDiv img,p > img,iframe{
+
+iframe{
+  margin: 0 auto;
+}
+.imgeAnimationDiv img,p > img{
   width:100%;
   transition:all 1s;
   cursor: pointer;

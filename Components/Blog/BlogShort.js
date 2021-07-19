@@ -20,7 +20,8 @@ import loadable from '@loadable/component'
 const Like = loadable(() => import('./Like'))
 // import { useState } from 'react';
 import { WebLink } from '@const/List';
-
+import Image from 'next/image'
+// import  Image  from "next/image";
 // ====================================
 
 
@@ -37,14 +38,15 @@ const BlogShort = (props) => {
             <div className="BlogShort">
             
             <span className="title">{topic}</span>
-                <div>
-                <img src={img} alt='BlogShort Img' />
+              
+                <div className="imgdiv">
+                <Image src={img} layout="fill" alt='BlogShort Img'   />
                 </div>    
                 <div className="BlogInformation" key={id}>
                     <span className="Blogtitle">{title}</span>
                     {/* <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2> */}
                 <Like blogInfo={props} isBlogShort={true}></Like>
-                    <a href={`${WebLink}/blog/${name}`} className="blog-a">
+                    <a href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
                         <button className="btn">Read
                         </button>
                     </a>

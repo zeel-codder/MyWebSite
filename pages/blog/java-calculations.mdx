@@ -1,0 +1,559 @@
+---
+title: Java Programming Calculation Programs
+keywords: Java
+layout: 'post'
+summery: 'How To make mony online for free and Fast.'
+---
+
+
+
+# Java programming Calculation Programs
+
+
+# YOU CAN FIND PROGRAMS BELLOW:
+
+
+## P.1. Addition of Two Numbers.
+
+*Program:*
+
+```java
+package javabasic;
+import java.io.*;
+public class add
+{
+    public static void main(String[] args)throws IOException
+    {
+    int a,b,sum;
+    BufferedReader h=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter your frist number");
+    a=Integer.parseInt(h.readLine());
+    System.out.println("Enter your Secoud number");
+    b=Integer.parseInt(h.readLine());
+    sum=a+b;
+    System.out.println("the sum is "+sum);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter your first number
+2
+Enter your second number
+3
+The sum of 2 and 3 is 5
+```
+
+## P.2. Arithmetic Operation of Two Variable.
+
+*Program:*
+
+```java
+package javabasic;
+import java.io.*;
+public class calculater
+{
+    public static void main(String[] args)throws IOException
+    {
+    int a,b,sum,sub,mul;
+    float div;
+    BufferedReader h=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter your first number");
+    a=Integer.parseInt(h.readLine());
+    System.out.println("Enter your Second number");
+    b=Integer.parseInt(h.readLine());
+    sum=a+b;
+    sub=a-b;
+    mul=a*b;
+    div= (float)a/b;
+    System.out.println("The sum of  is "+sum);
+    System.out.println("The subtraction is"+sub);
+    System.out.println("The multiplication is "+mul);
+    System.out.println("The division is "+div);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter your first number
+2
+Enter your second number
+1
+The sum  is 3
+The Substantiation is 1
+The Multiplication is 2
+The division  2.0
+```
+
+## P.3.  Convert Celsius TO Ferret.
+
+*Program:*
+
+```java
+package javabasic;
+import java.io.*;
+public class Celsius
+{
+    public static void main(String[] args)throws IOException
+    {
+    int c;
+    float f;
+    BufferedReader h=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter temprechar ic 0c");
+    c=Integer.parseInt(h.readLine());
+    f=(9/5)*c + 32;
+    System.out.println("Temperature is Ferret is "+f);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter Temperature in degree Celsius
+45
+Temperature is Ferret
+113
+```
+
+## P.4. Find Area Of Circle.
+
+*Program:*
+
+```java
+package javabasic;
+import java.io.*;
+public class findAreaOfCircle
+{
+  
+    public static void main(String[] args) throws IOException
+    {
+    double r,area;
+    double pi=3.14;
+    BufferedReader h=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter radius");
+    r=Double.parseDouble(h.readLine());
+    area=pi*r*r;
+    System.out.println("Area of Circle is  "+area);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter radius:
+3
+Area of Circle is 28.26
+```
+
+## P.5. Find nCr and nPr.
+
+*Program:*
+
+```java
+package javabasic;
+import java.io.*;
+public class nCrandnPr
+{
+  
+    public static void main(String[] args) throws IOException
+    {
+    int n,r;
+    BufferedReader h=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter the value of n and r");
+    n=Integer.parseInt(h.readLine());
+    r=Integer.parseInt(h.readLine());
+    int p=nPr(n,r);
+    int c=nCr(n,r);
+    System.out.println("nPr= "+p);
+    System.out.println("nPr= "+c);
+}
+private static int factorial(int n)
+{
+    if(n==0||n==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n*factorial(n-1);
+    }
+  
+}
+private static int nPr(int n, int r)
+{
+    return factorial(n)/factorial(n-r);
+}
+private static int nCr(int n, int r)
+{
+    return nPr(n,r)/factorial(r);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter the value of n and r
+3
+3
+nPr=6
+nCr=1
+```
+
+
+## P.6. Calculation of Simple Interest.
+
+*Program:*
+
+
+```java
+package javabasic;
+import java.io.*;
+public class SimpleInterst
+{
+  
+    public static void main(String[] args) throws IOException
+    {
+    double p,r,n,SI;
+    BufferedReader h=new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("enter the valu of principle");
+    p=Double.parseDouble(h.readLine());
+    System.out.println("enter the valu of principle");
+    r=Double.parseDouble(h.readLine());
+    System.out.println("enter the valu of principle");
+    n=Double.parseDouble(h.readLine());
+    SI= p*r*n/100;
+    System.out.println("Simple Interest is=  "+SI);
+
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter the value of Principal,Amount and Time(h)
+12
+23
+4
+Simple Interest is= 11.04
+```
+
+
+## P.7. Sum of first and Last Digit of Given Number.
+
+*Program:*
+
+```java
+package javabasic;
+import java.io.*;
+public class SumOfFristandLastDigit
+    {
+    public static void main(String[] args) throws IOException
+    {
+    int a,b,t,lastD,fristD;
+    BufferedReader d =new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter your number");
+    a=Integer.parseInt(d.readLine());
+    if(a<10)
+    {
+        System.out.println("Enter number more than 10");
+    }
+    t=a/10;
+    lastD=a-(t*10);
+    while (a>9)
+    {
+        a=a/10;
+    }
+    fristD=a;
+    System.out.println("The first digit is "+fristD);
+    System.out.println("The last digit is  "+lastD);
+    System.out.println("The sum of first and last digit is  "+(fristD+lastD));
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter your number
+12432
+The first digit is 1
+The last digit is 2
+The sum of first and last digit is  3
+```
+
+## P.8. Binary Operation Of Two Numbers.
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class BinaryOperation {
+ public static void main(String[] args)
+ {
+    String a,b;
+    Scanner s=new Scanner(System.in);
+    System.out.println("Enter first binary number");
+    a=s.next();
+    System.out.println("Enter Second binary number");
+    b=s.next();
+          int n1,n2;
+          n1=Integer.parseInt(a,2);
+          n2=Integer.parseInt(b,2);
+          System.out.println("Sum of Two Number is "+Integer.toBinaryString(n1+n2));
+          System.out.println("Sub of Two Number is "+Integer.toBinaryString(n1-n2));
+          System.out.println("Multiplication of Two Number is "+Integer.toBinaryString(n1*n2));
+          System.out.println("Division of Two Number is "+Integer.toBinaryString(n1/n2));
+   }   
+}
+```
+
+*Output:*
+
+```terminal
+Enter first binary number
+1000
+Enter Second binary number
+1000
+Sum of Two Number is 10000
+Sub of Two Number is 0
+Multiplication of Two Number is 100000
+Division of Two Number is 1
+```
+
+
+## P.9. Binary To Decimal  Number
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class BinaryToDecimalNumber {
+
+ public static void main(String[] args)
+ {
+  String a;
+     int n1;
+  Scanner s=new Scanner(System.in);
+  System.out.println("Enter binary number");
+  a=s.next();
+  n1=Integer.parseInt(a,2);
+  System.out.println("Decimal Number is "+n1);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter  binary number
+1000
+Decimal Number is 8
+```
+
+## P.10. Binary To Octal  Number
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class BineryToOctalNumber {
+ public static void main(String[] args)
+ {
+  String a;
+     int n1;
+  Scanner s=new Scanner(System.in);
+  System.out.println("Enter binary number");
+  a=s.next();
+  n1=Integer.parseInt(a,2);
+  System.out.println("Octal number is "+Integer.toOctalString(n1));
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter  binary number
+1000
+Decimal Number is 10
+```
+
+## P.11. Calculation Of Compound Interest.
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class CompoundInterst
+{
+  public static void main(String[] args)
+  {
+   double p,t,r,ci;
+   Scanner s=new Scanner(System.in);
+   System.out.println("Enter Amount");
+   p=s.nextDouble();
+   System.out.println("Enter time(in year)");
+   t=s.nextDouble();
+   System.out.println("Enter rate");
+   r=s.nextDouble();
+   ci=p*Math.pow(1+r, r/100) -p;
+   System.out.println("Compound Interest is"+ci);
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter Amount
+10
+Enter time(in year)
+3
+Enter rate
+3.4
+Compound Interest is 0.5166492833288832
+```
+
+
+## P.12. Gcd of Two Number By Euclid Method.
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class GcdOFTwoNumberByEuclidMethod {
+ public static void main(String[] args)
+ {
+  int a,b;
+  Scanner s=new Scanner(System.in);
+  System.out.println("Enter first number");
+  a=s.nextInt();
+  System.out.println("Enter Second number");
+  b=s.nextInt();
+  System.out.println("Gcd="+Gcd(a,b));
+ }
+ private static int Gcd(int n1, int n2)
+ {
+  if(n2==0)
+   return n1;
+  else
+   return Gcd(n2,n1%n2);
+ }
+}
+```
+
+*Output:*
+
+```terminal
+Enter first number
+10
+Enter Second number
+3
+Gcd= 1
+```
+
+## P.14. Multiplication Table.
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class MultiphicationTable {
+ public static void main(String[] args)
+ {
+  int n;
+  Scanner s=new Scanner(System.in);
+  System.out.println("Enter Number for table");
+  n=s.nextInt();
+        System.out.println("Table is");
+        for(int i=1;i<=10;i++)
+        {
+         System.out.println(n+" *"+i+"="+(n*i));
+        }
+}
+}
+```
+
+*Output:*
+
+```terminal
+Enter Number for table
+10
+Table is
+10 *1=10
+10 *2=20
+10 *3=30
+10 *4=40
+10 *5=50
+10 *6=60
+10 *7=70
+10 *8=80
+10 *9=90
+10 *10=100
+```
+
+## P.15.Sum of Harmonic Series.
+
+*Program:*
+
+```java
+package calculation;
+
+import java.util.Scanner;
+
+public class SumOfHarmonicSeries {
+
+ public static void main(String[] args)
+ {
+  double n;
+  Scanner s=new Scanner(System.in);
+  System.out.println("Enter length of Harmonic Series");
+  n=s.nextDouble();
+  double sum=0,i;
+  System.out.println("The Series is ");
+  for(i=1;i<=n;i++)
+  {
+   System.out.println("1/"+i+"+");
+   sum=sum+1/i;
+  }
+  System.out.println("Sum of Series is "+sum);
+ }
+}
+```
+
+
+*Output:*
+
+```terminal
+Enter length of Harmonic Series
+5
+The Series is
+1/1.0+1/2.0+1/3.0+1/4.0+1/5.0+
+Sum of Series is 2.283333333333333
+```

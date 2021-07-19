@@ -21,6 +21,7 @@
 import React from "react";
 import { WebLink } from '@const/List';
 import Link from 'next/link';
+import Image from "next/image";
 // import { useGlobalContext } from '../context';
 // ====================================
 
@@ -104,7 +105,9 @@ const Projects=()=>{
 
                 <div>
                 <h1>{title}</h1>
-                <img src={img} className="img" />
+                
+                {/* <img src={img} className="img" /> */}
+                <Image src={img} className="img" width={1000} height={400} quality={100} />
                 <div className="description">{description}</div>
                 <div>
                 

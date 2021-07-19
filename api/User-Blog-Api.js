@@ -33,6 +33,8 @@ export const  GetOnlyUserInfo= (name) => axios.post('/api/user/finduser',{email:
 
 //blog
 export const  GetBlog= (name) => axios.post('/api/blog/bloginfoone',{name});
+export const  GetBlogList= () => axios.get('/api/blog/blog');
 export const SetMailInContactForm = (email,subject,message) => axios.post('/api/me/mail-me',{email,subject,message});
+
 
 // exports.API=API;

@@ -1,0 +1,349 @@
+---
+title: Python Programming Oops Programs
+keywords: python
+layout: 'post'
+summery: 'How To make mony online for free and Fast.'
+---
+
+# Python Programming Oops Programs
+
+# YOU CAN FIND PROGRAMS BELLOW:
+
+## P.1.Single Inheritance.
+
+*Program:*
+
+```python
+# inheritance
+#  "basically inheritance is menses we use properties of one class in
+ #another class and we can mack code less and very helpful"
+# single inheritance(P-->C)
+
+
+class parent():
+    def __init__(self,name,fname):
+        self.name=name
+        self.fname=fname
+    def print(self):
+        print('Name is',self.name,'Father name is',self.fname)
+    def sum(self,a,b):
+        self.a=a
+        self.b=b
+        return self.a+self.b
+class child(parent):
+    def __init__(self,name,fname):
+        # super().__init__(name,fname)
+        parent.__init__(self,name,fname)
+    def display(self,sum):
+        self.sum=sum
+        print('sum is',sum)
+        print('sum is',self.sum)
+bo=child('zeel','Suresbhai')
+# bo.name="veels"
+bo.print()
+bo.display(bo.sum(1,3))
+# bo.display(bo.sum(1,3))error why
+```
+
+*Output:*
+
+```terminal
+Name is zeel Father name is Suresbhai
+sum is 4
+sum is 4
+```
+
+
+## P.2.Multiple Inheritance.
+
+*Program:*
+
+```python
+# inheritance
+#  "basically inheritance is menses we use properties of one class in
+ #another class and we can mack code less and very helpful"
+#multiple Inheritance(P1-->c<--P2)
+
+class parent1():
+    def __init__(self,name,fname):
+        self.name=name
+        self.fname=fname
+    def print(self):
+        print('Name is',self.name,'Father name is',self.fname)
+class parent2():
+    # def __init__(self,name,fname):
+    #     self.name=name
+    #     self.fname=fname see child has no constructor tho program is working 
+    def display(self):
+        print('hello i am second parent')
+class child(parent2,parent1):
+    pass
+bo=child('zeel','sureshbhai')
+bo.print()
+bo.display()
+```
+
+*Output:*
+
+```terminal
+Name is zeel Father name is sureshbhai
+hellos i am second parent
+```
+
+## P.3.Heretical Inheritance.
+
+*Program:*
+
+```python
+# inheritance
+#  "basically inheritance is menses we use properties of one class in
+ #another class and we can mack code less and very helpful"
+# heretical inheritance(c1<--P-->c2)
+class parent():
+    def __init__(self,name,fname):
+        self.name=name
+        self.fname=fname
+    def print(self):
+        print('Name is',self.name,'Father name is',self.fname)
+class child1(parent):
+    pass
+class child2(parent):
+    pass
+bo=child1('zeel','sureshbhai')
+bo.print()
+
+bo=child2('deel','kamesbhai')
+bo.print()
+```
+
+*Output:*
+
+```terminal
+Name is zeel Father name is sureshbhai
+Name is deel Father name is kamesbhai
+```
+
+## P.4.Multilevel Inheritance.
+
+*Program:*
+
+```python
+# inheritance
+#  "basically inheritance is menses we use properties of one class in
+ #another class and we can mack code less and very helpful"
+#Multilevel inheritance(p-->c-->v-->k...)
+
+class parent():
+    def __init__(self,name,fname):
+        self.name=name
+        self.fname=fname
+    def print(self):
+        print('Name is',self.name,'Father name is',self.fname)
+    def sum(self,a,b):
+        self.a=a
+        self.b=b
+        return self.a+self.b
+class child1(parent):
+    def __init__(self,name,fname):
+        # super().__init__(name,fname)
+        parent.__init__(self,name,fname)
+    def display(self,sum):
+        self.sum=sum
+        print('sum is',sum)
+        print('sum is',self.sum)
+class child2(child1):
+    pass
+#c1
+bo=child1('zeel','Suresbhai')
+bo.print()
+bo.display(bo.sum(1,3))
+#c2
+bo=child2('Deep','Lankesh')
+bo.print()
+bo.display(bo.sum(1,2))
+```
+
+*Output:*
+
+```terminal
+Name is zeel Father name is Suresbhai
+sum is 4
+sum is 4
+Name is Deep Father name is Lankesh
+sum is 3
+sum is 3
+```
+
+## P.5.Method Overloading.
+
+*Program:*
+
+```python
+class p():
+    def fun(self):
+        print('I am function p')
+class c1(p):
+    def fun(self):
+        print('I am function c1')
+        super().fun()
+class c2(c1):
+    def fun(self):
+        print('I am function c2')
+        super().fun()
+class c3(c2):
+    def fun(self):
+        print('I am function c4')
+        super().fun()#see this super class point the c2 fun() who is parent of c2
+# class c3(c2,c1):
+#     def fun(self):
+#         print('I am function c4')
+#         super().fun()#see it give the error 
+d=c3()
+d.fun()
+```
+
+*Output:*
+
+```terminal
+I am function c4
+I am function c2
+I am function c1
+I am function p
+```
+
+## P.6.SUPER FUNCTION.
+
+*Program:*
+
+```python
+class parent():
+    def __init__(self,id,name):
+        self.id=id
+        self.name=name
+    def print(self):
+        print('I am super class')
+    def display(self):
+        print('Id is',self.id,'Name is',self.name)
+class child(parent):
+    def __init__(self,id,name): 
+        super().__init__(id,name)#super() is say only this is main parent function
+        super().print()
+        super().display()
+bo=child(1,'zeel')
+```
+
+*Output:*
+
+```terminal
+I am super class
+Id is 1 Name is zeel
+```
+
+## P.7.Object Operation.
+
+*Program:*
+
+```python
+class A():
+    char1='hi i am not instance in a'
+    def __init__(self):
+        self.var1='I am Var of Class A'
+        self.char1='I am Char of Class A'
+class B(A):
+    char1='hi i am not instance in B'
+    def __init__(self):
+        super().__init__()
+        self.var1='I am Var of Class B'
+        self.char1='I am Char of Class B'
+        super().__init__()
+    s=12
+    def __add__(self,other):
+        return self.s+other.s
+#__init__ is also known as dunder method
+    # pass
+d=A()
+b=B()
+b1=B()
+
+print(d.char1)
+print(b.char1)
+print(b+b1)
+```
+
+*Output:*
+
+```terminal
+I am Char of Class A
+I am Char of Class A
+24
+```
+
+## P.8.User define module.
+
+*Program:*
+
+```python
+#main.py
+def fun(a,v):
+    return a+v
+# print(fun(2,3))#no
+if __name__=='__main__':#basically use function not run in import file
+    print(fun(2,3))
+
+#Output.py
+import main
+print(main.fun(2,3))
+print(main.fun(2,30))
+print(main.fun(2,31))
+```
+
+*Output:*
+
+```terminal
+5
+32
+33
+```
+
+## P.8.Setter and Getter properties FUNCTION.
+
+*Program:*
+
+```python
+class name():
+    def __init__(self,name,lname):
+        self.name=name
+        self.lname=lname
+        # self.email=f"{self.name}.{self.lname}@gmail.com"
+    @property
+    def email(self):
+        if self.name==None or self.lname ==None:
+            return "email not set, plase set buy setter"
+        return f"{self.name}.{self.lname}@gmail.com"
+    @email.setter
+    def email(self,string):
+        na=(string.split("@")[0]).split(".")
+        self.name=na[0]
+        self.lname=na[1]
+    @email.deleter
+    def email(self):
+        self.name=None
+        self.lname=None
+
+zee=name('zeel','prajapati')
+print(zee.email)
+zee.email="don.cat@gmail.com"
+print(zee.email)
+print(zee.name)
+del zee.email
+print(zee.email)
+```
+
+*Output:*
+
+```terminal
+zeel.prajapati@gmail.com
+don.cat@gmail.com
+don
+email not set, plase set buy setter
+```

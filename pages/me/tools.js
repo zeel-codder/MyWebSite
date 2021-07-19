@@ -2,6 +2,7 @@ import React from "react";
 // import Template from '@Layout/Template'
 import ToolsData from 'Data/project/tools'
 // import Link from 'next/link'
+import Image from "next/image";
 
 import loadable from '@loadable/component'
 const   Template   = loadable(() => import('@Layout/Template'))
@@ -36,6 +37,7 @@ function ToolList(){
               
 
                 <img src={img} className="img" />
+                {/* <Image  className="img" src={img}  width={1000} height={400} quality={100} /> */}
                 <div>
                 <div className="description">{description}</div>
                 <div>

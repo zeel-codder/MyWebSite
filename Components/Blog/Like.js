@@ -31,16 +31,18 @@ import {User} from '@const/List'
 
 const Like=(props)=>{
 
-  
+    
+    
     
     // [1,2].includes
     const {blogInfo,isBlogShort}=props;
+    // console.log('Blog In Like',blogInfo)
     
     // const {UserState}=useGlobalContext();
     const [isLike,setIsLike]=useState(false);
     const [user,setUser]=useState(null)
     const [isLoading,setisLoading]=useState(false)
-    const [Like,setLike]=useState(blogInfo.like);
+    const [Like,setLike]=useState(blogInfo.like );
     // const user=JSON.parse()
     const router=useRouter();
     // const {Loading}=useGlobalContext();
@@ -106,6 +108,8 @@ const Like=(props)=>{
         if(localStorage.getItem(User)){
             getUser()
         }
+        setLike(blogInfo.like)
+        console.log(Like)
 
     }, [])
 

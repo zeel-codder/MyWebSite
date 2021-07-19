@@ -110,7 +110,7 @@ export default function Search({ data }) {
                             <li key={index}>
                                 <div>
 
-                                    <a href={WebLink + `/blog/topic/${link}`}>
+                                    <a href={WebLink + `/topic/${link}`}>
                                         <span className="text" dangerouslySetInnerHTML={{ __html: title }}>
                                         </span>
                                     </a>

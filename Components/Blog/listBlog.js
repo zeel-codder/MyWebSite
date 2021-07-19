@@ -13,7 +13,7 @@ import { WebLink } from '@const/List';
 // import Search from '@Blog/Serach';
 // import BlogLoad from 'Components/loading/BlogLoadder';
 // import LoadShort from 'Components/loading/LoderShort' 
-
+import Image from 'next/image';
 
 import loadable from '@loadable/component'
 const BlogShort = loadable(() => import('@Blog/BlogShort'))
@@ -82,6 +82,8 @@ function BlogList({ isTopic, topic }) {
                 &&
 
                 <div className="blog_main1" id="home">
+
+                    {/* <Image src={img} width={400} height={400} alt='BlogShort Img'   /> */}
 
                     <img className="video" src="/index.jpg" />
                     {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}

@@ -17,6 +17,7 @@ import React from "react";
 // import { useEffect } from 'react'
 // import { useGlobalContext } from '../context';
 // ====================================
+import Image from "next/image";
 
 
 const ImageShow = ({data}) => {
@@ -55,7 +56,8 @@ const ImageShow = ({data}) => {
                         <h1>{title}</h1>
                         {/* <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" /> */}
                         <div className="imgeAnimationDiv">
-                        <img src={imgurl} key={ImageIndex}  alt="ImageShowImage" />
+                        {/* <img src={imgurl} key={ImageIndex}  alt="ImageShowImage" /> */}
+                        <Image src={imgurl} key={ImageIndex}  alt="ImageShowImage"  width={400} height={400}/>
                         </div>
                         </div>
                       

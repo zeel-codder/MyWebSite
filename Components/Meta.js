@@ -1,6 +1,7 @@
 import React from "react";
 import Head from 'next/head'
 import { useEffect ,useLayoutEffect} from "react";
+
 // import Document, { Html, Head } from 'next/document'
 const Meta = ({ title, keywords,description }) => {
 

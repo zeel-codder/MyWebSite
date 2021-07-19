@@ -73,16 +73,93 @@ export default async function handler(req, res) {
 
     await client.sendAsync(
       {
-        text: `You Email LogIn/Sing Up Link is : ${Link}/auth/verify?d=${End}
-
-        \nwill Expired in 1h.
-        \n
-        ,`,
+      
         from: mymail,
         to: email,
         subject: `From Email Verification for ${Link}`,
-        // html: 
+         attachment: [
+          { data: `<!DOCTYPE html>
+          <html lang="en">
+          
+          <body>
+
+          
+              <div class="container" style="text-align: center;
+              box-shadow: 0px 0px 3px blue;
+              width: 90%;
+              margin: 0 auto;
+              text-transform: capitalize;">
+          
+                  <h1>
+                      <a href="https://zeelcodder.tech/" style="
+                      text-decoration: none;
+                      padding: 3px;
+                      "
+                      >
+                          zeelcodder.tech Log In / Sing Up Link
+                      </a>
+          
+                  </h1>
+                  <p style="
+                  opacity: .5;
+                  font-size: 2.5rem;
+                  padding: 3px;"
+                  >
+                      zeel-codder web site for programmer and student. the web site where you find blog on demanding technology.
+                      Read and make you life good.
+                  </p>
+                  <button  style="background-color: blue;
+                  outline: none;
+                  border: none;
+                  padding: 5px;" >
+                      <a href=" ${Link}/auth/verify?d=${End}"
+                      style="color: wheat;
+                      font-size: 1.5rem;
+                      font-weight: bold;
+                      text-decoration:none;
+                      "
+                      >
+          
+                          Click 🛶 to Enter
+                      </a>
+          
+                  </button
+                  >
+                  <p style="
+                  opacity: .5;
+                  font-size: 1rem;
+                  padding: 3px;">
+                      Token will Expirer in 1h.
+                  </p>
+          
+                  <div class="footer" style=" background-color: black;
+                  width: 100%;
+                  padding: 0;
+                  
+                  text-align: center;
+               
+                  list-style: none;
+                  padding:1rem;
+               
+                  color: white;
+                  
+                  
+                  ">
+                    
+          <p class="footer-para">All Copyright goes to © zeel prajapati</p>
+          </div>
+          
+          
+              </div>
+          
+          </body>
+          
+          </html>`, alternative: true }
+        ]
+     
+        
       }
+      
     );
   } catch (e) {
     console.log(e)

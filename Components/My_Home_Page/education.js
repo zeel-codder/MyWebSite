@@ -8,7 +8,7 @@
  @functionality : This Component is use to show Education info of zeel  website.
 **/
 import React from "react";
-
+import Image from "next/image";
 
 const Education = () => {
     return (
@@ -17,7 +17,8 @@ const Education = () => {
                 <h1>Education</h1>
 
                 <div className="text-container  error">
-                    <img className="container-img" src='/images/home/education.svg' alt="Education Svg"></img>
+                    <Image className="container-img" src='/images/home/education.svg' alt="Education Svg"  width={1200} height={400} />
+                    {/* <img className="container-img" src='/images/home/education.svg' alt="Education Svg"></img> */}
                     <div>
 
                         <p className="para">

@@ -1,0 +1,493 @@
+---
+title: Python Programming Pattern Programs
+keywords: python
+layout: 'post'
+summery: 'How To make mony online for free and Fast.'
+---
+
+# Python Programming Pattern Programs
+
+# YOU CAN FIND PROGRAMS BELLOW:
+
+## P.1.Alpha-1.
+
+*Program:*
+
+```python
+def pattern(n):
+    c=65
+    for i in range(1,n+1):
+        k=chr(c)
+        for j in range(1,i+1):
+            print(k,end='')
+        c+=1
+        print('\r')
+def pattern2(n):
+    c=65
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            k=chr(c)
+            print(k,end='')
+            c+=1
+        print('\r')
+
+s=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(s)
+pattern2(s)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+A
+BB
+CCC
+DDDD
+EEEEE
+A
+BC
+DEF
+GHIJ
+KLMNO
+```
+
+## P.2.Number-1.
+
+*Program:*
+
+```python
+def pattern1(n):
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(i,end='')
+        print('\r')
+def pattern2(n):
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(j,end='')
+        print('\r')
+def pattern3(n):
+    k=1
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(k,end=' ')
+            k+=1
+        print('\r')
+n=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern1(n)
+pattern2(n)
+pattern3(n)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+1
+22
+333
+4444
+55555
+1
+12
+123
+1234
+12345
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+```
+
+## P.3. Pascal.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(1,n+1):
+        for j in range(1,i+1):
+            print(f(i-1,j-1)," ",end='')
+        print('\r')
+def f(n,i):
+    res=1
+    if(i>n-i):
+        i=n-i
+    for k in range(0,i):
+        res=res*(n-k)
+        res=res//(k+1)
+    return res
+s=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(s)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+1
+1  1
+1  2  1
+1  3  3  1
+1  4  6  4  1
+```
+
+
+## P.4. Star-1.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(0,n):
+        for j in range(0,i+1):
+            print('*',end="")
+        print('\r')
+s=int(input('Enter number of row:'))
+print('Pattern is\n')
+pattern(s)
+```
+
+
+*Output:*
+
+```terminal
+Enter number of row:5
+Pattern is
+
+*
+**
+***
+****
+*****
+```
+
+## P.5. Star-2.
+
+*Program:*
+
+
+```python
+def pattern(n):
+    for i in range(0,n):
+        for j in range(0,i+1):
+            print("*",end="")
+        print('\r')
+    for i in range(n,0,-1):
+        for j in range(1,i+1):
+            print('*',end="")
+        print('\r')
+n=int(input('Enter number of row: \n'))
+print('Pattern is:\n')
+pattern(n)
+# for i in range(6,-1,-1):
+#     print(i)
+```
+
+*Output:*
+
+```terminal
+Enter number of row: 
+5
+Pattern is:
+
+*
+**
+***
+****
+*****
+*****
+****
+***
+**
+*
+```
+
+## P.6. Star-3.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(1,n+1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        for j in range(1,i+1):
+            print('*',end='')
+        print('\r')
+s=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(s)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+    *
+   **
+  ***
+ ****
+*****
+```
+
+## P.7. Star-4.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(1,n+1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        for j in range(1,i+1):
+            print('*',end='')
+        print('\r')
+    for i in range(n-1,0,-1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        for j in range(1,i+1):
+            print('*',end='')
+        print('\r')
+
+s=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(s)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
+```
+
+## P.8. Star-5.
+
+*Program:*
+
+```terminal
+    for i in range(1,n+1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        for j in range(1,2*i):
+            print('*',end="")
+        print('\r')
+n=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(n)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+## P.9. Star-5.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(1,n+1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        for j in range(1,2*i):
+            print('*',end="")
+        print('\r')
+    for i in range(n-1,0,-1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        for j in range(1,2*i):
+            print('*',end="")
+        print('\r')
+n=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(n)
+```
+
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+  
+     *
+    ***
+   *****
+  *******
+ *********
+  *******
+   *****
+    ***
+     *
+```
+
+## P.10. Star-6.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(1,n+1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        if(i==1):
+            print('*',end='')
+        else:
+            print('*',end='')
+            for k in range(1,2*i-2):
+                print(end=' ')
+            print('*',end='')
+        print('\r')
+    for i in range(n-1,0,-1):
+        for k in range(1,n-i+1):
+            print(end=' ')
+        if(i==1):
+            print('*',end='')
+        else:
+            print('*',end='')
+            for k in range(1,2*i-2):
+                print(end=' ')
+            print('*',end='')
+        print('\r')
+n=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(n)
+```
+
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+  
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+```
+
+## P.11. K-Pattern.
+
+*Program:*
+
+```python
+def pattern(n):
+    for i in range(1,n+1):
+        print('*',end='')
+        for k in range(1,n-i+1):
+            print(end=' ')
+        print('*',end='')
+        print('\r')
+    for i in range(n-1,0,-1):
+        print('*',end='')
+        for k in range(1,n-i+1):
+            print(end=' ')
+        print('*',end='')
+        print('\r')
+n=int(input('Enter number of row:\n'))
+print('Pattern is:\n')
+pattern(n)
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+*    *
+*   *
+*  *
+* *
+**
+* *
+*  *
+*   *
+*    *
+```
+
+## P.12. Fibonacci.
+
+*Program:*
+
+```python
+def function():
+    f,s=1,1
+    while True:
+        yield f
+        f,s=s,f+s
+for x in function():
+    if(x>50):
+        break
+    print(x,end=" ")
+```
+
+*Output:*
+
+```terminal
+Enter number of row:
+5
+Pattern is:
+
+*    *
+*   *
+*  *
+* *
+**
+* *
+*  *
+*   *
+*    *
+```

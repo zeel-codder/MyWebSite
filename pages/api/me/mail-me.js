@@ -1,7 +1,6 @@
 
 
 // import { SMTPClient } from 'emailjs';
-
 // require('dotenv').config();
 // import nodemailer from 'nodemailer';
 import { SMTPClient } from 'emailjs';
@@ -40,7 +39,92 @@ export default async function handler(req, res) {
             
             subject: 'From zeel codder',
         
-              text:'Thank you from Contact me.'
+        
+              attachment: [
+                { data: `<!DOCTYPE html>
+                <html lang="en">
+                
+                <body>
+      
+                
+                    <div class="container" style="text-align: center;
+                    box-shadow: 0px 0px 3px blue;
+                    width: 90%;
+                    margin: 0 auto;
+                    text-transform: capitalize;">
+                
+                        <h1>
+                            <a href="https://zeelcodder.tech/" style="
+                            text-decoration: none;
+                            padding: 3px;
+                            "
+                            >
+                                zeelcodder.tech
+                            </a>
+                
+                        </h1>
+                        <p style="
+                        opacity: .5;
+                        font-size: 2.5rem;
+                        padding: 3px;"
+                        >
+                            zeel-codder web site for programmer and student. the web site where you find blog on demanding technology.
+                            Read and make you life good.
+                        </p>
+
+                        <h1>
+                        Thanks for Contact Me
+            
+                    </h1>
+                        <button  style="background-color: blue;
+                        outline: none;
+                        border: none;
+                        padding: 5px;" >
+                            <a href="https://zeelcodder.tech/"
+                            style="color: wheat;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            text-decoration:none;
+                            margin:2rem 0;
+                            "
+                            >
+                
+                                Click 🛶 to Enter
+                            </a>
+                
+                        </button
+                        >
+                        <h1> </h1>
+                      
+                
+                        <div class="footer" style=" background-color: black;
+                        width: 100%;
+                        padding: 0;
+                        
+                        text-align: center;
+                     
+                        list-style: none;
+                        padding:1rem;
+                     
+                        color: white;
+                        
+                        
+                        ">
+                          
+                <p class="footer-para">All Copyright goes to © zeel prajapati</p>
+                </div>
+                
+                
+                    </div>
+                
+                </body>
+                
+                </html>`, alternative: true }
+              ]
+           
+              
+            
+              
     
       }
     );
