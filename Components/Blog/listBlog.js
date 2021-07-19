@@ -74,7 +74,7 @@ function BlogList({ isTopic, topic }) {
         <article className="">
             {/* <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee> */}
 
-
+{/* 
             {
 
                 !isTopic
@@ -85,12 +85,12 @@ function BlogList({ isTopic, topic }) {
 
                     {/* <Image src={img} width={400} height={400} alt='BlogShort Img'   /> */}
 
-                    <img className="video" src="/index.jpg" />
+                    {/* <img className="video" src="/home.s" /> */}
                     {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
-                    <span className="logo-text home-h">
-                        <h1>
-                            Start Reading And Learning Today
-                        </h1>
+                    {/* <span className="logo-text home-h"> */}
+                        {/* <h1> */}
+                            {/* Start Reading And Learning Today */}
+                        {/* </h1> */}
                         {/* <button className="btn" >
                             <Link to='Read' title='Get start'
                                 spy={true}
@@ -101,10 +101,10 @@ function BlogList({ isTopic, topic }) {
                                 Lets Read
                             </Link>
                         </button> */}
-                    </span>
-                </div>
+                    {/* </span> */}
+                {/* </div> */}
 
-            }
+            {/* } */} 
             {/* </video> */}
 
             <Search data={list} />

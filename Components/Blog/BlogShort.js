@@ -27,7 +27,7 @@ import Image from 'next/image'
 
 const BlogShort = (props) => {
 
-    const { name, title, img, url, link, topic,id } = props;
+    const { name, title, img, url, link, topic,id,summery } = props;
     // const WebLink="null"
     // console.log(WebLink)
 
@@ -44,7 +44,8 @@ const BlogShort = (props) => {
                 </div>    
                 <div className="BlogInformation" key={id}>
                     <span className="Blogtitle">{title}</span>
-                    {/* <h2 style={{textAlign:'center'}}><FcLike /> {like}</h2> */}
+                    <p>{summery}</p>
+                    
                 <Like blogInfo={props} isBlogShort={true}></Like>
                     <a href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
                         <button className="btn">Read

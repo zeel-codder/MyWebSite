@@ -24,6 +24,7 @@ const Blog = new Schema({
   like:Number,
   topic:String,
   creator:String,
+  summery:String,
 
 },{ versionKey: false,timestamps: true });
 

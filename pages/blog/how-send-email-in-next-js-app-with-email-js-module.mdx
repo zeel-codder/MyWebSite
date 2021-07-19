@@ -2,10 +2,22 @@
 title: How Send Email in next js app With Email js module?
 keywords: 'Next js'
 layout: 'post'
-summery: 'Email send to User in Next js With help of email js'
+summery: 'In..'
+isLoadMore: a
 ---
 
+
 import {Image,MyLink} from '@Blog/image';
+
+
+# index
+
+<MyLink link="1" title="Creating Next js Starting Project"></MyLink>
+<MyLink link="2" title="Creating Main Page"></MyLink>
+<MyLink link="Creating Send Mail Api" title="Creating Send Mail Api"></MyLink>
+<MyLink link="Finishing frontend Work" title="Finishing frontend Work"></MyLink>
+<MyLink link="Code" title="Code"></MyLink>
+
 
 # How Send Email in next js app With Email js module?
  
@@ -13,7 +25,7 @@ Hello There, In this blog i will explain you that how you can send mail in the n
 
 So, In this post we are going to build a next js app which takes user email as input and sends mail to the user. Hope You Link It.
 
-## Creating Next js Starting Project
+<h2 id='1'> Creating Next js Starting Project </h2>
 
 ```bash
 npx create-next-app
@@ -30,7 +42,7 @@ Than Install axios and email-js for sending the mail
 npm i emailjs axios
 ```
 
-## Creating Main Page
+<h2 id="2"> Creating Main Page </h2>
 
 *Know replace index.js app to code given below*
 ```js
@@ -72,11 +84,13 @@ We have one useState email which is used for store user email and when the user 
 
 Till this point you can see project like below and when you Enter mail and click send you can see output *call* in console.
 
+
 <p>
   <Image src={'/images/blog/How-Send-Email-in-next-js-app-With-Email-js-module/1.jpg'} alt="1" />
 </p>
 
-## Creating Send Mail Api
+<h2 id="Creating Send Mail Api"> Creating Send Mail Api</h2>
+
 Next js is Used the server-side rendering and we can create api and make request to that api in client side. Let’s create api for send the mail.
  
 *Add email.js file to api folder* 
@@ -93,7 +107,7 @@ Just Open http://localhost:3000/api/email this link in  browser and you can see 
 
 <p>
 <Image src='/images/blog/How-Send-Email-in-next-js-app-With-Email-js-module/2.jpg'
-     
+    
       alt='2'
 />
 </p> 
@@ -172,7 +186,7 @@ export default function handler(req, res) {
 
 So, Our Api, For Sending mail is finish.
 
-## Finishing frontend Work
+<h2 id="Finishing frontend Work"> Finishing frontend Work </h2>
 
 In SendMail Function we are gointing to make post request to email api with the help of axios.
 
@@ -195,7 +209,7 @@ Add In SendMail Function
 
 And that's it you are successfully able to create an email send app in next js.
 
-## Code
+<h2 id="Code"> Code </h2>
 
 index .js
 ```js
@@ -298,4 +312,5 @@ const message = await client.sendAsync({
 ,
 	});
 ```
+
 

@@ -109,7 +109,7 @@ const Like=(props)=>{
             getUser()
         }
         setLike(blogInfo.like)
-        console.log(Like)
+        // console.log(Like)
 
     }, [])
 

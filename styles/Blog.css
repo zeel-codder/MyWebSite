@@ -123,6 +123,26 @@ Main Page
     line-height: 2.8rem;
     margin: 1.5rem 0;   
 }
+
+.blog-container > h1{
+    opacity: .6;
+    
+    font-size: 3rem;
+}
+.blog-container > h2{
+    
+    opacity: .7;
+}
+
+.blog-container a{
+    font-size: 20px;
+    
+    text-decoration: none;
+    text-decoration: none;
+    color: blue;
+    margin: .2rem 0;
+
+}
 .BlogInformation >span{
     margin: 0;
 }
@@ -153,10 +173,16 @@ em{
     font-weight:bold;
     /* border-radius: 12px; */
 }
+.BlogShort  p{
+    padding: .7rem 0;
+    line-height: 1.9rem;
+    text-align: start;
+    opacity: 0.80;
+}
 .code-toolbar::before{
     content: "code";
     position: absolute;
-    color: #bbb;
+    color: white;
     font-size: 1.5rem !important;
     padding: 0 .5em;
     background: #f5f2f0;
@@ -287,6 +313,18 @@ p > img{
 .Bloshort-not-found{
     flex-direction: column;
 }
+.form a{
+ width: 100%;
+ display: block;
+ text-align: center;
+ padding: .5rem 0 !important;
+ 
+ position: relative;
+}
+.form a:hover{
+    background-color: var(--form-bg);
+    transition: all .5;
+}
 .BlogInformation,.Bloshort-not-found{
     display: flex;
     flex: 1;
@@ -294,7 +332,7 @@ p > img{
     justify-content: space-between;
     margin: 0 1rem;
     flex-direction: column;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     height: 100%;
 }
 
@@ -316,7 +354,7 @@ h1,h3{
     text-transform: capitalize;
  
     position: absolute;
-    right: 0;
+    left: 0;
     top:0;
     z-index: 2;
 
@@ -409,7 +447,7 @@ svg{
 .Serach li{
     position: relative;
     width: 100% !important;
-    padding: 1rem 0 !important;
+    /* padding: 1rem 0 !important; */
     border-bottom: 2px solid var(--form-bg);
 
 }
@@ -612,7 +650,7 @@ Like
     overflow: auto;
 }
 .scroll-list  a{
-    padding: 0 !important;
+    /* padding: 0 !important; */
     margin: 0 auto;
 
 }
@@ -805,6 +843,11 @@ Like
     }
     .tools .code, .tools .link{
         display:block;
+    }
+    .imgdiv {
+        width: 113%;
+        height: 14rem;
+        position: relative;
     }
 }
 

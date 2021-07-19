@@ -14,7 +14,7 @@ import { WebLink } from '@const/List';
 
 
 export default function Post({ children, frontMatter }) {
-  const { title,keywords } = frontMatter;
+  const { title,keywords,isLoadMore } = frontMatter;
 
   const [data, setData] = useState({})
   const [list, setList] = useState([])
@@ -98,26 +98,20 @@ export default function Post({ children, frontMatter }) {
         {`zeel codder`}
         </a>
       </p>
-      <h1>People Also Read</h1>
 
+      {
+        !isLoadMore
+
+        &&
+        <>
+      <h1>People Also Read</h1>
       <div className="center">
         <ins className="adsbygoogle top-add add"
           style={{ display: 'inline-block' }}
           data-ad-client="ca-pub-4438223892792479"
           data-ad-slot="5009297566"></ins>
       </div>
-
       <div className="ListOfBlogs blog-container ListAfterBlog" >
-
-
-        {/* <ins className="adsbygoogle add"
-      style={{display:'block'}}
-      data-ad-client="ca-pub-4438223892792479"
-      data-ad-slot="5009297566"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-      data-adtest="on"
-      ></ins> */}
         {
           list.map((page, index) => {
             
@@ -127,6 +121,10 @@ export default function Post({ children, frontMatter }) {
           
         }
       </div>
+    </>
+      }
+
+
     </div>
     <ins className="adsbygoogle add"
       style={{ display: 'block' }}
