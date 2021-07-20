@@ -1,11 +1,11 @@
 import React from "react";
-// import Template from '@Layout/Template'
+import Template from '@Layout/Template'
 import ToolsData from 'Data/project/tools'
 // import Link from 'next/link'
-import Image from "next/image";
+// import Image from "next/image";
 
-import loadable from '@loadable/component'
-const   Template   = loadable(() => import('@Layout/Template'))
+// import loadable from '@loadable/component'
+// const   Template   = loadable(() => import('@Layout/Template'))
 // const   Template   = loadable(() => import('@Layout/Template'))
 
 

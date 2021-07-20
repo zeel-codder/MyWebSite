@@ -19,7 +19,6 @@ const BlogLoad = () => {
            <LoadShort></LoadShort>
            <LoadShort></LoadShort>
         
-           {/* <LoadShort></LoadShort> */}
         </>
     )
 }

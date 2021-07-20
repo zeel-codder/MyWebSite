@@ -8,7 +8,7 @@
  * @functionality : This Component is use to show Introduction Info of zeel-codder
  */
  import React from "react";
- import Image from "next/image";
+//  import Image from "next/image";
 
 
 

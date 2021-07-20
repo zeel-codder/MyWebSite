@@ -8,7 +8,6 @@
  @functionality : This Component is use to show Education info of zeel  website.
 **/
 import React from "react";
-import Image from "next/image";
 
 const Education = () => {
     return (

@@ -16,61 +16,33 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import React from "react";
-// import Link from 'next/link';
-import data from './data'
-// import { FaBeer } from 'react-icons/fa';
+
 // ====================================
 
 
 
 
-const Footer=({isShoWList})=>{
+const Footer = () => {
     return (
-    
+
         <div className="footer-container">
 
-        
-    {/* {
 
-        isShoWList 
 
-        &&
+            <div className="footer">
+                <p className="footer-para">
+                    All Copyright goes to © zeel prajapati
+                </p>
 
-        <div className="topic">
-            <h1 style={{width:"100%"}}>Topics of Blogs</h1>
 
-            <div className="list">
-            {
-                data.map((topic,index)=>{
-                    const {title,link}=topic;
-                    return (
-                        <a  key={index}
-                        
-                        href={process.env.NEXT_PUBLIC_WebLink+`/blog/topic/${link}`}>
-                       
-                        {title}
-
-                    </a>
-                    )
-                })
-            }
+                <ul className="footer-ul icons Footer-icons">
+                    <li><a href="https://www.facebook.com/zeel.prajapati.397/" title="Facebook"><FacebookIcon /></a></li>
+                    <li><a href="https://github.com/zeel-codder" title="Github"><GitHubIcon /></a></li>
+                    <li><a href="https://www.linkedin.com/in/zeel-prajapati-4832971a3/" title="Linkedin"><LinkedInIcon /></a></li>
+                    <li><a href="https://twitter.com/ZeelPrajapati15" title="Twitter"><TwitterIcon /></a></li>
+                </ul>
             </div>
-            </div>
-       } */}
-                        <div className="footer">
-            <p className="footer-para">
-            All Copyright goes to © zeel prajapati
-            </p>
-
-        
-        <ul className="footer-ul icons Footer-icons">
-        <li><a href="https://www.facebook.com/zeel.prajapati.397/" title="Facebook"><FacebookIcon /></a></li>
-        <li><a href="https://github.com/zeel-codder" title="Github"><GitHubIcon /></a></li>
-        <li><a href="https://www.linkedin.com/in/zeel-prajapati-4832971a3/" title="Linkedin"><LinkedInIcon /></a></li>
-        <li><a href="https://twitter.com/ZeelPrajapati15"  title="Twitter"><TwitterIcon /></a></li>
-        </ul>
-    </div>
-                </div>
+        </div>
     )
 }
 

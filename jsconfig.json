@@ -1,20 +1,18 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "paths": {
-        "@Home/*": ["Components/My_Home_Page/*"],
-        "@Blog/*":["Components/Blog/*"],
-        "@Database/*":["server/database/*"],
-        "@Page/*":["Blogs/*"],
-        "@Data/*":["Data/*"],
-        "@Layout/*":["Components/Blog/*"],
-        "@api/*":["api/*"],
-        "@middleware/*":["server/middleware/*"],
-        "@const/*":["Components/Constance/*"],
-        "@helpers/*":["server/helpers/*"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@Home/*": ["Components/My_Home_Page/*"],
+      "@Blog/*":["Components/Blog/*"],
+      "@Database/*":["server/database/*"],
+      "@Page/*":["Blogs/*"],
+      "@Data/*":["Data/*"],
+      "@Layout/*":["Components/Blog/*"],
+      "@api/*":["api/*"],
+      "@middleware/*":["server/middleware/*"],
+      "@const/*":["Components/Constance/*"],
+      "@helpers/*":["server/helpers/*"]
 
-      }
     }
   }
-
- 
+}

@@ -17,9 +17,9 @@ import React from "react";
 // import { useRef } from "react";
 // import { User } from "@const/List";
 // import BlogShort from "BlogShort";
-// import BlogShort from "@Blog/BlogShort";
-import loadable from '@loadable/component'
-const  BlogShort = loadable(() => import('@Blog/BlogShort'))
+import BlogShort from "@Blog/BlogShort";
+// import loadable from '@loadable/component'
+// const  BlogShort = loadable(() => import('@Bl/og/BlogShort'))
 // ====================================
 
 

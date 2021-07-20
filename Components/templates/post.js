@@ -1,13 +1,13 @@
 import React,{useEffect,useState} from 'react';
 import Prism from 'prismjs';
 import Share from '@Blog/share';
-import Like from '@Blog/Like'
 import {  GetBlogList } from '@api/User-Blog-Api';
-import loadable from '@loadable/component'
-const Navbar= loadable(() => import('../navbar/navbar'))
-const Meta= loadable(() => import('../Meta'))
-const MYButtons= loadable(() => import('../MainPageButton'))
-const Footer= loadable(() => import('../footer/Footer'))
+import Navbar from '../navbar/navbar'
+import Footer from '../footer/Footer'
+import Meta from '../Meta'
+import MYButtons from '../MainPageButton'
+import loadable from 'next/dynamic'
+const Like =loadable(()=> import('@Blog/Like'))
 const BlogShort= loadable(() => import('@Blog/BlogShort'))
 import { WebLink } from '@const/List';
 
@@ -71,12 +71,12 @@ export default function Post({ children, frontMatter }) {
     {/* <Tem></Tem> */}
    
     {/* <h1>{title}</h1>/ */}
-    <ins className="adsbygoogle add"
-      style={{ display: 'block' }}
-      data-ad-layout="in-article"
-      data-ad-format="fluid"
-      data-ad-client="ca-pub-4438223892792479"
-      data-ad-slot="9033777830"></ins>
+    <div className="center">
+                <ins className="adsbygoogle top-add add"
+                    style={{ display: 'inline-block' }}
+                    data-ad-client="ca-pub-4438223892792479"
+                    data-ad-slot="5009297566"></ins>
+            </div>
 
     <div className="blog-container">
      

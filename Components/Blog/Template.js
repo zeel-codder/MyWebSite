@@ -1,14 +1,10 @@
 // import '../styles/globals.css'
 import React from "react";
-// import Navbar from '../navbar/navbar'
-// import Footer from '../footer/Footer'
-// import Meta from '../Meta'
-// import MYButtons from '../MainPageButton'
-import loadable from '@loadable/component'
-const Navbar= loadable(() => import('../navbar/navbar'))
-const Meta= loadable(() => import('../Meta'))
-const MYButtons= loadable(() => import('../MainPageButton'))
-const Footer= loadable(() => import('../footer/Footer'))
+import Navbar from '../navbar/navbar'
+import Footer from '../footer/Footer'
+import Meta from '../Meta'
+import MYButtons from '../MainPageButton'
+
 
 function MyApp({ Component, data }) {
 

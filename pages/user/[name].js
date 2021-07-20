@@ -1,13 +1,13 @@
 import React from 'react'
-// import UserProfile from 'Components/User/UserProfile'
-// import Template from '@Layout/Template'
+import UserProfile from 'Components/User/UserProfile'
+import Template from '@Layout/Template'
 // import {User} from '@const/List'
 // import axios from 'axios'
 import  GetUserProfile  from 'server/helpers/User/GetUserProfile'
 
-import loadable from '@loadable/component'
-const   UserProfile   = loadable(() => import('Components/User/UserProfile'))
-const   Template    = loadable(() => import('@Layout/Template'))
+// import loadable from '@loadable/component'
+// const   UserProfile   = loadable(() => import('Components/User/UserProfile'))
+// const   Template    = loadable(() => import('@Layout/Template'))
 
 
 export default function UserDetails({data}) {

@@ -12,7 +12,6 @@
 
 // Imports
 // ====================================
-import { useState } from 'react'
 import React from "react";
 // import { useEffect } from 'react'
 // import { useGlobalContext } from '../context';
@@ -22,21 +21,6 @@ import Image from "next/image";
 
 const ImageShow = ({data}) => {
 
-    const ImageDic = [
-        {
-            id: 1,
-            link: '/images/home/1.jpg'
-        },
-        {
-            id: 2,
-            link: '/images/home/2.jpg'
-
-        }
-
-    ]
-    // console.log(data)/\
-
-    const [index, setIndex] = useState(0)
 
  
 

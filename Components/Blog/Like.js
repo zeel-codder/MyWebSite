@@ -9,22 +9,16 @@
 
 // Imports
 // ====================================
+import React from "react";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-
 import {useState,useEffect} from 'react';
-import React from "react";
 import { useRouter } from 'next/router'
 import {GetUser,UpdateBlogLike } from '@api/User-Blog-Api'
 import {User} from '@const/List'
+
 // import {useEffect} from 'react';
 
-
-
-// import axios from 'axios';
-// import {useGlobalContext} from '../context';
-// import { response } from 'express';
-// ====================================
 
 
 

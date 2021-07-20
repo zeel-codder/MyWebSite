@@ -2,9 +2,9 @@
 import React from "react";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import { useEffect, useState } from "react";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import { useEffect, useState } from "react";
 
 function MyApp({ title }) {
 

@@ -16,7 +16,8 @@ import React from "react";
 import { useState } from 'react';
 // import Loadding from './Loadding'
 // import { useGlobalCont/ext } from '../context';
-import loadable from '@loadable/component'
+import loadable from 'next/dynamic'
+// import loadable from '@loadable/component'
 const  Loading = loadable(() => import('../Loadding'))
 // import Loading from '../Loadding';
 import {SetMailInContactForm } from '@api/User-Blog-Api'

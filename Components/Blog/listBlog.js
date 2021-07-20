@@ -1,24 +1,17 @@
 
-// import Head from 'next/head'
-// import Image from 'next/image'
 import axios from 'axios'
 import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
 import { WebLink } from '@const/List';
 // import Html from 'next/'
 // import { useRouter } from 'next/router';
 // import BlogShort from '@B/BlogShort'
 // import Template from '@Layout/Template'
 // import BlogShort from '@Blog/BlogShort';
-// import Search from '@Blog/Serach';
-// import BlogLoad from 'Components/loading/BlogLoadder';
-// import LoadShort from 'Components/loading/LoderShort' 
-import Image from 'next/image';
+import Search from '@Blog/Serach';
+import BlogLoad from 'Components/loading/BlogLoadder';
 
-import loadable from '@loadable/component'
-const BlogShort = loadable(() => import('@Blog/BlogShort'))
-const Search = loadable(() => import('@Blog/Serach'))
-const BlogLoad = loadable(() => import('Components/loading/BlogLoadder'))
+import dynamic from 'next/dynamic'
+const BlogShort = dynamic(() => import('@Blog/BlogShort'))
 
 
 
@@ -65,7 +58,7 @@ function BlogList({ isTopic, topic }) {
     useEffect(() => {
 
         Getdata()
-        // console.log(data);
+
     }, [])
 
 
@@ -74,7 +67,7 @@ function BlogList({ isTopic, topic }) {
         <article className="">
             {/* <marquee className="alert" behavior="scroll" direction="right">This page is still in production</marquee> */}
 
-{/* 
+            {/* 
             {
 
                 !isTopic
@@ -85,13 +78,13 @@ function BlogList({ isTopic, topic }) {
 
                     {/* <Image src={img} width={400} height={400} alt='BlogShort Img'   /> */}
 
-                    {/* <img className="video" src="/home.s" /> */}
-                    {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
-                    {/* <span className="logo-text home-h"> */}
-                        {/* <h1> */}
-                            {/* Start Reading And Learning Today */}
-                        {/* </h1> */}
-                        {/* <button className="btn" >
+            {/* <img className="video" src="/home.s" /> */}
+            {/* <img className="img" src='/images/home/DarkBlueClubLogo.png' className="logo"  alt="blog img"></img> */}
+            {/* <span className="logo-text home-h"> */}
+            {/* <h1> */}
+            {/* Start Reading And Learning Today */}
+            {/* </h1> */}
+            {/* <button className="btn" >
                             <Link to='Read' title='Get start'
                                 spy={true}
                                 smooth={true}
@@ -101,10 +94,10 @@ function BlogList({ isTopic, topic }) {
                                 Lets Read
                             </Link>
                         </button> */}
-                    {/* </span> */}
-                {/* </div> */}
+            {/* </span> */}
+            {/* </div> */}
 
-            {/* } */} 
+            {/* } */}
             {/* </video> */}
 
             <Search data={list} />
@@ -120,37 +113,21 @@ function BlogList({ isTopic, topic }) {
 
                     :
                     <>
-                    <h1 className="hedging">Blogs</h1>
-                </>
+                        <h1 className="hedging">Blogs</h1>
+                    </>
             }
 
-         
-
-            <ins className="adsbygoogle add"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-4438223892792479"
-            data-ad-slot="9230683994"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-            data-adtest="on"
-            ></ins>
-        
-
-            {/* <Html> */}
 
 
-          
-            {/* </Html> */}
+            <div className="center">
+                <ins className="adsbygoogle top-add add"
+                    style={{ display: 'inline-block' }}
+                    data-ad-client="ca-pub-4438223892792479"
+                    data-ad-slot="5009297566"></ins>
+            </div>
 
 
-            {/* <BlogShort /> */}
-           
-            {/* <ins className="adsbygoogle add"
-     style={{display:'block'}}
-     data-ad-format="fluid"
-     data-ad-layout-key="-90-22-20-bu+d7"
-     data-ad-client="ca-pub-4438223892792479"
-     data-ad-slot="4097215739"></ins> */}
+
             <div className="ListOfBlogs blog-container" >
                 {
 
@@ -161,7 +138,7 @@ function BlogList({ isTopic, topic }) {
                         :
 
                         <>
-                         
+
 
                             {
                                 data.map((page, index) => {
@@ -179,11 +156,11 @@ function BlogList({ isTopic, topic }) {
                 }
             </div>
             <div className="center">
-            <ins className="adsbygoogle top-add add"
-     style={{display:'inline-block'}}
-     data-ad-client="ca-pub-4438223892792479"
-     data-ad-slot="5009297566"></ins>
-     </div>  
+                <ins className="adsbygoogle top-add add"
+                    style={{ display: 'inline-block' }}
+                    data-ad-client="ca-pub-4438223892792479"
+                    data-ad-slot="5009297566"></ins>
+            </div>
             {
 
                 list.length > data.length
@@ -197,13 +174,13 @@ function BlogList({ isTopic, topic }) {
                     </button>
                 </div>
             }
-              <ins className="adsbygoogle add"
-            style={{ display: 'block' }}
-            data-ad-client="ca-pub-4438223892792479"
-            data-ad-slot="9230683994"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-            data-adtest="on"
+            <ins className="adsbygoogle add"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-4438223892792479"
+                data-ad-slot="9230683994"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+                data-adtest="on"
             ></ins>
 
 

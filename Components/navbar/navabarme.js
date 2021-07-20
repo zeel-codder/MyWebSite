@@ -14,7 +14,7 @@
 // Imports
 // ====================================
 import { Link } from "react-scroll";
-// import MyLink from 'next/link'
+import MyLink from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
@@ -33,60 +33,14 @@ function Navbar({data}) {
     const linksContainerRef = useRef(null);
 
     const [showLinks, setLinkopen] = useState(false);
-    // const [isLoginOpen, setIsLoginOpen] = useState(false);
-
-    // const { UserState, Login } = useGlobalContext();
-
-    // console.log(Userstate);
-
-    //=============================
-    // @name:NavbarDisplay
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used add rotetor class in icon and add the height in navbar link. ====>More this Function is Used in Mobile responsive navbar<=====
-    //=============================
+   
 
     const NavbarDisplay = () => {
         // document.querySelector(".icon").classList.toggle("rotetor");
         setLinkopen(!showLinks);
     }
 
-    //=============================
-    // @name:ShowLogin
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used add Login Component in Web Site.
-    //=============================
-
-    // const ShowLogin = (data) => {
-    //     // console.log(data.textContent);
-    //     value.current = data.textContent;
-    //     setIsLoginOpen(true);
-
-    // }
-
-    //=============================
-    // @name:closeLogin
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used remove Login Component in Web Site.
-    //=============================
-
-    // const closeLogin = () => {
-    //     setIsLoginOpen(false);
-    // }
-
-
-    //=============================
-    // @name:useEffect
-    // @type:React Hook UseEffect
-    // @param:none
-    // @return:none
-    // @functionality: UseEffect is set Heigh of Navbar-ul in Mobile View.
-    //=============================
+    
 
     useEffect(() => {
         // console.log(isLoginOpen, 1);
@@ -151,7 +105,7 @@ function Navbar({data}) {
                         }
                     </div>
                     <li>
-                        <a href="/">My Blog</a>
+                        <MyLink href="/">My Blog</MyLink>
                     </li>
                     </ul>
             </div>

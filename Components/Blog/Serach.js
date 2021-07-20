@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
-import Link from 'next/link';
 import { WebLink } from '@const/List';
-import Topics from '../footer/data'
+import Topics from '../footer/data';
+// import Link from 'next/lin'
 
 
 export default function Search({ data }) {

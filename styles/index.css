@@ -273,6 +273,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   width: 5%;
   padding: 0px;
   margin: 0px;
+  height: 66px;
   border-radius: 47px;
 }
 .navabar-ul li a,.open,.login-choice span,.Mybutton,.navabar-ul li .a,.icons,.Serach li a,.topic a,.tools a{
@@ -729,6 +730,9 @@ margin: 0;
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+  .navabar-ul img{
+    display: none;
+  }
   .nav-icon > span{
     margin: 0 1rem;
   }
@@ -922,10 +926,7 @@ For Mobile
     align-items: flex-start;
     flex-direction: column;
   }
-  .icons{
-    /* flex-direction: row; */
-    /* align-self: flex-end; */
-  }
+
 
   .text-container{
     width: 100%;

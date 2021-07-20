@@ -13,7 +13,7 @@
 
 // Imports
 // ====================================
-// import Link from 'next/link'
+import Link from 'next/link'
 // import React from "react";
 import ViewWeekIcon from '@material-ui/icons/ViewWeek';
 import React, { useState, useRef, useEffect } from 'react';
@@ -36,20 +36,7 @@ function Navbar() {
     // const user=
     const [showLinks, setLinkopen] = useState(false);
     const [User, setUser] = useState(null);
-    // const [nam, setUser] = useState(null);
-    // const [isLoginOpen, setIsLoginOpen] = useState(false);
-
-    // const { UserState, Login } = useGlobalContext();
-
-    // console.log(Userstate);
-
-    //=============================
-    // @name:NavbarDisplay
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used add rotetor class in icon and add the height in navbar link. ====>More this Function is Used in Mobile responsive navbar<=====
-    //=============================
+  
 
     const NavbarDisplay = () => {
         // document.querySelector(".icon").classList.toggle("rotetor");
@@ -59,13 +46,7 @@ function Navbar() {
     
 
 
-    //=============================
-    // @name:useEffect
-    // @type:React Hook UseEffect
-    // @param:none
-    // @return:none
-    // @functionality: UseEffect is set Heigh of Navbar-ul in Mobile View.
-    //=============================
+    
 
     useEffect(() => {
         // console.log(isLoginOpen, 1);
@@ -114,27 +95,27 @@ function Navbar() {
 
                         <li className="a">
 
-                            <a href='/'>
+                            <Link href='/'>
 
                                 Zeel Codder Blogs
 
 
-                            </a>
+                            </Link>
                         </li>
                         <li>
 
-                            <a href='/me/zeel'>
+                            <Link href='/me/zeel'>
 
                                 About Me
 
-                            </a>
+                            </Link>
                         </li>
                         <li>
 
-                            <a href='/me/tools'>
+                            <Link href='/me/tools'>
 
                                 Tools
-                            </a>
+                            </Link>
                         </li>
                     </div>
 
@@ -149,15 +130,15 @@ function Navbar() {
                             <>
                                     <div className="login">
 
-                                       <a href='/auth/singup'
-                                            title="Sing Up">Sing Up</a>
+                                       <Link href='/auth/singup'
+                                            title="Sing Up">Sing Up</Link>
                                     </div>
                                     <div className="login"><a href='/auth/login' title="Log In">Log In</a></div>
                                 </>
                                 :
                                 <div className="icons">
                                     <div style={{display:"flex",flexDirection:"row"}}>
-                                    <a href={`/user/${User?._id}`} title="User">
+                                    <Link href={`/user/${User?._id}`} title="User">
                                     {/* <> */}
                                         {/* <AccountCircleIcon className="user" /> */}
                                 
@@ -165,10 +146,10 @@ function Navbar() {
                                     {User.username}    
                                     {/* </> */}
                                     
-                                    </a>
+                                    </Link>
                                     </div>    
                                     
-                                    <a title="Logout"
+                                    <Link title="Logout"
                                         onClick={() => {
                                             localStorage.removeItem('User');
                                             setUser(null);
@@ -176,7 +157,7 @@ function Navbar() {
                                         >
                                     
                                         Logout
-                                    </a>
+                                    </Link>
                                     
                                 </div>
                         }

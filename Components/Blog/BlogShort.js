@@ -10,28 +10,16 @@
 // Imports
 // ====================================
 
-// import {FcLike} from 'react-icons/fc';
-// import {useGlobalContext} from '../context';
-// import Link from 'next/link'
-// import Image from 'next/image'
 import React from "react";
-import loadable from '@loadable/component'
-// import Like from './Like';
-const Like = loadable(() => import('./Like'))
-// import { useState } from 'react';
+import Like from './Like'
+import Link from 'next/link'
 import { WebLink } from '@const/List';
 import Image from 'next/image'
-// import  Image  from "next/image";
-// ====================================
 
 
 const BlogShort = (props) => {
 
     const { name, title, img, url, link, topic,id,summery } = props;
-    // const WebLink="null"
-    // console.log(WebLink)
-
-
 
     return (
         <>
@@ -47,10 +35,10 @@ const BlogShort = (props) => {
                     <p>{summery}</p>
                     
                 <Like blogInfo={props} isBlogShort={true}></Like>
-                    <a href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
+                    <Link href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
                         <button className="btn">Read
                         </button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

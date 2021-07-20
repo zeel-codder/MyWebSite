@@ -13,14 +13,14 @@
 import React from "react";
 // import Reactmarkdown from 'react-markdown';
 // import { useRouter } from 'next/router'
-// import Template from '@Layout/Template'
+import Template from '@Layout/Template'
 // import Search from "@Blog/Serach";
 // import BlogShort from "@Blog/BlogShort";
 // import BlogLoad from "Components/loading/BlogLoadder";
 import List from '@Blog/listBlog'
 
-import loadable from '@loadable/component'
-const Template = loadable(() => import('@Layout/Template'))
+// import loadable from '@loadable/component'
+// const Template = loadable(() => import('@Layout/Template'))
 
 
 

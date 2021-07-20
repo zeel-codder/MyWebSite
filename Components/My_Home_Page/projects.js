@@ -55,33 +55,7 @@ const Projects=()=>{
      
      ]
 
-    //Store the open ul data
-    // const [arr,setarr]=useState([]);
-
-
     
-    //=============================
-    // @name:changeIndex
-    // @type:Javascript Function
-    // @param:none
-    // @return:none
-    // @functionality: Function is used to show the Text of ul. It item in arr than it nested ul is display in screen other wise not.
-    //=============================
-
-    // const changeIndex=(index)=>{
-    //     // console.log(index)
-    //     let new_arr=arr;
-    //     if(new_arr.includes(index)){
-    //         new_arr=new_arr.filter((index1)=>index1!==index);
-    //     }else{
-    //        new_arr.push(index);
-    //     }
-    //     // console.log([...new_arr])
-    //     setarr([...new_arr]);
-    // }
-
-
-    // console.log('rendee')
     return(
         <div id="projects">
         <h1>Projects</h1>
