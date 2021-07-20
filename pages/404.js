@@ -8,12 +8,14 @@ export default function Custom404() {
             <Head>
             <title>404</title>
         </Head>
-        <div className="column">
-            <h1> </h1>
-            <Image src='/404.svg' alt='404' width={1300} height={500}></Image>
-            <p> 404 Page Not Found | 
+        <div>
+           
+            <div>
+            <img style={{width:'100%',height:'90vh'}} src='/404.svg' alt='404' layout="fill" />
+            </div>
+            <h3 className="center"> 404 Page Not Found | 
                 <a href='/'>Back To Home</a>
-                 </p>
+            </h3>
         </div>
         </>
     )

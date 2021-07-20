@@ -13,12 +13,14 @@ const Meta = ({ title, keywords,description }) => {
   //   console.log(document.querySelectorAll('.adsbygoogle'))
   // },[])
 
+
+
   useEffect(() => {
 
     try {
-      const number=document.querySelectorAll('.adsbygoogle').length;
+      // const number=document.querySelectorAll('.adsbygoogle').length;
 
-      // console.log(document)
+      console.log(description)
       for(let i =0;i<3;i++){
         // console.log('call')
 
@@ -28,6 +30,7 @@ const Meta = ({ title, keywords,description }) => {
       console.log(err);
     }
   }, []);
+
 
 
   // zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.
@@ -46,7 +49,7 @@ const Meta = ({ title, keywords,description }) => {
             {/* <meta name="keywords" content="HTML, CSS, JavaScript,Node js , Zeel , zeelcodder, React js, Node js, Blog, c, java, python, error, competitive programming, blog" /> */}
             <meta name="keywords" content={keywords} />
             <meta name="author" content="zeel prajapati" />
-            <meta name="description" content={description} />
+            <meta name="description" content={description || 'zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.'} />
             <link rel="shortcut icon" href="/zeel.jpg" />
             {/* <link rel="preload" as="image" href="/index.jpg" /> */}
 
@@ -72,7 +75,7 @@ const Meta = ({ title, keywords,description }) => {
            <meta property="og:title" content={title} />
            <meta property="og:type" content="website" />
            <meta property="og:url" content="https://zeelcodder.tech/" />
-           <meta property="og:description" content={description} />
+           <meta property="og:description" content={description || 'zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.'} />
 
 
           

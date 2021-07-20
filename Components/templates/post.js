@@ -14,7 +14,7 @@ import { WebLink } from '@const/List';
 
 
 export default function Post({ children, frontMatter }) {
-  const { title,keywords,isLoadMore } = frontMatter;
+  const { title,keywords,isLoadMore ,summery} = frontMatter;
 
   const [data, setData] = useState({})
   const [list, setList] = useState([])
@@ -64,7 +64,7 @@ export default function Post({ children, frontMatter }) {
    
     <>
     <MYButtons></MYButtons>
-  <Meta title={title} keywords={keywords} ></Meta>
+  <Meta title={title} keywords={keywords} description={summery}></Meta>
   <Navbar></Navbar>
   
 

@@ -64,6 +64,10 @@ function Navbar({data}) {
 
     return (
         <>
+         <div className="center bg">
+                <img src='/logo.svg' alt='log' />
+
+            </div>
         <div className={`icon nav-icon`} > 
             
         <span onClick={NavbarDisplay} >

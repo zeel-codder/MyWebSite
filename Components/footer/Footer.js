@@ -36,10 +36,10 @@ const Footer = () => {
 
 
                 <ul className="footer-ul icons Footer-icons">
-                    <li><a href="https://www.facebook.com/zeel.prajapati.397/" title="Facebook"><FacebookIcon /></a></li>
-                    <li><a href="https://github.com/zeel-codder" title="Github"><GitHubIcon /></a></li>
-                    <li><a href="https://www.linkedin.com/in/zeel-prajapati-4832971a3/" title="Linkedin"><LinkedInIcon /></a></li>
-                    <li><a href="https://twitter.com/ZeelPrajapati15" title="Twitter"><TwitterIcon /></a></li>
+                    <li><a href="https://www.facebook.com/zeel.prajapati.3954/" title="Facebook" target="__blank"><FacebookIcon /></a></li>
+                    <li><a href="https://github.com/zeel-codder" title="Github" target="__blank"><GitHubIcon /></a></li>
+                    <li><a href="https://www.linkedin.com/in/zeel-prajapati-4832971a3/" title="Linkedin" target="__blank"><LinkedInIcon /></a></li>
+                    <li><a href="https://twitter.com/ZeelPrajapati15" title="Twitter" target="__blank"><TwitterIcon /></a></li>
                 </ul>
             </div>
         </div>
