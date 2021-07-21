@@ -71,10 +71,10 @@ function Navbar() {
 
     return (
         <>
-            <div className="center bg">
+            {/* <div className="center bg">
                 <img src='/logo.svg' alt='log' />
 
-            </div>
+            </div> */}
             <div className={`icon nav-icon`} > 
             
             <span onClick={NavbarDisplay}>
