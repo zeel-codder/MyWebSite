@@ -305,7 +305,7 @@ a{
 .navabar-ul li a:hover{
   /* background-color: none; */
   transition: all .5s;
-  border-style: ridge;
+  /* border-style: ridge; */
   border-bottom: 2px solid var(--form-bg);
 }
 .navabar-ul .a a:hover{
