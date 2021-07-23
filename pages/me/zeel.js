@@ -5,6 +5,7 @@ import Main from '@Home/Main'
 import Navbar from 'Components/navbar/navabarme'
 import Footer from 'Components/footer/Footer'
 import Meta from 'Components/Meta'
+// import ChatBox from 'Components/mychat'
 // import NavData from 'Components/navbar/data'
 
 // import loadable from '@loadable/component'
@@ -53,11 +54,14 @@ const NavData=[
 
 export default function Home() {
   return (
+    
     <div >
       <Meta title="Zeel Codder" keyword="zeel prajapati, zeel sureshbhai parajapati, js, web, zeel prajapati personal web site" description="My name is zeel Sureshbhai prajapati. currently, I am doing Computer Science at Nirma university. I love to make web sites and also create android apps" />
       <Navbar data={NavData}></Navbar>
       <Main></Main>
+      {/* <ChatBox key1={2} /> */}
       <Footer></Footer>
+      
     </div>
   )
 }

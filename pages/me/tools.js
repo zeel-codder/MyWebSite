@@ -1,6 +1,7 @@
 import React from "react";
 import Template from '@Layout/Template'
 import ToolsData from 'Data/project/tools'
+import ChatBox from 'Components/mychat'
 // import Link from 'next/link'
 // import Image from "next/image";
 
@@ -20,6 +21,7 @@ export default function Tools() {
 
 function ToolList(){
   return (
+    <>
       
       <div className="blog-container tools">
         <h1>Zeel Codder's Projects</h1>
@@ -64,7 +66,10 @@ function ToolList(){
 
         })
         }
-      </div>
+        </div>
+        {/* <ChatBox key1={1}></ChatBox> */}
+       
+</>
   )
 }
 

@@ -35,10 +35,10 @@ const BlogShort = (props) => {
                     <p>{summery}</p>
                     
                 <Like blogInfo={props} isBlogShort={true}></Like>
-                    <Link href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
+                    <a href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
                         <button className="btn">Read
                         </button>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </>

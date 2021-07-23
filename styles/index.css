@@ -301,6 +301,10 @@ a{
   border-bottom: 2px solid transparent;
 
 }
+#disqus_thread{
+  width: 70%;
+  margin: 0 auto;
+}
 
 .navabar-ul li a:hover{
   /* background-color: none; */
@@ -741,11 +745,36 @@ margin: 0;
 .MyContact div,.MyContact .btn{
   width: 100%;
 }
+#layout {
+  height: auto;
+}
+.fb-comments{
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+#layout{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* =========================================
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+  #layout{
+    /* width: 70%;{ */
+    width: 95%;
+    margin: 0 auto;
+  }
   .navabar-ul img{
     display: none;
   }
