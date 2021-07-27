@@ -23,9 +23,9 @@ const BlogShort = (props) => {
 
     return (
         <>
-            <div className="BlogShort">
+            <a href={`${WebLink}/blog/${name}`} className="BlogShort" data-interception='off'>
+           
             
-            <span className="title">{topic}</span>
               
                 <div className="imgdiv">
                 <Image src={img} layout="fill" alt='BlogShort Img'   />
@@ -35,12 +35,12 @@ const BlogShort = (props) => {
                     <p>{summery}</p>
                     
                 <Like blogInfo={props} isBlogShort={true}></Like>
-                    <a href={`${WebLink}/blog/${name}`} className="blog-a" data-interception='off'>
-                        <button className="btn">Read
-                        </button>
-                    </a>
+                        {/* <button className="btn">Read */}
+                        {/* </button> */}
                 </div>
-            </div>
+                <span className="tech">{topic}</span>
+           
+            </a>
         </>
     )
 }

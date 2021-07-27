@@ -30,7 +30,7 @@ const BlogShort = () => {
         <>
             <div className="BlogShort Loaddic">
             
-            <span className="title Load span5"></span>
+            {/* <span className="title Load span5"></span> */}
                 <div  className="Load span1">
                 <span  alt='BlogShort Img' />
                 </div>    

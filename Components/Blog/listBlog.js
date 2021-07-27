@@ -9,7 +9,8 @@ import { WebLink } from '@const/List';
 // import BlogShort from '@Blog/BlogShort';
 import Search from '@Blog/Serach';
 import BlogLoad from 'Components/loading/BlogLoadder';
-
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import dynamic from 'next/dynamic'
 const BlogShort = dynamic(() => import('@Blog/BlogShort'))
 
@@ -18,11 +19,48 @@ const BlogShort = dynamic(() => import('@Blog/BlogShort'))
 function BlogList({ isTopic, topic }) {
 
     const [data, setdata] = useState([])
+    const [number, setnumber] = useState(1)
+    const [LinksP,setLinksP]=useState([]);
+    // const [number, setnumber] = useState(0)
+    const [part,setPart]=useState(0)
     const [isLoading, setLoading] = useState(true)
     const [list, setlist] = useState([])
     const numberBlog = 9;
     const add = 6;
 
+
+    function SetDataByNumber(list){
+        setdata(list.slice(numberBlog*(number-1),numberBlog*(number)))
+        const max=Math.floor(list.length/numberBlog)+1;
+        setPart(Math.floor(list.length/numberBlog)+1)
+
+        if(number==1){
+            setLinksP([number+1]);
+        }else if(number==max){
+            setLinksP([number-1])
+        }else{
+            setLinksP([number-1,number,number+1]);
+        }
+        
+    }
+
+
+    useEffect(() => {
+
+        Getdata()
+
+    }, [])
+    
+    
+    useEffect(()=>{
+        
+        // setLoading(true/);
+        SetDataByNumber(list);
+        // document.scrollTo(0);
+        // setLoading(false)
+        window.scrollTo({ top: 100, behavior: 'smooth' })
+
+    },[number])
 
 
 
@@ -42,7 +80,7 @@ function BlogList({ isTopic, topic }) {
             data = data.filter((item) => item.topic === topic)
         }
         setlist(data);
-        setdata(data.slice(0, numberBlog))
+        SetDataByNumber(data);
         setLoading(false)
         // return data;
 
@@ -55,11 +93,6 @@ function BlogList({ isTopic, topic }) {
     }
 
 
-    useEffect(() => {
-
-        Getdata()
-
-    }, [])
 
 
     return (
@@ -167,12 +200,62 @@ function BlogList({ isTopic, topic }) {
 
                 &&
 
-                <div className="blog-container">
 
-                    <button className="btn" onClick={handler}>
-                        Load More
-                    </button>
-                </div>
+                
+
+                    <div className="row">
+
+                        {
+                            
+                          
+                        <ArrowBackIosIcon  className={number!==1 || 'dic'} onClick={()=>setnumber(number-1)} />
+                               
+                               
+                                
+
+                        }
+
+                        <div className="listl">
+
+                    {
+                        <a onClick={()=>setnumber(1)}>{number-1==2 || number-1==1 || number==1?'1':'1.....'}</a>
+                    }
+
+                    {
+                        LinksP.map((data,index)=>{
+                            if(data>1 && data<part){
+                                return   <a onClick={()=>setnumber(data)}>{data}</a>
+                                
+                            }
+                        })
+                    }
+                    {
+                        
+                        <a onClick={()=>setnumber(part)}>{number==part || number+1==part || number+2 == part?part:`...${part}`}</a>
+                    }
+                        </div>
+                        {
+                           
+                            
+                            
+                            <ArrowForwardIosIcon
+                            className={ number!==part || 'dic'}
+                            onClick={()=>setnumber(number+1)}
+                            ></ArrowForwardIosIcon>
+                            
+                        }
+                    </div>
+
+                
+
+
+
+                // <div className="blog-container">
+
+                //     <button className="btn" onClick={handler}>
+                //         Load More
+                //     </button>
+                // </div>
             }
             <ins className="adsbygoogle add"
                 style={{ display: 'block' }}
