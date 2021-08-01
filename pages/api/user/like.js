@@ -13,7 +13,7 @@ const  handler= async (req, res)=> {
 
 
     if(!req.userId){
-      res.status(400).end(JSON.stringify({
+      return res.status(400).end(JSON.stringify({
         message: `User Not Login`
       }));
     }

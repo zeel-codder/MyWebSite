@@ -64,6 +64,7 @@ function Navbar() {
         } else {
             first.current = false
         }
+        // console.log(JSON.parse(localStorage.getItem('User')));
         setUser(JSON.parse(localStorage.getItem('User')))
         // console.log('cc')
     }, [showLinks])
@@ -129,7 +130,7 @@ function Navbar() {
                     <li className="Login-Page" ref={linksRefs}>
 
                         {
-                            !User
+                            User==null
                             ?
                             <>
                                     <div className="login">
@@ -142,7 +143,7 @@ function Navbar() {
                                 :
                                 <div className="icons">
                                     <div style={{display:"flex",flexDirection:"row"}}>
-                                    <Link href={`/user/${User?._id}`} title="User">
+                                    <a href={`/user/${User?._id}`} title="User">
                                     {/* <> */}
                                         {/* <AccountCircleIcon className="user" /> */}
                                 
@@ -150,10 +151,10 @@ function Navbar() {
                                     {User.username}    
                                     {/* </> */}
                                     
-                                    </Link>
+                                    </a>
                                     </div>    
                                     
-                                    <Link title="Logout"
+                                    <a title="Logout"
                                         onClick={() => {
                                             localStorage.removeItem('User');
                                             setUser(null);
@@ -161,7 +162,7 @@ function Navbar() {
                                         >
                                     
                                         Logout
-                                    </Link>
+                                    </a>
                                     
                                 </div>
                         }
@@ -174,7 +175,7 @@ function Navbar() {
             </div>
             <div id="fb-root"  
          ></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0" nonce="vybL3TPe"></script>
+<script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0" nonce="vybL3TPe"></script>
         </div>
 
         </>

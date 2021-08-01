@@ -26,12 +26,13 @@ export default function Post({ children, frontMatter }) {
   useEffect(() => {
 
     const Link = (window.location.href).split('/');
-    const name = Link[Link.length - 1];
+    const without=Link[Link.length-1].split('?');
+    const name = without[0];
     // setId(name);
 
+    // console.log(name)
     GetBlogList(name)
       .then((data) => {
-        // console.log(data)
 
         const blog = data.data.find((data1) => data1.name == name)
         setData(blog)
@@ -72,8 +73,6 @@ export default function Post({ children, frontMatter }) {
 
 
       {/* <Tem></Tem> */}
-
-      {/* <h1>{title}</h1>/ */}
       <div className="center">
         <ins className="adsbygoogle top-add add"
           style={{ display: 'inline-block' }}
@@ -82,6 +81,9 @@ export default function Post({ children, frontMatter }) {
       </div>
 
       <div className="blog-container">
+          
+          {/* <dic>{data?.topic}<div> */}
+          
 
         {
           children

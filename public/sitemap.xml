@@ -36,238 +36,241 @@
 <!-- ================================================ -->
 <!-- topic -->
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/html</loc>
+    <loc>https://zeelcodder.tech/topic/html</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/css</loc>
+    <loc>https://zeelcodder.tech/topic/css</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/js</loc>
+    <loc>https://zeelcodder.tech/topic/js</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/react-js</loc>
+    <loc>https://zeelcodder.tech/topic/react-js</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/next-js</loc>
+    <loc>https://zeelcodder.tech/topic/next-js</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/node-js</loc>
+    <loc>https://zeelcodder.tech/topic/node-js</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/java</loc>
+    <loc>https://zeelcodder.tech/topic/java</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/python</loc>
+    <loc>https://zeelcodder.tech/topic/python</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/c</loc>
+    <loc>https://zeelcodder.tech/topic/c</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/React-native</loc>
+    <loc>https://zeelcodder.tech/topic/React-native</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/c++</loc>
+    <loc>https://zeelcodder.tech/topic/c++</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/vs-code</loc>
+    <loc>https://zeelcodder.tech/topic/vs-code</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/mysql</loc>
+    <loc>https://zeelcodder.tech/topic/mysql</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/mongodb</loc>
+    <loc>https://zeelcodder.tech/topic/mongodb</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/sql</loc>
+    <loc>https://zeelcodder.tech/topic/sql</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/error</loc>
+    <loc>https://zeelcodder.tech/topic/error</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/mobile</loc>
+    <loc>https://zeelcodder.tech/topic/mobile</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/topic/Json</loc>
+    <loc>https://zeelcodder.tech/topic/Json</loc>
     <lastmod>2021-06-18T09:10:32+00:00</lastmod>
     <priority>0.80</priority>
 </url>
 
 
 <!-- blogs -->
-
 <url>
-    <loc>https://zeelcodder.tech/blog/html4simpletages</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/how-send-email-in-next-js-app-with-email-js-module</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/top6vscodeextesions</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/earn-money-online-without-investment-in-india</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/letblogtogether</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-modules</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/java-calculation</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-oops</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-introduction</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-pattern</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-basic</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-file</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-calculation</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-functions</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-array</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-basic</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-structure</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-calculation</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-string</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/python-introduction</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-pointer</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/java-calculation</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-condition</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/java-array</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-pattern</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/java-string</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-modules</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/java-basic</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/java-introduction</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/java-introduction</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/java-basic</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-applications</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/java-string</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-pattern</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/java-array</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-condition</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/mongooseoverwriteerror</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-pointer</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-introduction</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-string</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-calculation</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-structure</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-basic</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-array</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-functions</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-calculation</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-file</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-basic</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-pattern</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/c-introduction</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/python-oops</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/mongooseoverwriteerror</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/c-applications</loc>
-    <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+        <loc>https://zeelcodder.tech/blog/letblogtogether</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 <url>
-    <loc>https://zeelcodder.tech/blog/Earn-Money-Online-Without-Investment-in-India</loc>
-    <lastmod>2021-07-02T09:10:32+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  
+        <loc>https://zeelcodder.tech/blog/top6vscodeextesions</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
+<url>
+        <loc>https://zeelcodder.tech/blog/html4simpletages</loc>
+        <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+        <priority>1</priority>
+      </url>
 </urlset>

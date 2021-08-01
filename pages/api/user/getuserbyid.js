@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     if (data === null) {
       // console.log('Lest Go');
 
-      res.status(404).end(JSON.stringify({
+      return res.status(404).end(JSON.stringify({
         message: "User Not Found"
       }));
     }

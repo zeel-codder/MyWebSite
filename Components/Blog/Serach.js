@@ -1,18 +1,23 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import SearchIcon from '@material-ui/icons/Search';
+// import SearchIcon from '@material-ui/icons/Search';
 import { WebLink } from '@const/List';
+import { List } from '@material-ui/core';
 import Topics from '../footer/data';
 // import Link from 'next/lin'
+import PageviewIcon from '@material-ui/icons/Pageview';
+import { useRouter } from 'next/router';
 
 
 export default function Search({ data }) {
 
     const [query, setquery] = useState("");
-    const [queryTopic, setqueryTopic] = useState("");
+  
     const [list, setlist] = useState([]);
-    const [Topic, settopic] = useState([]);
+  
+    const router=useRouter();
 
+    // console.log(data)
 
     function findList(datadic,isT,query) {
         const regex = new RegExp(query, 'gi');
@@ -65,65 +70,78 @@ export default function Search({ data }) {
         if (query !== "") {
 
             const new_list = findList(data,false,query);
-            // console.log(typeof(Array.from(new_list)))
-            // console.log(data);
+
+            
 
             setlist(new_list)
         } else {
-
             setlist([])
         }
     }, [query])
 
-    useEffect(() => {
-        if (queryTopic !== "") {
-
-            const new_list = findList(Topics,true,queryTopic);
-          
-
-            settopic(new_list)
-        } else {
-
-            settopic([])
-        }
-    }, [queryTopic])
+  
     
     
     
     return (
         <div className="Serach form" id="Read">
-            <SearchIcon />
-            <input list="browsers" 
-            type="Search"
-            className="form-input" name="browser" id="browser" placeholder="Select  Blog Topic..." 
-            onChange={(e) => setqueryTopic(e.target.value)}
-            autoComplete="off"
-            />
-            <ul className={`item item ${Topic.length===0 || 'scroll-list' }`}>
-
-                {
-                    Topic.map((value, index) => {
-                        const { title, link } = value;
-
-                        return (
-                            
-                            <li key={index}>
 
 
-                                    <a href={WebLink + `/topic/${link}`}>
-                                        <span className="text" dangerouslySetInnerHTML={{ __html: title }}>
-                                        </span>
-                                    </a>
-                               
+            <span className="row Topicl">
+            <PageviewIcon  className="sicon" />
+           
 
+            {/* <span for="cars">Topics:</span> */}
 
-                            </li>
-                        )
+            <select className="item1"  name="cars" id="cars"  
+            placeholder="Topics.."
+            
+            onChange={(e)=>{
 
-                    })
+                // console.log(e.target.value)
+
+                if(e.target.value=='-'){
+                    return;
                 }
 
-            </ul>
+
+                if(e.target.value=='all'){
+                    router.push(WebLink)
+                   return;
+                }
+                
+                router.push(WebLink + `/topic/${e.target.value}`)
+                
+            }}>
+                <>
+                <option  value={'-'} key={-2}>
+                            Topics
+                          
+                            </option>
+                <option  value={'all'} key={-1}>
+                            all
+                          
+                            </option>
+
+                {
+                    Topics.map((data,index)=>{
+                        return (
+                            <option  value={data.link} key={index}>
+                               
+
+                            {data.title}
+                                
+                          
+                            </option>
+                        )
+                    })
+                }
+                </>
+
+                
+            
+            </select>
+                </span>
 
 
             <input className="form-input" type="search" name="search" value={query}

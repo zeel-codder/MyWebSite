@@ -23,6 +23,7 @@ import { WebLink } from '@const/List';
 import Link from 'next/link';
 import Image from "next/image";
 // import { useGlobalContext } from '../context';
+import P from '@Data/project/tools'
 // ====================================
 
 
@@ -31,29 +32,7 @@ import Image from "next/image";
 const Projects=()=>{
 
 
-    const ProjectData=[
-        {
-            id:1,
-            title:'My Introduction',
-            technology:'Next Js',
-            description:'A blogging web site which build on next js. Web-site main function are User Auth , User can read the blogs , Search blogs and also like or share the blog.',
-            codelink:'https://github.com/zeel-codder/My_Introduction',
-            link:'https://zeelcodder.tech/',
-            img:'/images/projects/my-blog.png'
-            
-        },
-        {
-            id:2,
-            title:'Anteryamin-Store',
-            technology:'Html,Css and Js',
-            description:'An e-commerce web site which build on Only Html,css and js. Main function are User Login, singing , see the item or product of store, sort or search the item by name and price and add item or remove to cart.',
-            codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
-            link:'https://anteryaminstore.netlify.app/',
-            img:'/images/projects/Anteryami-store.png'
-            
-        },
-     
-     ]
+    const ProjectData=P.slice(0,2);
 
     
     return(
@@ -81,7 +60,14 @@ const Projects=()=>{
                 <h1>{title}</h1>
                 
                 {/* <img src={img} className="img" /> */}
+                
+                {
+
+                    img 
+                    &&
+                
                 <Image src={img} className="img" width={1000} height={400} quality={100} />
+                }
                 <div className="description">{description}</div>
                 <div>
                 

@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     
     if(data===null){
 
-      res.status(404).end( JSON.stringify({
+      return res.status(404).end( JSON.stringify({
         message: "Blog Not Found"
       }));
     }

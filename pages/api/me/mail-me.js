@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         ssl: true,
       });
 
-    client.send(
+      await client.sendAsync(
       {
         from: mymail,
         to: mymail,
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
     
       }
     );
-    client.send(
+    await client.sendAsync(
       {
         from: mymail,
             to: email,

@@ -2,63 +2,63 @@ const Navdata=[
 
     {
         id:1,
-        title:"html",
+        title:"Html",
         link:"html"
     },
     {
         id:2,
-        title:"css",
+        title:"Css",
         link:"css"
        
     },
     {
         id:3,
-        title:"js",
+        title:"Js",
         link:"js"
        
     },
     {
         id:4,
-        title:"react js",
+        title:"React Js",
         link:"react-js"
      
     },
     {
         id:5,
-        title:"next js",
+        title:"Next Js",
         link:"next-js"
     },
     {
         id:6,
-        title:"node js",
+        title:"Node Js",
         link:"node-js"
     },
     {
         id:7,
-        title:"java",
+        title:"Java",
         link:"java"
     },
     {
         id:8,
-        title:"python",
+        title:"Python",
         link:"python"
     },
     {
         id:9,
-        title:"c",
+        title:"C",
         link:"c"
   
     },
     {
         id:10,
-        title:"React native",
+        title:"React Native",
         link:"React-native"
 
   
     },
     {
         id:11,
-        title:"c++",
+        title:"C++",
         link:"c++"
   
     },
@@ -70,25 +70,25 @@ const Navdata=[
     },
     {
         id:13,
-        title:"mysql",
+        title:"My-Sql",
         link:"mysql"
   
     },
     {
         id:14,
-        title:"mongodb",
+        title:"Mongodb",
         link:"mongodb"
   
     },
     {
         id:15,
-        title:"sql",
+        title:"Sql",
         link:"sql"
   
     },
     {
         id:16,
-        title:"error",
+        title:"Error",
         link:"error"
   
     },
@@ -110,27 +110,18 @@ const Navdata=[
         link:"tools"
   
     },
-    {
-        id:20,
-        title:"C#",
-        link:"c#"
-  
-    },
-    {
-        id:21,
-        title:"Functions",
-        link:"functions"
-  
-    },
+   
 ]
+
+
 
 
 // for ( i in d){
 
 //         const data=`<url>
 //         <loc>https://zeelcodder.tech/blog/${d[i].name}</loc>
-//         <lastmod>2021-06-18T09:10:32+00:00</lastmod>
-//         <priority>0.80</priority>
+//         <lastmod>2021-08-01T09:10:32+00:00</lastmod>
+//         <priority>1</priority>
 //       </url>`
 //       console.log(data)
 //     }

@@ -164,7 +164,7 @@ export default async function handler(req, res) {
   } catch (e) {
     console.log(e)
 
-    res.status(404).end(JSON.stringify({
+    return res.status(404).end(JSON.stringify({
       message: "Error in sending mail",
 
     }))

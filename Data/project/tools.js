@@ -11,6 +11,14 @@ const data=[
         img:'/images/projects/my-blog.png'
     },
     {
+        id:6,
+        title:'Anteryami_GameZone',
+        technology:'Java',
+        description:'The Sudoku and Tic_Tac_Toe Games build in Java. In this project I am crate fully function java program to play Sudoku and Tic_Tac_Toe Games in Terminal.',
+        codelink:'https://github.com/zeel-codder/java_Tic-Tac-Toe_Sudoku_Games',
+        link:''
+    },
+    {
         id:2,
     
         title:'Anteryamin-store',
@@ -51,14 +59,7 @@ const data=[
         link:'https://programinghub.herokuapp.com/',
         img:'/images/projects/programmin-hub.png'
     },
-    {
-        id:6,
-        title:'Anteryami_GameZone',
-        technology:'Java',
-        description:'Sudoku and Tic-Tac-Toe Games Build in java. User of OOPs in java.',
-        codelink:'https://github.com/zeel-codder/java_Tic-Tac-Toe_Sudoku_Games',
-        link:''
-    }
+    
 
    
 ]

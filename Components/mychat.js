@@ -6,7 +6,7 @@ import React,{useEffect,useState} from 'react'
 
 export default function mychat({key1}) {
 
-    console.log('call')
+    // console.log('call')
     const [link,setLink]=useState('');
     // const [width,setLink]=useState('');
 
@@ -19,7 +19,7 @@ export default function mychat({key1}) {
 
     return (
         <div id="layout" data-tracking-area="layout">
-            <h1>Comment box</h1>
+            {/* <h1>Comment box</h1> */}
        
         
 

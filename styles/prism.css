@@ -5,9 +5,9 @@
  * Ported by Sara vieria [@SaraVieira]
  * Added by Souvik Mandal [@SimpleIndian]
  */
- pre[class*="language-"]{
+ /* pre[class*="language-"]{
 	 border-radius: 12px;
- }
+ } */
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #d6deeb;

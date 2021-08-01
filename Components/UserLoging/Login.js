@@ -9,7 +9,7 @@
 
 
 // Imports
-import {  useReducer } from 'react';
+import {  useReducer,useEffect } from 'react';
 // import axios from 'axios';
 import React from "react";
 // import { useGlobalContext } from '../context';
@@ -43,8 +43,16 @@ const Login = (props) => {
 
 
     const GotoHome = () => {
-        router.push('/')
+        router.push('/');
     }
+
+
+    useEffect(() => {
+       
+        if(localStorage.getItem('User')){
+            router.push('/');
+        }
+    }, [])
 
 
 

@@ -12,7 +12,7 @@ export default async function handler(req, res) {
  
 
     if(ans===null){
-      res.status(404).end(JSON.stringify({
+      return res.status(404).end(JSON.stringify({
         message: `Same Error while adding user`
       }))
     }

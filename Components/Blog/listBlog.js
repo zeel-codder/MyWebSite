@@ -49,7 +49,7 @@ function BlogList({ isTopic, topic }) {
 
         Getdata()
 
-    }, [])
+    }, [topic])
     
     
     useEffect(()=>{
@@ -146,7 +146,7 @@ function BlogList({ isTopic, topic }) {
 
                     :
                     <>
-                        <h1 className="hedging">Blogs</h1>
+                        <h1 className="hedging">{isTopic?topic:'Blogs'}</h1>
                     </>
             }
 
@@ -203,12 +203,12 @@ function BlogList({ isTopic, topic }) {
 
                 
 
-                    <div className="row">
+                    <div className="row space">
 
                         {
                             
                           
-                        <ArrowBackIosIcon  className={number!==1 || 'dic'} onClick={()=>setnumber(number-1)} />
+                        <ArrowBackIosIcon  className={number!==1 ? '' :'dic'} onClick={()=>setnumber(number-1)} />
                                
                                
                                 
@@ -239,7 +239,7 @@ function BlogList({ isTopic, topic }) {
                             
                             
                             <ArrowForwardIosIcon
-                            className={ number!==part || 'dic'}
+                            className={ number!==part ? '' : 'dic'}
                             onClick={()=>setnumber(number+1)}
                             ></ArrowForwardIosIcon>
                             

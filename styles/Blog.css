@@ -48,9 +48,12 @@ Main Page
     border: 1px solid;
  
     height:fit-content;
-    box-shadow: 0 0 20px var(--bgcolor);
+    /* box-shadow: 0 0 20px var(--bgcolor); */
   
     transition: all var(--transition);
+    width: 30%;
+    padding: 1rem 0;
+    margin: 1rem auto;
 }
 .topic{
     padding: 1rem;
@@ -125,7 +128,7 @@ Main Page
 }
 
 .blog-container > h1{
-    opacity: .6;
+    /* opacity: .6; */
     
     font-size: 3rem;
 }
@@ -142,6 +145,11 @@ Main Page
     color: blue;
     margin: .2rem 0;
 
+}
+
+.blog-container > a{
+    padding: .4rem;
+    text-align: justify;
 }
 .BlogInformation >span,.BlogInformation > p{
     margin: 0;
@@ -168,10 +176,10 @@ Main Page
 
 em{
     text-decoration: none;
-    background-color: var(--form-bg);
+    background-color: yellow;
     /* font-family: inherit; */
-    padding: 0px 2px;
-    color: white;
+    padding: 6px;
+    /* color: white; */
 
     font-style:normal;
     font-weight:bold;
@@ -183,7 +191,7 @@ em{
     text-align: start;
     opacity: 0.80;
 }
-.code-toolbar::before{
+/* .code-toolbar::before{
     content: "code";
     position: absolute;
     color: white;
@@ -195,9 +203,9 @@ em{
     border-radius: .5em;
     top: 9px;
     /* margin-bottom: 12px; */
-    font-size: 15px;
+    /* font-size: 15px;
     text-transform: capitalize;
-}
+} */ */
 .code-toolbar{
     
     position: relative;
@@ -405,6 +413,9 @@ svg{
 .Load{
     background: #cccccc;
 }
+.space{
+    margin: 2rem 0;
+}
 .Loaddic .span1{
     background: #cccccc;
     width: 100%;
@@ -456,13 +467,19 @@ svg{
     border-radius: 0px;
 }
 
-.Serach input{
+.Serach input,.Topicl{
     width: -webkit-fit-content;
     width: -moz-fit-content;
     /* width: 12px; */
     margin: 1rem;
     width: 60%;
     border-radius: 0;
+    background-color: white;
+    color: black !important;
+}
+.Topicl{
+    
+    width: 20%;
 }
 
 .Serach{
@@ -476,9 +493,9 @@ svg{
 
 }
 
-.Serach input:hover{
+/* .Serach input:hover{
     border-color: var(--form-bg);
-}
+} */
 .Serach  .hl{
     font-weight: bold;
     color: yellow;
@@ -499,12 +516,17 @@ svg{
     width: 100% !important;
     justify-content: center;
     color: white !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
     background-image: var(--bgi);
     position: relative;
     align-items: center;
     justify-content: center  !important;
 
+}
+.sicon{
+    width: 100%;
+    height: 100%;
 }
 
 .Serach input{
@@ -514,6 +536,13 @@ svg{
     font-size: 4rem;
     margin: 2rem;
 }
+/* .Serach li a{
+    color: black !important;
+    text-align: s;
+}
+.Serach a:hover{
+    background-color: blue;
+} */
 .Serach ul{
     position: absolute;
     /* transform: translatey(100%); */
@@ -533,7 +562,7 @@ svg{
     /* border: 1px solid var(--form-bg); */
     /* overflow: scroll; */
     /* transform: translateX(-14px); */
-    
+    transform: translateX(151px);
 }
 .item1{
     
@@ -541,7 +570,7 @@ svg{
 }
 .item2{
     z-index: 10 !important;
-    top:194px !important
+    top:93px !important
 }
 
 .home-h{
@@ -709,6 +738,17 @@ Like
     .loadding{
         top: 28px;
     }
+    .item1{
+        width: 100%;
+        flex: 2;
+    }
+    .Serach{
+        flex-direction: column  !important;
+    }
+    .Serach ul{
+     transform: translate(0);
+     top: 173px !important;
+    }
     .top-add{
         width: 100%;
     }
@@ -719,6 +759,7 @@ Like
         grid-template-columns: repeat(2, 50%);
     }
     .Log{
+        width: 50%;
         margin: 2rem auto;
     }
     .Loaddic .span1 {
@@ -727,7 +768,7 @@ Like
       
         margin: 9px;
     }
-    .Serach input{
+    .Serach input,.Topicl{
         width: 75%;
     }
     .Serach ul{
@@ -831,6 +872,10 @@ Like
 @media only screen and (max-width: 500px) {
     .ListOfBlogs{
         grid-template-columns: 90%;
+    }
+    .Log{
+        width: 100%;
+        margin: 0;
     }
 }
 @media only screen and (max-width: 400px) {
