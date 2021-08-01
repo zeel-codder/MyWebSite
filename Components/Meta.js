@@ -54,7 +54,7 @@ const Meta = ({ title, keywords, description }) => {
       {/* <link rel="preload" as="image" href="/index.jpg" /> */}
 
       {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC9RB4MTPH"></script> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC9RB4MTPH"></script>
 
       <script
         async
@@ -69,7 +69,7 @@ const Meta = ({ title, keywords, description }) => {
         }}
       />
 
-      {/* <script async data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
+      <script async data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
       <meta property="" content=""></meta>
       <meta property="og:title" content={title} />
