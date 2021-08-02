@@ -11,8 +11,12 @@ export default async function handler(req, res) {
   const {email,subject,message}=req.body;
 
 
+
+
     const mymail=process.env.mail;
     const password=process.env.password
+
+    console.log(mymail,password);
 
    
       try{
@@ -119,7 +123,7 @@ export default async function handler(req, res) {
                 
                 </body>
                 
-                </html>`, alternative: true }
+                </html>`}
               ]
            
               

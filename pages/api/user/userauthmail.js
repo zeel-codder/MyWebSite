@@ -66,7 +66,7 @@ export default async function handler(req, res) {
       user: mymail,
       password: password,
       host: 'smtp.gmail.com',
-      ssl: true,
+      ssl: true
       // port: 587,
       // tls: true,
     });
@@ -154,7 +154,7 @@ export default async function handler(req, res) {
           
           </body>
           
-          </html>`, alternative: true }
+          </html>`, alternative:true}
         ]
      
         
