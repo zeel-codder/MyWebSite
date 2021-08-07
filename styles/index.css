@@ -396,6 +396,7 @@ p > img,iframe{
 .Serach .form-input{
 padding: 15px;
 text-align: start;
+padding-left: 26px;
 }
 
 /* =============================
@@ -1043,6 +1044,9 @@ For Mobile
     font-size: 2rem;
     align-self: center;
     margin-top: 1rem;
+  }
+  .sicon{
+    height: 100%;
   }
   .nav-icon > span{
     margin: 0 .3rem;

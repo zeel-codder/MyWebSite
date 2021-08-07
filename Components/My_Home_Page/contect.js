@@ -37,7 +37,7 @@ const Context = () => {
     // @functionality: Function is used to send Email to zeel with the help of email js.
     //=============================
 
-    const MailMe = (e) => {
+    const MailMe = async(e) => {
 
         e.preventDefault();
 
@@ -46,11 +46,11 @@ const Context = () => {
          email=email.value;
          subject=subject.value;
          message=message.value;
-          console.log(email,subject,message)
+        //   console.log(email,subject,message)
          
 
         try{
-            SetMailInContactForm(email,subject,message)
+            await SetMailInContactForm(email,subject,message)
             alert("Send🙏🙏");
             setLoading(false);
         }catch(e){

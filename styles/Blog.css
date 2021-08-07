@@ -489,7 +489,7 @@ svg{
     position: relative;
     width: 100% !important;
     /* padding: 1rem 0 !important; */
-    border-bottom: 2px solid var(--form-bg);
+    /* border-bottom: 2px solid var(--form-bg); */
 
 }
 
@@ -498,7 +498,8 @@ svg{
 } */
 .Serach  .hl{
     font-weight: bold;
-    color: yellow;
+    font-weight: bold;
+    /* color: rgb(11, 101, 104); */
 }
 .Serach .title,.Serach .text{
     cursor: pointer;
@@ -546,9 +547,14 @@ svg{
 .Serach ul{
     position: absolute;
     /* transform: translatey(100%); */
-    background-image: var(--bgi);
+    /* background-image: var(--bgi); */
+    background-color: white;
     width: 26.4%;
     z-index: 12;
+    border: 1px solid black;
+    box-shadow: -1px 1px 4px black;
+    border-top: none;
+    border-right: none;
     /* padding: 1rem; */
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -563,6 +569,14 @@ svg{
     /* overflow: scroll; */
     /* transform: translateX(-14px); */
     transform: translateX(151px);
+    overflow-x: hidden;
+}
+
+.Serach li a{
+    color: black !important;
+    text-align: start;
+    padding-left:15px !important;
+    /* padding-ri/:15px !important; */
 }
 .item1{
     
@@ -570,7 +584,11 @@ svg{
 }
 .item2{
     z-index: 10 !important;
-    top:93px !important
+    top:86px !important
+}
+.item2 a:hover{
+    background-color: rgb(9, 43, 236);
+    color: white  !important;
 }
 
 .home-h{
@@ -747,7 +765,7 @@ Like
     }
     .Serach ul{
      transform: translate(0);
-     top: 173px !important;
+     top: 168px !important;
     }
     .top-add{
         width: 100%;
@@ -770,6 +788,7 @@ Like
     }
     .Serach input,.Topicl{
         width: 75%;
+        align-items: center;
     }
     .Serach ul{
         /* top: px !important; */

@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     const mymail=process.env.mail;
     const password=process.env.password
 
-    console.log(mymail,password);
+    // console.log(mymail,password);
 
    
       try{
@@ -69,7 +69,7 @@ export default async function handler(req, res) {
                         </h1>
                         <p style="
                         opacity: .5;
-                        font-size: 2.5rem;
+                        font-size: 1.5rem;
                         padding: 3px;"
                         >
                             zeel-codder web site for programmer and student. the web site where you find blog on demanding technology.
@@ -123,7 +123,11 @@ export default async function handler(req, res) {
                 
                 </body>
                 
-                </html>`}
+                </html>`
+              
+              ,
+              alternative:true
+            }
               ]
            
               

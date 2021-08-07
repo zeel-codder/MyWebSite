@@ -9,6 +9,7 @@ import PageviewIcon from '@material-ui/icons/Pageview';
 import { useRouter } from 'next/router';
 
 
+
 export default function Search({ data }) {
 
     const [query, setquery] = useState("");
@@ -160,7 +161,7 @@ export default function Search({ data }) {
                         return (
                             <li key={index} title={topic}>
                                 <a href={WebLink + `/blog/${name}`}>
-                                    <span className="title" dangerouslySetInnerHTML={{ __html: topic }}></span>
+                                    {/* <span className="title" dangerouslySetInnerHTML={{ __html: topic }}></span> */}
                                     <a href={WebLink + `/blog/${name}`}>
                                         <span className="text" dangerouslySetInnerHTML={{ __html: title }}>
                                         </span>
