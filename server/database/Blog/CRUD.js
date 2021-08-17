@@ -6,12 +6,13 @@ const {BlogInfo}=Database;
   
 const DemoData = {
 
-    "name": "How-Send-Email-in-next-js-app-With-Email-js-module",
-    "title": "How Send Email in next js app With Email js module?",
-    "img": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+    "name": "extract-text-from-image-in-python",
+    "title": "Extract Text from Image in Python",
+    "img": "/images/blog/python-introduction/1.jpg",
     "like": 0,
-    "topic": "next-js",
-    "creator":"zeelprajapati321@gmail.com"
+    "topic": "python",
+    "creator":"zeelprajapati321@gmail.com",
+    "summery":"In this post you are going to learn how you can Extract text from any image with the help of 3 line of python code. we also going to store the text in .txt file."
 }
 
 

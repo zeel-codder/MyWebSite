@@ -53,23 +53,30 @@ const Projects=()=>{
                 return (
 
                 <div key={id} className="BlogShort" >
-                <span className="title">{technology}</span>
+                {/* <span className="title">{technology}</span> */}
               
 
                 <div>
                 <h1>{title}</h1>
                 
                 {/* <img src={img} className="img" /> */}
-                
+{/*                 
                 {
 
                     img 
                     &&
                 
-                <Image src={img} className="img" width={1000} height={400} quality={100} />
-                }
+                // <Image src={img} className="img" width={1000} height={400} quality={100} />
+                } */}
                 <div className="description">{description}</div>
                 <div>
+
+                <div className="tech_list row">
+                    {
+                      technology.map((data,index)=><span id={index}>⭐ {data}</span>)
+                    }
+
+                </div>
                 
                 {
                     codelink 
@@ -92,8 +99,8 @@ const Projects=()=>{
                 })
             }
         {/* </ul> */}
-        <div className="code">
-            <Link href={`${WebLink}/me/tools`}>More Projects</Link>
+        <div className="code btn-more ">
+            <Link href={`${WebLink}/me/tools`}>More Projects 👑</Link>
         </div>
         </div>
         </div>

@@ -36,16 +36,29 @@ function Main() {
         <div className="main1" id="home">
          
             <img src='/images/home/zeel.jpeg' className="logo" alt="Zeel"></img>
+            <div className="text-box-one">
+
             <span className="logo-text" id="head">
-              Hello, I am zeel codder
-              <button className="btn" > 
-              <a href="/Resume.pdf">
+
+             Hi 👋, I am zeel
+
+            
+             
+            </span>
+
+            <span className="logo-texth">
+
+              I am Developer
+            </span>
+
+            <button className="btn">
+            <a href="/Resume.pdf">
                 
                 Resume
                 </a>
-                </button>
-            </span>
+            </button>
             
+            </div>
          
         </div>
 
@@ -53,7 +66,7 @@ function Main() {
         <section className="container mybox">
           
           <Introduction id="introduction"/>
-          <Education />
+          {/* <Education /> */}
           <Technology />
           <Projects />
           <Contact></Contact>

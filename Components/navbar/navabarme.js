@@ -111,7 +111,14 @@ function Navbar({data}) {
                     <li>
                         <MyLink href="/">My Blog</MyLink>
                     </li>
+
+                    <li className="resume">
+
+                   
+
+                    </li>
                     </ul>
+                    
             </div>
         </div>
 

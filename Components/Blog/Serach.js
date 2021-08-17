@@ -89,7 +89,7 @@ export default function Search({ data }) {
 
 
             <span className="row Topicl">
-            <PageviewIcon  className="sicon" />
+            {/* <PageviewIcon  className="sicon" /> */}
            
 
             {/* <span for="cars">Topics:</span> */}
@@ -145,7 +145,7 @@ export default function Search({ data }) {
                 </span>
 
 
-            <input className="form-input" type="search" name="search" value={query}
+            <input className="form-input si" type="search" name="search" value={query}
                 onChange={(e) => setquery(e.target.value)}
                 placeholder="Search Blogs..."
                 autoComplete="off"

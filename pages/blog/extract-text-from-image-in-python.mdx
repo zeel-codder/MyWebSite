@@ -1,0 +1,65 @@
+---
+title: Extract Text from Image in Python
+keywords: Python
+layout: 'post'
+summery: 'In this post you are going to learn how you can Extract text from any image with the help of 3 line of python code. we also going to store the text in .txt file.'
+---
+
+import {Image,MyLink} from '@Blog/image';
+
+# Extract Text from Image in Python
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1us84BjwV5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+In this post you are going to learn how you can Extract text from any image with the help of 3 line of python code. we also going to store the text in .txt file.
+
+## Sept 1: install python and pip in your Computer 
+
+Link to download Python in Pc: [Hear](https://www.python.org/downloads/)
+
+*Find more about Python You can find [Hear]()*
+
+
+Link to download pip In Python: [Hear](https://pip.pypa.io/en/stable/installation/)
+
+## Sept 2 : install Modules 
+
+1.[PIL](https://pillow.readthedocs.io/en/stable/installation.html)
+
+```bash
+pip install Pillow
+```
+
+2.[Pytesseract](https://pypi.org/project/pytesseract/)
+
+```bash
+pip install pytesseract
+```
+
+## Sept 3 : Write Code
+
+Create one .py file and copy pase code in it.
+
+```python
+try:
+    from PIL import Image
+except ImportError:
+    import Image
+import pytesseract
+
+
+f1=open('output.txt','w')
+f1.write((pytesseract.image_to_string(Image.open('index.png'))))
+```
+
+And By Running this code it will convert or Extract Text of index.png file and put the text in output.txt file.
+
+## Output
+
+Output.txt file
+
+```text
+ 
+Zeel is best
+
+```

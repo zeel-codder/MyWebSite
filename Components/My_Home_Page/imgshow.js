@@ -26,23 +26,22 @@ const ImageShow = ({data}) => {
 
 
     return (
-         <div  className="imgshow_div row" behavior="scroll" direction="right" >
+
+           
+      
+         <div  className="imgshow_div" behavior="scroll" direction="right" >
             {
                 data.map((Img, ImageIndex) => {
                     
                     const { title,imgurl, link } = Img;
-
+                    
                     //default all ImageDiv are next
                     
                     
                     return (
-                        <div className={`column`} style={{margin:"0 1rem"}}>
-                        <h1>{title}</h1>
-                        {/* <img src={imgurl} key={ImageIndex} className="logo" alt="ImageShowImage" /> */}
-                        <div className="imgeAnimationDiv">
-                        {/* <img src={imgurl} key={ImageIndex}  alt="ImageShowImage" /> */}
-                        <Image src={imgurl} key={ImageIndex}  alt="ImageShowImage"  width={400} height={400}/>
-                        </div>
+                        <div className={`column`} >
+                       👉 {title} 👈
+                    
                         </div>
                       
                       )
@@ -50,7 +49,9 @@ const ImageShow = ({data}) => {
                     })
                 }
            </div> 
-          
+        
+
+     
     )
 }
 

@@ -18,7 +18,7 @@ const Introduction = () => {
             <div className="box" name="introduction">
                 <h1>Introduction</h1>
                 <div className="text-container">
-                <img className="container-img" src="/images/home/introduction.svg" alt="Introduction Svg"></img>
+                {/* <img className="container-img" src="/images/home/introduction.svg" alt="Introduction Svg"></img> */}
                 {/* <img className="container-img" src="/images/home/introduction.svg" alt="Introduction Svg"  width={1200} height={400} /> */}
                  
                     <p className="para">

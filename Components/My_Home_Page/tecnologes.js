@@ -28,43 +28,43 @@ const Technology = () => {
     const data=[
         {
         title:'HTML,CSS,JS',
-        link:"#",
-        imgurl:"https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png"
+       
         },
         {
         title:'React js',
-        link:"#",
-        imgurl:"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        
         },
         {
         title:'Node js',
-        link:"#",
-        imgurl:"https://cdn3.iconfinder.com/data/icons/popular-services-brands/512/node-128.png"
+        
         },
         {
         title:'Java',
-        link:"#",
-        imgurl:"https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/181_Java-256.png"
+      
+        },
+        {
+            title:'C',
+          
         },
         {
         title:'Python',
-        link:"#",
-        imgurl:"https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png"
-        },
-        {
-        title:'C',
-        link:"#",
-        imgurl:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/140px-The_C_Programming_Language_logo.svg.png"
+      
         },
         {
             title:"next js",
-            link:"#",
-            imgurl:"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+          
         },
         {
-            title:"React-Native",
-            link:"#",
-            imgurl:"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+            title:"DBMS",
+        
+        },
+        {
+            title:"Flask",
+        
+        },
+        {
+            title:"",
+        
         },
 
         
@@ -73,10 +73,10 @@ const Technology = () => {
     return (
         <div id="theology">
                 <h1 style={{textAlign: 'center'}}>Technology</h1>
-            <div className="box row" id="theology">
+            
                 {/* <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img> */}
                 <Imgshow data={data}></Imgshow>  
-            </div>
+            
         </div>)
 }
 

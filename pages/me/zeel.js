@@ -26,11 +26,7 @@ const NavData=[
       title:"Introduction",
       link:"introduction",
   },
-  {
-      id:3,
-      title:"Education",
-      link:"education",
-  },
+ 
   {
       id:4,
       title:"Technology",

@@ -8,22 +8,29 @@ this main root variables
 }
 
 
-::selection{
-  /* color: red; */
-  /* opacity: 1 !important; */
-  background: yellow;
-  /* color: black; */
-}
-.row,.column{
+
+.row,.column,.text-box-one{
   display:flex !important;
   align-items: center;
   flex-direction:row;flex-wrap: wrap;
   justify-content: center;
 }
+
+.text-box-one .btn{
+  margin: 1rem 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
 .topic h1{
   color: white;
 }
-.column{
+.text-box-one{
+  line-height: 3.5rem;
+  align-items: flex-start;
+}
+.column,.text-box-one{
   flex-direction:column;
 }
 .row *,.column *{
@@ -66,9 +73,17 @@ body{
     --hadderbg:#021750;
     --color:white;
     --font_size:1.3rem;
-    --bgi:linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    --bgi:linear-gradient(      360deg      , #0d135d 0%, #0d135d 74%);
     --radius:12px;
+
+    background-image: var(--bgi);
 }
+
+body *,._li._li._li,.blog-container > h2{
+  color: white;
+}
+
+
 
 
 
@@ -89,14 +104,18 @@ body{
   margin: 1rem;
 }
 
-.logo-text{
+.logo-text,.logo-texth{
 
   color: white;
-  background-color:black;
-    font-size: 1.8rem;
+  /* background-color:black; */
+    font-size: 5rem;
     padding: 10px;
     text-align: center;
     z-index: 2;
+}
+
+.logo-texth{
+  opacity: .7;
 }
 
 .logo-text button{
@@ -110,7 +129,7 @@ body{
   height: 100vh;
   display: flex;
   background-color: #2d3436;
-background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-image: var(--bgi);
 
   align-items: center;
   overflow-x: hidden;
@@ -139,6 +158,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
 .blog_main1 img{
   opacity: .6;
 }
+
 
 
 
@@ -209,7 +229,7 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);/* W3C, IE 10
   align-items: center;
   justify-content:space-between;
   background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  background-image: var(--bgi);
   flex-wrap: wrap;
   width: 100%;
   cursor: pointer;
@@ -324,10 +344,23 @@ p{
   position: relative;
   height: auto;
   width: 100%;
-  display: flex;
+
   margin: 0 auto;
   cursor: pointer;
   align-items: center;
+}
+
+.imgshow_div > div , .tem> div{
+  width: fit-content;
+  align-items: flex-start !important;
+  font-size: 20px;
+  margin: 0 auto !important;
+  text-transform: capitalize;
+}
+
+.tem img{
+  width: 100%;
+  /* height: 30rem; */
 }
 .pointh{
   transform: scale(1.03);
@@ -443,7 +476,7 @@ h1{
 
 .container h1:hover{
 
-  color: var(--form-bg);
+  /* border-bottom:1px solid var(--form-bg); */
   cursor: pointer;
 }
 
@@ -542,6 +575,7 @@ h1{
   justify-content: center;
   padding: 10px;
   align-items: center;
+  border-top: 1px solid var(--form-bg);
 }
 .footer ul::before{
   content: 'Follow Me On';
@@ -628,6 +662,9 @@ h1{
   margin: 0;
   padding: 15px;
 }
+.item1 *{
+  color: black;
+}
 .userInfo .form-input{
   border: 2px solid var(--hadderbg);
   color: black !important;
@@ -671,6 +708,8 @@ h1{
 ::placeholder { 
   /* color: white; */
   opacity: 1; /* Firefox */
+  /* font-weight: bolder; */
+  color: white;
 }
 .form div{
   display: flex;
@@ -773,6 +812,16 @@ margin: 0;
 For Mobile
 ========================================= */
 @media only screen and (max-width: 1200px) {
+
+  .logo-text, .logo-texth,.text-box-one .btn{
+    font-size: 2rem !important;
+    line-height: 1rem;
+    margin: 1rem 0 !important;
+    text-align: start;
+    padding: 0;
+  }
+
+
   #layout{
     /* width: 70%;{ */
     width: 95%;
@@ -859,7 +908,7 @@ For Mobile
     height: 75vh;
   }
   .logo{
-    width: 66%;
+    width: 40%;
   }
   .logo-text .btn{
     padding:0 ;
@@ -958,9 +1007,8 @@ For Mobile
     transition: var(--transition1);
   }
   .nav-icon{
-    background-image: linear-gradient( 
-  315deg
-  , #2d3436 0%, #000000 74%);
+    background-image: var(--bgi);
+    border-bottom: 1px solid var(--form-bg);
     
   }
   .navabar-ul li{

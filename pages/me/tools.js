@@ -32,7 +32,7 @@ function ToolList(){
             return(
               <div key={id} className="BlogShort">
                 <div>
-                <span className="title">{technology}</span>
+                {/* <span className="title">{technology}</span> */}
                 <h1>{title}</h1>
                 </div> 
 
@@ -43,6 +43,13 @@ function ToolList(){
                 <div>
                 <div className="description">{description}</div>
                 <div>
+
+                <div className="tech_list row">
+                    {
+                      technology.map((data,index)=><span id={index}>⭐ {data}</span>)
+                    }
+
+                </div>
                 
                 {
                   codelink 

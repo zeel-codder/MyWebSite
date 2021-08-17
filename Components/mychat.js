@@ -23,7 +23,7 @@ export default function mychat({key1}) {
        
         
 
-<div className="fb-comments" data-href={`${link}`} data-colorscheme="dark"  data-width="100%" data-numposts="10"></div>
+<div className="fb-comments" data-href={`${link}`} data-colorscheme="light"  data-width="100%" data-numposts="10"></div>
 
      
         </div>

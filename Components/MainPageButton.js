@@ -36,12 +36,12 @@ function MainPageButton() {
 
     const GOTO = document.querySelector('.Goto_top');
     const Bottom = document.querySelector('.bottom');
-    const Dark = document.querySelector('.DarkMode');
+   
 
-    if (isOpen && GOTO && Dark) {
+    if (isOpen && GOTO) {
       GOTO.classList.toggle('Goto_top-show');
       Bottom.classList.toggle('bottom-show');
-      Dark.classList.toggle('DarkMode-show');
+    
     }
 
 
@@ -59,14 +59,14 @@ function MainPageButton() {
         window.scrollTo({ top: document.querySelector("#__next").offsetHeight, behavior: 'smooth' })
       }}></BiLeftTopArrowCircle>
 
-      <CgDarkMode className="DarkMode" onClick={() => {
+      {/* <CgDarkMode className="DarkMode" onClick={() => {
 
         document.querySelector("body").classList.toggle("dark");
         const form = document.querySelector(".form");
         form !== null && form.classList.toggle("light-dark");
 
 
-      }}></CgDarkMode>
+      }}></CgDarkMode> */}
 
       <DiOpensource className="Icon" onClick={() => setIsOpen(!isOpen)}></DiOpensource>
     </div>

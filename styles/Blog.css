@@ -3,7 +3,7 @@
 Main Page
 =============================================== */
 
-  .blog-container > p,.blog-container > pre,.tools *,.container p,.para,.blog-container  li{
+  .blog-container > p,.blog-container > pre,.tools *,.container p,.para,.blog-container  li,.imgshow_div > div{
     
     line-height: 34px;
     font-size: 20px;
@@ -65,6 +65,9 @@ Main Page
     margin: 1rem auto;
     text-align: center;
 
+}
+.blog-container *{
+    color: white;
 }
 @keyframes ShowLogin {
     0%{
@@ -133,6 +136,7 @@ Main Page
     font-size: 3rem;
 }
 .blog-container > h2{
+    color: white !important;
     
     opacity: .7;
 }
@@ -142,18 +146,22 @@ Main Page
     
     text-decoration: none;
     text-decoration: none;
-    color: blue;
+    color: white;
     margin: .2rem 0;
-
+    
 }
 
+.blog-container > p >a{
+    text-decoration: underline;
+
+}
 .blog-container > a{
     padding: .4rem;
     text-align: justify;
 }
 .BlogInformation >span,.BlogInformation > p{
     margin: 0;
-    color: black;
+    /* color: black; */
 }
 .tech{
     text-transform: capitalize;
@@ -170,6 +178,10 @@ Main Page
     padding: .5rem;
     font-size: 1.5rem;
 }
+
+.Link-Page svg{
+    color: red;
+}
 .Link-Page > *{
    padding-right: .2rem;
 }
@@ -179,7 +191,7 @@ em{
     background-color: yellow;
     /* font-family: inherit; */
     padding: 6px;
-    /* color: white; */
+    color: black !important;
 
     font-style:normal;
     font-weight:bold;
@@ -190,6 +202,9 @@ em{
     line-height: 1.9rem;
     text-align: start;
     opacity: 0.80;
+}
+.fb-comments{
+    background: white;
 }
 /* .code-toolbar::before{
     content: "code";
@@ -243,6 +258,18 @@ em{
     display: inline;
     /* margin: 0 6px; */
     margin-right: 16px;
+
+}
+.tools .btn-more {
+
+    /* display: block; */
+
+    /* margin: 0; */
+    /* width: 100%; */
+    text-align: center;
+    padding: 1rem;
+
+
 
 }
 .tools *{
@@ -328,6 +355,7 @@ p > img{
 .BlogShort:hover{
 
     box-shadow: 0px 0 10px #7e799a;
+    cursor: pointer;
 }
 .blog-a{
     text-decoration: none;
@@ -499,12 +527,18 @@ svg{
 .Serach  .hl{
     font-weight: bold;
     font-weight: bold;
+    color: black;
     /* color: rgb(11, 101, 104); */
+}
+
+.si::placeholder{
+    color: black;
 }
 .Serach .title,.Serach .text{
     cursor: pointer;
     text-transform:lowercase;
     font-size: 1rem !important;
+    color: black;
 
 }
 .Serach .text{
@@ -544,6 +578,10 @@ svg{
 .Serach a:hover{
     background-color: blue;
 } */
+
+.resume{
+    align-self: flex-end;
+}
 .Serach ul{
     position: absolute;
     /* transform: translatey(100%); */
@@ -867,6 +905,9 @@ Like
 }
 
 @media only screen and (max-width: 800px) {
+   .blog-container iframe {
+       width: 100%;
+   }
     .imgdiv {
         width: 70%;
         height: 14rem;
@@ -898,6 +939,9 @@ Like
     }
 }
 @media only screen and (max-width: 400px) {
+    .logo-text, .logo-texth,.text-box-one .btn{
+        font-size: 1.5rem !important;
+    }
     .ListOfBlogs{
         grid-template-columns: 95%;
     }
@@ -913,13 +957,16 @@ Like
 .User{
     width: 100% !important;
 }
+.tech_list span{
+    margin: 1rem .3rem;
+}
 
 
 
 
 @media only screen and (max-width: 300px) {
 
-    .blog-container  h1,h1,.BlogInformation >span{
+    .blog-container  h1,h1,.BlogInformation >span,.blog-container > h2{
         font-size: 1.4rem;
         margin:10px 0;
         line-height: 31px;
