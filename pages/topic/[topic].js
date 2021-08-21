@@ -18,6 +18,8 @@ import Template from '@Layout/Template'
 // import BlogShort from "@Blog/BlogShort";
 // import BlogLoad from "Components/loading/BlogLoadder";
 import List from '@Blog/listBlog'
+import axios from "axios";
+import { WebLink } from "@const/List";
 
 // import loadable from '@loadable/component'
 // const Template = loadable(() => import('@Layout/Template'))
@@ -47,12 +49,12 @@ export default Blogoftopic;
 
 
 
-function BlogPage({ topic }) {
+function BlogPage({ topic,Data }) {
 
 
 
 
-  return <List topic={topic} isTopic={true}></List>
+  return <List topic={topic}  Data={Data} isTopic={true}></List>
 
 }
 
@@ -62,8 +64,17 @@ export async function getStaticProps(context) {
   const title = topic;
   const keywords = `zeel codder ${topic}`;
   const description=`Find blog on topic ${title}`
+  let data1 = await axios.get(WebLink + '/api/blog/blog')
+  .then((res) => {
 
-  const data={title, keywords, topic,description}
+      return res.data;
+  })
+  .catch((err) => { return; })
+
+  const data={title, keywords, topic,description,Data:data1}
+
+  // console.log(data)
+
 
   return {
     props: { data }

@@ -20,7 +20,7 @@ const Meta = ({ title, keywords, description }) => {
     try {
       // const number=document.querySelectorAll('.adsbygoogle').length;
 
-      console.log(description)
+      // console.log(description)
       for (let i = 0; i < 3; i++) {
         // console.log('call')
 
@@ -69,13 +69,9 @@ const Meta = ({ title, keywords, description }) => {
         }}
       />
 
-      <script async data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      {/* <script async data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
 
-      <meta property="" content=""></meta>
-      <meta property="og:title" content={title} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://zeelcodder.tech/" />
-      <meta property="og:description" content={description || 'zeel-codder web site for programmer and student. the web site where you find blog on demanding technology. Read and make you life good.'} />
+   
 
 
 

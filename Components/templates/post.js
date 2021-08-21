@@ -74,11 +74,11 @@ export default function Post({ children, frontMatter }) {
 
       {/* <Tem></Tem> */}
       <div className="center">
-        <ins className="adsbygoogle top-add add"
-          style={{ display: 'inline-block' }}
-          data-ad-client="ca-pub-4438223892792479"
-          data-ad-slot="5009297566"></ins>
-      </div>
+                <ins className="adsbygoogle top-add add"
+                    style={{ display: 'inline-block' }}
+                    data-ad-client="ca-pub-4438223892792479"
+                    data-ad-slot="5009297566"></ins>
+            </div>
 
       <div className="blog-container">
           
@@ -131,12 +131,12 @@ export default function Post({ children, frontMatter }) {
 
 
       </div>
-      <ins className="adsbygoogle add"
-        style={{ display: 'block' }}
-        data-ad-layout="in-article"
-        data-ad-format="fluid"
-        data-ad-client="ca-pub-4438223892792479"
-        data-ad-slot="9033777830"></ins>
+      <div className="center">
+                <ins className="adsbygoogle top-add add"
+                    style={{ display: 'inline-block' }}
+                    data-ad-client="ca-pub-4438223892792479"
+                    data-ad-slot="5009297566"></ins>
+            </div>
 
 
 
