@@ -260,6 +260,17 @@ em{
     margin-right: 16px;
 
 }
+.btn-bg{
+    border: none !important;
+    box-shadow: none !important;
+}
+.code{
+    margin: 0 !important;
+}
+.btn-more{
+    width: 100%;
+    text-align: center;
+}
 .tools .btn-more {
 
     /* display: block; */

@@ -24,7 +24,7 @@ import Projects from './projects';
 import Contact from './contect';
 import React from "react";
 
-
+import Fade from 'react-reveal/Fade';
 // ====================================
 
 
@@ -37,6 +37,7 @@ function Main() {
          
             <img src='/images/home/zeel.jpeg' className="logo" alt="Zeel"></img>
             <div className="text-box-one">
+            <Fade top>
 
             <span className="logo-text" id="head">
 
@@ -45,6 +46,8 @@ function Main() {
             
              
             </span>
+            </Fade>
+            <Fade bottom>
 
             <span className="logo-texth">
 
@@ -58,6 +61,7 @@ function Main() {
                 </a>
             </button>
             
+            </Fade>
             </div>
          
         </div>

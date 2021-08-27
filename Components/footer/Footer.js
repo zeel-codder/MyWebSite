@@ -24,6 +24,7 @@ import React from "react";
 
 const Footer = () => {
     return (
+     
 
         <div className="footer-container">
 
@@ -43,6 +44,7 @@ const Footer = () => {
                 </ul>
             </div>
         </div>
+        
     )
 }
 

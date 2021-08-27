@@ -21,6 +21,7 @@ import loadable from 'next/dynamic'
 const  Loading = loadable(() => import('../Loadding'))
 // import Loading from '../Loadding';
 import {SetMailInContactForm } from '@api/User-Blog-Api'
+
 // ====================================
 
 const Context = () => {
@@ -71,11 +72,13 @@ const Context = () => {
                 loading ? <Loading /> : null
 
             }
-
+           
             <div >
 
-            
+                
 
+            
+          
             <h1 id="contact">Contact Form</h1>
             <div className="row con">
                 <div>
@@ -108,7 +111,10 @@ const Context = () => {
                 </form>
 
             </div>
+      
             </div>
+
+           
         </>
     )
 }

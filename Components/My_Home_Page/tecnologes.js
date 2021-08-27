@@ -18,6 +18,7 @@
 import Imgshow from './imgshow'
 import React from "react";
 // import { useGlobalContext } from '../conte/xt';
+
 // ====================================
 
 
@@ -25,7 +26,7 @@ import React from "react";
 const Technology = () => {
 
     // const Info = ['HTML,CSS,JS', 'React js', 'Node js', 'Java', 'Python', 'C']
-    const data=[
+    const Web=[
         {
         title:'HTML,CSS,JS',
        
@@ -34,48 +35,93 @@ const Technology = () => {
         title:'React js',
         
         },
-        {
-        title:'Node js',
-        
-        },
-        {
-        title:'Java',
+       
       
-        },
-        {
-            title:'C',
-          
-        },
-        {
-        title:'Python',
-      
-        },
         {
             title:"next js",
           
-        },
-        {
-            title:"DBMS",
-        
         },
         {
             title:"Flask",
         
         },
         {
-            title:"",
-        
+            title:'Node js',
+            
         },
-
+      
+      
+        
+        
         
         
     ]
+    
+    const L=[
+     
+        {
+            title:'Java',
+          
+            },
+            {
+            title:'Python',
+          
+            },
+            {
+                title:'TypeScript',
+              
+            },
+            {
+                title:'Javascript',
+              
+            },
+            {
+                title:'C',
+              
+            },
+
+
+    ]
+    const Tools=[
+   
+        {
+            title:"DBMS",
+        
+        },
+        {
+            title:"MLOps",
+        
+        },
+      
+
+
+    ]
     return (
         <div id="theology">
-                <h1 style={{textAlign: 'center'}}>Technology</h1>
+                <h1 >Technology</h1>
             
+            <div className="prow">
+
                 {/* <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img> */}
-                <Imgshow data={data}></Imgshow>  
+               
+              <div className="imgshow_div">
+                  <h3>Web development</h3>
+
+
+                <Imgshow data={Web} ></Imgshow> 
+              </div  >
+                
+              <div className="imgshow_div">
+                   <h3>Programming Language</h3>
+
+                <Imgshow data={L}></Imgshow>  
+              </div>
+              <div className="imgshow_div"> 
+                  <h3>Tools</h3>
+
+                <Imgshow data={Tools}></Imgshow>  
+              </div>
+            </div>
             
         </div>)
 }

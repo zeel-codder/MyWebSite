@@ -340,23 +340,49 @@ p{
   z-index: -1;
 }
 
+.prow{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+.prow *{
+  width: 50%;
+}
 .imgshow_div{
   position: relative;
   height: auto;
-  width: 100%;
+  width: fit-content;
+
+  align-items: flex-start;
 
   margin: 0 auto;
+  width: 30%;
   cursor: pointer;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .imgshow_div > div , .tem> div{
   width: fit-content;
   align-items: flex-start !important;
   font-size: 20px;
-  margin: 0 auto !important;
+  /* margin: 0 auto !important; */
   text-transform: capitalize;
+  margin: .5rem 0;
 }
+/* ..imgshow_div > div{ */
+
+  #theology >div,.imgshow_div>div{
+    /* text-align: center; */
+    /* align-content: center; */
+    justify-content: center;
+    /* width: 100%; */
+
+  }
+  .imgshow_div>h3{
+    display: inline;
+  }
+/* } */
 
 .tem img{
   width: 100%;
@@ -578,7 +604,7 @@ h1{
   border-top: 1px solid var(--form-bg);
 }
 .footer ul::before{
-  content: 'Follow Me On';
+  content: 'Find Me On';
 }
 
 .footer-ul{

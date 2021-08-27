@@ -24,6 +24,8 @@ import Link from 'next/link';
 import Image from "next/image";
 // import { useGlobalContext } from '../context';
 import P from '@Data/project/tools'
+// import ScrollAnimation from 'react-animate-on-scroll';
+import Zoom from 'react-reveal/Zoom';
 // ====================================
 
 
@@ -42,17 +44,20 @@ const Projects=()=>{
         {/* <div className="row"> */}
 
         {/* <img className="container-img" src='/images/home/project.jpg' alt="Project svg"></img> */}
+  
+        
         <div className="tools" >
      
 
            {
                ProjectData.map((data,index)=>{
-
-                const {id,technology,description,codelink ,link,title,img}=data
+                   
+                   const {id,technology,description,codelink ,link,title,img}=data
   
-                return (
-
-                <div key={id} className="BlogShort" >
+                   return (
+                    <Zoom >
+                       
+                       <div key={id}  className="BlogShort">
                 {/* <span className="title">{technology}</span> */}
               
 
@@ -62,18 +67,18 @@ const Projects=()=>{
                 {/* <img src={img} className="img" /> */}
 {/*                 
                 {
-
+                    
                     img 
                     &&
-                
-                // <Image src={img} className="img" width={1000} height={400} quality={100} />
+                    
+                    // <Image src={img} className="img" width={1000} height={400} quality={100} />
                 } */}
                 <div className="description">{description}</div>
                 <div>
 
                 <div className="tech_list row">
                     {
-                      technology.map((data,index)=><span id={index}>⭐ {data}</span>)
+                        technology.map((data,index)=><span id={index}>⭐ {data}</span>)
                     }
 
                 </div>
@@ -95,12 +100,16 @@ const Projects=()=>{
                 </div>
               
             </div>
+            </Zoom>
                 )
-                })
-            }
+            })
+        }
         {/* </ul> */}
+        <div  className="BlogShort btn-bg">
+
         <div className="code btn-more ">
-            <Link href={`${WebLink}/me/tools`}>More Projects 👑</Link>
+            <Link href={`${WebLink}/me/tools`}>Find More 👑</Link>
+        </div>
         </div>
         </div>
         </div>

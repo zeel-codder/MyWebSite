@@ -17,7 +17,7 @@ import React from "react";
 // import { useGlobalContext } from '../context';
 // ====================================
 import Image from "next/image";
-
+import Zoom from 'react-reveal/Zoom';
 
 const ImageShow = ({data}) => {
 
@@ -39,10 +39,12 @@ const ImageShow = ({data}) => {
                     
                     
                     return (
+                            <Zoom right>
                         <div className={`column`} >
-                       👉 {title} 👈
+                       👉 {title}
                     
                         </div>
+                        </Zoom>
                       
                       )
                       

@@ -7,6 +7,7 @@ import {useEffect, useLayoutEffect} from 'react';
 import {UserLogin} from '@api/User-Blog-Api'
 import {User} from '@const/List'
 import { useRouter } from 'next/router';
+// import "animate.css";
 
 
 function MyApp({ Component, pageProps }) {
