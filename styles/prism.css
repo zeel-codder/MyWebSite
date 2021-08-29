@@ -1,17 +1,13 @@
-/**
- * MIT License
- * Copyright (c) 2018 Sarah Drasner
- * Sarah Drasner's[@sdras] Night Owl
- * Ported by Sara vieria [@SaraVieira]
- * Added by Souvik Mandal [@SimpleIndian]
+/*
+ * Z-Toch
+ * by Zeel Codder
+ * https://github.com/zeel-codder
+ *
  */
- /* pre[class*="language-"]{
-	 border-radius: 12px;
- } */
 code[class*="language-"],
-pre[class*="language-"] {
-	color: #d6deeb;
-	font-family:Arial, Helvetica, sans-serif;
+pre[class*="language-"]{
+	color: #22da17;
+	font-family:monospace;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -28,9 +24,12 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-	line-height: 27px;
+	line-height: 25px;
     font-size: 18px;
     margin: 5px 0;
+}
+pre[class*="language-"] *{
+	font-family:monospace;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -66,7 +65,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	color: white;
-	background: #011627;
+	background: #0a143c;
 	padding: 22px;
 }
 
@@ -119,7 +118,7 @@ pre[class*="language-"] {
 .token.function,
 .token.builtin,
 .token.char {
-	color: rgb(130, 170, 255);
+	color: rgb(34 183 199);
 }
 
 .token.selector,
@@ -162,18 +161,18 @@ pre[class*="language-"] {
 .token.italic {
 	font-style: italic;
 }
-div.code-toolbar{
+/* div.code-toolbar{
 	padding: .2rem;
 }
 div.code-toolbar > .toolbar span, div.code-toolbar > .toolbar button{
    cursor: pointer !important;
    /* font-size: 1./5rem !important; */
-   margin-top:5px;
-}
-div.code-toolbar > .toolbar button:hover,div.code-toolbar > .toolbar span:hover{
-	color:black !important;
-}
-div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span{
-	padding: .2rem .5em !important;
-}
+   /* margin-top:5px; */
+/* } */
+/* div.code-toolbar > .toolbar button:hover,div.code-toolbar > .toolbar span:hover{ */
+	/* color:black !important; */
+/* } */
+/* div.code-toolbar > .toolbar a, div.code-toolbar > .toolbar button, div.code-toolbar > .toolbar span{ */
+	/* padding: .2rem .5em !important; */
+/* } */
 
