@@ -119,7 +119,7 @@ function Navbar() {
 
                             <Link href='/me/tools'>
 
-                                Tools
+                                Projects
                             </Link>
                         </li>
                     </div>

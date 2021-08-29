@@ -15,7 +15,7 @@ import Like from './Like'
 import Link from 'next/link'
 import { WebLink } from '@const/List';
 import Image from 'next/image'
-
+import Zoom from 'react-reveal/Zoom';
 
 const BlogShort = (props) => {
 
@@ -24,12 +24,12 @@ const BlogShort = (props) => {
     return (
         <>
             <a href={`${WebLink}/blog/${name}`} className="BlogShort" data-interception='off'>
-           
             
               
                 <div className="imgdiv">
                 <Image src={img} layout="fill" alt='BlogShort Img'   />
                 </div>    
+            <Zoom >
                 <div className="BlogInformation" key={id}>
                     <span className="Blogtitle">{title}</span>
                     <p>{summery}</p>
@@ -39,7 +39,7 @@ const BlogShort = (props) => {
                         {/* </button> */}
                 </div>
                 <span className="tech">{topic}</span>
-           
+            </Zoom>
             </a>
         </>
     )

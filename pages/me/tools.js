@@ -2,6 +2,7 @@ import React from "react";
 import Template from '@Layout/Template'
 import ToolsData from 'Data/project/tools'
 import ChatBox from 'Components/mychat'
+import Zoom from 'react-reveal/Zoom';
 // import Link from 'next/link'
 // import Image from "next/image";
 
@@ -30,6 +31,7 @@ function ToolList(){
             const {id, title, description,imgurl,codelink,link, technology,img}=data;
             
             return(
+              <Zoom >
               <div key={id} className="BlogShort">
                 <div>
                 {/* <span className="title">{technology}</span> */}
@@ -38,7 +40,7 @@ function ToolList(){
 
               
 
-                <img src={img} className="img" />
+                {/* <img src={img} className="img" /> */}
                 {/* <Image  className="img" src={img}  width={1000} height={400} quality={100} /> */}
                 <div>
                 <div className="description">{description}</div>
@@ -69,6 +71,7 @@ function ToolList(){
               
             </div>
 
+        </Zoom >
              )
 
         })

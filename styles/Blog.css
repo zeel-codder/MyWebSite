@@ -528,7 +528,9 @@ svg{
     position: relative;
     width: 100% !important;
     /* padding: 1rem 0 !important; */
-    /* border-bottom: 2px solid var(--form-bg); */
+    color: white !important;
+    background: var(--form-bg);
+    border-bottom: 2px solid white;
 
 }
 
@@ -538,7 +540,7 @@ svg{
 .Serach  .hl{
     font-weight: bold;
     font-weight: bold;
-    color: black;
+    /* color: black; */
     /* color: rgb(11, 101, 104); */
 }
 
@@ -549,7 +551,7 @@ svg{
     cursor: pointer;
     text-transform:lowercase;
     font-size: 1rem !important;
-    color: black;
+    /* color: black; */
 
 }
 .Serach .text{

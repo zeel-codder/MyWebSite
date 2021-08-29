@@ -13,7 +13,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import dynamic from 'next/dynamic'
 const BlogShort = dynamic(() => import('@Blog/BlogShort'))
-
+import Zoom from 'react-reveal/Zoom';
 
 
 function BlogList({ isTopic, topic, Data }) {

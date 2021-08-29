@@ -163,7 +163,7 @@ export default function Search({ data }) {
                                 <a href={WebLink + `/blog/${name}`}>
                                     {/* <span className="title" dangerouslySetInnerHTML={{ __html: topic }}></span> */}
                                     <a href={WebLink + `/blog/${name}`}>
-                                        <span className="text" dangerouslySetInnerHTML={{ __html: title }}>
+                                        <span className="text" dangerouslySetInnerHTML={{ __html: "👉 "+title }}>
                                         </span>
                                     </a>
                                 </a>

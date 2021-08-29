@@ -5,7 +5,7 @@ const data=[
     
         title:'My Introduction',
         technology:['next js','Netlify','mongodb'],
-        description:'A blogging web site which build on next js. Web-site main function are User Auth , User can read the blogs , Search blogs and also like or share the blog.',
+        description:'My Personal Web site Build with the power of Next Js. App Has User Authentication, Nice Ui, Blogs on Trending Tech, Blog Like and Comment functionality.',
         codelink:'https://github.com/zeel-codder/MyWebSitNextjs',
         link:'https://zeelcodder.tech/',
         img:'/images/projects/my-blog.png'
@@ -14,40 +14,52 @@ const data=[
         id:6,
         title:'Anteryami_GameZone',
         technology:['Java','Oops'],
-        description:'The Sudoku and Tic_Tac_Toe Games build in Java. In this project I am crate fully function java program to play Sudoku and Tic_Tac_Toe Games in Terminal.',
+        description:'The Sudoku and Tic_Tac_Toe Games build in Java.',
         codelink:'https://github.com/zeel-codder/java_Tic-Tac-Toe_Sudoku_Games',
         link:''
     },
-    {
-        id:2,
-    
-        title:'Anteryamin-store',
-        technology:['Html','Css','Js'],
-        description:'A e-commerce web site which build on Only Html,css and js. Main function are User Login, singing , see the item or product of store, sort or search the item by name and price and add item or remove to cart.',
-        codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
-        link:'https://anteryaminstore.netlify.app/',
-        img:'/images/projects/Anteryami-store.png'
-    },
+   
     {
         id:3,
     
         title:'SPI Calculator',
         technology:['Python','flask','jinja'],
-        description:'This project is used to find spi of student of nirma university Technology. Currently we have only four branch data so user can only calculate the spi of four branch.',
+        description:'Spi Calculator for Nirma University Student. Student Can Find Spi with In Build calculator and also by selecting branch and Grade.',
         codelink:'https://github.com/zeel-codder/spi',
         link:'https://zeelprajapati123.pythonanywhere.com/',
         img:'/images/projects/spi.png'
     
     },
     {
+        id:5,
+    
+        title:'Meam-Hub',
+        technology:['Html','Css','TypeScript'],
+        description:'Random Meam Generator App Build In TypeScript ',
+        codelink:'https://github.com/zeel-codder/Meme-Hub',
+        link:'https://meam-hub.netlify.app/',
+        img:'/images/projects/BookMark.png'
+    },
+    {
         id:4,
     
         title:'My BookMark',
         technology:['Html','Css','Js'],
-        description:'This project is used to find spi of student of nirma university Technology. Currently we have only four branch data so user can only calculate the spi of four branch.',
+        description:'Book-Mark App Like  Browser BookMark.For Filter BookMark, add new BookMark etc. ',
         codelink:'https://github.com/zeel-codder/BookMarks',
         link:'https://mybookmarks1.netlify.app/',
         img:'/images/projects/BookMark.png'
+    },
+   
+    {
+        id:2,
+    
+        title:'Anteryamin-store',
+        technology:['Html','Css','Js'],
+        description:'AE-commerce website Demo built with HTML, CSS, and JS only. Users can filer items, add them to the card, remove items from the card.',
+        codelink:'https://github.com/zeel-codder/AnteryamiStore-e-commerce-website-',
+        link:'https://anteryaminstore.netlify.app/',
+        img:'/images/projects/Anteryami-store.png'
     },
     {
         id:5,
