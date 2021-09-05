@@ -15,6 +15,7 @@ module.exports = composePlugins([
   mdxEnhanced({
     layoutPath: './Components/templates'
   })
+ 
 ], {
   target: 'serverless',
   webpack: function (config) {

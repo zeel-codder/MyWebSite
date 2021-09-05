@@ -38,7 +38,7 @@ export async function getStaticProps(context) {
   .catch((err) => { return; })
 
   return {
-    props: { Data  : data}
+    props: { Data  : data || []}
   }
 }
 

@@ -22,7 +22,7 @@ const Introduction = () => {
                 {/* <img className="container-img" src="/images/home/introduction.svg" alt="Introduction Svg"  width={1200} height={400} /> */}
                  
                     <p className="para">
-                    My name is Zeel Sureshbhai Prajapati.I am living in kalol, Gujarat. Presently, I am pursuing Computer Science at Nirma University. I love to code. I am doing competitive programming and using java for competitive programming. I am open source enthusiastic Javascript is my favorite language. I do projects on web development. I have knowledge of Python, C, and C++-like languages. I love to learn new things every day.
+                    My name is Zeel Sureshbhai Prajapati.I am pursuing B-tech Computer Science at Nirma University. I am a developer. I like to create websites. I have knowledge about React js, Next js, Node js, Flask like web frameworks or Libraries. I worked in full-stack as well as frontend projects. I am an open-source enthusiast. I work in Java, Python, Javascript, TypeScript like Languages. I am learning new things every day and keep growing every day.
                     </p>
                 </div>
                     

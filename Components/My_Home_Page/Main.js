@@ -55,7 +55,7 @@ function Main() {
             </span>
 
             <button className="btn">
-            <a href="/Resume.pdf">
+            <a href="https://drive.google.com/file/d/1mkCDqYevcKf8cuSH2ChvB-sjcVbyydAR/view?usp=sharing">
                 
                 Resume
                 </a>
