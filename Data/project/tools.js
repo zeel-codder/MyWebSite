@@ -7,7 +7,7 @@ const data=[
         technology:['next js','Netlify','mongodb'],
         description:'My Personal Web site Build with the power of Next Js. App Has User Authentication, Nice Ui, Blogs on Trending Tech, Blog Like and Comment functionality.',
         codelink:'https://github.com/zeel-codder/MyWebSitNextjs',
-        link:'https://gun-master-game.netlify.app/',
+        link:'https://zeelcodder.tech/',
         img:'/images/projects/my-blog.png'
     },
     {
@@ -17,7 +17,7 @@ const data=[
         technology:['TypeScript','Html5 Canvas','Node js','Socket-io'],
         description:'A Multiplayer Shotting Game Build in Html5 canvas and Node js. A hero can shoot the enemy by gun and play the game. Game support both guests as well as Multiplier Mode',
         codelink:'https://github.com/zeel-codder/Game',
-        link:'https://zeelcodder.tech/',
+        link:'https://gun-master-game.netlify.app/',
         
     },
 
