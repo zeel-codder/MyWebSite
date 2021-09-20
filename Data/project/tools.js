@@ -6,12 +6,23 @@ const data=[
         title:'My Introduction',
         technology:['next js','Netlify','mongodb'],
         description:'My Personal Web site Build with the power of Next Js. App Has User Authentication, Nice Ui, Blogs on Trending Tech, Blog Like and Comment functionality.',
-        codelink:'https://github.com/zeel-codder/MyWebSitNextjs',
+        codelink:'https://github.com/zeel-codder/Game',
         link:'https://zeelcodder.tech/',
         img:'/images/projects/my-blog.png'
     },
     {
-        id:6,
+        id:2,
+        
+        title:'Gun master',
+        technology:['TypeScript','Html5 Canvas','Node js','Socket-io'],
+        description:'A Multiplayer Shotting Game Build in Html5 canvas and Node js. A hero can shoot the enemy by gun and play the game. Game support both guests as well as Multiplier Mode',
+        codelink:'https://github.com/zeel-codder/MyWebSitNextjs',
+        link:'https://gun-master-game.netlify.app/',
+        
+    },
+
+    {
+        id:3,
         title:'Anteryami_GameZone',
         technology:['Java','Oops'],
         description:'The Sudoku and Tic_Tac_Toe Games build in Java.',
@@ -20,7 +31,7 @@ const data=[
     },
    
     {
-        id:3,
+        id:4,
     
         title:'SPI Calculator',
         technology:['Python','flask','jinja'],
@@ -41,7 +52,7 @@ const data=[
         img:'/images/projects/BookMark.png'
     },
     {
-        id:4,
+        id:6,
     
         title:'My BookMark',
         technology:['Html','Css','Js'],
@@ -52,7 +63,7 @@ const data=[
     },
    
     {
-        id:2,
+        id:7,
     
         title:'Anteryamin-store',
         technology:['Html','Css','Js'],
@@ -62,7 +73,7 @@ const data=[
         img:'/images/projects/Anteryami-store.png'
     },
     {
-        id:5,
+        id:8,
     
         title:'ProgramingHub.com',
         technology:['Node js and Express'],

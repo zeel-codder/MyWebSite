@@ -8,7 +8,6 @@
  @functionality : This Component is use to show Technology info of zeel in website.
 **/
 
-
 // Imports
 // ====================================
 // import { IoMdListBox } from 'react-icons/io'
@@ -72,7 +71,7 @@ const Technology = () => {
               
             },
             {
-                title:'Javascript',
+                title:'C++',
               
             },
             {
@@ -89,7 +88,19 @@ const Technology = () => {
         
         },
         {
-            title:"MLOps",
+            title:"Git and Github",
+        
+        },
+        {
+            title:"DSA",
+        
+        },
+        {
+            title:"Web Hosting",
+        
+        },
+        {
+            title:"Oops",
         
         },
       
@@ -117,7 +128,7 @@ const Technology = () => {
                 <Imgshow data={L}></Imgshow>  
               </div>
               <div className="imgshow_div"> 
-                  <h3>Tools</h3>
+                  <h3>Other</h3>
 
                 <Imgshow data={Tools}></Imgshow>  
               </div>
