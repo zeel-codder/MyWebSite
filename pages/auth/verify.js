@@ -17,7 +17,7 @@ import { User } from "@const/List";
 import loadable from '@loadable/component'
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 // const   Like   = loadable(() => import('@Blog/Like'))
 // const   Share    = loadable(() => import('@Blog/share'))
 const Template = loadable(() => import('@Layout/Template'))

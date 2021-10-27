@@ -1,6 +1,17 @@
 const data=[
 
     {
+        id:1.1,
+    
+        title:'Twitter Master',
+        technology:['Node js', 'MongoDB' , 'React js', 'Material-Ui', 'Redux'],
+        description:'Full Stack MERN Stack app.User authentication with password hashing with bcrypt.js, Tweet crate, like, comment, share, and delete functionality,Tweet, user, And group search functionality.',
+        codelink:'https://github.com/zeel-codder/Gun-master',
+        link:'https://twittermaster.netlify.app/',
+     
+    },
+
+    {
         id:1,
     
         title:'My Introduction',

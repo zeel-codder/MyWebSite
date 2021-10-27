@@ -56,12 +56,12 @@ function ToolList(){
                 {
                   codelink 
                   &&
-                  <div className="code"><a href={codelink}>code</a></div>
+                  <div className="code"><a href={codelink} target="_blank">code</a></div>
                 }
                 {
                   link
                   &&
-                  <div className="link"><a href={link}>Web site</a></div>
+                  <div className="link"><a href={link}  target="_blank">Web site</a></div>
 
                 }
 

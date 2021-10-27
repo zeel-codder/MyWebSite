@@ -927,6 +927,12 @@ Like
    .blog-container iframe {
        width: 100%;
    }
+   .prow{
+       flex-direction: column;
+   }
+   .imgshow_div{
+    width: 50%;    
+   }
     .imgdiv {
         width: 70%;
         height: 14rem;

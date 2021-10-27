@@ -47,11 +47,11 @@ body::-webkit-scrollbar,*::-webkit-scrollbar {
  
 body::-webkit-scrollbar-track,*::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background:rgb(83, 207, 197);
+  background:rgb(77, 45, 180);
 }
 
 body::-webkit-scrollbar-thumb,*::-webkit-scrollbar-thumb {
-  background-color: rgb(53, 0, 245);
+  background-color: rgb(16, 20, 66);
   /* outline: 1px solid slategrey; */
   border-radius: 12px;
 }
@@ -316,15 +316,40 @@ a{
   margin: 0 auto;
 }
 
-.navabar-ul li a:hover{
-  /* background-color: none; */
+.navabar-ul li a {
+  display: inline-block;
+  position: relative;
+  color: var(--form-bg);
+}
+
+
+.navabar-ul li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--form-bg);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navabar-ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* .navabar-ul li a:hover{
+
   transition: all .5s;
-  /* border-style: ridge; */
+
   border-bottom: 2px solid var(--form-bg);
-}
-.navabar-ul .a a:hover{
+} */
+/* .navabar-ul .a a:hover{
   background-color:unset;
-}
+} */
 
 
 p{
@@ -697,7 +722,7 @@ option{
 }
 .userInfo .form-input{
   border: 2px solid var(--hadderbg);
-  color: black !important;
+  /* color: black !important; */
   width: fit-content;
   margin-left: 2rem;
   padding: .8rem;
@@ -712,7 +737,7 @@ option{
   justify-content: space-between;
 }
 .userInfo span{
-  color: black  !important;
+  /* color: black  !important; */
 }
 
 .form div input,.form div textarea{
