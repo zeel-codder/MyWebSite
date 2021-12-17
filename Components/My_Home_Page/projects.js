@@ -65,7 +65,15 @@ const Projects=()=>{
                 <h1>{title}</h1>
                 
                 {/* <img src={img} className="img" /> */}
+
+                {img
+                &&
+                <Image  className="img" src={img}  width={800} height={500} quality={100} />
+                
+                }
 {/*                 
+
+
                 {
                     
                     img 

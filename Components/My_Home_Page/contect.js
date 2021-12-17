@@ -18,8 +18,8 @@ import { useState } from 'react';
 // import { useGlobalCont/ext } from '../context';
 import loadable from 'next/dynamic'
 // import loadable from '@loadable/component'
-const  Loading = loadable(() => import('../Loadding'))
-// import Loading from '../Loadding';
+// const  Loading = loadable(() => import('../Loadding'))
+import Loading from '../Loadding';
 import {SetMailInContactForm } from '@api/User-Blog-Api'
 
 // ====================================
@@ -43,6 +43,7 @@ const Context = () => {
         e.preventDefault();
 
         document.documentElement.scrollTop = 0;
+        setLoading(true);
          let {email,subject,message}=e.target;
          email=email.value;
          subject=subject.value;
@@ -53,10 +54,12 @@ const Context = () => {
         try{
             await SetMailInContactForm(email,subject,message)
             alert("Send🙏🙏");
-            setLoading(false);
+            // setLoading(false);
         }catch(e){
     
-            alert("Email is not Valid")
+            alert("Some Error Ocuures, please Try Again")
+        }finally{
+            setLoading(false);
         }
 
 
@@ -67,12 +70,6 @@ const Context = () => {
 
     return (
         <>
-            {
-
-                loading ? <Loading /> : null
-
-            }
-           
             <div >
 
                 
@@ -80,6 +77,12 @@ const Context = () => {
             
           
             <h1 id="contact">Contact Form</h1>
+            {
+
+                loading ? <Loading /> : null
+
+            }
+           
             <div className="row con">
                 <div>
 

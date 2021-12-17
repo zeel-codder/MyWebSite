@@ -40,7 +40,7 @@ module.exports = composePlugins([
     'react': 'React'
 },
 images: {
-  domains: ['images.unsplash.com','cdn4.iconfinder.com','cdn.pixabay.com','cdn3.iconfinder.com','upload.wikimedia.org'],
+  domains: ['images.unsplash.com','cdn4.iconfinder.com','cdn.pixabay.com','cdn3.iconfinder.com','upload.wikimedia.org','res.cloudinary.com'],
 },
 });
 // module.exports = withBund/leAnalyzer({})

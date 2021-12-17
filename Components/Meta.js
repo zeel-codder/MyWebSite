@@ -6,14 +6,14 @@ import { useEffect } from "react";
 const Meta = ({ title, keywords, description }) => {
 
   // useEffect(async ()=>{
-
+ 
   //   const number=await document.querySelectorAll('.adsbygoogle')
   //   console.log(document)
   //   console.log(number)
   //   console.log(document.querySelectorAll('.adsbygoogle'))
   // },[])
 
-
+ 
 
   useEffect(() => {
 

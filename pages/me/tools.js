@@ -4,7 +4,7 @@ import ToolsData from 'Data/project/tools'
 import ChatBox from 'Components/mychat'
 import Zoom from 'react-reveal/Zoom';
 // import Link from 'next/link'
-// import Image from "next/image";
+import Image from "next/image";
 
 // import loadable from '@loadable/component'
 // const   Template   = loadable(() => import('@Layout/Template'))
@@ -41,7 +41,11 @@ function ToolList(){
               
 
                 {/* <img src={img} className="img" /> */}
-                {/* <Image  className="img" src={img}  width={1000} height={400} quality={100} /> */}
+                {img
+                &&
+                <Image  className="img" src={img}  width={800} height={500} quality={100} />
+                
+                }
                 <div>
                 <div className="description">{description}</div>
                 <div>
