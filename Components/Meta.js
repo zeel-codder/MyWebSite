@@ -15,21 +15,21 @@ const Meta = ({ title, keywords, description }) => {
 
  
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    try {
-      // const number=document.querySelectorAll('.adsbygoogle').length;
+  //   try {
+  //     // const number=document.querySelectorAll('.adsbygoogle').length;
 
-      // console.log(description)
-      for (let i = 0; i < 3; i++) {
-        // console.log('call')
+  //     // console.log(description)
+  //     for (let i = 0; i < 3; i++) {
+  //       // console.log('call')
 
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
+  //       (window.adsbygoogle = window.adsbygoogle || []).push({});
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }, []);
 
 
 
@@ -69,7 +69,7 @@ const Meta = ({ title, keywords, description }) => {
         }}
       />
 
-      <script async data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      {/* <script async data-ad-client="ca-pub-4438223892792479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
 
    
 
