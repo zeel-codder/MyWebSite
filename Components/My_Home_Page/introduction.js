@@ -22,7 +22,7 @@ const Introduction = () => {
                 {/* <img className="container-img" src="/images/home/introduction.svg" alt="Introduction Svg"  width={1200} height={400} /> */}
                  
                     <p className="para">
-                    My name is Zeel Sureshbhai Prajapati.I am pursuing B-tech Computer Science at Nirma University. I am a developer. I like to create websites. I have knowledge about React js, Next js, Node js, Flask like web frameworks or Libraries. I worked in full-stack as well as frontend projects. I am an open-source enthusiast. I work in Java, Python, Javascript, TypeScript like Languages. I am learning new things every day and keep growing every day.
+                    I work on a team as well as on individual projects. I am a quick learner who loves to learn new things and share ideas with the world. As an experience, I work on many freelance projects and one internship. I work in MERN stack, Django, and flask. Also, I am very consistent in my work.
                     </p>
                 </div>
                     

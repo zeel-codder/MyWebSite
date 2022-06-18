@@ -102,7 +102,7 @@ function Navbar() {
 
                             <Link href='/'>
 
-                                Zeel Codder Blogs
+                                Zeel Blogs
 
 
                             </Link>

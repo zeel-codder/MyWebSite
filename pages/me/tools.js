@@ -43,7 +43,7 @@ function ToolList(){
                 {/* <img src={img} className="img" /> */}
                 {img
                 &&
-                <Image  className="img" src={img}  width={800} height={500} quality={100} />
+                <Image  className="img" src={img}  width={500} height={300} quality={100} />
                 
                 }
                 <div>
