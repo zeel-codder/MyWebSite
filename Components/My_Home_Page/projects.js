@@ -8,7 +8,6 @@
  @functionality : This Component is use to show Project info of zeel in website.
 **/
 
-
 // Imports
 // ====================================
 // import {IoIosArrowDroprightCircle} from 'react-icons/io'
@@ -19,110 +18,93 @@
 // import BookmarkIcon from '@material-ui/icons/Bookmark';
 // import {useState} from 'react'
 import React from "react";
-import { WebLink } from '@const/List';
-import Link from 'next/link';
+import { WebLink } from "@const/List";
+import Link from "next/link";
 import Image from "next/image";
 // import { useGlobalContext } from '../context';
-import P from '@Data/project/tools'
+import P from "@Data/project/tools";
 // import ScrollAnimation from 'react-animate-on-scroll';
-import Zoom from 'react-reveal/Zoom';
+import Zoom from "react-reveal/Zoom";
 // ====================================
 
+const Projects = () => {
+  const ProjectData = P.slice(0, 3);
 
-
-
-const Projects=()=>{
-
-
-    const ProjectData=P.slice(0,2);
-
-    
-    return(
-        <div id="projects">
+  return (
+    <>
+      <div id="projects">
         <h1>Projects</h1>
-        <div className="box row" id="projects">
-        {/* <div className="row"> */}
+        <div className="tools" style={{ width: "100%" }}>
+          {ProjectData.map((data) => {
+            const {
+              id,
+              title,
+              description,
+              imgurl,
+              codelink,
+              link,
+              technology,
+              img,
+            } = data;
 
-        {/* <img className="container-img" src='/images/home/project.jpg' alt="Project svg"></img> */}
-  
-        
-        <div className="tools" >
-     
+            return (
+              <Zoom>
+                <div key={id} className="BlogShort">
+                  <div>
+                    {/* <span className="title">{technology}</span> */}
+                    <h5>{title}</h5>
+                  </div>
 
-           {
-               ProjectData.map((data,index)=>{
-                   
-                   const {id,technology,description,codelink ,link,title,img}=data
-  
-                   return (
-                    <Zoom >
-                       
-                       <div key={id}  className="BlogShort">
-                {/* <span className="title">{technology}</span> */}
-              
-
-                <div>
-                <h1>{title}</h1>
-                
-                {/* <img src={img} className="img" /> */}
-
-                {img
-                &&
-                <Image  className="img" src={img}  width={500} height={300} quality={100} />
-                
-                }
-{/*                 
-
-
-                {
-                    
-                    img 
-                    &&
-                    
-                    // <Image src={img} className="img" width={1000} height={400} quality={100} />
-                } */}
-                <div className="description">{description}</div>
-                <div>
-
-                <div className="tech_list row">
-                    {
-                        technology.map((data,index)=><span id={index}>⭐ {data}</span>)
-                    }
-
+                  {/* <img src={img} className="img" /> */}
+                  {img ? (
+                    <Image
+                      className="img"
+                      src={img}
+                      width={400}
+                      height={200}
+                      quality={100}
+                    />
+                  ) : (
+                    <img
+                      className="img"
+                      src={"/project.svg"}
+                      width={400}
+                      height={300}
+                      quality={100}
+                    />
+                  )}
+                  <div>
+                    <div className="description">{description}</div>
+                    <div>
+                      {codelink && (
+                        <div className="code">
+                          <a href={codelink} target="_blank">
+                            code
+                          </a>
+                        </div>
+                      )}
+                      {link && (
+                        <div className="link">
+                          <a href={link} target="_blank">
+                            Web site
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
-                
-                {
-                    codelink 
-                  &&
-                  <div className="code"><Link href={codelink}  target="_blank">code</Link></div>
-                }
-                {
-                    link
-                    &&
-                    <div className="link"><Link href={link}  target="_blank">Web site</Link></div>
-                    
-                }
-
-                
-                </div>
-                </div>
-              
-            </div>
-            </Zoom>
-                )
-            })
-        }
-        {/* </ul> */}
-        <div  className="BlogShort btn-bg">
-
-        <div className="code btn-more ">
+              </Zoom>
+            );
+          })}
+        </div>
+        <div className="BlogShort btn-bg">
+          <div className="code btn-more pointer">
             <Link href={`${WebLink}/me/tools`}>Find More 👑</Link>
+          </div>
         </div>
-        </div>
-        </div>
-        </div>
-            {/* </div> */}
-        </div>
-    )
-}
+      </div>
+    </>
+  );
+};
+
 export default Projects;

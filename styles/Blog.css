@@ -911,9 +911,20 @@ Like
   }
   .prow {
     flex-direction: column;
+    width: 100%;
+    gap: 1rem;
   }
   .imgshow_div {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .imgshow_div h3 {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
   }
   .imgdiv {
     width: 70%;

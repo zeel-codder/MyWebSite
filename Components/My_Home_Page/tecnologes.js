@@ -1,140 +1,91 @@
 /**
- This page all information about zeel-codder education info.
-
- @name:Technology
- @type:React Component
- @param:none
- @returns: JSX of Education details
- @functionality : This Component is use to show Technology info of zeel in website.
-**/
+ * This page contains all information about Zeel's education and technology skills.
+ *
+ * @name: Technology
+ * @type: React Component
+ * @param: none
+ * @returns: JSX of Technology details
+ * @functionality: This component is used to show the technology skills of Zeel on the website.
+ **/
 
 // Imports
 // ====================================
-// import { IoMdListBox } from 'react-icons/io'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-// const  Imgshow = loadable(() => import('./imgshow'))
-import Imgshow from './imgshow'
+import Imgshow from "./imgshow";
 import React from "react";
-// import { useGlobalContext } from '../conte/xt';
 
 // ====================================
 
-
-
 const Technology = () => {
+  const Web = [
+    {
+      title: "Frappe",
+    },
+    {
+      title: "React.js",
+    },
+    {
+      title: "Next.js",
+    },
+    {
+      title: "FastAPI",
+    },
+    {
+      title: "Node.js",
+    },
+  ];
 
-    // const Info = ['HTML,CSS,JS', 'React js', 'Node js', 'Java', 'Python', 'C']
-    const Web=[
-        {
-        title:'HTML,CSS,JS',
-       
-        },
-        {
-        title:'React js',
-        
-        },
-       
-      
-        {
-            title:"next js",
-          
-        },
-        {
-            title:"Flask",
-        
-        },
-        {
-            title:'Node js',
-            
-        },
-      
-      
-        
-        
-        
-        
-    ]
-    
-    const L=[
-     
-        {
-            title:'Java',
-          
-            },
-            {
-            title:'Python',
-          
-            },
-            {
-                title:'TypeScript',
-              
-            },
-            {
-                title:'C++',
-              
-            },
-            {
-                title:'C',
-              
-            },
+  const Languages = [
+    {
+      title: "Python",
+    },
+    {
+      title: "JavaScript",
+    },
+    {
+      title: "TypeScript",
+    },
+    {
+      title: "Java",
+    },
+    {
+      title: "C",
+    },
+  ];
 
+  const Tools = [
+    {
+      title: "WordPress",
+    },
+    {
+      title: "Git and GitHub",
+    },
+    {
+      title: "DSA",
+    },
+  ];
 
-    ]
-    const Tools=[
-   
-        {
-            title:"DBMS",
-        
-        },
-        {
-            title:"Git and Github",
-        
-        },
-        {
-            title:"DSA",
-        
-        },
-        {
-            title:"Web Hosting",
-        
-        },
-        {
-            title:"Oops",
-        
-        },
-      
+  return (
+    <div id="theology">
+      <h1 style={{ marginBottom: "1rem" }}>Technology</h1>
 
+      <div className="prow">
+        <div className="imgshow_div">
+          <h3>Frameworks</h3>
+          <Imgshow data={Web}></Imgshow>
+        </div>
 
-    ]
-    return (
-        <div id="theology">
-                <h1 >Technology</h1>
-            
-            <div className="prow">
+        <div className="imgshow_div">
+          <h3>Programming Languages</h3>
+          <Imgshow data={Languages}></Imgshow>
+        </div>
 
-                {/* <img className="container-img" src='/images/home/tchnology.svg' alt='TheologyPhoto'></img> */}
-               
-              <div className="imgshow_div">
-                  <h3>Web development</h3>
-
-
-                <Imgshow data={Web} ></Imgshow> 
-              </div  >
-                
-              <div className="imgshow_div">
-                   <h3>Programming Language</h3>
-
-                <Imgshow data={L}></Imgshow>  
-              </div>
-              <div className="imgshow_div"> 
-                  <h3>Other</h3>
-
-                <Imgshow data={Tools}></Imgshow>  
-              </div>
-            </div>
-            
-        </div>)
-}
+        <div className="imgshow_div">
+          <h3>Other Tools</h3>
+          <Imgshow data={Tools}></Imgshow>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Technology;
